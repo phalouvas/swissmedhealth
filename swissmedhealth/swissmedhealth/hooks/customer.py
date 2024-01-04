@@ -7,18 +7,22 @@ def make_patient(source_name, target_doc=None):
 
 def _make_patient(source_name, target_doc=None, ignore_permissions=False):
 	def set_missing_values(source, target):
-		if source.company_name:
-			target.customer_type = "Company"
-			target.customer_name = source.company_name
-		else:
-			target.customer_type = "Individual"
-			target.customer_name = source.lead_name
+		# Get customer document from source_name
+		customer = frappe.get_doc("Customer", source_name)
 
+		target.customer_group = customer.customer_group
+		target.territory = customer.territory
+		target.customer = customer.name
+		target.default_price_list = customer.default_price_list
+		target.default_currency = customer.default_currency
 		target.customer_group = frappe.db.get_default("Customer Group")
+		
+    # Get the lead_name of the customer
+	lead_name = frappe.db.get_value("Customer", source_name, "lead_name")
 
 	doclist = get_mapped_doc(
 		"Lead",
-		source_name,
+		lead_name,
 		{
 			"Lead": {
 				"doctype": "Patient",
@@ -27,7 +31,7 @@ def _make_patient(source_name, target_doc=None, ignore_permissions=False):
 					"first_name": "first_name",
 					"middle_name": "middle_name",
 					"last_name": "last_name",
-					"gender": "sex",
+					"gender": "sex",                    
 				},
 				"field_no_map": ["disabled"],
 			}
