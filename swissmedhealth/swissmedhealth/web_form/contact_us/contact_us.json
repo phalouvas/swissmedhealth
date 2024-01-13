@@ -10,7 +10,7 @@
  "amount_based_on_field": 0,
  "anonymous": 1,
  "apply_document_permissions": 0,
- "banner_image": "",
+ "banner_image": "/files/registration-form.png",
  "breadcrumbs": "",
  "button_label": "Submit",
  "condition_json": "[]",
@@ -20,7 +20,7 @@
  "docstatus": 0,
  "doctype": "Web Form",
  "idx": 0,
- "introduction_text": "<div class=\"ql-editor read-mode\"><p><br></p></div>",
+ "introduction_text": "<div class=\"ql-editor read-mode\"><p>To register for Swiss Med Health, please fill in the following form with your personal and medical information. This will help us provide you with the best possible service and care. Please note that the form is confidential and secure. Thank you for choosing Swiss Med Health as your health partner.</p><p><br></p></div>",
  "is_standard": 1,
  "list_columns": [
   {
@@ -32,7 +32,7 @@
  "list_title": "Test",
  "login_required": 0,
  "max_attachment_size": 0,
- "modified": "2024-01-12 11:26:40.508362",
+ "modified": "2024-01-13 06:24:41.535399",
  "modified_by": "Administrator",
  "module": "Swissmedhealth",
  "name": "contact-us",
@@ -44,7 +44,7 @@
  "show_list": 0,
  "show_sidebar": 0,
  "success_url": "",
- "title": "Contact Us",
+ "title": "Registration Form",
  "web_form_fields": [
   {
    "allow_read_on_all_link_options": 0,
