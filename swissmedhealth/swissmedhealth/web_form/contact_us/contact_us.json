@@ -20,7 +20,7 @@
  "docstatus": 0,
  "doctype": "Web Form",
  "idx": 0,
- "introduction_text": "<div class=\"ql-editor read-mode\"><p>To register for Swissmed Health, please fill in the following form with your personal and medical information. This will help us provide you with the best possible service and care. Please note that the form is confidential and secure. Thank you for choosing Swissmed Health as your health partner.</p></div>",
+ "introduction_text": "<div class=\"ql-editor read-mode\"><p>To begin your health journey with us, kindly complete the registration form below. It requires your personal and medical details, which are essential for us to offer you personalized service and care. Rest assured, your information is treated with the utmost confidentiality and security.</p></div>",
  "is_standard": 1,
  "list_columns": [
   {
@@ -32,7 +32,7 @@
  "list_title": "Test",
  "login_required": 0,
  "max_attachment_size": 0,
- "modified": "2024-01-16 06:55:51.128568",
+ "modified": "2024-01-16 08:12:05.241524",
  "modified_by": "Administrator",
  "module": "Swissmedhealth",
  "name": "contact-us",
@@ -43,10 +43,10 @@
  "show_attachments": 0,
  "show_list": 0,
  "show_sidebar": 0,
- "success_message": "",
+ "success_message": "Thank you for providing your contact information. We invite you to proceed with the next step of completing your medical information. Please click on the button below to continue. We appreciate your attention to these details, ensuring we can offer you the best possible service.",
  "success_title": "",
  "success_url": "",
- "title": "Registration Form",
+ "title": "Welcome to Swissmed Health!",
  "web_form_fields": [
   {
    "allow_read_on_all_link_options": 0,
