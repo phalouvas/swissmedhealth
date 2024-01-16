@@ -32,7 +32,7 @@
  "list_title": "Test",
  "login_required": 0,
  "max_attachment_size": 0,
- "modified": "2024-01-13 06:24:41.535399",
+ "modified": "2024-01-16 06:44:49.022882",
  "modified_by": "Administrator",
  "module": "Swissmedhealth",
  "name": "contact-us",
@@ -43,22 +43,11 @@
  "show_attachments": 0,
  "show_list": 0,
  "show_sidebar": 0,
+ "success_message": "",
+ "success_title": "",
  "success_url": "",
  "title": "Registration Form",
  "web_form_fields": [
-  {
-   "allow_read_on_all_link_options": 0,
-   "fieldname": "gender",
-   "fieldtype": "Link",
-   "hidden": 0,
-   "label": "Gender",
-   "max_length": 0,
-   "max_value": 0,
-   "options": "Gender",
-   "read_only": 0,
-   "reqd": 1,
-   "show_in_filter": 0
-  },
   {
    "allow_read_on_all_link_options": 0,
    "fieldname": "salutation",
@@ -105,6 +94,19 @@
    "label": "Last Name",
    "max_length": 0,
    "max_value": 0,
+   "read_only": 0,
+   "reqd": 1,
+   "show_in_filter": 0
+  },
+  {
+   "allow_read_on_all_link_options": 0,
+   "fieldname": "gender",
+   "fieldtype": "Link",
+   "hidden": 0,
+   "label": "Gender",
+   "max_length": 0,
+   "max_value": 0,
+   "options": "Gender",
    "read_only": 0,
    "reqd": 1,
    "show_in_filter": 0
