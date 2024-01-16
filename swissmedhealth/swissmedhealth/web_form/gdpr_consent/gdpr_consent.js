@@ -23,7 +23,7 @@ $('.submit-btn').on('click', function(e) {
 		frappe.msgprint({
 			title: __('Success'),
 			indicator: 'green',
-			message: __('Thank you for submitting your medical history, a member of our team will contact you shortly...')
+			message: __('We have successfully received your medical history. A member of our professional team will be in touch with you shortly to discuss the next steps. Thank you for entrusting us with your healthcare needs.')
 		});
 		
 		$('.web-form-container').hide();
