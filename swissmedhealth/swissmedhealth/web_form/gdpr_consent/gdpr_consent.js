@@ -20,9 +20,13 @@ $('.submit-btn').on('click', function(e) {
 	e.preventDefault();
 
 	frappe.call('swissmedhealth.swissmedhealth.web_form.medical_history.medical_history.save', {doc: frappe.web_form.doc}).then(() => {
-		let params = new URLSearchParams(window.location.search);
-    	let email_id = params.get('email_id');
-		window.location.href = '../lead-step-3/new?email_id=' + encodeURIComponent(email_id);		
+		frappe.msgprint({
+			title: __('Success'),
+			indicator: 'green',
+			message: __('Thank you for submitting your medical history, a member of our team will contact you shortly...')
+		});
+		
+		$('.web-form-container').hide();
 	}).catch((err) => {
 		frappe.msgprint({
 			title: __('Error'),
