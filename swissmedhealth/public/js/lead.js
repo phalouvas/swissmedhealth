@@ -376,12 +376,12 @@ frappe.ui.form.on("Lead", {
 	refresh: function (frm) {
 		if (!frm.doc.__islocal) {
 			let email_id = encodeURIComponent(frm.doc.email_id);
-			frm.add_custom_button(__("Copy Web Medical History Form Link"), function () {
+			frm.add_custom_button(__("Copy Web Form Link"), function () {
 				// Prepare the link to the web form. The link is the domain name of the site plus /lead-step-2/new?email_id=...
 				// where the email_id is the email address of the lead.
 				// The email address is passed as a parameter to the web form so that the email address is automatically
 				// filled in the email field of the web form.
-				let web_form_link = frappe.urllib.get_base_url() + "/lead-step-2/new?email_id=" + email_id;
+				let web_form_link = frappe.urllib.get_base_url() + "/lead-step-1/new?email_id=" + email_id;
 				frappe.msgprint(web_form_link, __("Web Medical History Form Link"));
 
 				// Copy the link to the clipboard
@@ -394,23 +394,6 @@ frappe.ui.form.on("Lead", {
 				document.body.removeChild(dummy);
 			}, __('Action'));
 
-			frm.add_custom_button(__("Copy Web GDPR Consent Form Link"), function () {
-				// Prepare the link to the web form. The link is the domain name of the site plus /lead-step-2/new?email_id=...
-				// where the email_id is the email address of the lead.
-				// The email address is passed as a parameter to the web form so that the email address is automatically
-				// filled in the email field of the web form.
-				let web_form_link = frappe.urllib.get_base_url() + "/lead-step-3/new?email_id=" + email_id;
-				frappe.msgprint(web_form_link, __("Web GDPR Consent Form Link"));
-
-				// Copy the link to the clipboard
-				let dummy = document.createElement("input");
-				document.body.appendChild(dummy);
-				dummy.setAttribute("id", "dummy_id");
-				document.getElementById("dummy_id").value = web_form_link;
-				dummy.select();
-				document.execCommand("copy");
-				document.body.removeChild(dummy);
-			}, __('Action'));
 		}
 	}
 });

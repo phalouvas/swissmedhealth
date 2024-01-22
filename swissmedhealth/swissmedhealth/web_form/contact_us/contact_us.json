@@ -32,7 +32,7 @@
  "list_title": "Test",
  "login_required": 0,
  "max_attachment_size": 0,
- "modified": "2024-01-16 08:12:05.241524",
+ "modified": "2024-01-22 07:25:50.489707",
  "modified_by": "Administrator",
  "module": "Swissmedhealth",
  "name": "contact-us",
@@ -72,18 +72,6 @@
    "max_value": 0,
    "read_only": 0,
    "reqd": 1,
-   "show_in_filter": 0
-  },
-  {
-   "allow_read_on_all_link_options": 0,
-   "fieldname": "middle_name",
-   "fieldtype": "Data",
-   "hidden": 0,
-   "label": "Middle Name",
-   "max_length": 0,
-   "max_value": 0,
-   "read_only": 0,
-   "reqd": 0,
    "show_in_filter": 0
   },
   {
