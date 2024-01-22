@@ -20,6 +20,9 @@ frappe.ready(function () {
 		// Prevent the default form submission
 		e.preventDefault();
 
+		// set custom_status to 'Documentation received'
+		frappe.web_form.doc.custom_status = 'Documentation received';
+
 		frappe.call('swissmedhealth.swissmedhealth.web_form.medical_history.medical_history.save', { doc: frappe.web_form.doc }).then(() => {
 			let params = new URLSearchParams(window.location.search);
 			let email_id = params.get('email_id');
