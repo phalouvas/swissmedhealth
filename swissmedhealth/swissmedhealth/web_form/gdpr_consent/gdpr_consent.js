@@ -5,9 +5,13 @@ frappe.ready(function () {
 	if (email_id) {
 		frappe.call('swissmedhealth.swissmedhealth.web_form.medical_history.medical_history.get_lead_details', { email_id: email_id }).then(r => {
 			let doc = r.message;
+			// if (doc.custom_date) is empty set the current date
+			if (!doc.custom_date) {
+				doc.custom_date = frappe.datetime.nowdate();
+			}
 			frappe.web_form.set_values(doc);
 			frappe.web_form.is_new = false;
-			frappe.web_form.doc.name = doc.name;
+			frappe.web_form.doc.name = doc.name;			
 		});
 	} else {
 		// redirect to home page
