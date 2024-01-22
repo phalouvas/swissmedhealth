@@ -3521,7 +3521,7 @@
    "name": "Lead-custom_medication_allergies",
    "no_copy": 0,
    "non_negative": 0,
-   "options": "No\nYes",
+   "options": "No\nYes\nNot sure",
    "owner": "Administrator",
    "permlevel": 0,
    "precision": "",
