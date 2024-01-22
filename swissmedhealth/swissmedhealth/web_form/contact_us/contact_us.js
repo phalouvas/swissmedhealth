@@ -5,7 +5,8 @@ frappe.ready(function() {
     if (email_id) {
         frappe.call('swissmedhealth.swissmedhealth.web_form.medical_history.medical_history.get_lead_details', {email_id: email_id}).then(r => {
             let doc = r.message;
-            frappe.web_form.set_values(doc);
+
+			frappe.web_form.set_values(doc);
 			frappe.web_form.is_new = false;
 			frappe.web_form.doc.name = doc.name;
         });
