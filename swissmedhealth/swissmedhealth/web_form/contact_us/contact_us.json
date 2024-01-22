@@ -32,7 +32,7 @@
  "list_title": "Test",
  "login_required": 0,
  "max_attachment_size": 0,
- "modified": "2024-01-16 08:12:05.241524",
+ "modified": "2024-01-22 08:14:13.418357",
  "modified_by": "Administrator",
  "module": "Swissmedhealth",
  "name": "contact-us",
@@ -48,6 +48,20 @@
  "success_url": "",
  "title": "Welcome to Swissmed Health!",
  "web_form_fields": [
+  {
+   "allow_read_on_all_link_options": 0,
+   "default": "From online form",
+   "fieldname": "custom_status",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Status",
+   "max_length": 0,
+   "max_value": 0,
+   "options": "Lead\nFrom online form\nDocumentation sent\nDocumentation received\nConsultation recommended\nInvoice issued\nInvoice Paid\nConsultation\nMedical Proposal\nNot Interested\nConverted\nNot contact\nOpportunity",
+   "read_only": 0,
+   "reqd": 1,
+   "show_in_filter": 0
+  },
   {
    "allow_read_on_all_link_options": 0,
    "fieldname": "salutation",
@@ -72,18 +86,6 @@
    "max_value": 0,
    "read_only": 0,
    "reqd": 1,
-   "show_in_filter": 0
-  },
-  {
-   "allow_read_on_all_link_options": 0,
-   "fieldname": "middle_name",
-   "fieldtype": "Data",
-   "hidden": 0,
-   "label": "Middle Name",
-   "max_length": 0,
-   "max_value": 0,
-   "read_only": 0,
-   "reqd": 0,
    "show_in_filter": 0
   },
   {
