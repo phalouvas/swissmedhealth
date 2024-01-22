@@ -1020,7 +1020,7 @@
    "name": "Lead-custom_diet_preferences",
    "no_copy": 0,
    "non_negative": 0,
-   "options": "\nVegetarian\nVegan\nMeat\nOther",
+   "options": "No\nVegetarian\nVegan\nMeat\nOther",
    "owner": "Administrator",
    "permlevel": 0,
    "precision": "",
