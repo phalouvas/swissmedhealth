@@ -6,8 +6,6 @@ frappe.ui.form.on('Customer', {
         // Get patient linked with customer
         let patient = frappe.get_doc("Patient", { "customer": doc.name });
 
-        console.log(patient, doc.name);
-
         // If the lead is saved, then add the button to create a patient
         if (!frm.is_new() && doc.__onload && patient == null && doc.lead_name) {
             frm.add_custom_button(__('Create Patient'), function () {
