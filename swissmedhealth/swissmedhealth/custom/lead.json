@@ -6937,7 +6937,7 @@
    "name": "Lead-custom_status",
    "no_copy": 1,
    "non_negative": 0,
-   "options": "Lead\nPending\nFrom online form\nDocumentation sent\nDocumentation received\nConsultation recommended\nInvoice issued\nInvoice Paid\nConsultation\nMedical Proposal\nNot Interested\nConverted\nNot contact\nOpportunity",
+   "options": "Lead\nPending\nFrom online form\nRegistered Patient\nPending Appointment\nDocumentation sent\nDocumentation received\nConsultation scheduled\nNo action\nInvoice issued\nInvoice Paid\nConsultation\nIssue Medical Proposal\nFollow Up Medical Proposal\nNot Interested\nConverted\nNot contact\nOpportunity",
    "owner": "Administrator",
    "permlevel": 0,
    "precision": "",
