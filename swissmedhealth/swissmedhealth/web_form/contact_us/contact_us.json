@@ -32,7 +32,7 @@
  "list_title": "Test",
  "login_required": 0,
  "max_attachment_size": 0,
- "modified": "2024-01-22 08:34:24.502544",
+ "modified": "2024-01-23 14:15:53.668949",
  "modified_by": "Administrator",
  "module": "Swissmedhealth",
  "name": "contact-us",
@@ -115,6 +115,19 @@
   },
   {
    "allow_read_on_all_link_options": 0,
+   "fieldname": "",
+   "fieldtype": "Column Break",
+   "hidden": 0,
+   "label": "",
+   "max_length": 0,
+   "max_value": 0,
+   "options": "",
+   "read_only": 0,
+   "reqd": 0,
+   "show_in_filter": 0
+  },
+  {
+   "allow_read_on_all_link_options": 0,
    "fieldname": "email_id",
    "fieldtype": "Data",
    "hidden": 0,
@@ -162,6 +175,31 @@
    "options": "Country",
    "read_only": 0,
    "reqd": 1,
+   "show_in_filter": 0
+  },
+  {
+   "allow_read_on_all_link_options": 0,
+   "fieldname": "",
+   "fieldtype": "Section Break",
+   "hidden": 0,
+   "label": "",
+   "max_length": 0,
+   "max_value": 0,
+   "options": "",
+   "read_only": 0,
+   "reqd": 0,
+   "show_in_filter": 0
+  },
+  {
+   "allow_read_on_all_link_options": 0,
+   "description": "Fill in this field only if you have a sales partner referral code",
+   "fieldtype": "Data",
+   "hidden": 0,
+   "label": "Referral Code",
+   "max_length": 0,
+   "max_value": 0,
+   "read_only": 0,
+   "reqd": 0,
    "show_in_filter": 0
   }
  ]
