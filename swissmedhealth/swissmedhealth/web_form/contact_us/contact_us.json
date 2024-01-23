@@ -32,7 +32,7 @@
  "list_title": "Test",
  "login_required": 0,
  "max_attachment_size": 0,
- "modified": "2024-01-23 14:15:53.668949",
+ "modified": "2024-01-23 14:37:49.398912",
  "modified_by": "Administrator",
  "module": "Swissmedhealth",
  "name": "contact-us",
@@ -193,11 +193,13 @@
   {
    "allow_read_on_all_link_options": 0,
    "description": "Fill in this field only if you have a sales partner referral code",
+   "fieldname": "custom_sales_partner",
    "fieldtype": "Data",
    "hidden": 0,
-   "label": "Referral Code",
+   "label": "Sales Partner",
    "max_length": 0,
    "max_value": 0,
+   "options": "Sales Partner",
    "read_only": 0,
    "reqd": 0,
    "show_in_filter": 0
