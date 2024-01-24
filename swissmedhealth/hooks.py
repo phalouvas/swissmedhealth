@@ -115,21 +115,19 @@ doctype_js = {
 # ---------------
 # Override standard doctype classes
 
-# override_doctype_class = {
-#	"ToDo": "custom_app.overrides.CustomToDo"
-# }
+override_doctype_class = {
+    "Lead": "swissmedhealth.swissmedhealth.hooks.lead.Lead"
+}
 
 # Document Events
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-#	"*": {
-#		"on_update": "method",
-#		"on_cancel": "method",
-#		"on_trash": "method"
-#	}
-# }
+doc_events = {
+    "Lead": {
+        "before_insert": "swissmedhealth.swissmedhealth.hooks.lead.before_insert",
+    }
+}
 
 # Scheduled Tasks
 # ---------------
