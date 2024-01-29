@@ -31,6 +31,8 @@ class Lead(OriginalLead):
             contact.insert(ignore_permissions=True)
             contact.reload()  # load changes by hooks on contact
             self.relative_contact_doc = contact
+        else:
+            self.relative_contact_doc = None
 
         # call the original method
         return super(Lead, self).create_contact()
