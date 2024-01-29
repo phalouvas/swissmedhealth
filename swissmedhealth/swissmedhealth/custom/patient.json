@@ -706,7 +706,7 @@
    "insert_after": "custom_supplements",
    "is_system_generated": 0,
    "is_virtual": 0,
-   "label": "Have you been vaccinated for Covid-19 in the last 60 days?",
+   "label": "Have you been vaccinated for Covid-19 in the last 6 Months?",
    "length": 0,
    "mandatory_depends_on": null,
    "modified": "2023-12-20 09:06:10.830674",
