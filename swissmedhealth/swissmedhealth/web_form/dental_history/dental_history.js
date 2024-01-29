@@ -3,6 +3,9 @@ frappe.ready(function () {
 	let params = new URLSearchParams(window.location.search);
 	let email_id = params.get('email_id');
 	if (email_id) {
+		frappe.call('swissmedhealth.swissmedhealth.web_form.dental_history.dental_history.migrate_from_lead').then(r => {
+			return;
+		});
 		frappe.call('swissmedhealth.swissmedhealth.web_form.dental_history.dental_history.get_dental_history_details', { email_id: email_id }).then(r => {
 			let doc = r.message;
 

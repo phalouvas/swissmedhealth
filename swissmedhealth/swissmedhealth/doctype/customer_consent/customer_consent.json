@@ -1,12 +1,14 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "naming_series:",
  "creation": "2024-01-29 09:31:13.856656",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "naming_series",
   "gdpr_notice",
   "accept_registration",
   "column_break_cqqy5",
@@ -71,14 +73,27 @@
    "fieldname": "acceptance_date",
    "fieldtype": "Date",
    "label": "Date"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Series",
+   "options": "CUS-CON -.YYYY.-"
   }
  ],
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2024-01-29 09:38:10.135096",
+ "links": [
+  {
+   "link_doctype": "Lead",
+   "link_fieldname": "custom_customer_consent"
+  }
+ ],
+ "modified": "2024-01-29 14:59:51.976004",
  "modified_by": "Administrator",
  "module": "Swissmedhealth",
  "name": "Customer Consent",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {

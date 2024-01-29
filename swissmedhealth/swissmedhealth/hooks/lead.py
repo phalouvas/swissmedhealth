@@ -52,3 +52,37 @@ def after_insert(doc, method):
     dental_history.insert()
     doc.db_set('custom_dental_history', dental_history.name)
     doc.reload()
+
+def migrate_from_lead():
+	# Get all fieldnames of the Lead DocType
+	lead_meta = frappe.get_meta("Lead")
+	fieldnames = [field.fieldname for field in lead_meta.fields]
+	# Get all fieldnames that start with custom_
+	fieldnames = [fieldname for fieldname in fieldnames if fieldname.startswith("custom_")]
+	# remove custom_date from the list
+	fieldnames.remove("custom_date")
+
+	# Get all leads with all fields
+	leads = frappe.get_all("Lead", ["*"])
+
+	# for each lead
+	for lead in leads:
+		# if custom_customer_consent is empty
+		if not lead.get('custom_customer_consent'):
+			# create a new dental history document
+			customer_consent = frappe.new_doc("Customer Consent")
+			customer_consent.set("acceptance_date", lead.get("custom_date"))
+			# for each custom field
+			for fieldname in fieldnames:
+				# if the field is not empty
+				if lead.get(fieldname):		
+					# remove custom_ from the fieldname
+					fieldname_new = fieldname.replace("custom_", "")			
+					# assign the value of the field to the dental history document
+					customer_consent.set(fieldname_new, lead.get(fieldname))
+			# save the dental history document
+			customer_consent.insert(ignore_permissions=True)
+			# update the lead with the dental history document
+			frappe.db.set_value("Lead", lead.get('name'), "custom_customer_consent", customer_consent.name)
+			frappe.db.commit()		
+		
