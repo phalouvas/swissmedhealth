@@ -125,7 +125,7 @@ override_doctype_class = {
 
 doc_events = {
     "Lead": {
-        "before_insert": "swissmedhealth.swissmedhealth.hooks.lead.before_insert",
+        "after_save": "swissmedhealth.swissmedhealth.hooks.lead.after_save",
     }
 }
 

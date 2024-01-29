@@ -47,6 +47,8 @@ class Lead(OriginalLead):
 			)
             self.relative_contact_doc.save()
 
-
-def before_insert(doc, method):
-    pass
+def after_save(doc, method):
+        medical_history = frappe.new_doc("Medical History")
+        medical_history.insert()
+        doc.db_set('medical_history', medical_history.name)
+        doc.reload()
