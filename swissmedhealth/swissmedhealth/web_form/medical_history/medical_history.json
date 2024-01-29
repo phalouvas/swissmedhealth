@@ -1223,7 +1223,7 @@
    "fieldname": "custom_covid19_vaccination",
    "fieldtype": "Select",
    "hidden": 0,
-   "label": "Have you been vaccinated for Covid-19 in the last 60 days?",
+   "label": "Have you been vaccinated for Covid-19 in the last 6 Months?",
    "max_length": 0,
    "max_value": 0,
    "options": "No\nYes",
