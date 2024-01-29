@@ -51,7 +51,23 @@ def after_insert(doc, method):
     dental_history = frappe.new_doc("Dental History")
     dental_history.insert()
     doc.db_set('custom_dental_history', dental_history.name)
+
+    customer_consent = frappe.new_doc("Customer Consent")
+    customer_consent.insert()
+    doc.db_set('custom_customer_consent', customer_consent.name)
+
     doc.reload()
+
+# Hook: before delete
+def after_delete(doc, method):
+    # if custom_dental_history is not empty
+    if doc.get('custom_dental_history'):
+        # delete the dental history document
+        frappe.delete_doc("Dental History", doc.get('custom_dental_history'))
+    # if custom_customer_consent is not empty
+    if doc.get('custom_customer_consent'):
+        # delete the customer consent document
+        frappe.delete_doc("Customer Consent", doc.get('custom_customer_consent'))
 
 def migrate_from_lead():
 	# Get all fieldnames of the Lead DocType

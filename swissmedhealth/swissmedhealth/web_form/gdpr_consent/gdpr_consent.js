@@ -3,7 +3,7 @@ frappe.ready(function () {
 	let params = new URLSearchParams(window.location.search);
 	let email_id = params.get('email_id');
 	if (email_id) {
-		frappe.call('swissmedhealth.swissmedhealth.web_form.medical_history.medical_history.get_lead_details', { email_id: email_id }).then(r => {
+		frappe.call('swissmedhealth.swissmedhealth.web_form.gdpr_consent.gdpr_consent.get_customer_consent_details', { email_id: email_id }).then(r => {
 			let doc = r.message;
 			
 			// if (doc.custom_date) is empty set the current date
@@ -26,7 +26,7 @@ frappe.ready(function () {
 		// Prevent the default form submission
 		e.preventDefault();
 
-		frappe.call('swissmedhealth.swissmedhealth.web_form.medical_history.medical_history.save', { doc: frappe.web_form.doc }).then(() => {
+		frappe.call('swissmedhealth.swissmedhealth.web_form.gdpr_consent.gdpr_consent.save', { doc: frappe.web_form.doc }).then(() => {
 			frappe.msgprint({
 				title: __('Success'),
 				indicator: 'green',
