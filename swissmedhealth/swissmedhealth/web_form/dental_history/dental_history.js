@@ -3,7 +3,7 @@ frappe.ready(function () {
 	let params = new URLSearchParams(window.location.search);
 	let email_id = params.get('email_id');
 	if (email_id) {
-		frappe.call('swissmedhealth.swissmedhealth.web_form.medical_history.medical_history.get_lead_details', { email_id: email_id }).then(r => {
+		frappe.call('swissmedhealth.swissmedhealth.web_form.dental_history.dental_history.get_dental_history_details', { email_id: email_id }).then(r => {
 			let doc = r.message;
 
 			frappe.web_form.set_values(doc);
@@ -23,10 +23,10 @@ frappe.ready(function () {
 		// set custom_status to 'Documentation received'
 		frappe.web_form.doc.custom_status = 'Documentation received';
 
-		frappe.call('swissmedhealth.swissmedhealth.web_form.medical_history.medical_history.save', { doc: frappe.web_form.doc }).then(() => {
+		frappe.call('swissmedhealth.swissmedhealth.web_form.dental_history.dental_history.save', { doc: frappe.web_form.doc }).then(() => {
 			let params = new URLSearchParams(window.location.search);
 			let email_id = params.get('email_id');
-			window.location.href = '../lead-step-3/new?email_id=' + encodeURIComponent(email_id);
+			window.location.href = '../lead-step-4/new?email_id=' + encodeURIComponent(email_id);
 		}).catch((err) => {
 			frappe.msgprint({
 				title: __('Error'),

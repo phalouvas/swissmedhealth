@@ -441,8 +441,13 @@
   }
  ],
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2024-01-29 10:43:34.174922",
+ "links": [
+  {
+   "link_doctype": "Lead",
+   "link_fieldname": "custom_dental_history"
+  }
+ ],
+ "modified": "2024-01-29 11:55:35.209239",
  "modified_by": "Administrator",
  "module": "Swissmedhealth",
  "name": "Dental History",

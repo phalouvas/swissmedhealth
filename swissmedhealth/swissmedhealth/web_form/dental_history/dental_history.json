@@ -23,7 +23,7 @@
  "list_columns": [],
  "login_required": 0,
  "max_attachment_size": 0,
- "modified": "2024-01-29 10:51:46.629742",
+ "modified": "2024-01-29 11:53:10.799802",
  "modified_by": "Administrator",
  "module": "Swissmedhealth",
  "name": "dental-history",
@@ -246,19 +246,6 @@
   },
   {
    "allow_read_on_all_link_options": 0,
-   "fieldname": "periodontal_treatment",
-   "fieldtype": "Select",
-   "hidden": 0,
-   "label": "Periodontal treatment (Gum treatment)",
-   "max_length": 0,
-   "max_value": 0,
-   "options": "No\nYes\nDon't know",
-   "read_only": 0,
-   "reqd": 0,
-   "show_in_filter": 0
-  },
-  {
-   "allow_read_on_all_link_options": 0,
    "fieldname": "",
    "fieldtype": "Column Break",
    "hidden": 0,
@@ -266,6 +253,19 @@
    "max_length": 0,
    "max_value": 0,
    "options": "",
+   "read_only": 0,
+   "reqd": 0,
+   "show_in_filter": 0
+  },
+  {
+   "allow_read_on_all_link_options": 0,
+   "fieldname": "periodontal_treatment",
+   "fieldtype": "Select",
+   "hidden": 0,
+   "label": "Periodontal treatment (Gum treatment)",
+   "max_length": 0,
+   "max_value": 0,
+   "options": "No\nYes\nDon't know",
    "read_only": 0,
    "reqd": 0,
    "show_in_filter": 0
