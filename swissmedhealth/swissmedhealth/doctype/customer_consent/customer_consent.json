@@ -79,7 +79,7 @@
    "fieldtype": "Select",
    "hidden": 1,
    "label": "Series",
-   "options": "CUS-CON -.YYYY.-"
+   "options": "CUS-CON-.YYYY.-"
   }
  ],
  "index_web_pages_for_search": 1,
