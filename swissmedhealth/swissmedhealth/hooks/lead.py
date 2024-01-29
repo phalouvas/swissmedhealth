@@ -100,5 +100,21 @@ def migrate_from_lead():
 			customer_consent.insert(ignore_permissions=True)
 			# update the lead with the dental history document
 			frappe.db.set_value("Lead", lead.get('name'), "custom_customer_consent", customer_consent.name)
-			frappe.db.commit()		
-		
+			frappe.db.commit()
+			
+		if not lead.get('custom_medical_history'):
+			# create a new dental history document
+			medical_history = frappe.new_doc("Medical History")
+			# for each custom field
+			for fieldname in fieldnames:
+				# if the field is not empty
+				if lead.get(fieldname):		
+					# remove custom_ from the fieldname
+					fieldname_new = fieldname.replace("custom_", "")			
+					# assign the value of the field to the dental history document
+					medical_history.set(fieldname_new, lead.get(fieldname))
+			# save the dental history document
+			medical_history.insert(ignore_permissions=True)
+			# update the lead with the dental history document
+			frappe.db.set_value("Lead", lead.get('name'), "custom_medical_history", medical_history.name)
+			frappe.db.commit()

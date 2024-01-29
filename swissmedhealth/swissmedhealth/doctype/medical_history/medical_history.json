@@ -672,8 +672,13 @@
   }
  ],
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2024-01-29 18:30:15.374013",
+ "links": [
+  {
+   "link_doctype": "Lead",
+   "link_fieldname": "custom_medical_history"
+  }
+ ],
+ "modified": "2024-01-29 18:38:37.802024",
  "modified_by": "Administrator",
  "module": "Swissmedhealth",
  "name": "Medical History",
