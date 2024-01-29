@@ -1,12 +1,13 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "naming_series:",
  "creation": "2024-01-29 07:20:45.910149",
  "default_view": "List",
  "doctype": "DocType",
- "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "naming_series",
   "section_break_5ztfh",
   "amalgam_fillings",
   "amalgam_fillings_no",
@@ -431,14 +432,22 @@
   {
    "fieldname": "column_break_1jviv",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Series",
+   "options": "DNT-HIS-.YYYY.-"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-29 09:16:39.663817",
+ "modified": "2024-01-29 10:23:45.501013",
  "modified_by": "Administrator",
  "module": "Swissmedhealth",
  "name": "Dental History",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {
