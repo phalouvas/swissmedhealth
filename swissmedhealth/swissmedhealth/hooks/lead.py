@@ -48,6 +48,10 @@ class Lead(OriginalLead):
             self.relative_contact_doc.save()
 
 def after_insert(doc, method):
+    medical_history = frappe.new_doc("Medical History")
+    medical_history.insert(ignore_permissions=True)
+    doc.db_set('custom_medical_history', medical_history.name)
+
     dental_history = frappe.new_doc("Dental History")
     dental_history.insert(ignore_permissions=True)
     doc.db_set('custom_dental_history', dental_history.name)
