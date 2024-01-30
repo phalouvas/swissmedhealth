@@ -49,11 +49,11 @@ class Lead(OriginalLead):
 
 def after_insert(doc, method):
     dental_history = frappe.new_doc("Dental History")
-    dental_history.insert()
+    dental_history.insert(ignore_permissions=True)
     doc.db_set('custom_dental_history', dental_history.name)
 
     customer_consent = frappe.new_doc("Customer Consent")
-    customer_consent.insert()
+    customer_consent.insert(ignore_permissions=True)
     doc.db_set('custom_customer_consent', customer_consent.name)
 
     doc.reload()
