@@ -6,9 +6,9 @@ frappe.ready(function () {
 		frappe.call('swissmedhealth.swissmedhealth.web_form.gdpr_consent.gdpr_consent.get_customer_consent_details', { email_id: email_id }).then(r => {
 			let doc = r.message;
 			
-			// if (doc.custom_date) is empty set the current date
-			if (!doc.custom_date) {
-				doc.custom_date = frappe.datetime.nowdate();
+			// if (doc.acceptance_date) is empty set the current date
+			if (!doc.acceptance_date) {
+				doc.acceptance_date = frappe.datetime.nowdate();
 			}
 
 			// set the values in the form
