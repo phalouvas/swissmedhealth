@@ -1,12 +1,13 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "naming_series:",
  "creation": "2024-01-29 07:20:45.910149",
  "default_view": "List",
  "doctype": "DocType",
- "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "naming_series",
   "section_break_5ztfh",
   "amalgam_fillings",
   "amalgam_fillings_no",
@@ -50,13 +51,8 @@
   "use_floss",
   "use_dental_irrigator",
   "use_interdental_sticks",
-  "toothbrush_type",
-  "toothbrush_type_make",
-  "brush_duration",
-  "favorite_toothpaste",
   "column_break_r7aft",
   "oral_hygiene",
-  "column_break_8y8ns",
   "grind_night",
   "grind_stress",
   "jaw_joints_click",
@@ -65,10 +61,15 @@
   "know_bone_loss",
   "know_cavitation",
   "know_blotting_brushes",
+  "column_break_1jviv",
   "nervours_dental_treatment",
   "nervours_dental_treatmentnervours_dental_treatment_desc",
   "happy_teeth_appearance",
-  "happy_teeth_appearance_desc"
+  "happy_teeth_appearance_desc",
+  "toothbrush_type",
+  "toothbrush_type_make",
+  "favorite_toothpaste",
+  "brush_duration"
  ],
  "fields": [
   {
@@ -79,7 +80,6 @@
   {
    "fieldname": "amalgam_fillings",
    "fieldtype": "Select",
-   "in_list_view": 1,
    "label": "Amalgam fillings",
    "options": "No\nYes\nDon't know"
   },
@@ -301,7 +301,6 @@
    "options": "No\nYes"
   },
   {
-   "description": "Sometimes",
    "fieldname": "gums_bleed",
    "fieldtype": "Select",
    "label": "Do your gums bleed on brushing or flossing?",
@@ -430,16 +429,33 @@
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "column_break_8y8ns",
+   "fieldname": "column_break_1jviv",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Series",
+   "options": "DNT-HIS-.YYYY.-"
   }
  ],
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2024-01-29 08:34:28.229358",
+ "links": [
+  {
+   "link_doctype": "Lead",
+   "link_fieldname": "custom_dental_history"
+  },
+  {
+   "link_doctype": "Patient",
+   "link_fieldname": "custom_dental_history"
+  }
+ ],
+ "modified": "2024-01-30 07:41:29.337803",
  "modified_by": "Administrator",
  "module": "Swissmedhealth",
  "name": "Dental History",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {

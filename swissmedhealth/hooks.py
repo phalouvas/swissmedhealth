@@ -32,7 +32,6 @@ app_license = "MIT"
 doctype_js = {
     "Customer": "public/js/customer.js",
     "Lead": "public/js/lead.js",
-    "Patient": "public/js/patient.js",
     "CRM Activities": "public/js/crm_activities.js",
 }
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
@@ -125,7 +124,8 @@ override_doctype_class = {
 
 doc_events = {
     "Lead": {
-        "before_insert": "swissmedhealth.swissmedhealth.hooks.lead.before_insert",
+        "after_insert": "swissmedhealth.swissmedhealth.hooks.lead.after_insert",
+        "after_delete": "swissmedhealth.swissmedhealth.hooks.lead.after_delete",
     }
 }
 
