@@ -730,9 +730,13 @@
   {
    "link_doctype": "Lead",
    "link_fieldname": "custom_medical_history"
+  },
+  {
+   "link_doctype": "Patient",
+   "link_fieldname": "custom_medical_history"
   }
  ],
- "modified": "2024-01-30 07:05:44.962027",
+ "modified": "2024-01-30 07:40:37.689834",
  "modified_by": "Administrator",
  "module": "Swissmedhealth",
  "name": "Medical History",

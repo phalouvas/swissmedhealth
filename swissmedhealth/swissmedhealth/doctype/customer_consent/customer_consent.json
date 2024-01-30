@@ -87,9 +87,13 @@
   {
    "link_doctype": "Lead",
    "link_fieldname": "custom_customer_consent"
+  },
+  {
+   "link_doctype": "Patient",
+   "link_fieldname": "custom_customer_consent"
   }
  ],
- "modified": "2024-01-29 14:59:51.976004",
+ "modified": "2024-01-30 07:41:04.655512",
  "modified_by": "Administrator",
  "module": "Swissmedhealth",
  "name": "Customer Consent",

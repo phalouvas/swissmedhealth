@@ -445,9 +445,13 @@
   {
    "link_doctype": "Lead",
    "link_fieldname": "custom_dental_history"
+  },
+  {
+   "link_doctype": "Patient",
+   "link_fieldname": "custom_dental_history"
   }
  ],
- "modified": "2024-01-29 11:55:35.209239",
+ "modified": "2024-01-30 07:41:29.337803",
  "modified_by": "Administrator",
  "module": "Swissmedhealth",
  "name": "Dental History",
