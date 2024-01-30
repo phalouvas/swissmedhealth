@@ -68,6 +68,9 @@ def after_delete(doc, method):
     if doc.get('custom_customer_consent'):
         # delete the customer consent document
         frappe.delete_doc("Customer Consent", doc.get('custom_customer_consent'))
+    if doc.get('custom_medical_history'):
+        # delete the customer consent document
+        frappe.delete_doc("Medical History", doc.get('custom_medical_history'))
 
 def migrate_from_lead():
 	# Get all fieldnames of the Lead DocType
