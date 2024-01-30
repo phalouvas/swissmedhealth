@@ -23,7 +23,7 @@ frappe.ready(function () {
 		// set custom_status to 'Documentation received'
 		frappe.web_form.doc.custom_status = 'Documentation received';
 
-		frappe.call('swissmedhealth.swissmedhealth.web_form.medical_history.medical_history.save', { doc: frappe.web_form.doc }).then(() => {
+		frappe.call('swissmedhealth.swissmedhealth.web_form.medical_history.medical_history.save_medical_history', { doc: frappe.web_form.doc }).then(() => {
 			let params = new URLSearchParams(window.location.search);
 			let email_id = params.get('email_id');
 			window.location.href = '../lead-step-3/new?email_id=' + encodeURIComponent(email_id);
