@@ -381,7 +381,7 @@ frappe.ui.form.on("Lead", {
 				// where the email_id is the email address of the lead.
 				// The email address is passed as a parameter to the web form so that the email address is automatically
 				// filled in the email field of the web form.
-				let web_form_link = frappe.urllib.get_base_url() + "/lead-step-1/new?email_id=" + email_id;
+				let web_form_link = frappe.urllib.get_base_url() + "/patientonboarding/new?email_id=" + email_id;
 				frappe.msgprint(web_form_link, __("Web Medical History Form Link"));
 
 				// Copy the link to the clipboard
