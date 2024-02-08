@@ -12,7 +12,7 @@
  "apply_document_permissions": 0,
  "banner_image": "/files/registration-form.png",
  "breadcrumbs": "",
- "button_label": "Submit",
+ "button_label": "Next",
  "condition_json": "[]",
  "creation": "2024-01-12 09:17:44.038686",
  "currency": "EUR",
@@ -32,7 +32,7 @@
  "list_title": "Test",
  "login_required": 0,
  "max_attachment_size": 0,
- "modified": "2024-02-05 15:13:15.839011",
+ "modified": "2024-02-08 14:17:22.116600",
  "modified_by": "Administrator",
  "module": "Swissmedhealth",
  "name": "contact-us",
@@ -46,7 +46,7 @@
  "success_message": "Thank you for providing your contact information. We invite you to proceed with the next step of completing your medical information. Please click on the button below to continue. We appreciate your attention to these details, ensuring we can offer you the best possible service.",
  "success_title": "",
  "success_url": "",
- "title": "Welcome to Swissmed Health!",
+ "title": "New patient registration & medical history",
  "web_form_fields": [
   {
    "allow_read_on_all_link_options": 0,
