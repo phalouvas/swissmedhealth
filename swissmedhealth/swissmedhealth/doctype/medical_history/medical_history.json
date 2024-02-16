@@ -114,7 +114,8 @@
    "fieldtype": "Select",
    "hidden": 1,
    "label": "Series",
-   "options": "MED-HIS-.YYYY.-"
+   "options": "MED-HIS-.YYYY.-",
+   "print_hide": 1
   },
   {
    "fieldname": "symptoms",
@@ -736,7 +737,7 @@
    "link_fieldname": "custom_medical_history"
   }
  ],
- "modified": "2024-01-30 07:40:37.689834",
+ "modified": "2024-02-16 18:12:16.837733",
  "modified_by": "Administrator",
  "module": "Swissmedhealth",
  "name": "Medical History",

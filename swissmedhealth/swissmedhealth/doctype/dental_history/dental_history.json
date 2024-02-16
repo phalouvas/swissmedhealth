@@ -437,7 +437,8 @@
    "fieldtype": "Select",
    "hidden": 1,
    "label": "Series",
-   "options": "DNT-HIS-.YYYY.-"
+   "options": "DNT-HIS-.YYYY.-",
+   "print_hide": 1
   }
  ],
  "index_web_pages_for_search": 1,
@@ -451,7 +452,7 @@
    "link_fieldname": "custom_dental_history"
   }
  ],
- "modified": "2024-01-30 07:41:29.337803",
+ "modified": "2024-02-16 18:56:41.092587",
  "modified_by": "Administrator",
  "module": "Swissmedhealth",
  "name": "Dental History",
