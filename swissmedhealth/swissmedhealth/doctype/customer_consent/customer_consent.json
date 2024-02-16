@@ -79,7 +79,8 @@
    "fieldtype": "Select",
    "hidden": 1,
    "label": "Series",
-   "options": "CUS-CON-.YYYY.-"
+   "options": "CUS-CON-.YYYY.-",
+   "print_hide": 1
   }
  ],
  "index_web_pages_for_search": 1,
@@ -93,7 +94,7 @@
    "link_fieldname": "custom_customer_consent"
   }
  ],
- "modified": "2024-01-30 07:41:04.655512",
+ "modified": "2024-02-16 18:57:05.980696",
  "modified_by": "Administrator",
  "module": "Swissmedhealth",
  "name": "Customer Consent",

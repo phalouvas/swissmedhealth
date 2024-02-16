@@ -1,0 +1,13 @@
+{% set cus_doc = frappe.get_doc("Medical History", custom_medical_history) %}
+<div class="section-columns row">
+    {% for field in cus_doc.meta.fields %}
+    {% if field.print_hide == 0 and (field.label != None or cus_doc.get(field.fieldname) != None) %}
+    <div class="column col-6">
+        <div class="field">
+            <div class="label">{{ field.label }}</div>
+            <div class="value">{{ cus_doc.get(field.fieldname) }}</div>
+        </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+</div>
