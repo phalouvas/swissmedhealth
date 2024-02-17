@@ -1,0 +1,43 @@
+<h1>{{ doc.lead_name }}</h1>
+
+<h2>Medical History</h2>
+{% set medical_history_doc = frappe.get_doc("Medical History", custom_medical_history) %}
+{% set ns = namespace(counter=0) %}
+<table class="table page-break">
+{% for field in medical_history_doc.meta.fields %}
+    {% if field.print_hide == 0 and (field.label != None or medical_history_doc.get(field.fieldname) != None) %}
+        {% set ns.counter = ns.counter + 1 %}
+        {% if ns.counter is odd %}
+            <tr>
+        {% endif %}
+        <td>
+            <p><b>{{ field.label }}</b></p>
+            <p>{{ medical_history_doc.get(field.fieldname) }}</p>
+        </td>
+        {% if ns.counter is even or loop.last %}
+        </tr>
+        {% endif %}
+    {% endif %}
+{% endfor %}
+</table>
+
+<h2>Dental History</h2>
+{% set dental_history_doc = frappe.get_doc("Dental History", custom_dental_history) %}
+{% set ns = namespace(counter=0) %}
+<table class="table page-break>
+{% for field in dental_history_doc.meta.fields %}
+    {% if field.print_hide == 0 and (field.label != None or dental_history_doc.get(field.fieldname) != None) %}
+        {% set ns.counter = ns.counter + 1 %}
+        {% if ns.counter is odd %}
+            <tr>
+        {% endif %}
+        <td>
+            <p><b>{{ field.label }}</b></p>
+            <p>{{ dental_history_doc.get(field.fieldname) }}</p>
+        </td>
+        {% if ns.counter is even or loop.last %}
+        </tr>
+        {% endif %}
+    {% endif %}
+{% endfor %}
+</table>
