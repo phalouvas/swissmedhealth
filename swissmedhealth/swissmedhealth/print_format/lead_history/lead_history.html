@@ -24,7 +24,7 @@
 <h2>Dental History</h2>
 {% set dental_history_doc = frappe.get_doc("Dental History", custom_dental_history) %}
 {% set ns = namespace(counter=0) %}
-<table class="table page-break>
+<table class="table page-break">
 {% for field in dental_history_doc.meta.fields %}
     {% if field.print_hide == 0 and (field.label != None or dental_history_doc.get(field.fieldname) != None) %}
         {% set ns.counter = ns.counter + 1 %}
@@ -34,6 +34,27 @@
         <td>
             <p><b>{{ field.label }}</b></p>
             <p>{{ dental_history_doc.get(field.fieldname) }}</p>
+        </td>
+        {% if ns.counter is even or loop.last %}
+        </tr>
+        {% endif %}
+    {% endif %}
+{% endfor %}
+</table>
+
+<h2>Customer Consent</h2>
+{% set customer_consent_doc = frappe.get_doc("Customer Consent", custom_customer_consent) %}
+{% set ns = namespace(counter=0) %}
+<table class="table page-break">
+{% for field in customer_consent_doc.meta.fields %}
+    {% if field.print_hide == 0 and (field.label != None or customer_consent_doc.get(field.fieldname) != None) and field.label != "Signature" %}
+        {% set ns.counter = ns.counter + 1 %}
+        {% if ns.counter is odd %}
+            <tr>
+        {% endif %}
+        <td>
+            <p><b>{{ field.label }}</b></p>
+            <p>{{ customer_consent_doc.get(field.fieldname) }}</p>
         </td>
         {% if ns.counter is even or loop.last %}
         </tr>
