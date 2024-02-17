@@ -73,7 +73,7 @@
 <h2>Customer Consent</h2>
 {% set customer_consent_doc = frappe.get_doc("Customer Consent", custom_customer_consent) %}
 {% set ns = namespace(counter=0) %}
-<table class="table page-break">
+<table class="table">
     {% for field in customer_consent_doc.meta.fields %}
     {% if field.print_hide == 0 and (field.label != None or customer_consent_doc.get(field.fieldname) != None) and
     field.label != "Signature" %}
@@ -91,3 +91,16 @@
     {% endif %}
     {% endfor %}
 </table>
+
+<footer>
+    <hr>
+    <p class="text-center">
+        <small class="text-muted">
+            Cyprus | Qatar | USA
+        </small>
+        <br>
+        <small class="text-muted">
+            Tel: 800 70 900 | +357 25 010 200 | email: info@swissmedhealth.com | www.swissmedhealth.com
+        </small>
+    </p>
+</footer>
