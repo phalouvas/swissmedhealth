@@ -199,7 +199,8 @@
   },
   {
    "fieldname": "column_break_r1yxf",
-   "fieldtype": "Column Break"
+   "fieldtype": "Column Break",
+   "print_hide": 1
   },
   {
    "default": "None",
@@ -737,7 +738,7 @@
    "link_fieldname": "custom_medical_history"
   }
  ],
- "modified": "2024-02-16 18:12:16.837733",
+ "modified": "2024-02-17 07:08:55.611021",
  "modified_by": "Administrator",
  "module": "Swissmedhealth",
  "name": "Medical History",
