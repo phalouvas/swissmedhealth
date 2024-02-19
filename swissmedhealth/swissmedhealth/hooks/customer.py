@@ -31,7 +31,8 @@ def _make_patient(source_name, target_doc=None, ignore_permissions=False):
 					"first_name": "first_name",
 					"middle_name": "middle_name",
 					"last_name": "last_name",
-					"gender": "sex",                    
+					"gender": "sex",        
+					"custom_dob": "dob",           
 				},
 				"field_no_map": ["disabled"],
 			}
