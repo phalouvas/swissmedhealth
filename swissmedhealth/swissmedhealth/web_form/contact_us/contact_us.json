@@ -33,7 +33,7 @@
  "list_title": "Test",
  "login_required": 0,
  "max_attachment_size": 0,
- "modified": "2024-02-09 09:23:59.988103",
+ "modified": "2024-02-19 08:50:30.974068",
  "modified_by": "Administrator",
  "module": "Swissmedhealth",
  "name": "contact-us",
@@ -49,6 +49,20 @@
  "success_url": "",
  "title": "New patient registration & medical history",
  "web_form_fields": [
+  {
+   "allow_read_on_all_link_options": 0,
+   "default": "My self",
+   "fieldname": "custom_contact_relative",
+   "fieldtype": "Select",
+   "hidden": 0,
+   "label": "I am requesting information for",
+   "max_length": 0,
+   "max_value": 0,
+   "options": "My self\nFor relative",
+   "read_only": 0,
+   "reqd": 1,
+   "show_in_filter": 0
+  },
   {
    "allow_read_on_all_link_options": 0,
    "default": "From online form",
@@ -188,33 +202,6 @@
    "max_length": 0,
    "max_value": 0,
    "options": "Country",
-   "read_only": 0,
-   "reqd": 1,
-   "show_in_filter": 0
-  },
-  {
-   "allow_read_on_all_link_options": 0,
-   "fieldname": "",
-   "fieldtype": "Section Break",
-   "hidden": 0,
-   "label": "",
-   "max_length": 0,
-   "max_value": 0,
-   "options": "",
-   "read_only": 0,
-   "reqd": 0,
-   "show_in_filter": 0
-  },
-  {
-   "allow_read_on_all_link_options": 0,
-   "default": "My self",
-   "fieldname": "custom_contact_relative",
-   "fieldtype": "Select",
-   "hidden": 0,
-   "label": "I am requesting information for",
-   "max_length": 0,
-   "max_value": 0,
-   "options": "My self\nFor relative",
    "read_only": 0,
    "reqd": 1,
    "show_in_filter": 0
@@ -369,6 +356,18 @@
    "options": "",
    "read_only": 0,
    "reqd": 0,
+   "show_in_filter": 0
+  },
+  {
+   "allow_read_on_all_link_options": 0,
+   "fieldname": "custom_dob",
+   "fieldtype": "Date",
+   "hidden": 0,
+   "label": "Date of birth",
+   "max_length": 0,
+   "max_value": 0,
+   "read_only": 0,
+   "reqd": 1,
    "show_in_filter": 0
   },
   {
