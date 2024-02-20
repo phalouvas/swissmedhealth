@@ -250,7 +250,8 @@
   {
    "fieldname": "heading_1",
    "fieldtype": "Heading",
-   "label": "Do you have or have you ever suffered from?"
+   "label": "Do you have or have you ever suffered from?",
+   "print_hide": 1
   },
   {
    "default": "No",
@@ -364,7 +365,8 @@
   {
    "fieldname": "heading_2",
    "fieldtype": "Heading",
-   "label": "Do you have problems with?"
+   "label": "Do you have problems with?",
+   "print_hide": 1
   },
   {
    "default": "No",
@@ -471,7 +473,8 @@
   {
    "fieldname": "heading_3",
    "fieldtype": "Heading",
-   "label": "If the answer is YES to any of the following questions, please provide details in space provided"
+   "label": "If the answer is YES to any of the following questions, please provide details in space provided",
+   "print_hide": 1
   },
   {
    "default": "No",
@@ -738,7 +741,7 @@
    "link_fieldname": "custom_medical_history"
   }
  ],
- "modified": "2024-02-17 07:08:55.611021",
+ "modified": "2024-02-20 18:11:04.674245",
  "modified_by": "Administrator",
  "module": "Swissmedhealth",
  "name": "Medical History",

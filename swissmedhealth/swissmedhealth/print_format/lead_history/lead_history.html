@@ -39,8 +39,12 @@
     <tr>
         {% endif %}
         <td>
-            <p><b>{{ field.label }}</b></p>
+            <p>{{ field.label }}</p>
+            {% if medical_history_doc.get(field.fieldname) == "Yes" %}
+            <p><strong>Yes</strong></p>
+            {% else %}
             <p>{{ medical_history_doc.get(field.fieldname) }}</p>
+            {% endif %}
         </td>
         {% if ns.counter is even or loop.last %}
     </tr>
@@ -60,8 +64,12 @@
     <tr>
         {% endif %}
         <td>
-            <p><b>{{ field.label }}</b></p>
+            <p>{{ field.label }}</p>
+            {% if dental_history_doc.get(field.fieldname) == "Yes" %}
+            <p><strong>Yes</strong></p>
+            {% else %}
             <p>{{ dental_history_doc.get(field.fieldname) }}</p>
+            {% endif %}
         </td>
         {% if ns.counter is even or loop.last %}
     </tr>
@@ -82,7 +90,7 @@
     <tr>
         {% endif %}
         <td>
-            <p><b>{{ field.label }}</b></p>
+            <p>{{ field.label }}</p>
             <p>{{ customer_consent_doc.get(field.fieldname) }}</p>
         </td>
         {% if ns.counter is even or loop.last %}
