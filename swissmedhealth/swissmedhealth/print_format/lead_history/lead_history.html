@@ -29,7 +29,7 @@
 </table>
 
 <h2>Medical History</h2>
-{% set medical_history_doc = frappe.get_doc("Medical History", custom_medical_history) %}
+{% set medical_history_doc = frappe.get_doc("Medical History", doc.custom_medical_history) %}
 {% set ns = namespace(counter=0) %}
 <table class="table page-break">
     {% for field in medical_history_doc.meta.fields %}
@@ -54,7 +54,7 @@
 </table>
 
 <h2>Dental History</h2>
-{% set dental_history_doc = frappe.get_doc("Dental History", custom_dental_history) %}
+{% set dental_history_doc = frappe.get_doc("Dental History", doc.custom_dental_history) %}
 {% set ns = namespace(counter=0) %}
 <table class="table page-break">
     {% for field in dental_history_doc.meta.fields %}
@@ -79,7 +79,7 @@
 </table>
 
 <h2>Customer Consent</h2>
-{% set customer_consent_doc = frappe.get_doc("Customer Consent", custom_customer_consent) %}
+{% set customer_consent_doc = frappe.get_doc("Customer Consent", doc.custom_customer_consent) %}
 {% set ns = namespace(counter=0) %}
 <table class="table">
     {% for field in customer_consent_doc.meta.fields %}
