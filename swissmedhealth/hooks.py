@@ -126,7 +126,10 @@ doc_events = {
     "Lead": {
         "after_insert": "swissmedhealth.swissmedhealth.hooks.lead.after_insert",
         "after_delete": "swissmedhealth.swissmedhealth.hooks.lead.after_delete",
-    }
+    },
+    "Customer": {
+        "before_insert": "swissmedhealth.swissmedhealth.hooks.customer.before_insert",
+    },
 }
 
 # Scheduled Tasks
