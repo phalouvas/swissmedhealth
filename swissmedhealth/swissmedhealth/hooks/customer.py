@@ -43,3 +43,10 @@ def _make_patient(source_name, target_doc=None, ignore_permissions=False):
 	)
 
 	return doclist
+
+def before_insert(doc, method):
+	if doc.lead_name:
+		# Get the custom_sales_partner and custom_commision_rate from the lead
+		doc.default_sales_partner = frappe.db.get_value("Lead", doc.lead_name, "custom_sales_partner")
+		doc.default_commission_rate = frappe.db.get_value("Lead", doc.lead_name, "custom_commission_rate")
+			
