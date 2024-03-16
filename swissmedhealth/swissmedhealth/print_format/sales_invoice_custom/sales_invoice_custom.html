@@ -63,7 +63,7 @@
 
     <div class="row">
         <div class="col-xs-12">
-            <table class="sales-invoice-table table-min-height">
+            <table class="sales-invoice-table">
                 <thead>
                     <tr class="border-bottom">
                         <th class="text-center">{{_("Item Code")}}</th>
@@ -136,7 +136,7 @@
                             <b>{{ row.rate }}</b>
                         </td>
                         <td class="text-right">
-                            <b>{{ row.total - row.tax_amount_after_discount_amount }} </b>
+                            <b>{{ frappe.format(row.total - row.tax_amount_after_discount_amount, 'Float') }}</b>
                         </td>
                         <td class="text-right">
                             <b>{{ row.tax_amount_after_discount_amount }}</b>
@@ -159,23 +159,14 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class=" border-bottom">
-                        <td class="text-center
-                            {% if doc.total < 0 %}
-                                text-danger
-                            {% endif %}">
-                            <b>{{ doc.net_total - doc.discount_amount }}</b>
+                    <tr class="border-bottom">
+                        <td class="text-center">
+                            <b>{{ frappe.format(doc.net_total - doc.discount_amount, 'Float') }}</b>
                         </td>
-                        <td class="text-center
-                            {% if doc.total < 0 %}
-                                text-center
-                            {% endif %}">
+                        <td class="text-center">
                             <b>{{ doc.discount_amount }}</b>
                         </td>
-                        <td class="text-right
-                            {% if doc.total < 0 %}
-                                text-danger
-                            {% endif %}">
+                        <td class="text-right">
                             <b>{{ doc.net_total }}</b>
                         </td>
                     </tr>     
