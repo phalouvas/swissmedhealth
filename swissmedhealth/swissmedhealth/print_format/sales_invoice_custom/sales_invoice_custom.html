@@ -63,9 +63,9 @@
 
     <div class="row">
         <div class="col-xs-12">
-            <table class="table table-bordered">
+            <table class="sales-invoice-table table-min-height">
                 <thead>
-                    <tr>
+                    <tr class="border-bottom">
                         <th class="text-center">{{_("Item Code")}}</th>
                         <th class="text-center">{{_("Description")}}</th>
                         <th class="text-center">{{_("Qty")}}</th>
@@ -107,19 +107,68 @@
                         </tr>
                         {% set total = total + row.amount %}
                     {% endfor %}
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <td colspan="5" class="text-right"><b>{{_("Total")}}</b></td>
-                        <td class="text-right
-                            {% if total < 0 %}
-                                text-danger
-                            {% endif %}">
-                            {{ total }}
-                        </td>
-                    </tr>
-                </tfoot>
+                </tbody>                
             </table>
         </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-6">
+            <div>
+                <b>{{_("Total")}}: {{ total }}</b>
+            </div>
+        </div>
+        <div class="col-xs-6">
+            <table class="sales-invoice-table">
+                <thead>
+                    <tr class="border-bottom">
+                        <th colspan="3" class="text-center">{{ _("INVOICE SUMMARY") }}</th>
+                    </tr>
+                    <tr class="border-bottom">
+                        <th class="text-center">{{_("Gross Amount")}}</th>
+                        <th class="text-center">{{_("Discount Amount")}}</th>
+                        <th class="text-center">{{_("Amount")}}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class=" border-bottom">
+                        <td class="text-center
+                            {% if doc.total < 0 %}
+                                text-danger
+                            {% endif %}">
+                            <b>{{ doc.net_total - doc.discount_amount }}</b>
+                        </td>
+                        <td class="text-center
+                            {% if doc.total < 0 %}
+                                text-center
+                            {% endif %}">
+                            <b>{{ doc.discount_amount }}</b>
+                        </td>
+                        <td class="text-right
+                            {% if doc.total < 0 %}
+                                text-danger
+                            {% endif %}">
+                            <b>{{ doc.net_total }}</b>
+                        </td>
+                    </tr>     
+                    <tr>
+                        <th colspan="2" class="text-center">
+                            <b>{{_("Vat Amount")}}</b>
+                        </th>
+                        <td class="text-right border-bottom">
+                            <b>{{ doc.total_taxes_and_charges }}</b>
+                        </td>                        
+                    </tr>   
+                    <tr>
+                        <th colspan="2" class="text-center">
+                            <b>{{_("Total Amount")}}</b>
+                        </th>
+                        <td class="text-right">
+                            <b>{{ doc.grand_total }}</b>
+                        </td>                        
+                    </tr>              
+                </tbody>
+            </table>
+        </div>        
     </div>
 </div>
