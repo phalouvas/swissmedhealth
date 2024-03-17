@@ -83,16 +83,10 @@
                             <td class="text-right">{{ row.item_code }}</td>
                             <td class="text-right">{{ row.description }}</td>
                             <td class="text-right">{{ row.qty }}</td>
-                            <td class="text-right
-                                {% if row.rate < 0 %}
-                                    text-danger
-                                {% endif %}">
+                            <td class="text-right">
                                 {{ row.price_list_rate }}
                             </td>
-                            <td class="text-right
-                                {% if row.amount < 0 %}
-                                    text-danger
-                                {% endif %}">
+                            <td class="text-right">
                                 {{ row.qty *  row.price_list_rate }}
                             </td>
                             <td class="text-right">
@@ -104,6 +98,19 @@
                             <td class="text-right">
                                 {{ row.amount }}
                             </td>
+                        </tr>
+                    {% endfor %}
+                    {% set row_count = sales_invoice_table|length %}
+                    {% for i in range(4 - row_count) %}
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
                         </tr>
                     {% endfor %}
                 </tbody>                
