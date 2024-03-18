@@ -77,7 +77,6 @@
                     </tr>
                 </thead>
                 <tbody>
-                    {% set total = 0 %}
                     {% for row in doc.items %}
                         <tr>
                             <td class="text-right">{{ row.item_code }}</td>
@@ -100,8 +99,8 @@
                             </td>
                         </tr>
                     {% endfor %}
-                    {% set row_count = sales_invoice_table|length %}
-                    {% for i in range(4 - row_count) %}
+                    {% set row_count = doc.items|length %}
+                    {% for i in range(6 - row_count) %}
                         <tr>
                             <td>&nbsp;</td>
                             <td>&nbsp;</td>
@@ -150,8 +149,8 @@
                         </td>
                     </tr>
                     {% endfor %}
-                    {% set row_count = sales_invoice_table|length %}
-                    {% for i in range(1 - row_count) %}
+                    {% set row_count = doc.taxes|length %}
+                    {% for i in range(3 - row_count) %}
                         <tr>
                             <td>&nbsp;</td>
                             <td>&nbsp;</td>
