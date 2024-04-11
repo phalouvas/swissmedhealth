@@ -809,13 +809,23 @@ line-height:115%'>&nbsp;</span></p>
             <td width=73 valign=top style='width:54.85pt;border-top:none;border-left:
   none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
   padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>YES</span>
+                <p class=MsoNormal align=center style='text-align:center'>
+                    {% if medical_history_doc.excessive_bleeding == "Yes" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>YES</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>YES</span>
+                    {% endif %}
                 </p>
             </td>
             <td width=82 colspan=2 valign=top style='width:61.4pt;border-top:none;
   border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
   padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>NO</span>
+                <p class=MsoNormal align=center style='text-align:center'>
+                    {% if medical_history_doc.excessive_bleeding == "No" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>NO</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>NO</span>
+                    {% endif %}
                 </p>
             </td>
             <td width=162 valign=top style='width:121.3pt;border-top:none;border-left:
@@ -823,16 +833,26 @@ line-height:115%'>&nbsp;</span></p>
   padding:0in 5.4pt 0in 5.4pt'>
                 <p class=MsoNormal><span style='font-size:11.0pt'>Prostate</span></p>
             </td>
-            <td width=111 valign=top style='width:83.25pt;border-top:none;border-left:
+            <td width=73 valign=top style='width:54.85pt;border-top:none;border-left:
   none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
   padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>YES</span>
+                <p class=MsoNormal align=center style='text-align:center'>
+                    {% if medical_history_doc.prostate == "Yes" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>YES</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>YES</span>
+                    {% endif %}
                 </p>
             </td>
-            <td width=104 valign=top style='width:78.25pt;border-top:none;border-left:
-  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+            <td width=82 colspan=2 valign=top style='width:61.4pt;border-top:none;
+  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
   padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>NO</span>
+                <p class=MsoNormal align=center style='text-align:center'>
+                    {% if medical_history_doc.prostate == "No" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>NO</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>NO</span>
+                    {% endif %}
                 </p>
             </td>
         </tr>
@@ -844,13 +864,23 @@ line-height:115%'>&nbsp;</span></p>
             <td width=73 valign=top style='width:54.85pt;border-top:none;border-left:
   none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
   padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>YES</span>
+                <p class=MsoNormal align=center style='text-align:center'>
+                    {% if medical_history_doc.fainting_attacks == "Yes" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>YES</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>YES</span>
+                    {% endif %}
                 </p>
             </td>
             <td width=82 colspan=2 valign=top style='width:61.4pt;border-top:none;
   border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
   padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>NO</span>
+                <p class=MsoNormal align=center style='text-align:center'>
+                    {% if medical_history_doc.fainting_attacks == "No" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>NO</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>NO</span>
+                    {% endif %}
                 </p>
             </td>
             <td width=162 valign=top style='width:121.3pt;border-top:none;border-left:
@@ -858,16 +888,26 @@ line-height:115%'>&nbsp;</span></p>
   padding:0in 5.4pt 0in 5.4pt'>
                 <p class=MsoNormal><span style='font-size:11.0pt'>Spleen</span></p>
             </td>
-            <td width=111 valign=top style='width:83.25pt;border-top:none;border-left:
+            <td width=73 valign=top style='width:54.85pt;border-top:none;border-left:
   none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
   padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>YES</span>
+                <p class=MsoNormal align=center style='text-align:center'>
+                    {% if medical_history_doc.spleen == "Yes" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>YES</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>YES</span>
+                    {% endif %}
                 </p>
             </td>
-            <td width=104 valign=top style='width:78.25pt;border-top:none;border-left:
-  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+            <td width=82 colspan=2 valign=top style='width:61.4pt;border-top:none;
+  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
   padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>NO</span>
+                <p class=MsoNormal align=center style='text-align:center'>
+                    {% if medical_history_doc.spleen == "No" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>NO</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>NO</span>
+                    {% endif %}
                 </p>
             </td>
         </tr>
@@ -879,13 +919,23 @@ line-height:115%'>&nbsp;</span></p>
             <td width=73 valign=top style='width:54.85pt;border-top:none;border-left:
   none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
   padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>YES</span>
+                <p class=MsoNormal align=center style='text-align:center'>
+                    {% if medical_history_doc.heart_complaint == "Yes" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>YES</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>YES</span>
+                    {% endif %}
                 </p>
             </td>
             <td width=82 colspan=2 valign=top style='width:61.4pt;border-top:none;
   border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
   padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>NO</span>
+                <p class=MsoNormal align=center style='text-align:center'>
+                    {% if medical_history_doc.heart_complaint == "No" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>NO</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>NO</span>
+                    {% endif %}
                 </p>
             </td>
             <td width=162 valign=top style='width:121.3pt;border-top:none;border-left:
@@ -893,16 +943,26 @@ line-height:115%'>&nbsp;</span></p>
   padding:0in 5.4pt 0in 5.4pt'>
                 <p class=MsoNormal><span style='font-size:11.0pt'>Stomach</span></p>
             </td>
-            <td width=111 valign=top style='width:83.25pt;border-top:none;border-left:
+            <td width=73 valign=top style='width:54.85pt;border-top:none;border-left:
   none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
   padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>YES</span>
+                <p class=MsoNormal align=center style='text-align:center'>
+                    {% if medical_history_doc.stomach == "Yes" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>YES</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>YES</span>
+                    {% endif %}
                 </p>
             </td>
-            <td width=104 valign=top style='width:78.25pt;border-top:none;border-left:
-  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+            <td width=82 colspan=2 valign=top style='width:61.4pt;border-top:none;
+  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
   padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>NO</span>
+                <p class=MsoNormal align=center style='text-align:center'>
+                    {% if medical_history_doc.stomach == "No" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>NO</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>NO</span>
+                    {% endif %}
                 </p>
             </td>
         </tr>
@@ -914,13 +974,23 @@ line-height:115%'>&nbsp;</span></p>
             <td width=73 valign=top style='width:54.85pt;border-top:none;border-left:
   none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
   padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>YES</span>
+                <p class=MsoNormal align=center style='text-align:center'>
+                    {% if medical_history_doc.heart_surgery == "Yes" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>YES</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>YES</span>
+                    {% endif %}
                 </p>
             </td>
             <td width=82 colspan=2 valign=top style='width:61.4pt;border-top:none;
   border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
   padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>NO</span>
+                <p class=MsoNormal align=center style='text-align:center'>
+                    {% if medical_history_doc.heart_surgery == "No" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>NO</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>NO</span>
+                    {% endif %}
                 </p>
             </td>
             <td width=162 valign=top style='width:121.3pt;border-top:none;border-left:
@@ -928,16 +998,26 @@ line-height:115%'>&nbsp;</span></p>
   padding:0in 5.4pt 0in 5.4pt'>
                 <p class=MsoNormal><span style='font-size:11.0pt'>Thyroid</span></p>
             </td>
-            <td width=111 valign=top style='width:83.25pt;border-top:none;border-left:
+            <td width=73 valign=top style='width:54.85pt;border-top:none;border-left:
   none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
   padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>YES</span>
+                <p class=MsoNormal align=center style='text-align:center'>
+                    {% if medical_history_doc.thyroid == "Yes" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>YES</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>YES</span>
+                    {% endif %}
                 </p>
             </td>
-            <td width=104 valign=top style='width:78.25pt;border-top:none;border-left:
-  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+            <td width=82 colspan=2 valign=top style='width:61.4pt;border-top:none;
+  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
   padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>NO</span>
+                <p class=MsoNormal align=center style='text-align:center'>
+                    {% if medical_history_doc.thyroid == "No" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>NO</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>NO</span>
+                    {% endif %}
                 </p>
             </td>
         </tr>
@@ -949,13 +1029,23 @@ line-height:115%'>&nbsp;</span></p>
             <td width=73 valign=top style='width:54.85pt;border-top:none;border-left:
   none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
   padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>YES</span>
+                <p class=MsoNormal align=center style='text-align:center'>
+                    {% if medical_history_doc.hepatitis == "Yes" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>YES</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>YES</span>
+                    {% endif %}
                 </p>
             </td>
             <td width=82 colspan=2 valign=top style='width:61.4pt;border-top:none;
   border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
   padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>NO</span>
+                <p class=MsoNormal align=center style='text-align:center'>
+                    {% if medical_history_doc.hepatitis == "No" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>NO</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>NO</span>
+                    {% endif %}
                 </p>
             </td>
             <td width=162 valign=top style='width:121.3pt;border-top:none;border-left:
@@ -963,16 +1053,26 @@ line-height:115%'>&nbsp;</span></p>
   padding:0in 5.4pt 0in 5.4pt'>
                 <p class=MsoNormal><span style='font-size:11.0pt'>Uro-genital system</span></p>
             </td>
-            <td width=111 valign=top style='width:83.25pt;border-top:none;border-left:
+            <td width=73 valign=top style='width:54.85pt;border-top:none;border-left:
   none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
   padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>YES</span>
+                <p class=MsoNormal align=center style='text-align:center'>
+                    {% if medical_history_doc.urogenital_system == "Yes" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>YES</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>YES</span>
+                    {% endif %}
                 </p>
             </td>
-            <td width=104 valign=top style='width:78.25pt;border-top:none;border-left:
-  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+            <td width=82 colspan=2 valign=top style='width:61.4pt;border-top:none;
+  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
   padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>NO</span>
+                <p class=MsoNormal align=center style='text-align:center'>
+                    {% if medical_history_doc.urogenital_system == "No" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>NO</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>NO</span>
+                    {% endif %}
                 </p>
             </td>
         </tr>
