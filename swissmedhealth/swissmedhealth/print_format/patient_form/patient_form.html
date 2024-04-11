@@ -17,24 +17,28 @@
     <p class=MsoNormal style='margin-right:-.2in;text-align:justify'><b><i><span
                     style='font-size:11.0pt;color:#0070C0'>&nbsp;</span></i></b></p>
 
+    {% set details_doc = doc %}
+    {% set medical_history_doc = frappe.get_doc("Medical History", doc.custom_medical_history) %}
+    {% set dental_history_doc = frappe.get_doc("Dental History", doc.custom_dental_history) %}
+    {% set customer_consent_doc = frappe.get_doc("Customer Consent", doc.custom_customer_consent) %}
     <table>
         <tr>
             <td width=354 valign=top style='width:265.5pt;border:solid black 1.0pt;
   padding:0in 5.4pt 0in 5.4pt'>
                 <p class=MsoNormal style='line-height:115%'><span style='font-size:11.0pt;
-  line-height:115%'>Date:</span></p>
+  line-height:115%'>Date: <span class="text-primary">{{ customer_consent_doc.acceptance_date }}</span></span></p>
             </td>
             <td width=372 valign=top style='width:279.0pt;border:solid black 1.0pt;
   border-left:none;padding:0in 5.4pt 0in 5.4pt'>
                 <p class=MsoNormal style='line-height:115%'><span style='font-size:11.0pt;
-  line-height:115%'>Title (Mr/Mrs/Miss/Other):</span></p>
+  line-height:115%'>Title (Mr/Mrs/Miss/Other): <span class="text-primary">{{ doc.salutation }}</span></span></p>
             </td>
         </tr>
         <tr>
             <td width=354 valign=top style='width:265.5pt;border:solid black 1.0pt;
   border-top:none;padding:0in 5.4pt 0in 5.4pt'>
                 <p class=MsoNormal style='line-height:115%'><span style='font-size:11.0pt;
-  line-height:115%'>Surname:</span></p>
+  line-height:115%'>Surname: <span class="text-primary">{{ doc.last_name }}</span></p>
                 <p class=MsoNormal style='line-height:115%'><span style='font-size:11.0pt;
   line-height:115%'>&nbsp;</span></p>
             </td>
@@ -42,21 +46,21 @@
   none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
   padding:0in 5.4pt 0in 5.4pt'>
                 <p class=MsoNormal style='line-height:115%'><span style='font-size:11.0pt;
-  line-height:115%'>First Name:</span></p>
+  line-height:115%'>First Name: <span class="text-primary">{{ doc.first_name }}</span></p>
             </td>
         </tr>
         <tr>
             <td width=726 colspan=2 valign=top style='width:544.5pt;border:solid black 1.0pt;
   border-top:none;padding:0in 5.4pt 0in 5.4pt'>
                 <p class=MsoNormal style='line-height:115%'><span style='font-size:11.0pt;
-  line-height:115%'>ID/ Passport no:</span></p>
+  line-height:115%'>ID/ Passport no: <span class="text-primary">{{ doc.custom_national_id }}</span></p>
             </td>
         </tr>
         <tr>
             <td width=726 colspan=2 valign=top style='width:544.5pt;border:solid black 1.0pt;
   border-top:none;padding:0in 5.4pt 0in 5.4pt'>
                 <p class=MsoNormal style='line-height:115%'><span style='font-size:11.0pt;
-  line-height:115%'>Address:</span></p>
+  line-height:115%'>Address: </span></p>
                 <p class=MsoNormal style='line-height:115%'><span style='font-size:11.0pt;
   line-height:115%'>&nbsp;</span></p>
             </td>
@@ -71,20 +75,20 @@
   none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
   padding:0in 5.4pt 0in 5.4pt'>
                 <p class=MsoNormal style='line-height:115%'><span style='font-size:11.0pt;
-  line-height:115%'>Date of Birth: </span></p>
+  line-height:115%'>Date of Birth: <span class="text-primary">{{ doc.custom_dob }}</span></span></p>
             </td>
         </tr>
         <tr>
             <td width=354 valign=top style='width:265.5pt;border:solid black 1.0pt;
   border-top:none;padding:0in 5.4pt 0in 5.4pt'>
                 <p class=MsoNormal style='line-height:115%'><span style='font-size:11.0pt;
-  line-height:115%'>Occupation: </span></p>
+  line-height:115%'>Occupation: <span class="text-primary">{{ doc.custom_occupation }}</span></span></p>
             </td>
             <td width=372 valign=top style='width:279.0pt;border-top:none;border-left:
   none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
   padding:0in 5.4pt 0in 5.4pt'>
                 <p class=MsoNormal style='line-height:115%'><span style='font-size:11.0pt;
-  line-height:115%'>Nationality: </span></p>
+  line-height:115%'>Nationality: <span class="text-primary">{{ doc.country }}</span></span></p>
             </td>
         </tr>
         <tr>
@@ -119,27 +123,27 @@
             <td width=726 colspan=2 valign=top style='width:544.5pt;border:solid black 1.0pt;
   border-top:none;padding:0in 5.4pt 0in 5.4pt'>
                 <p class=MsoNormal style='line-height:115%'><span style='font-size:11.0pt;
-  line-height:115%'>Email address: </span></p>
+  line-height:115%'>Email address: <span class="text-primary">{{ doc.email_id }}</span></span></p>
             </td>
         </tr>
         <tr>
             <td width=354 valign=top style='width:265.5pt;border:solid black 1.0pt;
   border-top:none;padding:0in 5.4pt 0in 5.4pt'>
                 <p class=MsoNormal style='line-height:115%'><span style='font-size:11.0pt;
-  line-height:115%'>Home tel no: </span></p>
+  line-height:115%'>Home tel no: <span class="text-primary">{{ doc.phone }}</span></span></p>
             </td>
             <td width=372 valign=top style='width:279.0pt;border-top:none;border-left:
   none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
   padding:0in 5.4pt 0in 5.4pt'>
                 <p class=MsoNormal style='line-height:115%'><span style='font-size:11.0pt;
-  line-height:115%'>Mobile: </span></p>
+  line-height:115%'>Mobile: <span class="text-primary">{{ doc.mobile_no }}</span></span></p>
             </td>
         </tr>
         <tr>
             <td width=354 valign=top style='width:265.5pt;border:solid black 1.0pt;
   border-top:none;padding:0in 5.4pt 0in 5.4pt'>
                 <p class=MsoNormal style='line-height:115%'><span style='font-size:11.0pt;
-  line-height:115%'>Work tel no:</span></p>
+  line-height:115%'>Work tel no: <span class="text-primary">{{ doc.phone_ext }}</span></span></p>
             </td>
             <td width=372 valign=top style='width:279.0pt;border-top:none;border-left:
   none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
