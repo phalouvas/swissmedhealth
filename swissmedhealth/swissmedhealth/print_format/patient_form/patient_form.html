@@ -50,26 +50,10 @@
             </td>
         </tr>
         <tr>
-            <td width=726 colspan=2 valign=top style='width:544.5pt;border:solid black 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal style='line-height:115%'><span style='font-size:11.0pt;
-  line-height:115%'>ID/ Passport no: <span class="text-primary">{{ doc.custom_national_id or '' }}</span></p>
-            </td>
-        </tr>
-        <tr>
-            <td width=726 colspan=2 valign=top style='width:544.5pt;border:solid black 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal style='line-height:115%'><span style='font-size:11.0pt;
-  line-height:115%'>Address: </span></p>
-                <p class=MsoNormal style='line-height:115%'><span style='font-size:11.0pt;
-  line-height:115%'>&nbsp;</span></p>
-            </td>
-        </tr>
-        <tr>
             <td width=354 valign=top style='width:265.5pt;border:solid black 1.0pt;
   border-top:none;padding:0in 5.4pt 0in 5.4pt'>
                 <p class=MsoNormal style='line-height:115%'><span style='font-size:11.0pt;
-  line-height:115%'>Post Code: </span></p>
+  line-height:115%'>ID/ Passport no: <span class="text-primary">{{ doc.custom_national_id or '' }}</span></span></p>
             </td>
             <td width=372 valign=top style='width:279.0pt;border-top:none;border-left:
   none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
@@ -95,34 +79,6 @@
             <td width=726 colspan=2 valign=top style='width:544.5pt;border:solid black 1.0pt;
   border-top:none;padding:0in 5.4pt 0in 5.4pt'>
                 <p class=MsoNormal style='line-height:115%'><span style='font-size:11.0pt;
-  line-height:115%'>Previous occupations: </span></p>
-            </td>
-        </tr>
-        <tr>
-            <td width=354 valign=top style='width:265.5pt;border:solid black 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal style='line-height:115%'><span style='font-size:11.0pt;
-  line-height:115%'>Marital Status: </span></p>
-            </td>
-            <td width=372 valign=top style='width:279.0pt;border-top:none;border-left:
-  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal style='line-height:115%'><span style='font-size:11.0pt;
-  line-height:115%'>Children (incl.age): </span></p>
-            </td>
-        </tr>
-        <tr>
-            <td width=726 colspan=2 valign=top style='width:544.5pt;border:solid black 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal style='line-height:115%'><b><span style='font-size:11.0pt;
-  line-height:115%'>Preferred and consented method of contacting you and
-                            leaving messages:</span></b></p>
-            </td>
-        </tr>
-        <tr>
-            <td width=726 colspan=2 valign=top style='width:544.5pt;border:solid black 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal style='line-height:115%'><span style='font-size:11.0pt;
   line-height:115%'>Email address: <span class="text-primary">{{ doc.email_id or '' }}</span></span></p>
             </td>
         </tr>
@@ -140,41 +96,14 @@
             </td>
         </tr>
         <tr>
-            <td width=354 valign=top style='width:265.5pt;border:solid black 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal style='line-height:115%'><span style='font-size:11.0pt;
-  line-height:115%'>Work tel no: <span class="text-primary">{{ doc.phone_ext or '' }}</span></span></p>
-            </td>
-            <td width=372 valign=top style='width:279.0pt;border-top:none;border-left:
-  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal style='line-height:115%'><span style='font-size:11.0pt;
-  line-height:115%'>Next of kin:</span></p>
-            </td>
-        </tr>
-        <tr>
-            <td width=354 valign=top style='width:265.5pt;border:solid black 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal style='line-height:115%'><b><span style='font-size:11.0pt;
-  line-height:115%'>We will only contact your health professional with your
-                            permission</span></b></p>
-            </td>
-            <td width=372 valign=top style='width:279.0pt;border-top:none;border-left:
-  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal style='line-height:115%'><span style='font-size:11.0pt;
-  line-height:115%'>Next of kin contact: </span></p>
-            </td>
-        </tr>
-        <tr>
             <td width=726 colspan=2 valign=top style='width:544.5pt;border:solid black 1.0pt;
   border-top:none;padding:0in 5.4pt 0in 5.4pt'>
                 <p class=MsoNormal style='line-height:115%'><span style='font-size:11.0pt;
-  line-height:115%'>Your reasons for attending our clinic and your symptoms: <span class="text-primary">{{ medical_history_doc.symptoms or '' }}</span> </span></p>
+  line-height:115%'>Your reasons for attending our clinic and your symptoms: </span></p>
                 <p class=MsoNormal style='line-height:115%'><span style='font-size:11.0pt;
   line-height:115%'>&nbsp;</span></p>
                 <p class=MsoNormal style='line-height:115%'><span style='font-size:11.0pt;
-  line-height:115%'>&nbsp;</span></p>
+  line-height:115%'>&nbsp;<span class="text-primary">{{ medical_history_doc.symptoms or '' }}</span></span></p>
                 <p class=MsoNormal style='line-height:115%'><span style='font-size:11.0pt;
   line-height:115%'>&nbsp;</span></p>
             </td>
@@ -233,87 +162,30 @@ line-height:115%'>&nbsp;</span></p>
 
     <table>
         <tr>
-            <td width=726 colspan=8 valign=top style='width:544.5pt;border:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal style='line-height:115%'><span style='font-size:11.0pt;
-  line-height:115%'>How did you hear about us? Please check relevant box and if
-                        referral, provide name</span></p>
-            </td>
-        </tr>
-        <tr>
-            <td width=318 colspan=4 valign=top style='width:238.5pt;border:solid black 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal style='line-height:115%'><span style='font-size:11.0pt;
-  line-height:115%;color:#212121'>Referral by a friend or relative</span></p>
-            </td>
-            <td width=31 valign=top style='width:23.2pt;border-top:none;border-left:none;
-  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal style='line-height:115%'><span style='font-size:11.0pt;
-  line-height:115%'>&nbsp;</span></p>
-            </td>
-            <td width=273 colspan=2 valign=top style='width:204.55pt;border-top:none;
-  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal style='line-height:115%'><span style='font-size:11.0pt;
-  line-height:115%;color:#212121'>Social Media / SBMC Website</span></p>
-            </td>
-            <td width=104 valign=top style='width:78.25pt;border-top:none;border-left:
-  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal style='line-height:115%'><span style='font-size:11.0pt;
-  line-height:115%'>&nbsp;</span></p>
-            </td>
-        </tr>
-        <tr>
-            <td width=318 colspan=4 valign=top style='width:238.5pt;border:solid black 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal style='line-height:115%'><span style='font-size:11.0pt;
-  line-height:115%;color:#212121'>Doctor referral (name)</span></p>
-            </td>
-            <td width=31 valign=top style='width:23.2pt;border-top:none;border-left:none;
-  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal style='line-height:115%'><span style='font-size:11.0pt;
-  line-height:115%'>&nbsp;</span></p>
-            </td>
-            <td width=273 colspan=2 valign=top style='width:204.55pt;border-top:none;
-  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal style='line-height:115%'><span style='font-size:11.0pt;
-  line-height:115%;color:#212121'>Other</span></p>
-            </td>
-            <td width=104 valign=top style='width:78.25pt;border-top:none;border-left:
-  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal style='line-height:115%'><span style='font-size:11.0pt;
-  line-height:115%'>&nbsp;</span></p>
-            </td>
-        </tr>
-        <tr>
             <td width=179 valign=top style='width:133.95pt;border:solid black 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  padding:0in 5.4pt 0in 5.4pt'>
                 <p class=MsoNormal style='line-height:115%'><span style='font-size:11.0pt;
   line-height:115%'>Weight: <span class="text-primary">{{ medical_history_doc.weight or '' }}</span></span></p>
                 <p class=MsoNormal style='line-height:115%'><span style='font-size:11.0pt;
   line-height:115%'>(kg)</span></p>
             </td>
-            <td width=170 colspan=4 valign=top style='width:127.75pt;border-top:none;
-  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+            <td width=170 colspan=4 valign=top style='width:127.75pt;
+  border:solid black 1.0pt;
   padding:0in 5.4pt 0in 5.4pt'>
                 <p class=MsoNormal style='line-height:115%'><span style='font-size:11.0pt;
   line-height:115%'>Height:<span class="text-primary">{{ medical_history_doc.height or '' }}</span></span></p>
                 <p class=MsoNormal style='line-height:115%'><span style='font-size:11.0pt;
   line-height:115%'>(cm)</span></p>
             </td>
-            <td width=162 valign=top style='width:121.3pt;border-top:none;border-left:
-  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+            <td width=162 valign=top style='width:121.3pt;border:solid black 1.0pt;
   padding:0in 5.4pt 0in 5.4pt'>
                 <p class=MsoNormal style='line-height:115%'><span style='font-size:11.0pt;
   line-height:115%'>Blood group: <span class="text-primary">{{ medical_history_doc.blood_group or '' }}</span></span></p>
                 <p class=MsoNormal style='line-height:115%'><span style='font-size:11.0pt;
   line-height:115%'>&nbsp;</span></p>
             </td>
-            <td width=215 colspan=2 valign=top style='width:161.5pt;border-top:none;
-  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+            <td width=215 colspan=2 valign=top style='width:161.5pt;
+  border:solid black 1.0pt;
   padding:0in 5.4pt 0in 5.4pt'>
                 <p class=MsoNormal style='line-height:115%'><span style='font-size:11.0pt;
   line-height:115%'>Blood pressure: <span class="text-primary">{{ medical_history_doc.blood_pressure or '' }}</span></span></p>
