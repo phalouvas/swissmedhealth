@@ -3200,4 +3200,252 @@ line-height:115%'>&nbsp;</span></p>
         </tr>
     </table>
 
+    <p class=MsoNormal>&nbsp;</p>
+
+    <table>
+        <tbody>
+            <tr style="height:19.65pt">
+                <td width="726" colspan="9" valign="top" style="width:544.5pt;border:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:19.65pt">
+                    <p class="MsoNormal"><b><span style="font-size:11.0pt;color:#212121">GDPR
+                                statement and consent</span></b></p>
+                </td>
+            </tr>
+            <tr style="height:19.65pt">
+                <td width="726" colspan="9" valign="top" style="width:544.5pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt;height:19.65pt">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  color:#212121">Your personal information:</span></p>
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  color:#212121">The information collected with this questionnaire will be used
+                            by Swissmed Health for medical services and practices. Your personal data and
+                            information will remain with Swissmed Health for us to provide you with
+                            medical services and other related services both at the center and also
+                            potentially to other health centers. This may require that your personal data
+                            including medical records to be shared with other medical service providers
+                            for referral purposes as well as other legal and procedural purposes of the
+                            center.</span></p>
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  color:#212121">&nbsp;</span></p>
+                </td>
+            </tr>
+            <tr style="height:19.65pt">
+                <td width="599" colspan="6" valign="top" style="width:449.5pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt;height:19.65pt">
+                    <p class="MsoNormal"><b><span style="font-size:11.0pt;color:#212121">Your
+                                statement and confirmation</span></b></p>
+                </td>
+                <td width="67" colspan="2" valign="top" style="width:50.0pt;border-top:none;
+  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:19.65pt">
+                    <p class="MsoNormal"><b><span style="font-size:11.0pt;color:#212121">Yes</span></b><b><span
+                                style="font-size:11.0pt;color:#212121"> </span></b></p>
+                </td>
+                <td width="60" valign="top" style="width:45.0pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt;
+  height:19.65pt">
+                    <p class="MsoNormal"><b><span style="font-size:11.0pt;color:#212121">No</span></b><b><span
+                                style="font-size:11.0pt;color:#212121"> </span></b></p>
+                </td>
+            </tr>
+            <tr style="height:19.65pt">
+                <td width="599" colspan="6" valign="top" style="width:449.5pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt;height:19.65pt">
+                    <p class="MsoNormal"><span style="font-size:11.0pt;color:#212121">I understand
+                            and accept that the Center has the right to approve or reject my registration
+                            application at any point in time.</span></p>
+                </td>
+                <td width="67" colspan="2" valign="top" style="width:50.0pt;border-top:none;
+  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:19.65pt">
+                    <p class="MsoNormal"><span style="font-size:11.0pt;color:#212121">
+                        {% if customer_consent_doc.accept_registration == "Yes" %}
+                        <span style='font-size:11.0pt; font-weight: bold;'>✔️</span>
+                        {% else %}
+                        <span style='font-size:11.0pt;'>&nbsp;</span>
+                        {% endif %}
+                    </span></p>
+                </td>
+                <td width="60" valign="top" style="width:45.0pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt;
+  height:19.65pt">
+                    <p class="MsoNormal"><span style="font-size:11.0pt;color:#212121">
+                        {% if customer_consent_doc.accept_registration == "No" %}
+                        <span style='font-size:11.0pt; font-weight: bold;'>X</span>
+                        {% else %}
+                        <span style='font-size:11.0pt;'>&nbsp;</span>
+                        {% endif %}
+                    </span></p>
+                </td>
+            </tr>
+            <tr style="height:19.65pt">
+                <td width="599" colspan="6" valign="top" style="width:449.5pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt;height:19.65pt">
+                    <p class="MsoNormal"><span style="font-size:11.0pt;color:#212121">I confirm
+                            that to the best of my knowledge the information that I have given on this
+                            registration form/questionnaire is accurate. Additionally, I understand that
+                            it is my responsibility to inform and update the Center as to any changes to
+                            my personal data and information.</span></p>
+                </td>
+                <td width="67" colspan="2" valign="top" style="width:50.0pt;border-top:none;
+  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:19.65pt">
+                    <p class="MsoNormal"><span style="font-size:11.0pt;color:#212121">
+                        {% if customer_consent_doc.accept_personal_data == "Yes" %}
+                        <span style='font-size:11.0pt; font-weight: bold;'>✔️</span>
+                        {% else %}
+                        <span style='font-size:11.0pt;'>&nbsp;</span>
+                        {% endif %}
+                    </span></p>
+                </td>
+                <td width="60" valign="top" style="width:45.0pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt;
+  height:19.65pt">
+                    <p class="MsoNormal"><span style="font-size:11.0pt;color:#212121">
+                        {% if customer_consent_doc.accept_personal_data == "No" %}
+                        <span style='font-size:11.0pt; font-weight: bold;'>X</span>
+                        {% else %}
+                        <span style='font-size:11.0pt;'>&nbsp;</span>
+                        {% endif %}
+                    </span></p>
+                </td>
+            </tr>
+            <tr style="height:19.65pt">
+                <td width="599" colspan="6" valign="top" style="width:449.5pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt;height:19.65pt">
+                    <p class="MsoNormal"><span style="font-size:11.0pt;color:#212121">I hereby give
+                            my consent to the Center to communicate with me via phone, email or other
+                            means for updates as to new medical programs, upcoming lectures and
+                            conferences as well as Center news.</span></p>
+                </td>
+                <td width="67" colspan="2" valign="top" style="width:50.0pt;border-top:none;
+  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:19.65pt">
+                    <p class="MsoNormal"><span style="font-size:11.0pt;color:#212121">
+                        {% if customer_consent_doc.accept_communication == "Yes" %}
+                        <span style='font-size:11.0pt; font-weight: bold;'>✔️</span>
+                        {% else %}
+                        <span style='font-size:11.0pt;'>&nbsp;</span>
+                        {% endif %}
+                    </span></p>
+                </td>
+                <td width="60" valign="top" style="width:45.0pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt;
+  height:19.65pt">
+                    <p class="MsoNormal"><span style="font-size:11.0pt;color:#212121">
+                        {% if customer_consent_doc.accept_communication == "No" %}
+                        <span style='font-size:11.0pt; font-weight: bold;'>X</span>
+                        {% else %}
+                        <span style='font-size:11.0pt;'>&nbsp;</span>
+                        {% endif %}
+                    </span></p>
+                </td>
+            </tr>
+            <tr style="height:29.75pt">
+                <td width="241" colspan="2" valign="top" style="width:180.7pt;border:none;
+  border-bottom:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:29.75pt">
+                    <p class="MsoNormal"><span style="font-size:11.0pt;color:#212121">&nbsp;</span></p>
+                    <p class="MsoNormal"><span style="font-size:11.0pt;color:#212121">&nbsp;</span></p>
+                    <p class="MsoNormal"><span style="font-size:8.0pt;color:#212121">&nbsp;</span></p>
+                    <p class="MsoNormal"><span style="font-size:11.0pt;color:#212121">&nbsp;</span></p>
+                    <p class="MsoNormal"><span style="font-size:11.0pt;color:#212121">&nbsp;</span></p>
+                    <p class="MsoNormal"><span style="font-size:11.0pt;color:#212121">&nbsp;</span></p>
+                </td>
+                <td width="47" valign="top" style="width:35.35pt;border:none;padding:0in 5.4pt 0in 5.4pt;
+  height:29.75pt">
+                    <p class="MsoNormal"><span style="font-size:11.0pt;color:#212121">&nbsp;</span></p>
+                </td>
+                <td width="283" colspan="2" valign="top" style="width:212.25pt;border:none;
+  padding:0in 5.4pt 0in 5.4pt;height:29.75pt">
+                    <p class="MsoNormal"><span style="font-size:11.0pt;color:#212121">&nbsp;</span></p>
+                </td>
+                <td width="155" colspan="4" valign="top" style="width:116.2pt;border:none;
+  border-bottom:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:29.75pt">
+                    <p class="MsoNormal"><span style="font-size:11.0pt;color:#212121">&nbsp;</span></p>
+                </td>
+            </tr>
+            <tr style="height:20.25pt">
+                <td width="241" colspan="2" valign="top" style="width:180.7pt;border:none;
+  padding:0in 5.4pt 0in 5.4pt;height:20.25pt">
+                    <p class="MsoNormal"><span style="font-size:11.0pt;color:#212121">Signature</span></p>
+                </td>
+                <td width="47" valign="top" style="width:35.35pt;border:none;padding:0in 5.4pt 0in 5.4pt;
+  height:20.25pt">
+                    <p class="MsoNormal"><span style="font-size:11.0pt;color:#212121">&nbsp;</span></p>
+                    <p class="MsoNormal"><span style="font-size:8.0pt;color:#212121">&nbsp;</span></p>
+                </td>
+                <td width="283" colspan="2" valign="top" style="width:212.25pt;border:none;
+  padding:0in 5.4pt 0in 5.4pt;height:20.25pt">
+                    <p class="MsoNormal"><span style="font-size:11.0pt;color:#212121">&nbsp;</span></p>
+                </td>
+                <td width="155" colspan="4" valign="top" style="width:116.2pt;border:none;
+  padding:0in 5.4pt 0in 5.4pt;height:20.25pt">
+                    <p class="MsoNormal"><span style="font-size:11.0pt;color:#212121">Date</span></p>
+                    <p class="MsoNormal"><span style="font-size:11.0pt;color:#212121">&nbsp;</span></p>
+                </td>
+            </tr>
+            <tr style="height:17.8pt">
+                <td width="726" colspan="9" valign="top" style="width:544.5pt;border:solid black 1.0pt;
+  background:#D9D9D9;padding:0in 5.4pt 0in 5.4pt;height:17.8pt">
+                    <p class="MsoNormal"><b><span style="font-size:11.0pt;color:#212121">For
+                                Internal Use</span></b></p>
+                </td>
+            </tr>
+            <tr style="height:17.8pt">
+                <td width="222" valign="top" style="width:166.25pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt;height:17.8pt">
+                    <p class="MsoNormal"><span style="font-size:11.0pt;color:#212121">Received by:</span></p>
+                </td>
+                <td width="198" colspan="3" valign="top" style="width:148.6pt;border-top:none;
+  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:17.8pt">
+                    <p class="MsoNormal"><span style="font-size:11.0pt;color:#212121">&nbsp;</span></p>
+                </td>
+                <td width="189" colspan="3" valign="top" style="width:141.5pt;border-top:none;
+  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:17.8pt">
+                    <p class="MsoNormal"><span style="font-size:11.0pt;color:#212121">Previous
+                            medical records requested</span></p>
+                </td>
+                <td width="118" colspan="2" valign="top" style="width:88.15pt;border-top:none;
+  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:17.8pt">
+                    <p class="MsoNormal"><span style="font-size:11.0pt;color:#212121">&nbsp;</span></p>
+                </td>
+            </tr>
+            <tr style="height:17.8pt">
+                <td width="222" valign="top" style="width:166.25pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt;height:17.8pt">
+                    <p class="MsoNormal"><span style="font-size:11.0pt;color:#212121">System entry
+                            date</span></p>
+                </td>
+                <td width="198" colspan="3" valign="top" style="width:148.6pt;border-top:none;
+  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:17.8pt">
+                    <p class="MsoNormal"><span style="font-size:11.0pt;color:#212121">&nbsp;</span></p>
+                </td>
+                <td width="189" colspan="3" valign="top" style="width:141.5pt;border-top:none;
+  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:17.8pt">
+                    <p class="MsoNormal"><span style="font-size:11.0pt;color:#212121">MRN Number</span></p>
+                </td>
+                <td width="118" colspan="2" valign="top" style="width:88.15pt;border-top:none;
+  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:17.8pt">
+                    <p class="MsoNormal"><span style="font-size:11.0pt;color:#212121">&nbsp;</span></p>
+                </td>
+            </tr>
+            <tr height="0">
+                <td width="222" style="border:none"></td>
+                <td width="19" style="border:none"></td>
+                <td width="47" style="border:none"></td>
+                <td width="132" style="border:none"></td>
+                <td width="151" style="border:none"></td>
+                <td width="28" style="border:none"></td>
+                <td width="9" style="border:none"></td>
+                <td width="58" style="border:none"></td>
+                <td width="60" style="border:none"></td>
+            </tr>
+        </tbody>
+    </table>
 </div>
