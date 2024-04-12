@@ -3349,7 +3349,11 @@ line-height:115%'>&nbsp;</span></p>
                     <p class="MsoNormal"><span style="font-size:8.0pt;color:#212121">&nbsp;</span></p>
                     <p class="MsoNormal"><span style="font-size:11.0pt;color:#212121">&nbsp;</span></p>
                     <p class="MsoNormal"><span style="font-size:11.0pt;color:#212121">&nbsp;</span></p>
-                    <p class="MsoNormal"><span style="font-size:11.0pt;color:#212121">&nbsp;</span></p>
+                    <p class="MsoNormal"><span style="font-size:11.0pt;color:#212121">&nbsp;
+                        {%if customer_consent_doc.signature %}
+                        <img src="{{ customer_consent_doc.signature }}" />
+                        {% endif %}
+                    </span></p>
                 </td>
                 <td width="47" valign="top" style="width:35.35pt;border:none;padding:0in 5.4pt 0in 5.4pt;
   height:29.75pt">
@@ -3362,6 +3366,11 @@ line-height:115%'>&nbsp;</span></p>
                 <td width="155" colspan="4" valign="top" style="width:116.2pt;border:none;
   border-bottom:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:29.75pt">
                     <p class="MsoNormal"><span style="font-size:11.0pt;color:#212121">&nbsp;</span></p>
+                    <p class="MsoNormal"><span style="font-size:11.0pt;color:#212121">&nbsp;</span></p>
+                    <p class="MsoNormal"><span style="font-size:8.0pt;color:#212121">&nbsp;</span></p>
+                    <p class="MsoNormal"><span style="font-size:11.0pt;color:#212121">&nbsp;</span></p>
+                    <p class="MsoNormal"><span style="font-size:11.0pt;color:#212121">&nbsp;</span></p>
+                    <p class="MsoNormal"><span style="font-size:11.0pt;color:#212121">&nbsp;{{ customer_consent_doc.acceptance_date or ''}}</span></p>
                 </td>
             </tr>
             <tr style="height:20.25pt">
