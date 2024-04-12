@@ -2447,9 +2447,702 @@ line-height:115%'>&nbsp;</span></p>
 
     <table>
         <tr>
-            <td width=726 colspan=4 valign=top style='width:544.5pt;border:solid black 1.0pt;
+            <td width=726 colspan=8 valign=top style='width:544.5pt;border:solid black 1.0pt;
   padding:0in 5.4pt 0in 5.4pt'>
                 <p class=MsoNormal><b><i><span style='font-size:11.0pt'>Do you have pain or discomfort when</span></i></b></p>
+            </td>
+        </tr>
+        <tr>
+            <td width=364 valign=top style='width:273.2pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal><span style='font-size:11.0pt'>When biting or chewing</span></p>
+            </td>
+            <td width=66 valign=top style='width:49.65pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.biting_pain == "Yes" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>YES</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>YES</span>
+                    {% endif %}
+                </span>
+                </p>
+            </td>
+            <td width=57 valign=top style='width:42.5pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.biting_pain == "No" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>NO</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>NO</span>
+                    {% endif %}
+                </span>
+                </p>
+            </td>
+            <td width=239 valign=top style='width:179.15pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal><span style='font-size:11.0pt'>&nbsp;{{ dental_history_doc.biting_pain_desc or '' }}</span></p>
+            </td>
+            <td width=364 valign=top style='width:273.2pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal><span style='font-size:11.0pt'>Cold, hot or sweet sensitivity</span></p>
+            </td>
+            <td width=66 valign=top style='width:49.65pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.cold_hot_sweet_sensitivity == "Yes" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>YES</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>YES</span>
+                    {% endif %}
+                </span>
+                </p>
+            </td>
+            <td width=57 valign=top style='width:42.5pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.cold_hot_sweet_sensitivity == "No" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>NO</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>NO</span>
+                    {% endif %}
+                </span>
+                </p>
+            </td>
+            <td width=239 valign=top style='width:179.15pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal><span style='font-size:11.0pt'>&nbsp;{{ dental_history_doc.cold_hot_sweet_sensitivity_desc or '' }}</span></p>
+            </td>
+        </tr>
+        <tr>
+            <td width=364 valign=top style='width:273.2pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal><span style='font-size:11.0pt'>Do you have food traps</span></p>
+            </td>
+            <td width=66 valign=top style='width:49.65pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.food_traps == "Yes" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>YES</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>YES</span>
+                    {% endif %}
+                </span>
+                </p>
+            </td>
+            <td width=57 valign=top style='width:42.5pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.food_traps == "No" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>NO</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>NO</span>
+                    {% endif %}
+                </span>
+                </p>
+            </td>
+            <td width=239 valign=top style='width:179.15pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal><span style='font-size:11.0pt'>&nbsp;{{ dental_history_doc.food_traps_desc or '' }}</span></p>
+            </td>
+            <td width=364 valign=top style='width:273.2pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal><span style='font-size:11.0pt'>Do you chew on both sides</span></p>
+            </td>
+            <td width=66 valign=top style='width:49.65pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.chew_both_sites == "Yes" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>YES</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>YES</span>
+                    {% endif %}
+                </span>
+                </p>
+            </td>
+            <td width=57 valign=top style='width:42.5pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.chew_both_sites == "No" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>NO</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>NO</span>
+                    {% endif %}
+                </span>
+                </p>
+            </td>
+            <td width=239 valign=top style='width:179.15pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal><span style='font-size:11.0pt'>&nbsp;</span></p>
+            </td>
+        </tr>
+        <tr>
+            <td width=364 valign=top style='width:273.2pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal><span style='font-size:11.0pt'>Do you suffer from bad breath?</span></p>
+            </td>
+            <td width=66 valign=top style='width:49.65pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.bad_breath == "Yes" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>YES</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>YES</span>
+                    {% endif %}
+                </span>
+                </p>
+            </td>
+            <td width=57 valign=top style='width:42.5pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.bad_breath == "No" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>NO</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>NO</span>
+                    {% endif %}
+                </span>
+                </p>
+            </td>
+            <td width=239 valign=top style='width:179.15pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal><span style='font-size:11.0pt'>&nbsp;</span></p>
+            </td>
+            <td width=364 valign=top style='width:273.2pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal><span style='font-size:11.0pt'>Do your gums bleed on brushing or flossing?</span></p>
+            </td>
+            <td width=66 valign=top style='width:49.65pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.gums_bleed == "Yes" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>YES</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>YES</span>
+                    {% endif %}
+                </span>
+                </p>
+            </td>
+            <td width=57 valign=top style='width:42.5pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.gums_bleed == "No" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>NO</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>NO</span>
+                    {% endif %}
+                </span>
+                </p>
+            </td>
+            <td width=239 valign=top style='width:179.15pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal><span style='font-size:11.0pt'>&nbsp;</span></p>
+            </td>
+        </tr>
+        <tr>
+            <td width=364 valign=top style='width:273.2pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal><span style='font-size:11.0pt'>Do you use floss?</span></p>
+            </td>
+            <td width=66 valign=top style='width:49.65pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.use_floss == "Yes" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>YES</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>YES</span>
+                    {% endif %}
+                </span>
+                </p>
+            </td>
+            <td width=57 valign=top style='width:42.5pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.use_floss == "No" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>NO</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>NO</span>
+                    {% endif %}
+                </span>
+                </p>
+            </td>
+            <td width=239 valign=top style='width:179.15pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal><span style='font-size:11.0pt'>&nbsp;</span></p>
+            </td>
+            <td width=364 valign=top style='width:273.2pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal><span style='font-size:11.0pt'>Do you use a dental irrigator?</span></p>
+            </td>
+            <td width=66 valign=top style='width:49.65pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.use_dental_irrigator == "Yes" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>YES</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>YES</span>
+                    {% endif %}
+                </span>
+                </p>
+            </td>
+            <td width=57 valign=top style='width:42.5pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.use_dental_irrigator == "No" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>NO</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>NO</span>
+                    {% endif %}
+                </span>
+                </p>
+            </td>
+            <td width=239 valign=top style='width:179.15pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal><span style='font-size:11.0pt'>&nbsp;</span></p>
+            </td>
+        </tr>
+        <tr>
+            <td width=364 valign=top style='width:273.2pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal><span style='font-size:11.0pt'>Do you use interdental sticks between teeth?</span></p>
+            </td>
+            <td width=66 valign=top style='width:49.65pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.use_interdental_sticks == "Yes" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>YES</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>YES</span>
+                    {% endif %}
+                </span>
+                </p>
+            </td>
+            <td width=57 valign=top style='width:42.5pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.use_interdental_sticks == "No" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>NO</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>NO</span>
+                    {% endif %}
+                </span>
+                </p>
+            </td>
+            <td width=239 valign=top style='width:179.15pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal><span style='font-size:11.0pt'>&nbsp;</span></p>
+            </td>
+            <td width=364 valign=top style='width:273.2pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal><span style='font-size:11.0pt'>Have you been instructed in Oral Hygiene?</span></p>
+            </td>
+            <td width=66 valign=top style='width:49.65pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.oral_hygiene == "Yes" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>YES</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>YES</span>
+                    {% endif %}
+                </span>
+                </p>
+            </td>
+            <td width=57 valign=top style='width:42.5pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.oral_hygiene == "No" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>NO</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>NO</span>
+                    {% endif %}
+                </span>
+                </p>
+            </td>
+            <td width=239 valign=top style='width:179.15pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal><span style='font-size:11.0pt'>&nbsp;</span></p>
+            </td>
+        </tr>
+        <tr>
+            <td width=364 valign=top style='width:273.2pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal><span style='font-size:11.0pt'>Do you clench/grind your teeth at night?</span></p>
+            </td>
+            <td width=66 valign=top style='width:49.65pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.grind_night == "Yes" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>YES</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>YES</span>
+                    {% endif %}
+                </span>
+                </p>
+            </td>
+            <td width=57 valign=top style='width:42.5pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.grind_night == "No" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>NO</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>NO</span>
+                    {% endif %}
+                </span>
+                </p>
+            </td>
+            <td width=239 valign=top style='width:179.15pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal><span style='font-size:11.0pt'>&nbsp;</span></p>
+            </td>
+            <td width=364 valign=top style='width:273.2pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal><span style='font-size:11.0pt'>Do you clench/grind when under stress?</span></p>
+            </td>
+            <td width=66 valign=top style='width:49.65pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.grind_stress == "Yes" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>YES</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>YES</span>
+                    {% endif %}
+                </span>
+                </p>
+            </td>
+            <td width=57 valign=top style='width:42.5pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.grind_stress == "No" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>NO</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>NO</span>
+                    {% endif %}
+                </span>
+                </p>
+            </td>
+            <td width=239 valign=top style='width:179.15pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal><span style='font-size:11.0pt'>&nbsp;</span></p>
+            </td>
+        </tr>
+        <tr>
+            <td width=364 valign=top style='width:273.2pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal><span style='font-size:11.0pt'>Do your jaw joints click or pop?</span></p>
+            </td>
+            <td width=66 valign=top style='width:49.65pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.jaw_joints_click == "Yes" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>YES</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>YES</span>
+                    {% endif %}
+                </span>
+                </p>
+            </td>
+            <td width=57 valign=top style='width:42.5pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.jaw_joints_click == "No" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>NO</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>NO</span>
+                    {% endif %}
+                </span>
+                </p>
+            </td>
+            <td width=239 valign=top style='width:179.15pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal><span style='font-size:11.0pt'>&nbsp;</span></p>
+            </td>
+            <td width=364 valign=top style='width:273.2pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal><span style='font-size:11.0pt'>Do you have Tinnitus?</span></p>
+            </td>
+            <td width=66 valign=top style='width:49.65pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.have_tinnitus == "Yes" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>YES</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>YES</span>
+                    {% endif %}
+                </span>
+                </p>
+            </td>
+            <td width=57 valign=top style='width:42.5pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.have_tinnitus == "No" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>NO</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>NO</span>
+                    {% endif %}
+                </span>
+                </p>
+            </td>
+            <td width=239 valign=top style='width:179.15pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal><span style='font-size:11.0pt'>&nbsp;</span></p>
+            </td>
+        </tr>
+        <tr>
+            <td width=364 valign=top style='width:273.2pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal><span style='font-size:11.0pt'>Do you know oral infections can cause systemic symptoms?</span></p>
+            </td>
+            <td width=66 valign=top style='width:49.65pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.know_oral_infections_cause == "Yes" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>YES</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>YES</span>
+                    {% endif %}
+                </span>
+                </p>
+            </td>
+            <td width=57 valign=top style='width:42.5pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.know_oral_infections_cause == "No" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>NO</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>NO</span>
+                    {% endif %}
+                </span>
+                </p>
+            </td>
+            <td width=239 valign=top style='width:179.15pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal><span style='font-size:11.0pt'>&nbsp;</span></p>
+            </td>
+            <td width=364 valign=top style='width:273.2pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal><span style='font-size:11.0pt'>Do you know you can have bone loss without being aware of it?</span></p>
+            </td>
+            <td width=66 valign=top style='width:49.65pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.know_bone_loss == "Yes" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>YES</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>YES</span>
+                    {% endif %}
+                </span>
+                </p>
+            </td>
+            <td width=57 valign=top style='width:42.5pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.know_bone_loss == "No" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>NO</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>NO</span>
+                    {% endif %}
+                </span>
+                </p>
+            </td>
+            <td width=239 valign=top style='width:179.15pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal><span style='font-size:11.0pt'>&nbsp;</span></p>
+            </td>
+        </tr>
+        <tr>
+            <td width=364 valign=top style='width:273.2pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal><span style='font-size:11.0pt'>Do you know what a cavitation is?</span></p>
+            </td>
+            <td width=66 valign=top style='width:49.65pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.know_cavitation == "Yes" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>YES</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>YES</span>
+                    {% endif %}
+                </span>
+                </p>
+            </td>
+            <td width=57 valign=top style='width:42.5pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.know_cavitation == "No" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>NO</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>NO</span>
+                    {% endif %}
+                </span>
+                </p>
+            </td>
+            <td width=239 valign=top style='width:179.15pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal><span style='font-size:11.0pt'>&nbsp;</span></p>
+            </td>
+            <td width=364 valign=top style='width:273.2pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal><span style='font-size:11.0pt'>Have you ever heard of Blotting Brushes?</span></p>
+            </td>
+            <td width=66 valign=top style='width:49.65pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.know_blotting_brushes == "Yes" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>YES</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>YES</span>
+                    {% endif %}
+                </span>
+                </p>
+            </td>
+            <td width=57 valign=top style='width:42.5pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.know_blotting_brushes == "No" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>NO</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>NO</span>
+                    {% endif %}
+                </span>
+                </p>
+            </td>
+            <td width=239 valign=top style='width:179.15pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal><span style='font-size:11.0pt'>&nbsp;</span></p>
+            </td>
+        </tr>
+        <tr>
+            <td width=364 valign=top style='width:273.2pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal><span style='font-size:11.0pt'>Are you nervous about dental treatment?</span></p>
+            </td>
+            <td width=66 valign=top style='width:49.65pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.nervours_dental_treatment == "Yes" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>YES</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>YES</span>
+                    {% endif %}
+                </span>
+                </p>
+            </td>
+            <td width=57 valign=top style='width:42.5pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.nervours_dental_treatment == "No" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>NO</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>NO</span>
+                    {% endif %}
+                </span>
+                </p>
+            </td>
+            <td width=239 valign=top style='width:179.15pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal><span style='font-size:11.0pt'>&nbsp;{{ dental_history_doc.nervours_dental_treatmentnervours_dental_treatment_desc or '' }}</span></p>
+            </td>
+            <td width=364 valign=top style='width:273.2pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal><span style='font-size:11.0pt'>Are you happy with the appearance of your teeth?</span></p>
+            </td>
+            <td width=66 valign=top style='width:49.65pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.happy_teeth_appearance == "Yes" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>YES</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>YES</span>
+                    {% endif %}
+                </span>
+                </p>
+            </td>
+            <td width=57 valign=top style='width:42.5pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.happy_teeth_appearance == "No" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>NO</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>NO</span>
+                    {% endif %}
+                </span>
+                </p>
+            </td>
+            <td width=239 valign=top style='width:179.15pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal><span style='font-size:11.0pt'>&nbsp;</span></p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="5" width=364 valign=top style='width:273.2pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal><span style='font-size:11.0pt'>What type of toothbrush do you use?</span></p>
+            </td>            
+            <td colspan="3" width=239 valign=top style='width:179.15pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal><span style='font-size:11.0pt'>&nbsp;{{ dental_history_doc.toothbrush_type or '' }}</span></p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="5" width=364 valign=top style='width:273.2pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal><span style='font-size:11.0pt'>Your favorite toothpaste?</span></p>
+            </td>            
+            <td colspan="3" width=239 valign=top style='width:179.15pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal><span style='font-size:11.0pt'>&nbsp;{{ dental_history_doc.favorite_toothpaste or '' }}</span></p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="5" width=364 valign=top style='width:273.2pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal><span style='font-size:11.0pt'>How often and how long do you brush your teeth?</span></p>
+            </td>            
+            <td colspan="3" width=239 valign=top style='width:179.15pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal><span style='font-size:11.0pt'>&nbsp;{{ dental_history_doc.brush_duration or '' }}</span></p>
             </td>
         </tr>
     </table>
