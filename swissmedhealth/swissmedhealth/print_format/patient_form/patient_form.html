@@ -1847,555 +1847,611 @@ line-height:115%'>&nbsp;</span></p>
 
     <table>
         <tr>
-            <td width=726 colspan=5 valign=top style='width:544.5pt;border:solid black 1.0pt;
+            <td width=726 colspan=4 valign=top style='width:544.5pt;border:solid black 1.0pt;
   padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal><b><i><span style='font-size:11.0pt'>If the answer is YES
-                                to any of the following questions, please provide details in space
-                                provided</span></i></b></p>
+                <p class=MsoNormal><b><i><span style='font-size:11.0pt'>Have you or have you previously had</span></i></b></p>
             </td>
         </tr>
         <tr>
-            <td width=363 valign=top style='width:272.6pt;border:solid black 1.0pt;
+            <td width=364 valign=top style='width:273.2pt;border:solid black 1.0pt;
   border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal><span style='font-size:11.0pt'>Have you ever had a joint
-                        or hip replacement operation? Ceramic or Titanium?</span></p>
+                <p class=MsoNormal><span style='font-size:11.0pt'>Amalgam fillings</span></p>
             </td>
-            <td width=68 valign=top style='width:50.65pt;border-top:none;border-left:
+            <td width=66 valign=top style='width:49.65pt;border-top:none;border-left:
   none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
   padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>YES</span>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.amalgam_fillings == "Yes" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>YES</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>YES</span>
+                    {% endif %}
+                </span>
                 </p>
             </td>
-            <td width=67 valign=top style='width:50.25pt;border-top:none;border-left:
+            <td width=57 valign=top style='width:42.5pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.amalgam_fillings == "No" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>NO</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>NO</span>
+                    {% endif %}
+                </span>
+                </p>
+            </td>
+            <td width=239 valign=top style='width:179.15pt;border-top:none;border-left:
   none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
   padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>NO</span>
-                </p>
-            </td>
-            <td width=228 colspan=2 valign=top style='width:171.0pt;border-top:none;
-  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal><span style='font-size:11.0pt'>&nbsp;</span></p>
+                <p class=MsoNormal><span style='font-size:11.0pt'>&nbsp;{{ dental_history_doc.amalgam_fillings_no or '' }}</span></p>
             </td>
         </tr>
         <tr>
-            <td width=363 valign=top style='width:272.6pt;border:solid black 1.0pt;
+            <td width=364 valign=top style='width:273.2pt;border:solid black 1.0pt;
   border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal><span style='font-size:11.0pt'>Do you have any amalgam
-                        fillings? (if yes state number) if were removed, please state so</span></p>
+                <p class=MsoNormal><span style='font-size:11.0pt'>Amalgam fillings removed</span></p>
             </td>
-            <td width=68 valign=top style='width:50.65pt;border-top:none;border-left:
+            <td width=66 valign=top style='width:49.65pt;border-top:none;border-left:
   none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
   padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>YES</span>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.amalgam_fillings_removed == "Yes" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>YES</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>YES</span>
+                    {% endif %}
+                </span>
                 </p>
             </td>
-            <td width=67 valign=top style='width:50.25pt;border-top:none;border-left:
+            <td width=57 valign=top style='width:42.5pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.amalgam_fillings_removed == "No" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>NO</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>NO</span>
+                    {% endif %}
+                </span>
+                </p>
+            </td>
+            <td width=239 valign=top style='width:179.15pt;border-top:none;border-left:
   none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
   padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>NO</span>
-                </p>
-            </td>
-            <td width=228 colspan=2 valign=top style='width:171.0pt;border-top:none;
-  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal><span style='font-size:11.0pt'>&nbsp;</span></p>
+                <p class=MsoNormal><span style='font-size:11.0pt'>&nbsp;{{ dental_history_doc.amalgam_fillings_removed_no or '' }}</span></p>
             </td>
         </tr>
         <tr>
-            <td width=363 valign=top style='width:272.6pt;border:solid black 1.0pt;
+            <td width=364 valign=top style='width:273.2pt;border:solid black 1.0pt;
   border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal><span style='font-size:11.0pt'>Do you have any root
-                        canals? (if yes state number) if were replaced, please state so</span></p>
+                <p class=MsoNormal><span style='font-size:11.0pt'>Bone grafts</span></p>
             </td>
-            <td width=68 valign=top style='width:50.65pt;border-top:none;border-left:
+            <td width=66 valign=top style='width:49.65pt;border-top:none;border-left:
   none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
   padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>YES </span>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.bone_grafts == "Yes" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>YES</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>YES</span>
+                    {% endif %}
+                </span>
                 </p>
             </td>
-            <td width=67 valign=top style='width:50.25pt;border-top:none;border-left:
+            <td width=57 valign=top style='width:42.5pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.bone_grafts == "No" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>NO</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>NO</span>
+                    {% endif %}
+                </span>
+                </p>
+            </td>
+            <td width=239 valign=top style='width:179.15pt;border-top:none;border-left:
   none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>NO</span>
-                </p>
-            </td>
-            <td width=228 colspan=2 valign=top style='width:171.0pt;border-top:none;
-  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal><span style='font-size:11.0pt'>&nbsp;</span></p>
-                <p class=MsoNormal><span style='font-size:11.0pt'>&nbsp;</span></p>
-            </td>
-        </tr>
-        <tr>
-            <td width=363 valign=top style='width:272.6pt;border:solid black 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal><span style='font-size:11.0pt'>Did you perform any MRIs?
-                        Please give number and when they were performed</span></p>
-            </td>
-            <td width=68 valign=top style='width:50.65pt;border-top:none;border-left:
-  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>YES</span>
-                </p>
-            </td>
-            <td width=67 valign=top style='width:50.25pt;border-top:none;border-left:
-  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>NO</span>
-                </p>
-            </td>
-            <td width=228 colspan=2 valign=top style='width:171.0pt;border-top:none;
-  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal><span style='font-size:11.0pt'>&nbsp;</span></p>
-            </td>
-        </tr>
-        <tr>
-            <td width=363 valign=top style='width:272.6pt;border:solid black 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal><span style='font-size:11.0pt'>Have you had any blood
-                        tests or other medical diagnostic tests done within the last 12 months? If
-                        yes, please detail</span></p>
-            </td>
-            <td width=68 valign=top style='width:50.65pt;border-top:none;border-left:
-  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>YES</span>
-                </p>
-            </td>
-            <td width=67 valign=top style='width:50.25pt;border-top:none;border-left:
-  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>NO</span>
-                </p>
-            </td>
-            <td width=228 colspan=2 valign=top style='width:171.0pt;border-top:none;
-  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
   padding:0in 5.4pt 0in 5.4pt'>
                 <p class=MsoNormal><span style='font-size:11.0pt'>&nbsp;</span></p>
             </td>
         </tr>
         <tr>
-            <td width=363 valign=top style='width:272.6pt;border:solid black 1.0pt;
+            <td width=364 valign=top style='width:273.2pt;border:solid black 1.0pt;
   border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal><span style='font-size:11.0pt'>Do you smoke? Daily number
-                        of cigarettes?</span></p>
+                <p class=MsoNormal><span style='font-size:11.0pt'>Bridges</span></p>
             </td>
-            <td width=68 valign=top style='width:50.65pt;border-top:none;border-left:
+            <td width=66 valign=top style='width:49.65pt;border-top:none;border-left:
   none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
   padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>YES</span>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.bridges == "Yes" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>YES</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>YES</span>
+                    {% endif %}
+                </span>
                 </p>
             </td>
-            <td width=67 valign=top style='width:50.25pt;border-top:none;border-left:
+            <td width=57 valign=top style='width:42.5pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.bridges == "No" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>NO</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>NO</span>
+                    {% endif %}
+                </span>
+                </p>
+            </td>
+            <td width=239 valign=top style='width:179.15pt;border-top:none;border-left:
   none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>NO</span>
-                </p>
-            </td>
-            <td width=228 colspan=2 valign=top style='width:171.0pt;border-top:none;
-  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
   padding:0in 5.4pt 0in 5.4pt'>
                 <p class=MsoNormal><span style='font-size:11.0pt'>&nbsp;</span></p>
             </td>
         </tr>
         <tr>
-            <td width=363 valign=top style='width:272.6pt;border:solid black 1.0pt;
+            <td width=364 valign=top style='width:273.2pt;border:solid black 1.0pt;
   border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal><span style='font-size:11.0pt'>Do you consume alcohol? If
-                        yes, please provide details of weekly consumption</span></p>
+                <p class=MsoNormal><span style='font-size:11.0pt'>Composite fillings</span></p>
             </td>
-            <td width=68 valign=top style='width:50.65pt;border-top:none;border-left:
+            <td width=66 valign=top style='width:49.65pt;border-top:none;border-left:
   none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
   padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>YES</span>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.composite_fillings == "Yes" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>YES</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>YES</span>
+                    {% endif %}
+                </span>
                 </p>
             </td>
-            <td width=67 valign=top style='width:50.25pt;border-top:none;border-left:
+            <td width=57 valign=top style='width:42.5pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.composite_fillings == "No" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>NO</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>NO</span>
+                    {% endif %}
+                </span>
+                </p>
+            </td>
+            <td width=239 valign=top style='width:179.15pt;border-top:none;border-left:
   none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
   padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>NO</span>
-                </p>
-            </td>
-            <td width=228 colspan=2 valign=top style='width:171.0pt;border-top:none;
-  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal><span style='font-size:11.0pt'>&nbsp;</span></p>
+                <p class=MsoNormal><span style='font-size:11.0pt'>&nbsp;{{ dental_history_doc.composite_fillings_no or '' }}</span></p>
             </td>
         </tr>
-        <tr style='height:18.05pt'>
-            <td width=363 valign=top style='width:272.6pt;border:solid black 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt;height:18.05pt'>
-                <p class=MsoNormal><span style='font-size:11.0pt'>Do you have any food
-                        intolerances? If yes, what? </span></p>
+        <tr>
+            <td width=364 valign=top style='width:273.2pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal><span style='font-size:11.0pt'>Crowns</span></p>
             </td>
-            <td width=68 valign=top style='width:50.65pt;border-top:none;border-left:
+            <td width=66 valign=top style='width:49.65pt;border-top:none;border-left:
   none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt;height:18.05pt'>
-                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>YES</span>
+  padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.crowns == "Yes" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>YES</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>YES</span>
+                    {% endif %}
+                </span>
                 </p>
             </td>
-            <td width=67 valign=top style='width:50.25pt;border-top:none;border-left:
-  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt;height:18.05pt'>
-                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>NO</span>
+            <td width=57 valign=top style='width:42.5pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.crowns == "No" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>NO</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>NO</span>
+                    {% endif %}
+                </span>
                 </p>
             </td>
-            <td width=228 colspan=2 valign=top style='width:171.0pt;border-top:none;
-  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt;height:18.05pt'>
+            <td width=239 valign=top style='width:179.15pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal><span style='font-size:11.0pt'>&nbsp;{{ dental_history_doc.crowns_no or '' }}</span></p>
+            </td>
+        </tr>
+        <tr>
+            <td width=364 valign=top style='width:273.2pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal><span style='font-size:11.0pt'>Dentures</span></p>
+            </td>
+            <td width=66 valign=top style='width:49.65pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.dentures == "Yes" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>YES</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>YES</span>
+                    {% endif %}
+                </span>
+                </p>
+            </td>
+            <td width=57 valign=top style='width:42.5pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.dentures == "No" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>NO</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>NO</span>
+                    {% endif %}
+                </span>
+                </p>
+            </td>
+            <td width=239 valign=top style='width:179.15pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
                 <p class=MsoNormal><span style='font-size:11.0pt'>&nbsp;</span></p>
             </td>
         </tr>
         <tr>
-            <td width=363 valign=top style='width:272.6pt;border:solid black 1.0pt;
+            <td width=364 valign=top style='width:273.2pt;border:solid black 1.0pt;
   border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal><span style='font-size:11.0pt'>Do you take supplements? <b><i>*
-                                Please list on separate sheet</i></b></span></p>
+                <p class=MsoNormal><span style='font-size:11.0pt'>Implants</span></p>
             </td>
-            <td width=68 valign=top style='width:50.65pt;border-top:none;border-left:
+            <td width=66 valign=top style='width:49.65pt;border-top:none;border-left:
   none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
   padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>YES</span>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.implants == "Yes" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>YES</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>YES</span>
+                    {% endif %}
+                </span>
                 </p>
             </td>
-            <td width=67 valign=top style='width:50.25pt;border-top:none;border-left:
+            <td width=57 valign=top style='width:42.5pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.implants == "No" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>NO</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>NO</span>
+                    {% endif %}
+                </span>
+                </p>
+            </td>
+            <td width=239 valign=top style='width:179.15pt;border-top:none;border-left:
   none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
   padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>NO</span>
+                <p class=MsoNormal><span style='font-size:11.0pt'>&nbsp;{{ dental_history_doc.implants_no or '' }} {{ dental_history_doc.implants_desc or '' }}</span></p>
+            </td>
+        </tr>
+        <tr>
+            <td width=364 valign=top style='width:273.2pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal><span style='font-size:11.0pt'>Orthodontic treatment (Braces)</span></p>
+            </td>
+            <td width=66 valign=top style='width:49.65pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.orthodontic_treatment == "Yes" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>YES</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>YES</span>
+                    {% endif %}
+                </span>
                 </p>
             </td>
-            <td width=228 colspan=2 valign=top style='width:171.0pt;border-top:none;
-  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+            <td width=57 valign=top style='width:42.5pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.orthodontic_treatment == "No" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>NO</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>NO</span>
+                    {% endif %}
+                </span>
+                </p>
+            </td>
+            <td width=239 valign=top style='width:179.15pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
   padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal><span style='font-size:11.0pt'>&nbsp;</span></p>
-                <p class=MsoNormal><span style='font-size:11.0pt'>&nbsp;</span></p>
                 <p class=MsoNormal><span style='font-size:11.0pt'>&nbsp;</span></p>
             </td>
         </tr>
         <tr>
-            <td width=363 valign=top style='width:272.6pt;border:solid black 1.0pt;
+            <td width=364 valign=top style='width:273.2pt;border:solid black 1.0pt;
   border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal><span style='font-size:11.0pt'>Do you tend to feel hot or
-                        cold or neither?</span></p>
+                <p class=MsoNormal><span style='font-size:11.0pt'>Periodontal treatment (Gum treatment)</span></p>
             </td>
-            <td width=68 valign=top style='width:50.65pt;border-top:none;border-left:
+            <td width=66 valign=top style='width:49.65pt;border-top:none;border-left:
   none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
   padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>YES</span>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.periodontal_treatment == "Yes" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>YES</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>YES</span>
+                    {% endif %}
+                </span>
                 </p>
             </td>
-            <td width=67 valign=top style='width:50.25pt;border-top:none;border-left:
+            <td width=57 valign=top style='width:42.5pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.periodontal_treatment == "No" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>NO</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>NO</span>
+                    {% endif %}
+                </span>
+                </p>
+            </td>
+            <td width=239 valign=top style='width:179.15pt;border-top:none;border-left:
   none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
   padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>NO</span>
+                <p class=MsoNormal><span style='font-size:11.0pt'>&nbsp;</span></p>
+            </td>
+        </tr>
+        <tr>
+            <td width=364 valign=top style='width:273.2pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal><span style='font-size:11.0pt'>Root fillings</span></p>
+            </td>
+            <td width=66 valign=top style='width:49.65pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.root_fillings == "Yes" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>YES</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>YES</span>
+                    {% endif %}
+                </span>
                 </p>
             </td>
-            <td width=228 colspan=2 valign=top style='width:171.0pt;border-top:none;
-  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+            <td width=57 valign=top style='width:42.5pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.root_fillings == "No" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>NO</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>NO</span>
+                    {% endif %}
+                </span>
+                </p>
+            </td>
+            <td width=239 valign=top style='width:179.15pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal><span style='font-size:11.0pt'>&nbsp;{{ dental_history_doc.root_fillings_no or '' }}</span></p>
+            </td>
+        </tr>
+        <tr>
+            <td width=364 valign=top style='width:273.2pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal><span style='font-size:11.0pt'>Tooth fracture</span></p>
+            </td>
+            <td width=66 valign=top style='width:49.65pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.tooth_fracture == "Yes" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>YES</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>YES</span>
+                    {% endif %}
+                </span>
+                </p>
+            </td>
+            <td width=57 valign=top style='width:42.5pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.tooth_fracture == "No" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>NO</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>NO</span>
+                    {% endif %}
+                </span>
+                </p>
+            </td>
+            <td width=239 valign=top style='width:179.15pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
   padding:0in 5.4pt 0in 5.4pt'>
                 <p class=MsoNormal><span style='font-size:11.0pt'>&nbsp;</span></p>
             </td>
         </tr>
-        <tr style='height:20.75pt'>
-            <td width=363 valign=top style='width:272.6pt;border:solid black 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt;height:20.75pt'>
-                <p class=MsoNormal><span style='font-size:11.0pt'>How many bowel movements do
-                        you have per day?</span></p>
+        <tr>
+            <td width=364 valign=top style='width:273.2pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal><span style='font-size:11.0pt'>Wisdom tooth extraction</span></p>
             </td>
-            <td width=363 colspan=4 valign=top style='width:271.9pt;border-top:none;
-  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt;height:20.75pt'>
-                <p class=MsoNormal><span style='font-size:11.0pt'>&nbsp;</span></p>
-            </td>
-        </tr>
-        <tr style='height:20.45pt'>
-            <td width=363 valign=top style='width:272.6pt;border:solid black 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt;height:20.45pt'>
-                <p class=MsoNormal><span style='font-size:11.0pt'>Do you get to sleep easily?</span></p>
-            </td>
-            <td width=363 colspan=4 valign=top style='width:271.9pt;border-top:none;
-  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt;height:20.45pt'>
-                <p class=MsoNormal><span style='font-size:11.0pt'>&nbsp;</span></p>
-            </td>
-        </tr>
-        <tr style='height:20.75pt'>
-            <td width=363 valign=top style='width:272.6pt;border:solid black 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt;height:20.75pt'>
-                <p class=MsoNormal><span style='font-size:11.0pt'>Do you have to get up at
-                        night to pee?</span></p>
-            </td>
-            <td width=363 colspan=4 valign=top style='width:271.9pt;border-top:none;
-  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt;height:20.75pt'>
-                <p class=MsoNormal><span style='font-size:11.0pt'>&nbsp;</span></p>
-            </td>
-        </tr>
-        <tr style='height:20.75pt'>
-            <td width=363 valign=top style='width:272.6pt;border:solid black 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt;height:20.75pt'>
-                <p class=MsoNormal><span style='font-size:11.0pt'>Covid-19 Vaccination?</span></p>
-            </td>
-            <td width=231 colspan=3 valign=top style='width:172.9pt;border-top:none;
-  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt;height:20.75pt'>
-                <p class=MsoNormal><span style='font-size:11.0pt'>�� YES:</span></p>
-            </td>
-            <td width=132 valign=top style='width:99.0pt;border-top:none;border-left:
+            <td width=66 valign=top style='width:49.65pt;border-top:none;border-left:
   none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt;height:20.75pt'>
-                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>NO</span>
+  padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.wisdom_tooth_extraction == "Yes" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>YES</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>YES</span>
+                    {% endif %}
+                </span>
                 </p>
             </td>
+            <td width=57 valign=top style='width:42.5pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.wisdom_tooth_extraction == "No" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>NO</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>NO</span>
+                    {% endif %}
+                </span>
+                </p>
+            </td>
+            <td width=239 valign=top style='width:179.15pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal><span style='font-size:11.0pt'>&nbsp;</span></p>
+            </td>
         </tr>
-        <tr height=0>
-            <td width=363 style='border:none'></td>
-            <td width=68 style='border:none'></td>
-            <td width=67 style='border:none'></td>
-            <td width=96 style='border:none'></td>
-            <td width=132 style='border:none'></td>
+        <tr>
+            <td width=364 valign=top style='width:273.2pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal><span style='font-size:11.0pt'>Excessive bleeding after extractions?</span></p>
+            </td>
+            <td width=66 valign=top style='width:49.65pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.excessive_bleeding == "Yes" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>YES</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>YES</span>
+                    {% endif %}
+                </span>
+                </p>
+            </td>
+            <td width=57 valign=top style='width:42.5pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.excessive_bleeding == "No" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>NO</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>NO</span>
+                    {% endif %}
+                </span>
+                </p>
+            </td>
+            <td width=239 valign=top style='width:179.15pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal><span style='font-size:11.0pt'>&nbsp;</span></p>
+            </td>
+        </tr>
+        <tr>
+            <td width=364 valign=top style='width:273.2pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal><span style='font-size:11.0pt'>Complications after extractions?</span></p>
+            </td>
+            <td width=66 valign=top style='width:49.65pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.complications_after_extractions == "Yes" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>YES</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>YES</span>
+                    {% endif %}
+                </span>
+                </p>
+            </td>
+            <td width=57 valign=top style='width:42.5pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.complications_after_extractions == "No" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>NO</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>NO</span>
+                    {% endif %}
+                </span>
+                </p>
+            </td>
+            <td width=239 valign=top style='width:179.15pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal><span style='font-size:11.0pt'>&nbsp;</span></p>
+            </td>
+        </tr>
+        <tr>
+            <td width=364 valign=top style='width:273.2pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal><span style='font-size:11.0pt'>Adverse reactions to anaesthetic?</span></p>
+            </td>
+            <td width=66 valign=top style='width:49.65pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.adverse_reactions_to_anaesthetic == "Yes" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>YES</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>YES</span>
+                    {% endif %}
+                </span>
+                </p>
+            </td>
+            <td width=57 valign=top style='width:42.5pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.adverse_reactions_to_anaesthetic == "No" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>NO</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>NO</span>
+                    {% endif %}
+                </span>
+                </p>
+            </td>
+            <td width=239 valign=top style='width:179.15pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal><span style='font-size:11.0pt'>&nbsp;</span></p>
+            </td>
+        </tr>
+        <tr>
+            <td width=364 valign=top style='width:273.2pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal><span style='font-size:11.0pt'>Have you had any dental x-rays in the last 3 months?</span></p>
+            </td>
+            <td width=66 valign=top style='width:49.65pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.dental_x_rays == "Yes" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>YES</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>YES</span>
+                    {% endif %}
+                </span>
+                </p>
+            </td>
+            <td width=57 valign=top style='width:42.5pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal align=center style='text-align:center'><span style='font-size:11.0pt'>
+                    {% if dental_history_doc.dental_x_rays == "No" %}
+                    <span style='font-size:11.0pt; font-weight: bold;'>NO</span>
+                    {% else %}
+                    <span style='font-size:11.0pt;'>NO</span>
+                    {% endif %}
+                </span>
+                </p>
+            </td>
+            <td width=239 valign=top style='width:179.15pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal><span style='font-size:11.0pt'>&nbsp;</span></p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3" width=364 valign=top style='width:273.2pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal><span style='font-size:11.0pt'>How many months since you last saw a dentist?</span></p>
+            </td>                     
+            <td width=239 valign=top style='width:179.15pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal><span style='font-size:11.0pt'>&nbsp;{{ dental_history_doc.last_dentist_visit or '' }} {{ dental_history_doc.last_dentist_address or '' }}</span></p>
+            </td>
         </tr>
     </table>
-
-    <p class=MsoNormal><span style='font-size:11.0pt'>&nbsp;</span></p>
-
-    <table>
-        <tr>
-            <td width=726 valign=top style='width:544.5pt;border:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal style='line-height:115%'><b><span style='font-size:11.0pt;
-  line-height:115%'>Have you ever suffered any adverse reactions to
-                            vaccinations, medication, anesthetics? If yes, please detail:</span></b></p>
-            </td>
-        </tr>
-        <tr>
-            <td width=726 valign=top style='width:544.5pt;border:solid black 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal style='line-height:115%'><b><span style='font-size:11.0pt;
-  line-height:115%;color:red'>&nbsp;</span></b></p>
-            </td>
-        </tr>
-    </table>
-
-    <p class=MsoNormal style='text-align:justify'><span style='font-size:11.0pt'>&nbsp;</span></p>
-
-    <table>
-        <tr style='height:19.65pt'>
-            <td width=726 colspan=9 valign=top style='width:544.5pt;border:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt;height:19.65pt'>
-                <p class=MsoNormal><b><span style='font-size:11.0pt;color:#212121'>GDPR
-                            statement and consent</span></b></p>
-            </td>
-        </tr>
-        <tr style='height:19.65pt'>
-            <td width=726 colspan=9 valign=top style='width:544.5pt;border:solid black 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt;height:19.65pt'>
-                <p class=MsoNormal style='text-align:justify'><span style='font-size:11.0pt;
-  color:#212121'>Your personal information:</span></p>
-                <p class=MsoNormal style='text-align:justify'><span style='font-size:11.0pt;
-  color:#212121'>The information collected with this questionnaire will be used
-                        by Swissmed Health for medical services and practices. Your personal data and
-                        information will remain with Swissmed Health for us to provide you with
-                        medical services and other related services both at the center and also
-                        potentially to other health centers. This may require that your personal data
-                        including medical records to be shared with other medical service providers
-                        for referral purposes as well as other legal and procedural purposes of the
-                        center.</span></p>
-                <p class=MsoNormal style='text-align:justify'><span style='font-size:11.0pt;
-  color:#212121'>&nbsp;</span></p>
-            </td>
-        </tr>
-        <tr style='height:19.65pt'>
-            <td width=599 colspan=6 valign=top style='width:449.5pt;border:solid black 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt;height:19.65pt'>
-                <p class=MsoNormal><b><span style='font-size:11.0pt;color:#212121'>Your
-                            statement and confirmation</span></b></p>
-            </td>
-            <td width=67 colspan=2 valign=top style='width:50.0pt;border-top:none;
-  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt;height:19.65pt'>
-                <p class=MsoNormal><b><span style='font-size:11.0pt;color:#212121'>Yes</span></b><b><span
-                            style='font-size:11.0pt;color:#212121'> </span></b><b><span style='font-size:
-  11.0pt;color:#212121'>(</span></b><b><span style='font-size:11.0pt;
-  font-family:Wingdings;color:#212121'>�</span></b><b><span style='font-size:
-  11.0pt;color:#212121'>)</span></b></p>
-            </td>
-            <td width=60 valign=top style='width:45.0pt;border-top:none;border-left:none;
-  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:19.65pt'>
-                <p class=MsoNormal><b><span style='font-size:11.0pt;color:#212121'>No</span></b><b><span
-                            style='font-size:11.0pt;color:#212121'> </span></b><b><span style='font-size:
-  11.0pt;color:#212121'>(</span></b><b><span style='font-size:11.0pt;
-  font-family:Wingdings;color:#212121'>�</span></b><b><span style='font-size:
-  11.0pt;color:#212121'>)</span></b></p>
-            </td>
-        </tr>
-        <tr style='height:19.65pt'>
-            <td width=599 colspan=6 valign=top style='width:449.5pt;border:solid black 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt;height:19.65pt'>
-                <p class=MsoNormal><span style='font-size:11.0pt;color:#212121'>I understand
-                        and accept that the Center has the right to approve or reject my registration
-                        application at any point in time.</span></p>
-            </td>
-            <td width=67 colspan=2 valign=top style='width:50.0pt;border-top:none;
-  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt;height:19.65pt'>
-                <p class=MsoNormal><span style='font-size:11.0pt;color:#212121'>&nbsp;</span></p>
-            </td>
-            <td width=60 valign=top style='width:45.0pt;border-top:none;border-left:none;
-  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:19.65pt'>
-                <p class=MsoNormal><span style='font-size:11.0pt;color:#212121'>&nbsp;</span></p>
-            </td>
-        </tr>
-        <tr style='height:19.65pt'>
-            <td width=599 colspan=6 valign=top style='width:449.5pt;border:solid black 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt;height:19.65pt'>
-                <p class=MsoNormal><span style='font-size:11.0pt;color:#212121'>I confirm
-                        that to the best of my knowledge the information that I have given on this
-                        registration form/questionnaire is accurate. Additionally, I understand that
-                        it is my responsibility to inform and update the Center as to any changes to
-                        my personal data and information.</span></p>
-            </td>
-            <td width=67 colspan=2 valign=top style='width:50.0pt;border-top:none;
-  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt;height:19.65pt'>
-                <p class=MsoNormal><span style='font-size:11.0pt;color:#212121'>&nbsp;</span></p>
-            </td>
-            <td width=60 valign=top style='width:45.0pt;border-top:none;border-left:none;
-  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:19.65pt'>
-                <p class=MsoNormal><span style='font-size:11.0pt;color:#212121'>&nbsp;</span></p>
-            </td>
-        </tr>
-        <tr style='height:19.65pt'>
-            <td width=599 colspan=6 valign=top style='width:449.5pt;border:solid black 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt;height:19.65pt'>
-                <p class=MsoNormal><span style='font-size:11.0pt;color:#212121'>I hereby give
-                        my consent to the Center to communicate with me via phone, email or other
-                        means for updates as to new medical programs, upcoming lectures and
-                        conferences as well as Center news.</span></p>
-            </td>
-            <td width=67 colspan=2 valign=top style='width:50.0pt;border-top:none;
-  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt;height:19.65pt'>
-                <p class=MsoNormal><span style='font-size:11.0pt;color:#212121'>&nbsp;</span></p>
-            </td>
-            <td width=60 valign=top style='width:45.0pt;border-top:none;border-left:none;
-  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:19.65pt'>
-                <p class=MsoNormal><span style='font-size:11.0pt;color:#212121'>&nbsp;</span></p>
-            </td>
-        </tr>
-        <tr style='height:29.75pt'>
-            <td width=241 colspan=2 valign=top style='width:180.7pt;border:none;
-  border-bottom:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:29.75pt'>
-                <p class=MsoNormal><span style='font-size:11.0pt;color:#212121'>&nbsp;</span></p>
-                <p class=MsoNormal><span style='font-size:11.0pt;color:#212121'>&nbsp;</span></p>
-                <p class=MsoNormal><span style='font-size:8.0pt;color:#212121'>&nbsp;</span></p>
-                <p class=MsoNormal><span style='font-size:11.0pt;color:#212121'>&nbsp;</span></p>
-                <p class=MsoNormal><span style='font-size:11.0pt;color:#212121'>&nbsp;</span></p>
-                <p class=MsoNormal><span style='font-size:11.0pt;color:#212121'>&nbsp;</span></p>
-            </td>
-            <td width=47 valign=top style='width:35.35pt;border:none;padding:0in 5.4pt 0in 5.4pt;
-  height:29.75pt'>
-                <p class=MsoNormal><span style='font-size:11.0pt;color:#212121'>&nbsp;</span></p>
-            </td>
-            <td width=283 colspan=2 valign=top style='width:212.25pt;border:none;
-  padding:0in 5.4pt 0in 5.4pt;height:29.75pt'>
-                <p class=MsoNormal><span style='font-size:11.0pt;color:#212121'>&nbsp;</span></p>
-            </td>
-            <td width=155 colspan=4 valign=top style='width:116.2pt;border:none;
-  border-bottom:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:29.75pt'>
-                <p class=MsoNormal><span style='font-size:11.0pt;color:#212121'>&nbsp;</span></p>
-            </td>
-        </tr>
-        <tr style='height:20.25pt'>
-            <td width=241 colspan=2 valign=top style='width:180.7pt;border:none;
-  padding:0in 5.4pt 0in 5.4pt;height:20.25pt'>
-                <p class=MsoNormal><span style='font-size:11.0pt;color:#212121'>Signature</span></p>
-            </td>
-            <td width=47 valign=top style='width:35.35pt;border:none;padding:0in 5.4pt 0in 5.4pt;
-  height:20.25pt'>
-                <p class=MsoNormal><span style='font-size:11.0pt;color:#212121'>&nbsp;</span></p>
-                <p class=MsoNormal><span style='font-size:8.0pt;color:#212121'>&nbsp;</span></p>
-            </td>
-            <td width=283 colspan=2 valign=top style='width:212.25pt;border:none;
-  padding:0in 5.4pt 0in 5.4pt;height:20.25pt'>
-                <p class=MsoNormal><span style='font-size:11.0pt;color:#212121'>&nbsp;</span></p>
-            </td>
-            <td width=155 colspan=4 valign=top style='width:116.2pt;border:none;
-  padding:0in 5.4pt 0in 5.4pt;height:20.25pt'>
-                <p class=MsoNormal><span style='font-size:11.0pt;color:#212121'>Date</span></p>
-                <p class=MsoNormal><span style='font-size:11.0pt;color:#212121'>&nbsp;</span></p>
-            </td>
-        </tr>
-        <tr style='height:17.8pt'>
-            <td width=726 colspan=9 valign=top style='width:544.5pt;border:solid black 1.0pt;
-  background:#D9D9D9;padding:0in 5.4pt 0in 5.4pt;height:17.8pt'>
-                <p class=MsoNormal><b><span style='font-size:11.0pt;color:#212121'>For
-                            Internal Use</span></b></p>
-            </td>
-        </tr>
-        <tr style='height:17.8pt'>
-            <td width=222 valign=top style='width:166.25pt;border:solid black 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt;height:17.8pt'>
-                <p class=MsoNormal><span style='font-size:11.0pt;color:#212121'>Received by:</span></p>
-            </td>
-            <td width=198 colspan=3 valign=top style='width:148.6pt;border-top:none;
-  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt;height:17.8pt'>
-                <p class=MsoNormal><span style='font-size:11.0pt;color:#212121'>&nbsp;</span></p>
-            </td>
-            <td width=189 colspan=3 valign=top style='width:141.5pt;border-top:none;
-  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt;height:17.8pt'>
-                <p class=MsoNormal><span style='font-size:11.0pt;color:#212121'>Previous
-                        medical records requested</span></p>
-            </td>
-            <td width=118 colspan=2 valign=top style='width:88.15pt;border-top:none;
-  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt;height:17.8pt'>
-                <p class=MsoNormal><span style='font-size:11.0pt;color:#212121'>&nbsp;</span></p>
-            </td>
-        </tr>
-        <tr style='height:17.8pt'>
-            <td width=222 valign=top style='width:166.25pt;border:solid black 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt;height:17.8pt'>
-                <p class=MsoNormal><span style='font-size:11.0pt;color:#212121'>System entry
-                        date</span></p>
-            </td>
-            <td width=198 colspan=3 valign=top style='width:148.6pt;border-top:none;
-  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt;height:17.8pt'>
-                <p class=MsoNormal><span style='font-size:11.0pt;color:#212121'>&nbsp;</span></p>
-            </td>
-            <td width=189 colspan=3 valign=top style='width:141.5pt;border-top:none;
-  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt;height:17.8pt'>
-                <p class=MsoNormal><span style='font-size:11.0pt;color:#212121'>MRN Number</span></p>
-            </td>
-            <td width=118 colspan=2 valign=top style='width:88.15pt;border-top:none;
-  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt;height:17.8pt'>
-                <p class=MsoNormal><span style='font-size:11.0pt;color:#212121'>&nbsp;</span></p>
-            </td>
-        </tr>
-        <tr height=0>
-            <td width=222 style='border:none'></td>
-            <td width=19 style='border:none'></td>
-            <td width=47 style='border:none'></td>
-            <td width=132 style='border:none'></td>
-            <td width=151 style='border:none'></td>
-            <td width=28 style='border:none'></td>
-            <td width=9 style='border:none'></td>
-            <td width=58 style='border:none'></td>
-            <td width=60 style='border:none'></td>
-        </tr>
-    </table>
-
+    
     <p class=MsoNormal>&nbsp;</p>
+
+    <table>
+        <tr>
+            <td width=726 colspan=4 valign=top style='width:544.5pt;border:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+                <p class=MsoNormal><b><i><span style='font-size:11.0pt'>Do you have pain or discomfort when</span></i></b></p>
+            </td>
+        </tr>
+    </table>
 
 </div>
