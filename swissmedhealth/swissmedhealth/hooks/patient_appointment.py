@@ -38,7 +38,7 @@ def get_events(start, end, filters=None):
 
 	for item in data:
 		item.end = item.start + datetime.timedelta(minutes=item.duration)
-		item.title = item.service_unit + " (" + item.patient + " with " + item.practitioner_name + ")"
+		item.title = item.service_unit + " - " + item.patient
 
 	return data
 
