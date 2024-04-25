@@ -1,16 +1,19 @@
 import frappe
 
 def get_context(context):
-    # do your magic here
+	# do your magic here
 	pass
 
 @frappe.whitelist(allow_guest=True)
-def get_lead_details(email_id):
-    lead = frappe.db.get_value("Lead", {"email_id": email_id}, ["*"], as_dict=True)
-    # if empty lead throw error
-    if not lead:
-        frappe.throw("Not found")
-    return lead
+def get_lead_details(email_id, throw_error=True):
+	lead = frappe.db.get_value("Lead", {"email_id": email_id}, ["*"], as_dict=True)
+	# if empty lead throw error
+	if not lead:
+		if throw_error == 'false':
+			return None
+		else:
+			frappe.throw("Not found")
+	return lead
 
 @frappe.whitelist(allow_guest=True)
 def save(doc):
