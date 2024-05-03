@@ -92,6 +92,11 @@ doctype_calendar_js = {"Patient Appointment" : "public/js/patient_appointment_ca
 # before_app_uninstall = "swissmedhealth.utils.before_app_uninstall"
 # after_app_uninstall = "swissmedhealth.utils.after_app_uninstall"
 
+# After migrate
+after_migrate = [
+    "swissmedhealth.utils.after_migrate.set_default_print_format",
+]
+
 # Desk Notifications
 # ------------------
 # See frappe.core.notifications.get_notification_config
