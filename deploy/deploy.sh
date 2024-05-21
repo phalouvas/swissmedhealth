@@ -17,4 +17,4 @@ docker exec -it erpnext-v15-backend-1 bench --site all migrate
 docker exec -it erpnext-v15-backend-1 bench --site all clear-cache
 docker exec -it erpnext-v15-backend-1 bench --site all clear-website-cache
 
-docker images | grep erpnext
+docker images | grep swissmed
