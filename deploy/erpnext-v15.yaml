@@ -5,7 +5,7 @@ services:
       configurator:
         condition: service_completed_successfully
         required: true
-    image: phalouvas/erpnext-worker:version-15
+    image: phalouvas/swissmed-worker:version-15
     networks:
       bench-network: null
       mariadb-network: null
@@ -22,7 +22,7 @@ services:
     entrypoint:
       - bash
       - -c
-    image: phalouvas/erpnext-worker:version-15
+    image: phalouvas/swissmed-worker:version-15
     networks:
       bench-network: null
       mariadb-network: null
@@ -51,7 +51,7 @@ services:
       REDIS_CACHE: redis-cache:6379
       REDIS_QUEUE: redis-queue:6379
       SOCKETIO_PORT: "9000"
-    image: phalouvas/erpnext-worker:version-15
+    image: phalouvas/swissmed-worker:version-15
     networks:
       bench-network: null
       mariadb-network: null
@@ -80,7 +80,7 @@ services:
       UPSTREAM_REAL_IP_ADDRESS: 127.0.0.1
       UPSTREAM_REAL_IP_HEADER: X-Forwarded-For
       UPSTREAM_REAL_IP_RECURSIVE: "off"
-    image: phalouvas/erpnext-worker:version-15
+    image: phalouvas/swissmed-worker:version-15
     labels:
       traefik.docker.network: traefik-public
       traefik.enable: "true"
@@ -120,7 +120,7 @@ services:
       configurator:
         condition: service_completed_successfully
         required: true
-    image: phalouvas/erpnext-worker:version-15
+    image: phalouvas/swissmed-worker:version-15
     networks:
       bench-network: null
       mariadb-network: null
@@ -141,7 +141,7 @@ services:
       configurator:
         condition: service_completed_successfully
         required: true
-    image: phalouvas/erpnext-worker:version-15
+    image: phalouvas/swissmed-worker:version-15
     networks:
       bench-network: null
       mariadb-network: null
@@ -182,7 +182,7 @@ services:
       configurator:
         condition: service_completed_successfully
         required: true
-    image: phalouvas/erpnext-worker:version-15
+    image: phalouvas/swissmed-worker:version-15
     networks:
       bench-network: null
       mariadb-network: null
@@ -201,7 +201,7 @@ services:
       configurator:
         condition: service_completed_successfully
         required: true
-    image: phalouvas/erpnext-worker:version-15
+    image: phalouvas/swissmed-worker:version-15
     networks:
       bench-network: null
       mariadb-network: null
@@ -232,12 +232,12 @@ x-backend-defaults:
   depends_on:
     configurator:
       condition: service_completed_successfully
-  image: phalouvas/erpnext-worker:version-15
+  image: phalouvas/swissmed-worker:version-15
   pull_policy: if_not_present
   volumes:
     - sites:/home/frappe/frappe-bench/sites
 x-customizable-image:
-  image: phalouvas/erpnext-worker:version-15
+  image: phalouvas/swissmed-worker:version-15
   pull_policy: if_not_present
 x-depends-on-configurator:
   depends_on:
