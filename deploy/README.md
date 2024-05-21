@@ -65,7 +65,7 @@ Below should be run on local machine to avoid availability on production server.
     --build-arg=NODE_VERSION=18.18.2 \
     --build-arg=APPS_JSON_BASE64=$APPS_JSON_BASE64 \
     --tag=phalouvas/swissmed-worker:15.24.0 \
-    --file=images/azure/Containerfile .
+    --file=deploy/Containerfile .
 
   docker push phalouvas/swissmed-worker:15.24.0
   docker tag phalouvas/swissmed-worker:15.24.0 phalouvas/swissmed-worker:version-15
