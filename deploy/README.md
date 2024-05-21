@@ -1,7 +1,7 @@
 
 # Setup and deploy
 
-For preparing and setup of docker services this repository works together with fork repository [text](https://github.com/phalouvas/frappe_docker.git)
+For preparing and setup of docker services this repository works together with fork repository [frappe_docker](https://github.com/phalouvas/frappe_docker.git)
 
 ## First time setup
 
@@ -51,6 +51,9 @@ docker compose --project-name erpnext-v15 -f ~/swissmedhealth/deploy/erpnext-v15
 ```
 
 ## Build image
+
+Below should be run on local machine to avoid availability on production server.
+
 - Export apps to variable and build image
   ```shell
 
@@ -69,3 +72,13 @@ docker compose --project-name erpnext-v15 -f ~/swissmedhealth/deploy/erpnext-v15
   docker push phalouvas/swissmed-worker:version-15
 
     ```
+
+## Deploy
+
+Run below on production server.
+
+```shell
+~/swissmedhealth/deploy/deploy.sh
+```
+
+To delete old image in order to free up space use command `docker rmi -f phalouvas/swissmed-worker:x.x.x` where x.x.x the old version

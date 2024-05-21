@@ -2,10 +2,10 @@ cd ~
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/github
 
-cd /home/azureuser/gitops
+cd ~/gitops
 git pull
 
-cd /home/azureuser/frappe_docker
+cd ~/frappe_docker
 git pull
 
 docker pull phalouvas/swissmed-worker:version-15
