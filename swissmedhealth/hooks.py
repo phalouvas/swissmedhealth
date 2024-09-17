@@ -97,7 +97,7 @@ doctype_calendar_js = {"Therapy Session" : "public/js/therapy_session_calendar.j
 
 # After migrate
 after_migrate = [
-    "swissmedhealth.utils.after_migrate.set_default_print_format",
+    "swissmedhealth.swissmedhealth.utils.after_migrate.set_default_print_format",
 ]
 
 # Desk Notifications
