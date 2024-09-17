@@ -7,6 +7,7 @@ swissmedhealth/__init__.py
 swissmedhealth/hooks.py
 swissmedhealth/modules.txt
 swissmedhealth/patches.txt
+swissmedhealth/utils.py
 swissmedhealth.egg-info/PKG-INFO
 swissmedhealth.egg-info/SOURCES.txt
 swissmedhealth.egg-info/dependency_links.txt
@@ -16,6 +17,8 @@ swissmedhealth/config/__init__.py
 swissmedhealth/config/desktop.py
 swissmedhealth/config/docs.py
 swissmedhealth/fixtures/client_script.json
+swissmedhealth/fixtures/workflow.json
+swissmedhealth/fixtures/workflow_state.json
 swissmedhealth/fixtures/workspace.json
 swissmedhealth/public/therapy_session.py
 swissmedhealth/public/js/custom_sale_quotation.js
@@ -33,6 +36,7 @@ swissmedhealth/swissmedhealth/custom/lab_test_template.json
 swissmedhealth/swissmedhealth/custom/lead.json
 swissmedhealth/swissmedhealth/custom/opportunity.json
 swissmedhealth/swissmedhealth/custom/patient.json
+swissmedhealth/swissmedhealth/custom/room_number.json
 swissmedhealth/swissmedhealth/custom/supplier.json
 swissmedhealth/swissmedhealth/custom/therapy_plan.json
 swissmedhealth/swissmedhealth/custom/therapy_plan_detail.json
@@ -74,6 +78,9 @@ swissmedhealth/swissmedhealth/doctype/patient_treatment_plan/test_patient_treatm
 swissmedhealth/swissmedhealth/doctype/practitioner/__init__.py
 swissmedhealth/swissmedhealth/doctype/practitioner/practitioner.json
 swissmedhealth/swissmedhealth/doctype/practitioner/practitioner.py
+swissmedhealth/swissmedhealth/doctype/practitioner_multiselect/__init__.py
+swissmedhealth/swissmedhealth/doctype/practitioner_multiselect/practitioner_multiselect.json
+swissmedhealth/swissmedhealth/doctype/practitioner_multiselect/practitioner_multiselect.py
 swissmedhealth/swissmedhealth/doctype/room_number/__init__.py
 swissmedhealth/swissmedhealth/doctype/room_number/room_number.js
 swissmedhealth/swissmedhealth/doctype/room_number/room_number.json
@@ -89,6 +96,9 @@ swissmedhealth/swissmedhealth/doctype/sub_category_master/sub_category_master.js
 swissmedhealth/swissmedhealth/doctype/sub_category_master/sub_category_master.json
 swissmedhealth/swissmedhealth/doctype/sub_category_master/sub_category_master.py
 swissmedhealth/swissmedhealth/doctype/sub_category_master/test_sub_category_master.py
+swissmedhealth/swissmedhealth/doctype/therapy_type_service_units/__init__.py
+swissmedhealth/swissmedhealth/doctype/therapy_type_service_units/therapy_type_service_units.json
+swissmedhealth/swissmedhealth/doctype/therapy_type_service_units/therapy_type_service_units.py
 swissmedhealth/swissmedhealth/doctype/total_chair/__init__.py
 swissmedhealth/swissmedhealth/doctype/total_chair/test_total_chair.py
 swissmedhealth/swissmedhealth/doctype/total_chair/total_chair.js
@@ -140,6 +150,7 @@ swissmedhealth/swissmedhealth/print_format/patient_form/patient_form.json
 swissmedhealth/swissmedhealth/print_format/sales_invoice_custom/__init__.py
 swissmedhealth/swissmedhealth/print_format/sales_invoice_custom/sales_invoice_custom.html
 swissmedhealth/swissmedhealth/print_format/sales_invoice_custom/sales_invoice_custom.json
+swissmedhealth/swissmedhealth/utils/after_migrate.py
 swissmedhealth/swissmedhealth/web_form/__init__.py
 swissmedhealth/swissmedhealth/web_form/contact_us/__init__.py
 swissmedhealth/swissmedhealth/web_form/contact_us/contact_us.js
@@ -159,5 +170,4 @@ swissmedhealth/swissmedhealth/web_form/medical_history/medical_history.json
 swissmedhealth/swissmedhealth/web_form/medical_history/medical_history.py
 swissmedhealth/templates/__init__.py
 swissmedhealth/templates/pages/__init__.py
-swissmedhealth/utils/after_migrate.py
 swissmedhealth/www/__init__.py
