@@ -1,0 +1,79 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Therapy Session",
+  "enabled": 1,
+  "modified": "2024-08-08 09:30:14.001181",
+  "module": "Swissmedhealth",
+  "name": "Merge Invoice",
+  "script": "frappe.listview_settings['Therapy Session'] = {\n    onload: function(listview) {\n        listview.page.add_inner_button(__('Merge Invoice'), function() {\n            const selected_docs = listview.get_checked_items();\n\n            if (selected_docs.length === 0) {\n                frappe.msgprint(__('Please select at least one Therapy Session'));\n                return;\n            }\n\n            const therapy_sessions = selected_docs.map(doc => doc.name);\n            console.log(\"::::::::::::therapy_sessions:::\",therapy_sessions)\n\n            frappe.call({\n                method: \"swissmedhealth.swissmedhealth.hooks.custom_therapy_session.merge_therapy_sessions_to_invoice\",\n                args: {\n                    'therapy_sessions': therapy_sessions\n                },\n                callback: function(r) {\n                    if(r.message) {\n                        console.log(\"::::::::::::::::::::\",r.message)\n                        frappe.msgprint(__('Invoice Created: <a href = \"/app/sales-invoice/'+r.message+'\">'+r.message+'</a>'));\n                        listview.refresh();\n                    }\n                }\n            });\n        });\n    }\n};\n",
+  "view": "List"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Therapy Plan",
+  "enabled": 1,
+  "modified": "2024-06-14 14:53:27.694573",
+  "module": "Swissmedhealth",
+  "name": "Custom Buttion Therapy Plan",
+  "script": "frappe.ui.form.on('Therapy Plan', {\n\trefresh: function(frm,cdt,cdn) {\n\t    frm.page.remove_inner_button(__('Therapy Session'),  __('Create'));\n\t\tfrm.add_custom_button(__(\"Treatment Appointment\"), function() {\t    \t\t\n\t\t\tfrappe.new_doc(\"Therapy Session\", {\n\t\t\t    \"therapy_plan\": frm.doc.name,\n\t\t\t\t\"patient\": frm.doc.patient,\n\t\t\t});\n\t\t}, __(\"Create\"));\n\t}\n});",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Therapy Session",
+  "enabled": 1,
+  "modified": "2024-08-08 16:59:03.478899",
+  "module": "Swissmedhealth",
+  "name": "Calendar View",
+  "script": "frappe.views.calendar[\"Therapy Session\"] = {\n\tfield_map: {\n\t\tstatus: \"docstatus\",\n        id: \"name\",\n        title: \"patient\",\n        start: \"start\",\n        end: \"end\",  // Make sure you have an end_date if needed\n        // \"allDay\": \"all_day\", // Optional, if you are using all-day events\n        therapy_plan: \"therapy_plan\",\n        // \"eventColor\": \"color\",\n        color: \"color\"\n\t},\n\torder_by: \"start_date\",\n// \tgantt: true,\n\tget_events_method: \"swissmedhealth.public.therapy_session.get_events\"\n};\n",
+  "view": "List"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Therapy Session",
+  "enabled": 0,
+  "modified": "2024-07-09 09:36:01.772270",
+  "module": "Swissmedhealth",
+  "name": "Script room and chair multi select",
+  "script": "frappe.ui.form.on('Therapy Session', {\n    // refresh: function(frm) {\n    //     frm.add_fetch('therapy_type', 'room_number', 'room_number');\n    // },\n    therapy_type: function(frm) {\n        console.log(\"test :::::::::::::::::::::::::::::::::::\");\n        if(frm.doc.therapy_type) {\n            // Fetch room numbers based on selected therapy types\n            frappe.call({\n                method: 'swissmedhealth.public.therapy_session.get_room_numbers_by_therapy_types',\n                args: {\n                    therapy_type_ids: frm.doc.therapy_type\n                },\n                callback: function(r) {\n                    if(r.message) {\n                        let room_numbers = r.message;\n                        frm.clear_table(\"custom_room_number_1\");  // Assuming \"room_numbers\" is the table field\n                        \n                        room_numbers.forEach(function(room) {\n                            console.log(\"room ::::::::::::::::\", room);\n                            let new_row = frm.add_child(\"custom_room_number_1\");\n                            new_row.name1 = room;\n                        });\n                        \n                        refresh_field(\"custom_room_number_1\");\n                    }\n                }\n            });\n        }\n    }\n});\n\n\nfrappe.ui.form.on('Therapy Session', {\n    therapy_type: function(frm) {\n        console.log(\"test :::::::::::::::::::::::::::::::::::\");\n        if(frm.doc.therapy_type) {\n            // Fetch room numbers based on selected therapy types\n            frappe.call({\n                method: 'swissmedhealth.public.therapy_session.get_total_chair_by_therapy_types',\n                args: {\n                    therapy_type_ids: frm.doc.therapy_type\n                },\n                callback: function(r) {\n                    if(r.message) {\n                        let chair_numbers = r.message;\n                        frm.clear_table(\"custom_total_chairs\");  // Assuming \"room_numbers\" is the table field\n                        \n                        chair_numbers.forEach(function(chair) {\n                            console.log(\"chair ::::::::::::::::\", chair);\n                            let new_row = frm.add_child(\"custom_total_chairs\");\n                            new_row.name1 = chair;\n                        });\n                        \n                        refresh_field(\"custom_total_chairs\");\n                    }\n                }\n            });\n        }\n    }\n});\n\nfrappe.ui.form.on('Therapy Session', {\n    therapy_type: function(frm) {\n        console.log(\"test :::::::::::::::::::::::::::::::::::\");\n        if(frm.doc.therapy_type) {\n            // Fetch room numbers based on selected therapy types\n            frappe.call({\n                method: 'swissmedhealth.public.therapy_session.get_total_beds_by_therapy_types',\n                args: {\n                    therapy_type_ids: frm.doc.therapy_type\n                },\n                callback: function(r) {\n                    if(r.message) {\n                        let bed_numbers = r.message;\n                        frm.clear_table(\"custom_total_beds\");  // Assuming \"room_numbers\" is the table field\n                        \n                        bed_numbers.forEach(function(bed) {\n                            console.log(\"bed ::::::::::::::::\", bed);\n                            let new_row = frm.add_child(\"custom_total_beds\");\n                            new_row.totals_beds = bed;\n                        });\n                        \n                        refresh_field(\"custom_total_beds\");\n                    }\n                }\n            });\n        }\n    }\n});",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Therapy Session",
+  "enabled": 0,
+  "modified": "2024-07-09 09:34:54.873774",
+  "module": "Swissmedhealth",
+  "name": "Fetch Healthcare Practitioner in therapy session from therapy plan",
+  "script": "frappe.ui.form.on('Therapy Session', {\n    therapy_type: function(frm) {\n        console.log(\"test :::::::::::::::::::::::::::::::::::\");\n        if(frm.doc.therapy_type) {\n            // Fetch staff based on selected therapy types\n            frappe.call({\n                method: 'swissmedhealth.public.therapy_session.get_practitioner_from_therapy_types',\n                args: {\n                    therapy_type_ids: frm.doc.therapy_type\n                },\n                callback: function(r) {\n                    if(r.message) {\n                        let health_staff = r.message;\n                        frm.clear_table(\"custom_practitioner\");  // Assuming \"room_numbers\" is the table field\n                        \n                        health_staff.forEach(function(staff) {\n                            console.log(\"staff ::::::::::::::::\", staff);\n                            let new_row = frm.add_child(\"custom_practitioner\");\n                            new_row.name1 = staff;\n                        });\n                        \n                        refresh_field(\"custom_practitioner\");\n                    }\n                }\n            });\n        }\n    }\n});\n",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Quotation",
+  "enabled": 1,
+  "modified": "2024-06-27 07:17:16.026565",
+  "module": "Swissmedhealth",
+  "name": "Button Quotaion form - Create Therapy Plan",
+  "script": "frappe.ui.form.on('Quotation', {\n    refresh: function(frm) {\n        if (!frm.doc.__islocal && frm.doc.docstatus === 1) {\n            frm.add_custom_button(__('Create Therapy Plan'), function() {\n                create_therapy_plan(frm);\n            }, __('Create')); // Adding under 'Actions' instead of 'Create'\n        }\n    }\n});\n\nfunction create_therapy_plan(frm) {\n    frappe.call({\n        method: 'swissmedhealth.swissmedhealth.hooks.quotation.create_therapy_plan',\n        args: {\n            quotation_name: frm.doc.name\n        },\n        callback: function(r) {\n            if (!r.exc) {\n                frappe.msgprint(__('Therapy Plan created successfully'));\n                frappe.set_route('Form', 'Therapy Plan', r.message);\n            }\n        }\n    });\n}\n",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Opportunity",
+  "enabled": 1,
+  "modified": "2024-07-01 06:50:46.595411",
+  "module": null,
+  "name": "Fetching item prices in Opportunity",
+  "script": "frappe.ui.form.on('Opportunity Item', {\n    item_code: function(frm, cdt, cdn) {\n        var item = frappe.get_doc(cdt, cdn);\n        var price_list = frm.doc.price_list; // Get the selected price list from the Opportunity DocType\n        var item_code = item.item_code;\n\n        frappe.call({\n            method: 'frappe.client.get_value',\n            args: {\n                doctype: 'Item Price',\n                filters: {\n                    item_code: item_code,\n                    price_list: price_list\n                },\n                fieldname: 'price_list_rate'\n            },\n            callback: function(response) {\n                if (response && response.message) {\n                    frappe.model.set_value(cdt, cdn, 'rate', response.message.price_list_rate);\n                }\n            }\n        });\n    }\n});",
+  "view": "Form"
+ }
+]
