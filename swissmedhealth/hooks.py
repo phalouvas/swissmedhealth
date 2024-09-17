@@ -33,11 +33,14 @@ doctype_js = {
     "Customer": "public/js/customer.js",
     "Lead": "public/js/lead.js",
     "CRM Activities": "public/js/crm_activities.js",
+    "Therapy Session": "public/js/therapy_session.js",
+    # "Therapy Session": "public/js/custom_therapy_session.js",
+    "Quotation": "public/js/custom_sale_quotation.js"
 }
-# doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
+# doctype_list_js = {"Therapy Session" : "public/js/custom_therapy_session.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 doctype_calendar_js = {"Patient Appointment" : "public/js/patient_appointment_calendar.js"}
-
+doctype_calendar_js = {"Therapy Session" : "public/js/therapy_session_calendar.js"}
 # Home Pages
 # ----------
 
@@ -93,9 +96,9 @@ doctype_calendar_js = {"Patient Appointment" : "public/js/patient_appointment_ca
 # after_app_uninstall = "swissmedhealth.utils.after_app_uninstall"
 
 # After migrate
-after_migrate = [
-    "swissmedhealth.utils.after_migrate.set_default_print_format",
-]
+#after_migrate = [
+#    "swissmedhealth.utils.after_migrate.set_default_print_format",
+#]
 
 # Desk Notifications
 # ------------------
@@ -120,7 +123,9 @@ after_migrate = [
 # Override standard doctype classes
 
 override_doctype_class = {
-    "Lead": "swissmedhealth.swissmedhealth.hooks.lead.Lead"
+    "Lead": "swissmedhealth.swissmedhealth.hooks.lead.Lead",
+    "Therapy Session": "swissmedhealth.swissmedhealth.hooks.CTherapySession.CTherapySession",
+    "Therapy Type": "swissmedhealth.swissmedhealth.customization.therapy_type.therapy_type.CustomTherapyType"
 }
 
 # Document Events
@@ -135,7 +140,15 @@ doc_events = {
     "Customer": {
         "before_insert": "swissmedhealth.swissmedhealth.hooks.customer.before_insert",
     },
+    "Therapy Session": {
+        "on_update_after_submit": "swissmedhealth.swissmedhealth.customization.therapy_session.therapy_session.on_update_after_submit",
+        "validate":"swissmedhealth.swissmedhealth.customization.therapy_session.therapy_session.validate_session"
+    },
+    # "Therapy Session": {
+    #     "on_submit": "swissmedhealth.public.therapy_session.validate_double_booking",
+    # },
 }
+
 
 # Scheduled Tasks
 # ---------------
@@ -226,3 +239,35 @@ doc_events = {
 # auth_hooks = [
 #	"swissmedhealth.auth.validate"
 # ]
+
+fixtures = [{
+    "doctype": "Client Script",
+        "filters": {
+            "name": [ "in", ["Custom Buttion Therapy Plan", "Calendar View", "Script room and chair multi select", "Merge Invoice", "Fetch Healthcare Practitioner in therapy session from therapy plan", "Button Quotaion form - Create Therapy Plan", "Fetching item prices in Opportunity"] ]
+            }
+    },
+    {
+    "doctype": "Workspace",
+        "filters": [
+            [
+                "name", "in", [
+                    "Healthcare"
+                ]
+            ]
+        ]
+    },
+    {
+    "doctype": "Workflow",
+        "filters": [
+            [
+                "name", "in", [
+                    "Therapy Custom Workflow"
+                ]
+            ]
+        ]
+    },
+    {
+    "doctype": "Workflow State",
+    }
+    ]
+

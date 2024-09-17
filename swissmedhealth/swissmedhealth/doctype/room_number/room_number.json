@@ -1,0 +1,51 @@
+{
+ "actions": [],
+ "autoname": "field:room_number",
+ "creation": "2024-05-31 15:22:01.801054",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "room_number",
+  "test"
+ ],
+ "fields": [
+  {
+   "fieldname": "room_number",
+   "fieldtype": "Data",
+   "label": "Room Number",
+   "unique": 1
+  },
+  {
+   "fieldname": "test",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Center Location",
+   "options": "Limassol\nNicosia"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-07-11 07:19:16.048469",
+ "modified_by": "Administrator",
+ "module": "Swissmedhealth",
+ "name": "Room Number",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -3,5 +3,5 @@
 *.egg-info
 *.swp
 tags
-swissmedhealth/docs/current
-node_modules/
+node_modules
+__pycache__
