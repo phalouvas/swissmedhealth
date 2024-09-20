@@ -129,7 +129,19 @@
   "do_you_tend_to_feel",
   "daily_bowel_movements",
   "sleep_easily",
-  "night_pee"
+  "night_pee",
+  "fitness_section",
+  "fitness_goals",
+  "fitness_areas",
+  "fitness_level",
+  "use_supplements",
+  "fitness_injury",
+  "fitness_injury_details",
+  "physical_activity_details",
+  "training_frequency",
+  "competitive_sports_details",
+  "supplements_details",
+  "is_pregnant"
  ],
  "fields": [
   {
@@ -902,6 +914,76 @@
    "fieldname": "details_of_medical_history",
    "fieldtype": "Small Text",
    "label": "Details of medical history"
+  },
+  {
+   "fieldname": "fitness_section",
+   "fieldtype": "Section Break",
+   "label": "Fitness"
+  },
+  {
+   "fieldname": "fitness_goals",
+   "fieldtype": "Select",
+   "label": "What are your primary fitness goals?",
+   "options": "\nImproving strength\nIncreasing flexibility\nEnhancing cardiovascular health\nWeight management\nGeneral wellness"
+  },
+  {
+   "fieldname": "fitness_areas",
+   "fieldtype": "Select",
+   "label": "What areas of fitness would you like to improve on through guidance or support?",
+   "options": "\nImproving strength\nIncreasing flexibility\nEnhancing cardiovascular health\nWeight management\nGeneral wellness"
+  },
+  {
+   "fieldname": "fitness_level",
+   "fieldtype": "Select",
+   "label": "How would you rate your overall fitness level?",
+   "options": "\nBeginner\nIntermediate\nAdvanced\nAthlete"
+  },
+  {
+   "default": "No",
+   "fieldname": "use_supplements",
+   "fieldtype": "Select",
+   "label": "Have you ever used or are you currently using any methods/substances/supplements to enhance sports performance?",
+   "options": "No\nYes"
+  },
+  {
+   "fieldname": "physical_activity_details",
+   "fieldtype": "Small Text",
+   "label": "What is your primary sport or physical activity?"
+  },
+  {
+   "fieldname": "training_frequency",
+   "fieldtype": "Small Text",
+   "label": "How often do you train per week (frequency, duration, intensity)?"
+  },
+  {
+   "fieldname": "competitive_sports_details",
+   "fieldtype": "Small Text",
+   "label": "Do you participate in competitive events (competititions)? If yes, please specify"
+  },
+  {
+   "fieldname": "supplements_details",
+   "fieldtype": "Small Text",
+   "label": "Current medications and supplements"
+  },
+  {
+   "default": "No",
+   "fieldname": "is_pregnant",
+   "fieldtype": "Select",
+   "label": "Are you currently pregnant or breastfeeding?",
+   "options": "No\nYes"
+  },
+  {
+   "default": "No",
+   "fieldname": "fitness_injury",
+   "fieldtype": "Select",
+   "label": "Have you ever experienced any injuries or conditions that have affected your fitness routine? If yes, please provide details",
+   "options": "No\nYes"
+  },
+  {
+   "depends_on": "eval:doc.fitness_injury=='Yes'",
+   "fieldname": "fitness_injury_details",
+   "fieldtype": "Small Text",
+   "label": "Fitness Injury Details"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -915,7 +997,7 @@
    "link_fieldname": "custom_medical_history"
   }
  ],
- "modified": "2024-09-20 07:35:07.001574",
+ "modified": "2024-09-20 08:18:39.344577",
  "modified_by": "Administrator",
  "module": "Swissmedhealth",
  "name": "Medical History",
