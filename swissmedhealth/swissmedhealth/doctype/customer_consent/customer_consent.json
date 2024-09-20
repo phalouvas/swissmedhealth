@@ -90,7 +90,7 @@
   },
   {
    "default": "Yes",
-   "description": "By participating in Swissmed Health's Hormonal Optimisation Program, the member acknowledges and voluntarily consents to hormone levels being adjusted beyond normal health and optimisation parameters at their own request.\n\nThe member understands and accepts that such adjustments may carry increased risks, including but not limited to potential health complications, side effects, or adverse outcomes.\n\nThe member expressly waives any claims against Swissmed Health, its physicians, staff, and affiliated entities for any liability, harm, or damages arising from hormone adjustments beyond standard recommended health levels.\n\nThe member agrees that Swissmed Health shall not be held responsible for any negative health impacts resulting from member-initiated requests for hormone levels outside of normal clinical guidelines.",
+   "description": "By participating in Swissmed Health's Hormonal Optimization Program, the member acknowledges and voluntarily consents to hormone levels being adjusted beyond normal health and optimization parameters at their own request.<br>\n\nThe member understands and accepts that such adjustments may carry increased risks, including but not limited to potential health complications, side effects, or adverse outcomes.<br>\n\nThe member expressly waives any claims against Swissmed Health, its physicians, staff, and affiliated entities for any liability, harm, or damages arising from hormone adjustments beyond standard recommended health levels.<br>\n\nThe member agrees that Swissmed Health shall not be held responsible for any negative health impacts resulting from member-initiated requests for hormone levels outside of normal clinical guidelines.<br>",
    "fieldname": "understand_hormone",
    "fieldtype": "Select",
    "label": "Do you understand that hormonal optimization therapy is a personalized treatment plan and may not be suitable for everyone?",
@@ -108,7 +108,7 @@
    "link_fieldname": "custom_customer_consent"
   }
  ],
- "modified": "2024-09-20 08:44:33.864324",
+ "modified": "2024-09-20 09:11:42.176383",
  "modified_by": "Administrator",
  "module": "Swissmedhealth",
  "name": "Customer Consent",

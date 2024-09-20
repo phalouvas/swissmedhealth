@@ -24,7 +24,7 @@
  "list_columns": [],
  "login_required": 0,
  "max_attachment_size": 0,
- "modified": "2024-09-20 08:54:18.631561",
+ "modified": "2024-09-20 09:11:52.998595",
  "modified_by": "Administrator",
  "module": "Swissmedhealth",
  "name": "hormonal-optimization-therapy-acceptance",
@@ -39,6 +39,7 @@
  "web_form_fields": [
   {
    "allow_read_on_all_link_options": 0,
+   "description": "I understand and accept that the Center has the right to approve or reject my registration application at any point in time.",
    "fieldname": "accept_registration",
    "fieldtype": "Select",
    "hidden": 0,
@@ -67,6 +68,7 @@
   },
   {
    "allow_read_on_all_link_options": 0,
+   "description": "I confirm that to the best of my knowledge the information that I have given on this registration form/questionnaire is accurate. Additionally, I understand that it is my responsibility to inform and update the Center as to any changes to my personal data and information.",
    "fieldname": "accept_personal_data",
    "fieldtype": "Select",
    "hidden": 0,
@@ -95,6 +97,7 @@
   },
   {
    "allow_read_on_all_link_options": 0,
+   "description": "I hereby give my consent to the Center to communicate with me via phone, email or other means for updates as to new medical programs, upcoming lectures and conferences as well as Center news.",
    "fieldname": "accept_communication",
    "fieldtype": "Select",
    "hidden": 0,
@@ -124,6 +127,7 @@
   {
    "allow_read_on_all_link_options": 0,
    "default": "",
+   "description": "By participating in Swissmed Health's Hormonal Optimization Program, the member acknowledges and voluntarily consents to hormone levels being adjusted beyond normal health and optimization parameters at their own request.<br>\n\nThe member understands and accepts that such adjustments may carry increased risks, including but not limited to potential health complications, side effects, or adverse outcomes.<br>\n\nThe member expressly waives any claims against Swissmed Health, its physicians, staff, and affiliated entities for any liability, harm, or damages arising from hormone adjustments beyond standard recommended health levels.<br>\n\nThe member agrees that Swissmed Health shall not be held responsible for any negative health impacts resulting from member-initiated requests for hormone levels outside of normal clinical guidelines.<br>",
    "fieldname": "understand_hormone",
    "fieldtype": "Select",
    "hidden": 0,
