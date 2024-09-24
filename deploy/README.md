@@ -70,8 +70,8 @@ Below should be run on local machine to avoid availability on production server.
     --file=images/azure/Containerfile .
 
   # docker push phalouvas/swissmed-worker:version-15
-  # docker tag phalouvas/swissmed-worker:version-15 phalouvas/swissmed-worker:15.35.1
-  # docker push phalouvas/swissmed-worker:15.35.1
+  # docker tag phalouvas/swissmed-worker:version-15 phalouvas/swissmed-worker:15.xx.x
+  # docker push phalouvas/swissmed-worker:15.xx.x
   # docker builder prune
 
     ```
