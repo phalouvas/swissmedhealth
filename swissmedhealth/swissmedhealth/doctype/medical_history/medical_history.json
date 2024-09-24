@@ -930,7 +930,7 @@
    "fieldname": "fitness_areas",
    "fieldtype": "Select",
    "label": "What areas of fitness would you like to improve on through guidance or support?",
-   "options": "\nImproving strength\nIncreasing flexibility\nEnhancing cardiovascular health\nWeight management\nGeneral wellness"
+   "options": "\nStrength\nEndurance\nFlexibility and mobility\nBalance\nRecovery and rehabilitation"
   },
   {
    "fieldname": "fitness_level",
@@ -997,7 +997,7 @@
    "link_fieldname": "custom_medical_history"
   }
  ],
- "modified": "2024-09-20 08:18:39.344577",
+ "modified": "2024-09-24 15:03:47.897987",
  "modified_by": "Administrator",
  "module": "Swissmedhealth",
  "name": "Medical History",
