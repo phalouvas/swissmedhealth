@@ -33,7 +33,7 @@
  "list_title": "Test",
  "login_required": 0,
  "max_attachment_size": 0,
- "modified": "2024-10-17 08:38:49.379769",
+ "modified": "2024-10-17 08:46:59.102487",
  "modified_by": "Administrator",
  "module": "Swissmedhealth",
  "name": "hormonal-optimization-therapy-registration-form",
@@ -160,7 +160,7 @@
    "max_value": 0,
    "precision": "",
    "read_only": 0,
-   "reqd": 0,
+   "reqd": 1,
    "show_in_filter": 0
   },
   {
