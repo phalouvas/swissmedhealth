@@ -24,7 +24,7 @@
  "list_columns": [],
  "login_required": 0,
  "max_attachment_size": 0,
- "modified": "2024-09-24 14:49:18.529167",
+ "modified": "2024-10-17 16:04:51.872494",
  "modified_by": "Administrator",
  "module": "Swissmedhealth",
  "name": "symptoms-medical-history",
@@ -136,7 +136,7 @@
   {
    "allow_read_on_all_link_options": 0,
    "default": "Nothing specific",
-   "fieldname": "custom_nutritional_preferences",
+   "fieldname": "nutritional_preferences",
    "fieldtype": "Select",
    "hidden": 0,
    "label": "Nutritional Preferences",

@@ -84,8 +84,8 @@ def after_insert(doc, method):
     doc.reload()
 
 def on_update(doc, method):
-    if not doc.custom_customer_primary_address:
-        address = frappe.new_doc("Address")
+    if doc.custom_customer_primary_address:
+        address = frappe.get_doc("Address", doc.custom_customer_primary_address)
         address.update({
             "address_type": "Billing",
             "address_line1": doc.custom_street_name,
@@ -99,8 +99,7 @@ def on_update(doc, method):
                 "link_title": doc.lead_name
             }]
         })
-        address.insert(ignore_permissions=True)
-        doc.db_set('custom_customer_primary_address', address.name)
+        address.save()
 
 def validate(doc, method):
     if doc.custom_referral_code:

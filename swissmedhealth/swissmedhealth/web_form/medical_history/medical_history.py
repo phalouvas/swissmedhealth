@@ -25,14 +25,15 @@ def save(doc):
 	lead.save(ignore_permissions=True)
 
 	address = frappe.get_doc("Address", lead.custom_customer_primary_address)
-	address.update({
-		"address_line1": doc.custom_street_name,
-		"address_line2": doc.custom_building_name,
-		"city": doc.city,
-		"pincode": doc.custom_post_code,
-		"country": doc.country,
-	})
-	address.save()
+	if address:
+		address.update({
+			"address_line1": doc.custom_street_name if doc.custom_street_name else "-",
+			"address_line2": doc.custom_building_name,
+			"city": doc.city if doc.city else "-",
+			"pincode": doc.custom_post_code,
+			"country": doc.country,
+		})
+		address.save()
 
 	return lead
 

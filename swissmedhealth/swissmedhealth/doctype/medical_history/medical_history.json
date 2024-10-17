@@ -51,6 +51,7 @@
   "diet_preference_details",
   "section_break_uc9hj",
   "pacemaker",
+  "nutritional_preferences",
   "section_break_itjls",
   "heading_1",
   "anorexia",
@@ -141,7 +142,12 @@
   "training_frequency",
   "competitive_sports_details",
   "supplements_details",
-  "is_pregnant"
+  "is_pregnant",
+  "health_section",
+  "health_goals",
+  "health_goals_desc",
+  "preferred_contact_method",
+  "preferred_contact_times"
  ],
  "fields": [
   {
@@ -984,6 +990,48 @@
    "fieldname": "fitness_injury_details",
    "fieldtype": "Small Text",
    "label": "Fitness Injury Details"
+  },
+  {
+   "default": "Nothing specific",
+   "fieldname": "nutritional_preferences",
+   "fieldtype": "Select",
+   "label": "Nutritional Preferences",
+   "options": "Nothing specific\nVegetarian\nVegan\nGluten-free\nDairy-free\nKeto\nPaleo\nLow-carb\nLow-fat"
+  },
+  {
+   "fieldname": "health_goals",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Health Goals",
+   "options": "Overcoming a current health challenge\nUnlocking the secrets to a longer, healthier life\nBoosting my physical and mental performance\nGetting a comprehensive health check-up\nAchieving a brighter, healthier smile with our biological dental services\nCurious about a treatment I saw on social media\nOur corporate wellness program",
+   "reqd": 1
+  },
+  {
+   "fieldname": "health_section",
+   "fieldtype": "Section Break",
+   "label": "Health"
+  },
+  {
+   "depends_on": "eval:doc.health_goals=='Overcoming a current health challenge' || doc.health_goals=='Curious about a treatment I saw on social media';",
+   "fieldname": "health_goals_desc",
+   "fieldtype": "Small Text",
+   "label": "Please Describe"
+  },
+  {
+   "fieldname": "preferred_contact_method",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Which is your preferred contact method?",
+   "options": "Email\nTelephone\nWhatsapp\nTelegram",
+   "reqd": 1
+  },
+  {
+   "fieldname": "preferred_contact_times",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "What are your preferred contact times?",
+   "options": "Morning\nLunch\nAfternoon\nLate afternoon",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
@@ -997,7 +1045,7 @@
    "link_fieldname": "custom_medical_history"
   }
  ],
- "modified": "2024-09-24 15:03:47.897987",
+ "modified": "2024-10-17 16:23:46.891755",
  "modified_by": "Administrator",
  "module": "Swissmedhealth",
  "name": "Medical History",
