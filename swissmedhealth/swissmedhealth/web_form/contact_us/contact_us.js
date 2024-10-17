@@ -9,6 +9,11 @@ frappe.ready(function () {
 			frappe.web_form.set_values(doc);
 			frappe.web_form.is_new = false;
 			frappe.web_form.doc.name = doc.name;
+
+			// Check if custom_referral_code is not empty and make it read-only
+            if (doc.custom_referral_code) {
+                frappe.web_form.set_df_property('custom_referral_code', 'read_only', 1);
+            }
 		});
 	}
 
