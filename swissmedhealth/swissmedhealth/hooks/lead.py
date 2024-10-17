@@ -65,6 +65,15 @@ def after_insert(doc, method):
 
     doc.reload()
 
+def validate(doc, method):
+    if doc.custom_referral_code:
+        sales_partner_data = frappe.get_value("Sales Partner", {"referral_code": doc.custom_referral_code}, ["name", "commission_rate"])
+        if sales_partner_data:
+            doc.custom_sales_partner = sales_partner_data[0]
+            doc.custom_commission_rate = sales_partner_data[1]
+        else:
+            frappe.throw(f"Sales Partner with referral code {doc.custom_referral_code} not found.")
+
 # Hook: before delete
 def after_delete(doc, method):
     # if custom_dental_history is not empty
