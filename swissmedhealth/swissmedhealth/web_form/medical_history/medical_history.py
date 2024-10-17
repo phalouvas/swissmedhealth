@@ -23,6 +23,17 @@ def save(doc):
 	lead = frappe.get_doc("Lead", doc.name)
 	lead.update(doc)
 	lead.save(ignore_permissions=True)
+
+	address = frappe.get_doc("Address", lead.custom_customer_primary_address)
+	address.update({
+		"address_line1": doc.custom_street_name,
+		"address_line2": doc.custom_building_name,
+		"city": doc.city,
+		"pincode": doc.custom_post_code,
+		"country": doc.country,
+	})
+	address.save()
+
 	return lead
 
 @frappe.whitelist(allow_guest=True)
@@ -31,7 +42,7 @@ def get_medical_history_details(email_id):
 	# if empty lead throw error
 	if not lead:
 		frappe.throw("Not found")
-	
+
 	# get the dental history document from the lead
 	medical_history = frappe.get_value("Medical History", lead.custom_medical_history, ["*"], as_dict=True)
 	return medical_history

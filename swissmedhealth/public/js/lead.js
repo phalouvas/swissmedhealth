@@ -395,5 +395,16 @@ frappe.ui.form.on("Lead", {
 			}, __('Action'));
 
 		}
+	},
+
+	setup: function (frm) {
+		frm.set_query("custom_customer_primary_address", function (doc) {
+			return {
+				filters: {
+					link_doctype: "Lead",
+					link_name: doc.name,
+				},
+			};
+		});
 	}
 });

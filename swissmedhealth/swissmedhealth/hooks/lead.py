@@ -63,7 +63,44 @@ def after_insert(doc, method):
     customer_consent.insert(ignore_permissions=True)
     doc.db_set('custom_customer_consent', customer_consent.name)
 
+    if not doc.custom_customer_primary_address:
+        address = frappe.new_doc("Address")
+        address.update({
+            "address_type": "Billing",
+            "address_line1": doc.custom_street_name,
+            "address_line2": doc.custom_building_name,
+            "city": doc.city,
+            "pincode": doc.custom_post_code,
+            "country": doc.country,
+            "links": [{
+                "link_doctype": "Lead",
+                "link_name": doc.name,
+                "link_title": doc.lead_name
+            }]
+        })
+        address.insert(ignore_permissions=True)
+        doc.db_set('custom_customer_primary_address', address.name)
+
     doc.reload()
+
+def on_update(doc, method):
+    if not doc.custom_customer_primary_address:
+        address = frappe.new_doc("Address")
+        address.update({
+            "address_type": "Billing",
+            "address_line1": doc.custom_street_name,
+            "address_line2": doc.custom_building_name,
+            "city": doc.city,
+            "pincode": doc.custom_post_code,
+            "country": doc.country,
+            "links": [{
+                "link_doctype": "Lead",
+                "link_name": doc.name,
+                "link_title": doc.lead_name
+            }]
+        })
+        address.insert(ignore_permissions=True)
+        doc.db_set('custom_customer_primary_address', address.name)
 
 def validate(doc, method):
     if doc.custom_referral_code:

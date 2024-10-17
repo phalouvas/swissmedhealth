@@ -137,6 +137,7 @@ doc_events = {
         "after_insert": "swissmedhealth.swissmedhealth.hooks.lead.after_insert",
         "after_delete": "swissmedhealth.swissmedhealth.hooks.lead.after_delete",
         "validate": "swissmedhealth.swissmedhealth.hooks.lead.validate",
+        "on_update": "swissmedhealth.swissmedhealth.hooks.lead.on_update",
     },
     "Customer": {
         "before_insert": "swissmedhealth.swissmedhealth.hooks.customer.before_insert",
