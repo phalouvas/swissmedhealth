@@ -63,7 +63,52 @@ def after_insert(doc, method):
     customer_consent.insert(ignore_permissions=True)
     doc.db_set('custom_customer_consent', customer_consent.name)
 
+    if not doc.custom_customer_primary_address:
+        address = frappe.new_doc("Address")
+        address.update({
+            "address_type": "Billing",
+            "address_line1": doc.custom_street_name,
+            "address_line2": doc.custom_building_name,
+            "city": doc.city,
+            "pincode": doc.custom_post_code,
+            "country": doc.country,
+            "links": [{
+                "link_doctype": "Lead",
+                "link_name": doc.name,
+                "link_title": doc.lead_name
+            }]
+        })
+        address.insert(ignore_permissions=True)
+        doc.db_set('custom_customer_primary_address', address.name)
+
     doc.reload()
+
+def on_update(doc, method):
+    if doc.custom_customer_primary_address:
+        address = frappe.get_doc("Address", doc.custom_customer_primary_address)
+        address.update({
+            "address_type": "Billing",
+            "address_line1": doc.custom_street_name,
+            "address_line2": doc.custom_building_name,
+            "city": doc.city,
+            "pincode": doc.custom_post_code,
+            "country": doc.country,
+            "links": [{
+                "link_doctype": "Lead",
+                "link_name": doc.name,
+                "link_title": doc.lead_name
+            }]
+        })
+        address.save()
+
+def validate(doc, method):
+    if doc.custom_referral_code:
+        sales_partner_data = frappe.get_value("Sales Partner", {"referral_code": doc.custom_referral_code}, ["name", "commission_rate"])
+        if sales_partner_data:
+            doc.custom_sales_partner = sales_partner_data[0]
+            doc.custom_commission_rate = sales_partner_data[1]
+        else:
+            frappe.throw(f"Sales Partner with referral code {doc.custom_referral_code} not found.")
 
 # Hook: before delete
 def after_delete(doc, method):
