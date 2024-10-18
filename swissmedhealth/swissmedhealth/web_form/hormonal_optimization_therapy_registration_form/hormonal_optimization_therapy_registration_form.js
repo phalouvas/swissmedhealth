@@ -17,6 +17,12 @@ frappe.ready(function () {
 		});
 	}
 
+	// set referral code from URL
+	let referral_code = params.get('referral_code');
+	if (referral_code) {
+		frappe.web_form.set_value('custom_referral_code', referral_code);
+	}
+
 	// bind events here
 	frappe.web_form.after_save = () => {
 		let email_id = frappe.web_form.doc.email_id;
