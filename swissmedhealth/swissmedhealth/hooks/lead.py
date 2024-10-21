@@ -99,7 +99,7 @@ def on_update(doc, method):
                 "link_title": doc.lead_name
             }]
         })
-        address.save()
+        address.save(ignore_permissions=True)
 
 def validate(doc, method):
     if doc.custom_referral_code:
