@@ -32,7 +32,7 @@
  "list_title": "Test",
  "login_required": 0,
  "max_attachment_size": 0,
- "modified": "2024-10-22 07:52:56.590292",
+ "modified": "2024-10-22 14:13:57.070294",
  "modified_by": "Administrator",
  "module": "Swissmedhealth",
  "name": "contact-us",
@@ -50,14 +50,14 @@
  "web_form_fields": [
   {
    "allow_read_on_all_link_options": 0,
-   "default": "My self",
+   "default": "Myself",
    "fieldname": "custom_contact_relative",
    "fieldtype": "Select",
    "hidden": 0,
    "label": "I am requesting information for",
    "max_length": 0,
    "max_value": 0,
-   "options": "My self\nFor relative",
+   "options": "Myself\nFor relative",
    "read_only": 0,
    "reqd": 1,
    "show_in_filter": 0
