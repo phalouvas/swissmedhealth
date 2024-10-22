@@ -23,6 +23,7 @@
   "column_break_yyv6d",
   "possible_problem_cause",
   "symptoms_restrict_daily_life",
+  "personalized_familiar",
   "symptoms_if_any_copy",
   "short_temper",
   "trouble_sleeping",
@@ -1032,6 +1033,13 @@
    "label": "What are your preferred contact times?",
    "options": "Morning\nLunch\nAfternoon\nLate afternoon",
    "reqd": 1
+  },
+  {
+   "default": "No",
+   "fieldname": "personalized_familiar",
+   "fieldtype": "Select",
+   "label": "Are you familiar with Swissmed Health Personalized Medicine approach?",
+   "options": "No\nYes"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -1045,7 +1053,7 @@
    "link_fieldname": "custom_medical_history"
   }
  ],
- "modified": "2024-10-17 16:23:46.891755",
+ "modified": "2024-10-22 08:03:29.534692",
  "modified_by": "Administrator",
  "module": "Swissmedhealth",
  "name": "Medical History",
