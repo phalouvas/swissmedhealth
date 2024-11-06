@@ -67,11 +67,11 @@ def after_insert(doc, method):
         address = frappe.new_doc("Address")
         address.update({
             "address_type": "Billing",
-            "address_line1": doc.custom_street_name,
+            "address_line1": doc.custom_street_name if doc.custom_street_name else "-",
             "address_line2": doc.custom_building_name,
-            "city": doc.city,
+            "city": doc.city if doc.city else "-",
             "pincode": doc.custom_post_code,
-            "country": doc.country,
+            "country": doc.country if doc.country else "Cyprus",
             "links": [{
                 "link_doctype": "Lead",
                 "link_name": doc.name,
@@ -88,11 +88,11 @@ def on_update(doc, method):
         address = frappe.get_doc("Address", doc.custom_customer_primary_address)
         address.update({
             "address_type": "Billing",
-            "address_line1": doc.custom_street_name,
+            "address_line1": doc.custom_street_name if doc.custom_street_name else "-",
             "address_line2": doc.custom_building_name,
-            "city": doc.city,
+            "city": doc.city if doc.city else "-",
             "pincode": doc.custom_post_code,
-            "country": doc.country,
+            "country": doc.country if doc.country else "Cyprus",
             "links": [{
                 "link_doctype": "Lead",
                 "link_name": doc.name,
