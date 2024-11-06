@@ -51,7 +51,13 @@ frappe.ready(function () {
 
 			frappe.call('swissmedhealth.swissmedhealth.web_form.medical_history.medical_history.save', { doc: frappe.web_form.doc }).then(r => {
 				let email_id = r.message.email_id;
-				window.location.href = '../partners-step-2/new?email_id=' + encodeURIComponent(email_id);
+				frappe.msgprint({
+					title: __('Success'),
+					indicator: 'green',
+					message: __('We have received your information and a member of our patient management team will be contacting you via your preferred contact method shortly.')
+				});
+	
+				$('.web-form-container').hide();
 			}).catch((err) => {
 				frappe.msgprint({
 					title: __('Error'),
@@ -64,7 +70,13 @@ frappe.ready(function () {
 			e.preventDefault();
 			frappe.call('swissmedhealth.swissmedhealth.web_form.medical_history.medical_history.save', { doc: frappe.web_form.doc }).then(r => {
 				let email_id = r.message.email_id;
-				window.location.href = '../partners-step-2/new?email_id=' + encodeURIComponent(email_id);
+				frappe.msgprint({
+					title: __('Success'),
+					indicator: 'green',
+					message: __('We have received your information and a member of our patient management team will be contacting you via your preferred contact method shortly.')
+				});
+	
+				$('.web-form-container').hide();
 			}).catch((err) => {
 				frappe.msgprint({
 					title: __('Error'),
