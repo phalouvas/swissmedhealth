@@ -1,5 +1,10 @@
 frappe.ready(function () {
 
+	// Set the current date in the data-fieldtype "Date" using jQuery in yyyy-mm-dd format
+	let currentDate = new Date();
+	let formattedDate = currentDate.getFullYear() + '-' + ('0' + (currentDate.getMonth() + 1)).slice(-2) + '-' + ('0' + currentDate.getDate()).slice(-2);
+	$('input[data-fieldtype="Date"]').val(formattedDate);
+
 	let params = new URLSearchParams(window.location.search);
 	let email_id = params.get('email_id');
 	if (email_id) {
@@ -36,6 +41,12 @@ frappe.ready(function () {
 
 	$('.submit-btn').on('click', async function (e) {
 
+		// Set the user consent fields in web form
+		frappe.web_form.doc.consent_accept_registration = $('label:contains("Accept Registration")').closest('.form-group').find('select').val();
+		frappe.web_form.doc.consent_accept_personal_data = $('label:contains("Accept Personal Data")').closest('.form-group').find('select').val();
+		frappe.web_form.doc.consent_accept_communication = $('label:contains("Accept Communication")').closest('.form-group').find('select').val();
+		frappe.web_form.doc.consent_date = $('label:contains("Consent Date")').closest('.form-group').find('input').val();
+
 		// Get the email from the URL
 		let params = new URLSearchParams(window.location.search);
 		let email_id = params.get('email_id');
@@ -65,7 +76,7 @@ frappe.ready(function () {
 					indicator: 'red',
 					message: __('An error occurred while submitting your details. Please try again later.')
 				});
-			});
+			});	
 		} else {
 			// Prevent the default form submission
 			e.preventDefault();
@@ -86,7 +97,6 @@ frappe.ready(function () {
 				});
 			});
 		}
-
 	});
 
 })

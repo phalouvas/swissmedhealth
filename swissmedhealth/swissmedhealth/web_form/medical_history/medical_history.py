@@ -1,4 +1,5 @@
 import frappe
+from datetime import datetime
 
 def get_context(context):
 	# do your magic here
@@ -36,9 +37,23 @@ def save(doc):
 			"pincode": doc.custom_post_code,
 			"country": doc.country,
 		})
-		address.save()
+		address.save(ignore_permissions=True)
+
+	if doc.get("consent_accept_registration"):
+		save_customer_consent(doc, lead)
 
 	return lead
+
+def save_customer_consent(doc, lead):
+	customer_consent = frappe.get_doc("Customer Consent", lead.custom_customer_consent)
+	customer_consent.update({
+		"accept_registration": doc.consent_accept_registration,
+		"accept_personal_data": doc.consent_accept_personal_data,
+		"accept_communication": doc.consent_accept_communication,
+		"acceptance_date": frappe.utils.nowdate(),
+		"signature": doc.undefined
+	})
+	customer_consent.save(ignore_permissions=True)
 
 @frappe.whitelist(allow_guest=True)
 def get_medical_history_details(email_id):
