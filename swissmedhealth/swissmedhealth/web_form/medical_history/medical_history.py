@@ -24,6 +24,9 @@ def save(doc):
 	lead.update(doc)
 	lead.save(ignore_permissions=True)
 
+	if not doc.get("country"):
+		doc["country"] = lead.country
+
 	address = frappe.get_doc("Address", lead.custom_customer_primary_address)
 	if address:
 		address.update({
