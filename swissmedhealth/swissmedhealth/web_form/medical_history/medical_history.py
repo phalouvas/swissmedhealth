@@ -40,11 +40,13 @@ def save(doc):
 		address.save(ignore_permissions=True)
 
 	if doc.get("consent_accept_registration"):
-		save_customer_consent(doc, lead)
+		save_customer_consent(doc)
 
 	return lead
 
-def save_customer_consent(doc, lead):
+@frappe.whitelist(allow_guest=True)
+def save_customer_consent(doc):
+	lead = frappe.get_doc("Lead", doc.name)
 	customer_consent = frappe.get_doc("Customer Consent", lead.custom_customer_consent)
 	customer_consent.update({
 		"accept_registration": doc.consent_accept_registration,
