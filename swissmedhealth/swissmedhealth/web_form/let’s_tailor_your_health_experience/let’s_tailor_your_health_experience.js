@@ -1,5 +1,7 @@
 frappe.ready(function () {
 
+	$('input[data-fieldname="custom_referral_code"]').addClass('text-muted');
+
 	let params = new URLSearchParams(window.location.search);
 	let email_id = params.get('email_id');
 	if (email_id) {
