@@ -61,3 +61,12 @@ def save_medical_history(doc):
 	lead.update(doc)
 	lead.save(ignore_permissions=True)
 	return lead
+
+
+@frappe.whitelist(allow_guest=True)
+def get_sales_partner_title(referral_code):
+	lead = frappe.db.get_value("Sales Partner", {"referral_code": referral_code}, ["custom_web_form_title"], as_dict=True)
+	if not lead:
+		return None
+	
+	return lead.custom_web_form_title
