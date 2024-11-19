@@ -23,7 +23,12 @@ frappe.ready(function () {
 	let referral_code = params.get('referral_code');
 	if (referral_code) {
 		frappe.web_form.set_value('custom_referral_code', referral_code);
-	}
+		frappe.call('swissmedhealth.swissmedhealth.web_form.medical_history.medical_history.get_sales_partner_title', { referral_code: referral_code }).then(r => {
+			if (r.message) {
+				document.querySelector('.web-form-title h1').textContent = r.message;
+			}
+		});
+}
 
 	// bind events here
 	frappe.web_form.after_save = () => {
