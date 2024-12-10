@@ -63,6 +63,10 @@ def after_insert(doc, method):
     customer_consent.insert(ignore_permissions=True)
     doc.db_set('custom_customer_consent', customer_consent.name)
 
+    stress_identification = frappe.new_doc("Stress Identification")
+    stress_identification.insert(ignore_permissions=True)
+    doc.db_set('custom_stress_identification', stress_identification.name)
+
     if not doc.custom_customer_primary_address:
         address = frappe.new_doc("Address")
         address.update({
@@ -123,3 +127,6 @@ def after_delete(doc, method):
     if doc.get('custom_medical_history'):
         # delete the customer consent document
         frappe.delete_doc("Medical History", doc.get('custom_medical_history'))
+    if doc.get('custom_stress_identification'):
+        # delete the customer consent document
+        frappe.delete_doc("Stress Identification", doc.get('custom_stress_identification'))
