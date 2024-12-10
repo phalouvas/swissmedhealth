@@ -1,0 +1,123 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-12-10 14:29:39.158201",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "physical_symptoms",
+  "sleep_patterns",
+  "energy_levels",
+  "unhealthy_habits",
+  "column_break_itza",
+  "general_mood",
+  "workload",
+  "work_life_balance",
+  "section_break_tioj",
+  "naming_series"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Series",
+   "options": "STR-HIS-.YYYY.-",
+   "print_hide": 1
+  },
+  {
+   "description": "How often do you experience headaches, muscle tension, or stomach issues?",
+   "fieldname": "physical_symptoms",
+   "fieldtype": "Select",
+   "label": "Physical Symptoms",
+   "options": "1 - Never\n2 - Rarely\n3 - Sometimes\n4 - Often\n5 - Always"
+  },
+  {
+   "fieldname": "section_break_tioj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "description": "How often do you have difficulty falling asleep or staying asleep?",
+   "fieldname": "sleep_patterns",
+   "fieldtype": "Select",
+   "label": "Sleep Patterns",
+   "options": "1 - Never\n2 - Rarely\n3 - Sometimes\n4 - Often\n5 - Always"
+  },
+  {
+   "description": "Do you feel fatigued or drained even after a full night\u2019s sleep?",
+   "fieldname": "energy_levels",
+   "fieldtype": "Select",
+   "label": "Energy Levels",
+   "options": "1 - Never\n2 - Rarely\n3 - Sometimes\n4 - Often\n5 - Always"
+  },
+  {
+   "description": "How often do you turn to unhealthy habits (e.g., smoking, overeating, or alcohol)?",
+   "fieldname": "unhealthy_habits",
+   "fieldtype": "Select",
+   "label": "Unhealthy Habits",
+   "options": "1 - Never\n2 - Rarely\n3 - Sometimes\n4 - Often\n5 - Always"
+  },
+  {
+   "fieldname": "column_break_itza",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Do you feel overwhelmed, anxious, or irritable regularly?",
+   "fieldname": "general_mood",
+   "fieldtype": "Select",
+   "label": "General Mood",
+   "options": "1 - Never\n2 - Rarely\n3 - Sometimes\n4 - Often\n5 - Always"
+  },
+  {
+   "description": "How often do you feel you have too much work to manage effectively?",
+   "fieldname": "workload",
+   "fieldtype": "Select",
+   "label": "Workload",
+   "options": "1 - Never\n2 - Rarely\n3 - Sometimes\n4 - Often\n5 - Always"
+  },
+  {
+   "description": "How often do work demands interfere with your personal life and relationships?",
+   "fieldname": "work_life_balance",
+   "fieldtype": "Select",
+   "label": "Work-Life Balance",
+   "options": "1 - Never\n2 - Rarely\n3 - Sometimes\n4 - Often\n5 - Always"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "link_doctype": "Lead",
+   "link_fieldname": "custom_stress_identification"
+  },
+  {
+   "link_doctype": "Patient",
+   "link_fieldname": "custom_stress_identification"
+  }
+ ],
+ "modified": "2024-12-10 15:24:45.825320",
+ "modified_by": "Administrator",
+ "module": "Swissmedhealth",
+ "name": "Stress Identification",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

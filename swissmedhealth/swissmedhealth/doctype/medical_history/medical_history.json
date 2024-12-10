@@ -132,6 +132,7 @@
   "daily_bowel_movements",
   "sleep_easily",
   "night_pee",
+  "overall_health",
   "fitness_section",
   "fitness_goals",
   "fitness_areas",
@@ -1040,6 +1041,13 @@
    "fieldtype": "Select",
    "label": "Are you familiar with Swissmed Health Personalized Medicine approach?",
    "options": "No\nYes"
+  },
+  {
+   "description": "On a scale of 1\u20135, where would you score your overall health level? - (1 = Poor, 5 = Excellent)",
+   "fieldname": "overall_health",
+   "fieldtype": "Select",
+   "label": "Overall Health",
+   "options": "1\n2\n3\n4\n5"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -1053,7 +1061,7 @@
    "link_fieldname": "custom_medical_history"
   }
  ],
- "modified": "2024-10-22 08:03:29.534692",
+ "modified": "2024-12-10 14:50:16.330892",
  "modified_by": "Administrator",
  "module": "Swissmedhealth",
  "name": "Medical History",
