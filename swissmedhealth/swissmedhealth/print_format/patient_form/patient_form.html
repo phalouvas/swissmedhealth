@@ -1,115 +1,31 @@
 <div class="WordSection1">
 
-    <p class=MsoNormal>&nbsp;</p>
-
-    <p class=MsoNormal align=center style='margin-right:-.2in;text-align:center'><b><span
-                style='font-size:14.0pt'>Patient Registration Form</span></b></p>
-
-    <p class=MsoNormal style='margin-right:-.2in'><b><i><span style='font-size:
-11.0pt'>Please complete all 3 pages on this form in as much detail as possible.</span></i></b></p>
-
-    <p class=MsoNormal style='margin-right:-.2in;text-align:justify'><b><i><span
-                    style='font-size:11.0pt;color:#0070C0'>In case you need additional space please
-                    write your answers on a separate sheet of paper with the question number to
-                    which your answer refers to. To establish a truly integrative consultation it
-                    is very important to complete the form as accurately as possible.</span></i></b></p>
-
-    <p class=MsoNormal style='margin-right:-.2in;text-align:justify'><b><i><span
-                    style='font-size:11.0pt;color:#0070C0'>&nbsp;</span></i></b></p>
+    <h2 class="text-center">Patient Registration Form</h2>
 
     {% set details_doc = doc %}
     {% set medical_history_doc = frappe.get_doc("Medical History", doc.custom_medical_history) %}
     {% set dental_history_doc = frappe.get_doc("Dental History", doc.custom_dental_history) %}
     {% set customer_consent_doc = frappe.get_doc("Customer Consent", doc.custom_customer_consent) %}
-    <table>
-        <tr>
-            <td width=354 valign=top style='width:265.5pt;border:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal style='line-height:115%'><span style='font-size:11.0pt;
-  line-height:115%'>Date: <span class="text-primary">{{ customer_consent_doc.acceptance_date or '' }}</span></span></p>
-            </td>
-            <td width=372 valign=top style='width:279.0pt;border:solid black 1.0pt;
-  border-left:none;padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal style='line-height:115%'><span style='font-size:11.0pt;
-  line-height:115%'>Title (Mr/Mrs/Miss/Other): <span class="text-primary">{{ doc.salutation or '' }}</span></span></p>
-            </td>
-        </tr>
-        <tr>
-            <td width=354 valign=top style='width:265.5pt;border:solid black 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal style='line-height:115%'><span style='font-size:11.0pt;
-  line-height:115%'>Surname: <span class="text-primary">{{ doc.last_name or '' }}</span></p>
-                <p class=MsoNormal style='line-height:115%'><span style='font-size:11.0pt;
-  line-height:115%'>&nbsp;</span></p>
-            </td>
-            <td width=372 valign=top style='width:279.0pt;border-top:none;border-left:
-  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal style='line-height:115%'><span style='font-size:11.0pt;
-  line-height:115%'>First Name: <span class="text-primary">{{ doc.first_name or '' }}</span></p>
-            </td>
-        </tr>
-        <tr>
-            <td width=354 valign=top style='width:265.5pt;border:solid black 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal style='line-height:115%'><span style='font-size:11.0pt;
-  line-height:115%'>ID/ Passport no: <span class="text-primary">{{ doc.custom_national_id or '' }}</span></span></p>
-            </td>
-            <td width=372 valign=top style='width:279.0pt;border-top:none;border-left:
-  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal style='line-height:115%'><span style='font-size:11.0pt;
-  line-height:115%'>Date of Birth: <span class="text-primary">{{ doc.custom_dob or '' }}</span></span></p>
-            </td>
-        </tr>
-        <tr>
-            <td width=354 valign=top style='width:265.5pt;border:solid black 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal style='line-height:115%'><span style='font-size:11.0pt;
-  line-height:115%'>Occupation: <span class="text-primary">{{ doc.custom_occupation or '' }}</span></span></p>
-            </td>
-            <td width=372 valign=top style='width:279.0pt;border-top:none;border-left:
-  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal style='line-height:115%'><span style='font-size:11.0pt;
-  line-height:115%'>Nationality: <span class="text-primary">{{ doc.country or '' }}</span></span></p>
-            </td>
-        </tr>
-        <tr>
-            <td width=726 colspan=2 valign=top style='width:544.5pt;border:solid black 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal style='line-height:115%'><span style='font-size:11.0pt;
-  line-height:115%'>Email address: <span class="text-primary">{{ doc.email_id or '' }}</span></span></p>
-            </td>
-        </tr>
-        <tr>
-            <td width=354 valign=top style='width:265.5pt;border:solid black 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal style='line-height:115%'><span style='font-size:11.0pt;
-  line-height:115%'>Home tel no: <span class="text-primary">{{ doc.phone or '' }}</span></span></p>
-            </td>
-            <td width=372 valign=top style='width:279.0pt;border-top:none;border-left:
-  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal style='line-height:115%'><span style='font-size:11.0pt;
-  line-height:115%'>Mobile: <span class="text-primary">{{ doc.mobile_no or '' }}</span></span></p>
-            </td>
-        </tr>
-        <tr>
-            <td width=726 colspan=2 valign=top style='width:544.5pt;border:solid black 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-                <p class=MsoNormal style='line-height:115%'><span style='font-size:11.0pt;
-  line-height:115%'>Your reasons for attending our clinic and your symptoms: </span></p>
-                <p class=MsoNormal style='line-height:115%'><span style='font-size:11.0pt;
-  line-height:115%'>&nbsp;</span></p>
-                <p class=MsoNormal style='line-height:115%'><span style='font-size:11.0pt;
-  line-height:115%'>&nbsp;<span class="text-primary">{{ medical_history_doc.symptoms or '' }}</span></span></p>
-                <p class=MsoNormal style='line-height:115%'><span style='font-size:11.0pt;
-  line-height:115%'>&nbsp;</span></p>
-            </td>
-        </tr>
-    </table>
+    {% set stress_identification_doc = frappe.get_doc("Stress Identification", doc.custom_stress_identification) %}
 
+    {% set new_row= {'total': 0} %}
+    <table class="table table-bordered">
+        {% for field in details_doc.meta.fields %}
+        {% if new_row.total % 2 == 0 %}
+        <tr>
+        {% endif %}
+            {% if details_doc.get(field.fieldname) and field.print_hide != 1 %}
+            {% if new_row.update({'total': new_row.total + 1}) %}{% endif %} 
+            <td>
+                <p>{{ field.label }}: <span class="text-primary">{{ details_doc.get(field.fieldname) }}</span></p>
+            </td>
+            {% endif %}
+        {% if new_row.total % 2 == 0 %}
+        </tr>
+        {% endif %}
+        {% endfor %}
+    </table>
+    
     <p class=MsoNormal style='line-height:115%'><span style='font-size:11.0pt;
 line-height:115%'>&nbsp;</span></p>
 
