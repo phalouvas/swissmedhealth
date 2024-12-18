@@ -1,6 +1,6 @@
 <div class="WordSection1">
 
-    <h2 class="text-center">Patient Registration Form</h2>
+    <h1 class="text-center">Patient Registration Form</h1>
 
     {% set details_doc = doc %}
     {% set medical_history_doc = frappe.get_doc("Medical History", doc.custom_medical_history) %}
@@ -10,6 +10,7 @@
 
     {% set new_row= {'total': 0} %}
     <table class="table table-bordered">
+        <caption><h2>Personal Details</h2></caption>
         {% for field in details_doc.meta.fields %}
         {% if new_row.total % 2 == 0 %}
         <tr>
@@ -18,6 +19,31 @@
             {% if new_row.update({'total': new_row.total + 1}) %}{% endif %} 
             <td>
                 <p>{{ field.label }}: <span class="text-primary">{{ details_doc.get(field.fieldname) }}</span></p>
+            </td>
+            {% endif %}
+        {% if new_row.total % 2 == 0 %}
+        </tr>
+        {% endif %}
+        {% endfor %}
+    </table>
+
+    {% set new_row= {'total': 0} %}
+    <table class="table table-bordered">
+        <caption><h2>Medical History</h2></caption>
+        {% for field in medical_history_doc.meta.fields %}
+        {% if new_row.total % 2 == 0 %}
+        <tr>
+        {% endif %}
+            {% 
+                if medical_history_doc.get(field.fieldname) and 
+                field.print_hide != 1 and 
+                medical_history_doc.get(field.fieldname) != "No" and 
+                medical_history_doc.get(field.fieldname) != "None" and
+                medical_history_doc.get(field.fieldname) != "Neither" 
+            %}
+            {% if new_row.update({'total': new_row.total + 1}) %}{% endif %} 
+            <td>
+                <p>{{ field.label }}: <span class="text-primary">{{ medical_history_doc.get(field.fieldname) }}</span></p>
             </td>
             {% endif %}
         {% if new_row.total % 2 == 0 %}
