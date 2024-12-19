@@ -14,7 +14,11 @@
             {% if field.label and field.print_hide != 1 %}
             {% if new_row.update({'total': new_row.total + 1}) %}{% endif %} 
             <td>
-                {{ field.label }}: 
+                {% if field.fieldtype == "Heading" or field.fieldtype == "Section Break" %}
+                <h3>{{ field.label }}</h3>
+                {% else %}
+                <p>{{ field.label }}</p>
+                {% endif %}
                 {% if active_value %}
                     {% if field.fieldtype == "Select" %}
                         <ul>
@@ -56,7 +60,11 @@
             {% if field.label and field.print_hide != 1 %}
             {% if new_row.update({'total': new_row.total + 1}) %}{% endif %} 
             <td>
-                {{ field.label }}: 
+                {% if field.fieldtype == "Heading" or field.fieldtype == "Section Break" %}
+                <h3>{{ field.label }}</h3>
+                {% else %}
+                <p>{{ field.label }}</p>
+                {% endif %}
                 {% if active_value %}
                     {% if field.fieldtype == "Select" %}
                         <ul>
@@ -98,7 +106,11 @@
             {% if field.label and field.print_hide != 1 %}
             {% if new_row.update({'total': new_row.total + 1}) %}{% endif %} 
             <td>
-                {{ field.label }}: 
+                {% if field.fieldtype == "Heading" or field.fieldtype == "Section Break" %}
+                <h3>{{ field.label }}</h3>
+                {% else %}
+                <p>{{ field.label }}</p>
+                {% endif %}
                 {% if active_value %}
                     {% if field.fieldtype == "Select" %}
                         <ul>
@@ -140,7 +152,11 @@
             {% if field.label and field.print_hide != 1 %}
             {% if new_row.update({'total': new_row.total + 1}) %}{% endif %} 
             <td>
-                {{ field.label }}: 
+                {% if field.fieldtype == "Heading" or field.fieldtype == "Section Break" %}
+                <h3>{{ field.label }}</h3>
+                {% else %}
+                <p>{{ field.label }}</p>
+                {% endif %}
                 {% if active_value %}
                     {% if field.fieldtype == "Select" %}
                         <ul>
