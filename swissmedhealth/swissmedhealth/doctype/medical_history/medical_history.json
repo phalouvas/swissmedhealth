@@ -779,7 +779,8 @@
   {
    "fieldname": "symptoms_if_any",
    "fieldtype": "Heading",
-   "label": "Symptoms If Any"
+   "label": "Symptoms If Any",
+   "print_hide": 1
   },
   {
    "default": "No",
@@ -1060,7 +1061,7 @@
    "link_fieldname": "custom_medical_history"
   }
  ],
- "modified": "2024-12-19 07:18:38.113827",
+ "modified": "2024-12-19 07:50:25.055074",
  "modified_by": "Administrator",
  "module": "Swissmedhealth",
  "name": "Medical History",
