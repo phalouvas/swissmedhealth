@@ -3,6 +3,33 @@ import frappe
 from erpnext.crm.doctype.lead.lead import Lead as OriginalLead
 
 class Lead(OriginalLead):
+    def onload(self):
+        super(Lead, self).onload()
+
+        # Create missing documents if they do not exist
+        if not self.custom_medical_history:
+            medical_history = frappe.new_doc("Medical History")
+            medical_history.insert(ignore_permissions=True)
+            self.db_set('custom_medical_history', medical_history.name)
+
+        if not self.custom_dental_history:
+            dental_history = frappe.new_doc("Dental History")
+            dental_history.insert(ignore_permissions=True)
+            self.db_set('custom_dental_history', dental_history.name)
+
+        if not self.custom_customer_consent:
+            customer_consent = frappe.new_doc("Customer Consent")
+            customer_consent.insert(ignore_permissions=True)
+            self.db_set('custom_customer_consent', customer_consent.name)
+
+        if not self.custom_stress_identification:
+            stress_identification = frappe.new_doc("Stress Identification")
+            stress_identification.insert(ignore_permissions=True)
+            self.db_set('custom_stress_identification', stress_identification.name)
+
+        frappe.db.commit()
+        
+
     def create_contact(self):
         if not self.lead_name:
             self.set_full_name()
