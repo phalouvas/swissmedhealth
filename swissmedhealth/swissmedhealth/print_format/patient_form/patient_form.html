@@ -37,6 +37,12 @@
                         {{ active_value }}
                     </span>
                     {% endif %}
+                {% else %}
+                    {% if field.fieldtype == "Small Text" %}
+                    <span>
+                        <br><br><br>
+                    </span>
+                    {% endif %}
                 {% endif %}
             </td>
             {% endif %}
@@ -81,6 +87,12 @@
                     {% else %}
                     <span class="text-primary">
                         {{ active_value }}
+                    </span>
+                    {% endif %}
+                {% else %}
+                    {% if field.fieldtype == "Small Text" %}
+                    <span>
+                        <br><br><br>
                     </span>
                     {% endif %}
                 {% endif %}
@@ -129,6 +141,12 @@
                         {{ active_value }}
                     </span>
                     {% endif %}
+                {% else %}
+                    {% if field.fieldtype == "Small Text" %}
+                    <span>
+                        <br><br><br>
+                    </span>
+                    {% endif %}
                 {% endif %}
             </td>
             {% endif %}
@@ -173,6 +191,12 @@
                     {% else %}
                     <span class="text-primary">
                         {{ active_value }}
+                    </span>
+                    {% endif %}
+                {% else %}
+                    {% if field.fieldtype == "Small Text" %}
+                    <span>
+                        <br><br><br>
                     </span>
                     {% endif %}
                 {% endif %}
