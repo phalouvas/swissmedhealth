@@ -17,9 +17,7 @@
         {% endif %}
             {% if details_doc.get(field.fieldname) and field.print_hide != 1 %}
             {% if new_row.update({'total': new_row.total + 1}) %}{% endif %} 
-            <td>
-                <p>{{ field.label }}: <span class="text-primary">{{ details_doc.get(field.fieldname) }}</span></p>
-            </td>
+            <td>{{ field.label }}: <span class="text-primary">{{ details_doc.get(field.fieldname) }}</span></td>
             {% endif %}
         {% if new_row.total % 2 == 0 %}
         </tr>
@@ -34,17 +32,9 @@
         {% if new_row.total % 2 == 0 %}
         <tr>
         {% endif %}
-            {% 
-                if medical_history_doc.get(field.fieldname) and 
-                field.print_hide != 1 and 
-                medical_history_doc.get(field.fieldname) != "No" and 
-                medical_history_doc.get(field.fieldname) != "None" and
-                medical_history_doc.get(field.fieldname) != "Neither" 
-            %}
+            {% if medical_history_doc.get(field.fieldname) and field.print_hide != 1 %}
             {% if new_row.update({'total': new_row.total + 1}) %}{% endif %} 
-            <td>
-                <p>{{ field.label }}: <span class="text-primary">{{ medical_history_doc.get(field.fieldname) }}</span></p>
-            </td>
+            <td>{{ field.label }}: <span class="text-primary">{{ medical_history_doc.get(field.fieldname) }}</span></td>
             {% endif %}
         {% if new_row.total % 2 == 0 %}
         </tr>
@@ -59,17 +49,9 @@
         {% if new_row.total % 2 == 0 %}
         <tr>
         {% endif %}
-            {% 
-                if dental_history_doc.get(field.fieldname) and 
-                field.print_hide != 1 and 
-                dental_history_doc.get(field.fieldname) != "No" and 
-                dental_history_doc.get(field.fieldname) != "None" and
-                dental_history_doc.get(field.fieldname) != "Neither" 
-            %}
+            {% if dental_history_doc.get(field.fieldname) and field.print_hide != 1 %}
             {% if new_row.update({'total': new_row.total + 1}) %}{% endif %} 
-            <td>
-                <p>{{ field.label }}: <span class="text-primary">{{ dental_history_doc.get(field.fieldname) }}</span></p>
-            </td>
+            <td>{{ field.label }}: <span class="text-primary">{{ dental_history_doc.get(field.fieldname) }}</span></td>
             {% endif %}
         {% if new_row.total % 2 == 0 %}
         </tr>
@@ -84,16 +66,10 @@
         {% if new_row.total % 2 == 0 %}
         <tr>
         {% endif %}
-            {% 
-                if stress_identification_doc.get(field.fieldname) and 
-                field.print_hide != 1 and 
-                stress_identification_doc.get(field.fieldname) != "No" and 
-                stress_identification_doc.get(field.fieldname) != "None" and
-                stress_identification_doc.get(field.fieldname) != "Neither" 
-            %}
+            {% if stress_identification_doc.get(field.fieldname) and field.print_hide != 1 %}
             {% if new_row.update({'total': new_row.total + 1}) %}{% endif %} 
             <td>
-                <p>{{ field.label }}: <span class="text-primary">{{ stress_identification_doc.get(field.fieldname) }}</span></p>
+                {{ field.label }}: <span class="text-primary">{{ stress_identification_doc.get(field.fieldname) }}</span>
             </td>
             {% endif %}
         {% if new_row.total % 2 == 0 %}
