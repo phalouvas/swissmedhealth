@@ -2,22 +2,25 @@
 
     <h1 class="text-center">Patient Registration Form</h1>
 
-    {% set details_doc = doc %}
-    {% set medical_history_doc = frappe.get_doc("Medical History", doc.custom_medical_history) %}
-    {% set dental_history_doc = frappe.get_doc("Dental History", doc.custom_dental_history) %}
-    {% set customer_consent_doc = frappe.get_doc("Customer Consent", doc.custom_customer_consent) %}
-    {% set stress_identification_doc = frappe.get_doc("Stress Identification", doc.custom_stress_identification) %}
-
+    {% set active_doc = doc %}
     {% set new_row= {'total': 0} %}
     <table class="table table-bordered">
         <caption><h2>Personal Details</h2></caption>
-        {% for field in details_doc.meta.fields %}
+        {% for field in active_doc.meta.fields %}
+        {% set active_value = active_doc.get(field.fieldname) %}
         {% if new_row.total % 2 == 0 %}
         <tr>
         {% endif %}
-            {% if details_doc.get(field.fieldname) and field.print_hide != 1 %}
+            {% if field.label and field.print_hide != 1 %}
             {% if new_row.update({'total': new_row.total + 1}) %}{% endif %} 
-            <td>{{ field.label }}: <span class="text-primary">{{ details_doc.get(field.fieldname) }}</span></td>
+            <td>
+                {{ field.label }}: 
+                {% if active_value %}
+                <span class="text-primary">
+                    {{ active_value }}
+                </span>
+                {% endif %}
+            </td>
             {% endif %}
         {% if new_row.total % 2 == 0 %}
         </tr>
@@ -25,16 +28,27 @@
         {% endfor %}
     </table>
 
+    <div style="page-break-before: always;"></div>
+
+    {% set active_doc = frappe.get_doc("Medical History", doc.custom_medical_history) %}
     {% set new_row= {'total': 0} %}
     <table class="table table-bordered">
         <caption><h2>Medical History</h2></caption>
-        {% for field in medical_history_doc.meta.fields %}
+        {% for field in active_doc.meta.fields %}
+        {% set active_value = active_doc.get(field.fieldname) %}
         {% if new_row.total % 2 == 0 %}
         <tr>
         {% endif %}
-            {% if medical_history_doc.get(field.fieldname) and field.print_hide != 1 %}
+            {% if field.label and field.print_hide != 1 %}
             {% if new_row.update({'total': new_row.total + 1}) %}{% endif %} 
-            <td>{{ field.label }}: <span class="text-primary">{{ medical_history_doc.get(field.fieldname) }}</span></td>
+            <td>
+                {{ field.label }}: 
+                {% if active_value %}
+                <span class="text-primary">
+                    {{ active_value }}
+                </span>
+                {% endif %}
+            </td>
             {% endif %}
         {% if new_row.total % 2 == 0 %}
         </tr>
@@ -42,16 +56,27 @@
         {% endfor %}
     </table>
 
+    <div style="page-break-before: always;"></div>
+
+    {% set active_doc = frappe.get_doc("Dental History", doc.custom_dental_history) %}
     {% set new_row= {'total': 0} %}
     <table class="table table-bordered">
         <caption><h2>Dental History</h2></caption>
-        {% for field in dental_history_doc.meta.fields %}
+        {% for field in active_doc.meta.fields %}
+        {% set active_value = active_doc.get(field.fieldname) %}
         {% if new_row.total % 2 == 0 %}
         <tr>
         {% endif %}
-            {% if dental_history_doc.get(field.fieldname) and field.print_hide != 1 %}
+            {% if field.label and field.print_hide != 1 %}
             {% if new_row.update({'total': new_row.total + 1}) %}{% endif %} 
-            <td>{{ field.label }}: <span class="text-primary">{{ dental_history_doc.get(field.fieldname) }}</span></td>
+            <td>
+                {{ field.label }}: 
+                {% if active_value %}
+                <span class="text-primary">
+                    {{ active_value }}
+                </span>
+                {% endif %}
+            </td>
             {% endif %}
         {% if new_row.total % 2 == 0 %}
         </tr>
@@ -59,17 +84,26 @@
         {% endfor %}
     </table>
 
+    <div style="page-break-before: always;"></div>
+    
+    {% set active_doc = frappe.get_doc("Stress Identification", doc.custom_stress_identification) %}
     {% set new_row= {'total': 0} %}
     <table class="table table-bordered">
         <caption><h2>Stress Identification</h2></caption>
-        {% for field in stress_identification_doc.meta.fields %}
+        {% for field in active_doc.meta.fields %}
+        {% set active_value = active_doc.get(field.fieldname) %}
         {% if new_row.total % 2 == 0 %}
         <tr>
         {% endif %}
-            {% if stress_identification_doc.get(field.fieldname) and field.print_hide != 1 %}
+            {% if field.label and field.print_hide != 1 %}
             {% if new_row.update({'total': new_row.total + 1}) %}{% endif %} 
             <td>
-                {{ field.label }}: <span class="text-primary">{{ stress_identification_doc.get(field.fieldname) }}</span>
+                {{ field.label }}: 
+                {% if active_value %}
+                <span class="text-primary">
+                    {{ active_value }}
+                </span>
+                {% endif %}
             </td>
             {% endif %}
         {% if new_row.total % 2 == 0 %}
@@ -80,6 +114,7 @@
     
     <div style="page-break-before: always;"></div>
 
+    {% set active_doc = frappe.get_doc("Customer Consent", doc.custom_customer_consent) %}
     <table class="table table-bordered">
         <tbody>
             <tr>
@@ -110,7 +145,7 @@
                 </td>
                 <td colspan="2">
                     <p>
-                        {% if customer_consent_doc.accept_registration == "Yes" %}
+                        {% if active_doc.accept_registration == "Yes" %}
                         <span style='font-weight: bold;'>✔️</span>
                         {% else %}
                         <span>&nbsp;</span>
@@ -119,7 +154,7 @@
                 </td>
                 <td>
                     <p>
-                        {% if customer_consent_doc.accept_registration == "No" %}
+                        {% if active_doc.accept_registration == "No" %}
                         <span style='font-weight: bold;'>X</span>
                         {% else %}
                         <span>&nbsp;</span>
@@ -133,7 +168,7 @@
                 </td>
                 <td colspan="2">
                     <p>
-                        {% if customer_consent_doc.accept_personal_data == "Yes" %}
+                        {% if active_doc.accept_personal_data == "Yes" %}
                         <span style='font-weight: bold;'>✔️</span>
                         {% else %}
                         <span>&nbsp;</span>
@@ -142,7 +177,7 @@
                 </td>
                 <td>
                     <p>
-                        {% if customer_consent_doc.accept_personal_data == "No" %}
+                        {% if active_doc.accept_personal_data == "No" %}
                         <span style='font-weight: bold;'>X</span>
                         {% else %}
                         <span>&nbsp;</span>
@@ -156,7 +191,7 @@
                 </td>
                 <td colspan="2">
                     <p>
-                        {% if customer_consent_doc.accept_communication == "Yes" %}
+                        {% if active_doc.accept_communication == "Yes" %}
                         <span style='font-weight: bold;'>✔️</span>
                         {% else %}
                         <span>&nbsp;</span>
@@ -165,7 +200,7 @@
                 </td>
                 <td>
                     <p>
-                        {% if customer_consent_doc.accept_communication == "No" %}
+                        {% if active_doc.accept_communication == "No" %}
                         <span style='font-weight: bold;'>X</span>
                         {% else %}
                         <span>&nbsp;</span>
@@ -176,8 +211,8 @@
             <tr>
                 <td colspan="9">
                     <p>
-                        {% if customer_consent_doc.signature %}
-                        <img src="{{ customer_consent_doc.signature }}" />
+                        {% if active_doc.signature %}
+                        <img src="{{ active_doc.signature }}" />
                         {% endif %}
                     </p>
                 </td>
@@ -185,7 +220,7 @@
             <tr>
                 <td colspan="9">
                     <p>Signature</p>
-                    <p>Date: <b>{{ customer_consent_doc.acceptance_date or ''}}</b></p>
+                    <p>Date: <b>{{ active_doc.acceptance_date or ''}}</b></p>
                 </td>
             </tr>
             <tr>
