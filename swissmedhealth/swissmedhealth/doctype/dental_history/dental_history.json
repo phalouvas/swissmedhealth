@@ -93,13 +93,15 @@
    "fieldname": "amalgam_fillings_removed",
    "fieldtype": "Select",
    "label": "Amalgam fillings removed",
-   "options": "No\nYes\nDon't know"
+   "options": "No\nYes\nDon't know",
+   "print_hide": 1
   },
   {
    "depends_on": "eval:doc.amalgam_fillings_removed=='Yes'",
    "fieldname": "amalgam_fillings_removed_no",
    "fieldtype": "Int",
-   "label": "How many"
+   "label": "How many",
+   "print_hide": 1
   },
   {
    "fieldname": "bone_grafts",
@@ -189,37 +191,43 @@
    "fieldname": "tooth_fracture",
    "fieldtype": "Select",
    "label": "Tooth fracture",
-   "options": "No\nYes\nDon't know"
+   "options": "No\nYes\nDon't know",
+   "print_hide": 1
   },
   {
    "fieldname": "wisdom_tooth_extraction",
    "fieldtype": "Select",
    "label": "Wisdom tooth extraction",
-   "options": "No\nYes\nDon't know"
+   "options": "No\nYes\nDon't know",
+   "print_hide": 1
   },
   {
    "fieldname": "excessive_bleeding",
    "fieldtype": "Select",
    "label": "Excessive bleeding after extractions?",
-   "options": "No\nYes\nDon't know"
+   "options": "No\nYes\nDon't know",
+   "print_hide": 1
   },
   {
    "fieldname": "complications_after_extractions",
    "fieldtype": "Select",
    "label": "Complications after extractions?",
-   "options": "No\nYes\nDon't know"
+   "options": "No\nYes\nDon't know",
+   "print_hide": 1
   },
   {
    "fieldname": "adverse_reactions_to_anaesthetic",
    "fieldtype": "Select",
    "label": "Adverse reactions to anaesthetic?",
-   "options": "No\nYes\nDon't know"
+   "options": "No\nYes\nDon't know",
+   "print_hide": 1
   },
   {
    "fieldname": "dental_x_rays",
    "fieldtype": "Select",
    "label": "Have you had any dental x-rays in the last 3 months?",
-   "options": "No\nYes\nDon't know"
+   "options": "No\nYes\nDon't know",
+   "print_hide": 1
   },
   {
    "fieldname": "last_dentist_visit",
@@ -236,19 +244,22 @@
   {
    "fieldname": "section_break_rhm4a",
    "fieldtype": "Section Break",
-   "label": "Do you have pain or discomfort when"
+   "label": "Do you have pain or discomfort when",
+   "print_hide": 1
   },
   {
    "fieldname": "biting_pain",
    "fieldtype": "Select",
    "label": "When biting or chewing",
-   "options": "No\nYes"
+   "options": "No\nYes",
+   "print_hide": 1
   },
   {
    "depends_on": "eval:doc.biting_pain=='Yes'",
    "fieldname": "biting_pain_desc",
    "fieldtype": "Small Text",
-   "label": "Where"
+   "label": "Where",
+   "print_hide": 1
   },
   {
    "fieldname": "column_break_ur7m7",
@@ -262,167 +273,195 @@
    "fieldname": "cold_hot_sweet_sensitivity",
    "fieldtype": "Select",
    "label": "Cold, hot or sweet sensitivity",
-   "options": "No\nYes"
+   "options": "No\nYes",
+   "print_hide": 1
   },
   {
    "depends_on": "eval:doc.cold_hot_sweet_sensitivity=='Yes'",
    "fieldname": "cold_hot_sweet_sensitivity_desc",
    "fieldtype": "Small Text",
-   "label": "Where"
+   "label": "Where",
+   "print_hide": 1
   },
   {
    "fieldname": "food_traps",
    "fieldtype": "Select",
    "label": "Do you have food traps",
-   "options": "No\nYes"
+   "options": "No\nYes",
+   "print_hide": 1
   },
   {
    "depends_on": "eval:doc.food_traps=='Yes'",
    "fieldname": "food_traps_desc",
    "fieldtype": "Small Text",
-   "label": "Where"
+   "label": "Where",
+   "print_hide": 1
   },
   {
    "fieldname": "chew_both_sites",
    "fieldtype": "Select",
    "label": "Do you chew on both sides",
-   "options": "Yes\nNo"
+   "options": "Yes\nNo",
+   "print_hide": 1
   },
   {
    "depends_on": "eval:doc.chew_both_sites=='No'",
    "fieldname": "chew_both_sites_desc",
    "fieldtype": "Small Text",
-   "label": "Why not"
+   "label": "Why not",
+   "print_hide": 1
   },
   {
    "fieldname": "bad_breath",
    "fieldtype": "Select",
    "label": "Do you suffer from bad breath?",
-   "options": "No\nYes"
+   "options": "No\nYes",
+   "print_hide": 1
   },
   {
    "fieldname": "gums_bleed",
    "fieldtype": "Select",
    "label": "Do your gums bleed on brushing or flossing?",
-   "options": "No\nYes\nSometimes"
+   "options": "No\nYes\nSometimes",
+   "print_hide": 1
   },
   {
    "fieldname": "use_floss",
    "fieldtype": "Select",
    "label": "Do you use floss?",
-   "options": "No\nYes\nSometimes"
+   "options": "No\nYes\nSometimes",
+   "print_hide": 1
   },
   {
    "fieldname": "use_dental_irrigator",
    "fieldtype": "Select",
    "label": "Do you use a dental irrigator?",
-   "options": "No\nYes\nSometimes"
+   "options": "No\nYes\nSometimes",
+   "print_hide": 1
   },
   {
    "fieldname": "use_interdental_sticks",
    "fieldtype": "Select",
    "label": "Do you use interdental sticks between teeth?",
-   "options": "No\nYes\nSometimes"
+   "options": "No\nYes\nSometimes",
+   "print_hide": 1
   },
   {
    "fieldname": "toothbrush_type",
    "fieldtype": "Select",
    "label": "What type of toothbrush do you use?",
-   "options": "Manual\nElectric"
+   "options": "Manual\nElectric",
+   "print_hide": 1
   },
   {
    "depends_on": "eval:doc.toothbrush_type=='Electric'",
    "fieldname": "toothbrush_type_make",
    "fieldtype": "Small Text",
-   "label": "Make"
+   "label": "Make",
+   "print_hide": 1
   },
   {
    "fieldname": "brush_duration",
    "fieldtype": "Small Text",
-   "label": "How often and how long do you brush your teeth?"
+   "label": "How often and how long do you brush your teeth?",
+   "print_hide": 1
   },
   {
    "fieldname": "favorite_toothpaste",
    "fieldtype": "Small Text",
-   "label": "Your favorite toothpaste?"
+   "label": "Your favorite toothpaste?",
+   "print_hide": 1
   },
   {
    "fieldname": "oral_hygiene",
    "fieldtype": "Select",
    "label": "Have you been instructed in Oral Hygiene?",
-   "options": "No\nYes"
+   "options": "No\nYes",
+   "print_hide": 1
   },
   {
    "fieldname": "grind_night",
    "fieldtype": "Select",
    "label": "Do you clench/grind your teeth at night?",
-   "options": "No\nYes\nDon't know"
+   "options": "No\nYes\nDon't know",
+   "print_hide": 1
   },
   {
    "fieldname": "grind_stress",
    "fieldtype": "Select",
    "label": "Do you clench/grind when under stress?",
-   "options": "No\nYes\nDon't know"
+   "options": "No\nYes\nDon't know",
+   "print_hide": 1
   },
   {
    "fieldname": "jaw_joints_click",
    "fieldtype": "Select",
    "label": "Do your jaw joints click or pop?",
-   "options": "No\nYes\nDon't know"
+   "options": "No\nYes\nDon't know",
+   "print_hide": 1
   },
   {
    "fieldname": "have_tinnitus",
    "fieldtype": "Select",
    "label": "Do you have Tinnitus?",
-   "options": "No\nYes\nDon't know"
+   "options": "No\nYes\nDon't know",
+   "print_hide": 1
   },
   {
    "fieldname": "know_oral_infections_cause",
    "fieldtype": "Select",
    "label": "Do you know oral infections can cause systemic symptoms?",
-   "options": "No\nYes"
+   "options": "No\nYes",
+   "print_hide": 1
   },
   {
    "fieldname": "know_bone_loss",
    "fieldtype": "Select",
    "label": "Do you know you can have bone loss without being aware of it?",
-   "options": "No\nYes"
+   "options": "No\nYes",
+   "print_hide": 1
   },
   {
    "fieldname": "know_cavitation",
    "fieldtype": "Select",
    "label": "Do you know what a cavitation is?",
-   "options": "No\nYes"
+   "options": "No\nYes",
+   "print_hide": 1
   },
   {
    "fieldname": "know_blotting_brushes",
    "fieldtype": "Select",
    "label": "Have you ever heard of Blotting Brushes?",
-   "options": "No\nYes"
+   "options": "No\nYes",
+   "print_hide": 1
   },
   {
    "fieldname": "nervours_dental_treatment",
    "fieldtype": "Select",
    "label": "Are you nervous about dental treatment?",
-   "options": "No\nYes"
+   "options": "No\nYes",
+   "print_hide": 1
   },
   {
    "depends_on": "eval:doc.nervours_dental_treatment=='Yes'",
    "fieldname": "nervours_dental_treatmentnervours_dental_treatment_desc",
    "fieldtype": "Small Text",
-   "label": "What in particular?"
+   "label": "What in particular?",
+   "print_hide": 1
   },
   {
    "fieldname": "happy_teeth_appearance",
    "fieldtype": "Select",
    "label": "Are you happy with the appearance of your teeth?",
-   "options": "Yes\nNo"
+   "options": "Yes\nNo",
+   "print_hide": 1
   },
   {
    "depends_on": "eval:doc.happy_teeth_appearance=='No'",
    "fieldname": "happy_teeth_appearance_desc",
    "fieldtype": "Small Text",
-   "label": "What would you like changed"
+   "label": "What would you like changed",
+   "print_hide": 1
   },
   {
    "fieldname": "column_break_r7aft",
@@ -452,7 +491,7 @@
    "link_fieldname": "custom_dental_history"
   }
  ],
- "modified": "2024-02-16 18:56:41.092587",
+ "modified": "2024-12-20 07:17:23.073165",
  "modified_by": "Administrator",
  "module": "Swissmedhealth",
  "name": "Dental History",
