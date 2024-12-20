@@ -15,9 +15,9 @@
             {% if new_row.update({'total': new_row.total + 1}) %}{% endif %} 
             <td>
                 {% if field.fieldtype == "Heading" or field.fieldtype == "Section Break" %}
-                <h3>{{ field.label }}</h3>
+                <b>{{ field.label }}</b>
                 {% else %}
-                <p>{{ field.label }}</p>
+                <span>{{ field.label }} </span>
                 {% endif %}
                 {% if active_value %}
                     {% if field.fieldtype == "Select" %}
@@ -51,8 +51,6 @@
         {% endif %}
         {% endfor %}
     </table>
-
-    <div style="page-break-before: always;"></div>
 
     {% set active_doc = frappe.get_doc("Medical History", doc.custom_medical_history) %}
     {% set new_row= {'total': 0} %}
@@ -67,9 +65,9 @@
             {% if new_row.update({'total': new_row.total + 1}) %}{% endif %} 
             <td>
                 {% if field.fieldtype == "Heading" or field.fieldtype == "Section Break" %}
-                <h3>{{ field.label }}</h3>
+                <b>{{ field.label }}</b>
                 {% else %}
-                <p>{{ field.label }}</p>
+                <span>{{ field.label }} </span>
                 {% endif %}
                 {% if active_value %}
                     {% if field.fieldtype == "Select" %}
@@ -103,8 +101,6 @@
         {% endif %}
         {% endfor %}
     </table>
-
-    <div style="page-break-before: always;"></div>
 
     {% set active_doc = frappe.get_doc("Dental History", doc.custom_dental_history) %}
     {% set new_row= {'total': 0} %}
@@ -119,9 +115,9 @@
             {% if new_row.update({'total': new_row.total + 1}) %}{% endif %} 
             <td>
                 {% if field.fieldtype == "Heading" or field.fieldtype == "Section Break" %}
-                <h3>{{ field.label }}</h3>
+                <b>{{ field.label }}</b>
                 {% else %}
-                <p>{{ field.label }}</p>
+                <span>{{ field.label }} </span>
                 {% endif %}
                 {% if active_value %}
                     {% if field.fieldtype == "Select" %}
@@ -156,8 +152,6 @@
         {% endfor %}
     </table>
 
-    <div style="page-break-before: always;"></div>
-    
     {% set active_doc = frappe.get_doc("Stress Identification", doc.custom_stress_identification) %}
     {% set new_row= {'total': 0} %}
     <table class="table table-bordered">
@@ -171,9 +165,9 @@
             {% if new_row.update({'total': new_row.total + 1}) %}{% endif %} 
             <td>
                 {% if field.fieldtype == "Heading" or field.fieldtype == "Section Break" %}
-                <h3>{{ field.label }}</h3>
+                <b>{{ field.label }}</b>
                 {% else %}
-                <p>{{ field.label }}</p>
+                <span>{{ field.label }} </span>
                 {% endif %}
                 {% if active_value %}
                     {% if field.fieldtype == "Select" %}
@@ -207,8 +201,6 @@
         {% endif %}
         {% endfor %}
     </table>
-    
-    <div style="page-break-before: always;"></div>
 
     {% set active_doc = frappe.get_doc("Customer Consent", doc.custom_customer_consent) %}
     <table class="table table-bordered">
