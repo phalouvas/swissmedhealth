@@ -8,11 +8,13 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "symptons_section",
   "naming_series",
   "symptoms",
   "symptoms_duration",
-  "symptoms_if_any",
+  "possible_problem_cause",
+  "symptoms_restrict_daily_life",
+  "personalized_familiar",
+  "symptons_section",
   "low_energy",
   "fatigue",
   "weakness",
@@ -21,9 +23,6 @@
   "low_sexual_drive",
   "hot_flushes",
   "column_break_yyv6d",
-  "possible_problem_cause",
-  "symptoms_restrict_daily_life",
-  "personalized_familiar",
   "symptoms_if_any_copy",
   "short_temper",
   "trouble_sleeping",
@@ -91,8 +90,6 @@
   "low_bone_density",
   "section_break_azvk",
   "details_of_medical_history",
-  "section_break_u8jzm",
-  "heading_3",
   "section_break_oukzv",
   "medication_allergies",
   "medication_allergies_details",
@@ -163,12 +160,12 @@
   {
    "fieldname": "symptoms",
    "fieldtype": "Small Text",
-   "label": "Symptoms"
+   "label": "What are your current health challenges?"
   },
   {
    "fieldname": "symptoms_duration",
    "fieldtype": "Small Text",
-   "label": "Symptoms Duration"
+   "label": "How long have you had the symptoms?"
   },
   {
    "fieldname": "column_break_yyv6d",
@@ -293,7 +290,7 @@
   {
    "fieldname": "heading_1",
    "fieldtype": "Heading",
-   "label": "Do you have or have you ever suffered from?"
+   "label": "Do you currently have or have you ever suffered from the following conditions?"
   },
   {
    "default": "No",
@@ -407,7 +404,7 @@
   {
    "fieldname": "heading_2",
    "fieldtype": "Heading",
-   "label": "Do you have problems with?"
+   "label": "Do you have problems with any of the bellow?"
   },
   {
    "default": "No",
@@ -508,15 +505,6 @@
    "options": "No\nYes"
   },
   {
-   "fieldname": "section_break_u8jzm",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "heading_3",
-   "fieldtype": "Heading",
-   "label": "If the answer is YES to any of the following questions, please provide details in space provided"
-  },
-  {
    "default": "No",
    "fieldname": "medication_allergies",
    "fieldtype": "Select",
@@ -527,7 +515,7 @@
    "depends_on": "eval:doc.medication_allergies=='Yes'",
    "fieldname": "medication_allergies_details",
    "fieldtype": "Small Text",
-   "label": "Medication Allergies Details"
+   "label": "Allergies Details"
   },
   {
    "default": "No",
@@ -777,16 +765,12 @@
   },
   {
    "fieldname": "section_break_oukzv",
-   "fieldtype": "Section Break"
+   "fieldtype": "Section Break",
+   "label": "If the answer is YES to any of the following questions, please provide details in the space provided"
   },
   {
    "fieldname": "symptons_section",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "symptoms_if_any",
-   "fieldtype": "Heading",
-   "label": "Symptoms If Any",
+   "fieldtype": "Section Break",
    "print_hide": 1
   },
   {
@@ -794,105 +778,120 @@
    "fieldname": "low_energy",
    "fieldtype": "Select",
    "label": "Low Energy",
-   "options": "No\nYes"
+   "options": "No\nYes",
+   "print_hide": 1
   },
   {
    "default": "No",
    "fieldname": "fatigue",
    "fieldtype": "Select",
    "label": "Fatigue",
-   "options": "No\nYes"
+   "options": "No\nYes",
+   "print_hide": 1
   },
   {
    "default": "No",
    "fieldname": "weakness",
    "fieldtype": "Select",
    "label": "Weakness",
-   "options": "No\nYes"
+   "options": "No\nYes",
+   "print_hide": 1
   },
   {
    "default": "No",
    "fieldname": "depression",
    "fieldtype": "Select",
    "label": "Depression",
-   "options": "No\nYes"
+   "options": "No\nYes",
+   "print_hide": 1
   },
   {
    "default": "No",
    "fieldname": "decreased_muscle_mass",
    "fieldtype": "Select",
    "label": "Decreased muscle mass",
-   "options": "No\nYes"
+   "options": "No\nYes",
+   "print_hide": 1
   },
   {
    "default": "No",
    "fieldname": "low_sexual_drive",
    "fieldtype": "Select",
    "label": "Low sexual drive",
-   "options": "No\nYes"
+   "options": "No\nYes",
+   "print_hide": 1
   },
   {
    "default": "No",
    "fieldname": "hot_flushes",
    "fieldtype": "Select",
    "label": "Hot flushes",
-   "options": "No\nYes"
+   "options": "No\nYes",
+   "print_hide": 1
   },
   {
    "default": "No",
    "fieldname": "short_temper",
    "fieldtype": "Select",
    "label": "Short temper",
-   "options": "No\nYes"
+   "options": "No\nYes",
+   "print_hide": 1
   },
   {
    "default": "No",
    "fieldname": "trouble_sleeping",
    "fieldtype": "Select",
    "label": "Trouble sleeping",
-   "options": "No\nYes"
+   "options": "No\nYes",
+   "print_hide": 1
   },
   {
    "default": "No",
    "fieldname": "appetite_changes",
    "fieldtype": "Select",
    "label": "Appetite changes",
-   "options": "No\nYes"
+   "options": "No\nYes",
+   "print_hide": 1
   },
   {
    "default": "No",
    "fieldname": "diarrhea",
    "fieldtype": "Select",
    "label": "Diarrhea",
-   "options": "No\nYes"
+   "options": "No\nYes",
+   "print_hide": 1
   },
   {
    "default": "No",
    "fieldname": "dizziness",
    "fieldtype": "Select",
    "label": "Dizziness",
-   "options": "No\nYes"
+   "options": "No\nYes",
+   "print_hide": 1
   },
   {
    "default": "No",
    "fieldname": "nervousness",
    "fieldtype": "Select",
    "label": "Nervousness",
-   "options": "No\nYes"
+   "options": "No\nYes",
+   "print_hide": 1
   },
   {
    "default": "No",
    "fieldname": "stress",
    "fieldtype": "Select",
    "label": "Stress",
-   "options": "No\nYes"
+   "options": "No\nYes",
+   "print_hide": 1
   },
   {
    "default": "No",
    "fieldname": "increased_sweating",
    "fieldtype": "Select",
    "label": "Increased sweating",
-   "options": "No\nYes"
+   "options": "No\nYes",
+   "print_hide": 1
   },
   {
    "fieldname": "symptoms_if_any_copy",
@@ -923,12 +922,14 @@
   },
   {
    "fieldname": "section_break_azvk",
-   "fieldtype": "Section Break"
+   "fieldtype": "Section Break",
+   "print_hide": 1
   },
   {
    "fieldname": "details_of_medical_history",
    "fieldtype": "Small Text",
-   "label": "Details of medical history"
+   "label": "Details of medical history",
+   "print_hide": 1
   },
   {
    "fieldname": "fitness_section",
@@ -1059,7 +1060,8 @@
    "fieldname": "overall_health",
    "fieldtype": "Select",
    "label": "Overall Health",
-   "options": "1\n2\n3\n4\n5"
+   "options": "1\n2\n3\n4\n5",
+   "print_hide": 1
   }
  ],
  "index_web_pages_for_search": 1,
