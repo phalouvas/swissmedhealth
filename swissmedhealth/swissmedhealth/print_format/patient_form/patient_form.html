@@ -8,10 +8,10 @@
         <caption><h2>Personal Details</h2></caption>
         {% for field in active_doc.meta.fields %}
         {% set active_value = active_doc.get(field.fieldname) %}        
-            {% if field.label and field.print_hide != 1 %}
+            {% if field.print_hide != 1 and field.fieldtype != "Column Break" %}
                 {% if field.fieldtype == "Heading" or field.fieldtype == "Section Break" %}
                     {% if new_row.update({'total': 0}) %}{% endif %} 
-                    <tr><td colspan="2"><h3>{{ field.label }}</h3></td></tr>
+                    <tr><td colspan="2">{% if field.label %}<h3>{{ field.label }}</h3>{% endif %}</td></tr>
                 {% else %}
                 {% if new_row.total % 2 == 0 %}
                 <tr>
@@ -114,10 +114,10 @@
         <caption><h2>Dental History</h2></caption>
         {% for field in active_doc.meta.fields %}
         {% set active_value = active_doc.get(field.fieldname) %}        
-            {% if field.label and field.print_hide != 1 %}
+            {% if field.print_hide != 1 and field.fieldtype != "Column Break" %}
                 {% if field.fieldtype == "Heading" or field.fieldtype == "Section Break" %}
                     {% if new_row.update({'total': 0}) %}{% endif %} 
-                    <tr><td colspan="2"><h3>{{ field.label }}</h3></td></tr>
+                    <tr><td colspan="2">{% if field.label %}<h3>{{ field.label }}</h3>{% endif %}</td></tr>
                 {% else %}
                 {% if new_row.total % 2 == 0 %}
                 <tr>
@@ -167,10 +167,10 @@
         <caption><h2>Stress Identification</h2></caption>
         {% for field in active_doc.meta.fields %}
         {% set active_value = active_doc.get(field.fieldname) %}        
-            {% if field.label and field.print_hide != 1 %}
+            {% if field.print_hide != 1 and field.fieldtype != "Column Break" %}
                 {% if field.fieldtype == "Heading" or field.fieldtype == "Section Break" %}
                     {% if new_row.update({'total': 0}) %}{% endif %} 
-                    <tr><td colspan="2"><h3>{{ field.label }}</h3></td></tr>
+                    <tr><td colspan="2">{% if field.label %}<h3>{{ field.label }}</h3>{% endif %}</td></tr>
                 {% else %}
                 {% if new_row.total % 2 == 0 %}
                 <tr>
