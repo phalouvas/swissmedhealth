@@ -10,9 +10,11 @@
         {% set active_value = active_doc.get(field.fieldname) %}        
             {% if field.print_hide != 1 and field.fieldtype != "Column Break" %}
                 {% if field.fieldtype == "Heading" or field.fieldtype == "Section Break" %}
-                <b>{{ field.label }}</b>
+                    {% if new_row.update({'total': 0}) %}{% endif %} 
+                    <tr><td colspan="2">{% if field.label %}<h3>{{ field.label }}</h3>{% endif %}</td></tr>
                 {% else %}
-                <span>{{ field.label }} </span>
+                {% if new_row.total % 2 == 0 %}
+                <tr>
                 {% endif %}
                 {% if new_row.update({'total': new_row.total + 1}) %}{% endif %}                 
                     <td>
@@ -50,6 +52,8 @@
             {% endif %}        
         {% endfor %}
     </table>
+
+    <div style="page-break-before: always;"></div>
 
     {% set active_doc = frappe.get_doc("Medical History", doc.custom_medical_history) %}
     {% set new_row= {'total': 0} %}
@@ -59,9 +63,11 @@
         {% set active_value = active_doc.get(field.fieldname) %}        
             {% if field.print_hide != 1 and field.fieldtype != "Column Break" %}
                 {% if field.fieldtype == "Heading" or field.fieldtype == "Section Break" %}
-                <b>{{ field.label }}</b>
+                    {% if new_row.update({'total': 0}) %}{% endif %} 
+                    <tr><td colspan="2">{% if field.label %}<h3>{{ field.label }}</h3>{% endif %}</td></tr>
                 {% else %}
-                <span>{{ field.label }} </span>
+                {% if new_row.total % 2 == 0 %}
+                <tr>
                 {% endif %}
                 {% if new_row.update({'total': new_row.total + 1}) %}{% endif %}                 
                     <td>
@@ -99,6 +105,8 @@
             {% endif %}        
         {% endfor %}
     </table>
+
+    <div style="page-break-before: always;"></div>
 
     {% set active_doc = frappe.get_doc("Dental History", doc.custom_dental_history) %}
     {% set new_row= {'total': 0} %}
@@ -108,9 +116,11 @@
         {% set active_value = active_doc.get(field.fieldname) %}        
             {% if field.print_hide != 1 and field.fieldtype != "Column Break" %}
                 {% if field.fieldtype == "Heading" or field.fieldtype == "Section Break" %}
-                <b>{{ field.label }}</b>
+                    {% if new_row.update({'total': 0}) %}{% endif %} 
+                    <tr><td colspan="2">{% if field.label %}<h3>{{ field.label }}</h3>{% endif %}</td></tr>
                 {% else %}
-                <span>{{ field.label }} </span>
+                {% if new_row.total % 2 == 0 %}
+                <tr>
                 {% endif %}
                 {% if new_row.update({'total': new_row.total + 1}) %}{% endif %}                 
                     <td>
@@ -149,6 +159,8 @@
         {% endfor %}
     </table>
 
+    <div style="page-break-before: always;"></div>
+    
     {% set active_doc = frappe.get_doc("Stress Identification", doc.custom_stress_identification) %}
     {% set new_row= {'total': 0} %}
     <table class="table table-bordered">
@@ -157,9 +169,11 @@
         {% set active_value = active_doc.get(field.fieldname) %}        
             {% if field.print_hide != 1 and field.fieldtype != "Column Break" %}
                 {% if field.fieldtype == "Heading" or field.fieldtype == "Section Break" %}
-                <b>{{ field.label }}</b>
+                    {% if new_row.update({'total': 0}) %}{% endif %} 
+                    <tr><td colspan="2">{% if field.label %}<h3>{{ field.label }}</h3>{% endif %}</td></tr>
                 {% else %}
-                <span>{{ field.label }} </span>
+                {% if new_row.total % 2 == 0 %}
+                <tr>
                 {% endif %}
                 {% if new_row.update({'total': new_row.total + 1}) %}{% endif %}                 
                     <td>
@@ -197,6 +211,8 @@
             {% endif %}        
         {% endfor %}
     </table>
+    
+    <div style="page-break-before: always;"></div>
 
     {% set active_doc = frappe.get_doc("Customer Consent", doc.custom_customer_consent) %}
     <table class="table table-bordered">
