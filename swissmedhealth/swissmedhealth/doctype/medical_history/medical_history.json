@@ -8,11 +8,13 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "symptons_section",
   "naming_series",
   "symptoms",
   "symptoms_duration",
-  "symptoms_if_any",
+  "possible_problem_cause",
+  "symptoms_restrict_daily_life",
+  "personalized_familiar",
+  "symptons_section",
   "low_energy",
   "fatigue",
   "weakness",
@@ -21,9 +23,6 @@
   "low_sexual_drive",
   "hot_flushes",
   "column_break_yyv6d",
-  "possible_problem_cause",
-  "symptoms_restrict_daily_life",
-  "personalized_familiar",
   "symptoms_if_any_copy",
   "short_temper",
   "trouble_sleeping",
@@ -163,12 +162,12 @@
   {
    "fieldname": "symptoms",
    "fieldtype": "Small Text",
-   "label": "Symptoms"
+   "label": "What are your current health challenges?"
   },
   {
    "fieldname": "symptoms_duration",
    "fieldtype": "Small Text",
-   "label": "Symptoms Duration"
+   "label": "How long have you had the symptoms?"
   },
   {
    "fieldname": "column_break_yyv6d",
@@ -774,12 +773,6 @@
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "symptoms_if_any",
-   "fieldtype": "Heading",
-   "label": "Symptoms If Any",
-   "print_hide": 1
-  },
-  {
    "default": "No",
    "fieldname": "low_energy",
    "fieldtype": "Select",
@@ -1058,7 +1051,7 @@
    "link_fieldname": "custom_medical_history"
   }
  ],
- "modified": "2024-12-19 07:57:12.010463",
+ "modified": "2024-12-23 11:29:33.180577",
  "modified_by": "Administrator",
  "module": "Swissmedhealth",
  "name": "Medical History",
