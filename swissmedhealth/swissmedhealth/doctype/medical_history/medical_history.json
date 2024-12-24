@@ -938,8 +938,7 @@
    "in_list_view": 1,
    "label": "Health Goals",
    "options": "\nOvercoming a current health challenge\nUnlocking the secrets to a longer, healthier life\nBoosting my physical and mental performance\nGetting a comprehensive health check-up\nAchieving a brighter, healthier smile with our biological dental services\nCurious about a treatment I saw on social media\nOur corporate wellness program",
-   "print_hide": 1,
-   "reqd": 1
+   "print_hide": 1
   },
   {
    "fieldname": "health_section",
@@ -960,8 +959,7 @@
    "in_list_view": 1,
    "label": "Which is your preferred contact method?",
    "options": "\nEmail\nTelephone\nWhatsapp\nTelegram",
-   "print_hide": 1,
-   "reqd": 1
+   "print_hide": 1
   },
   {
    "fieldname": "preferred_contact_times",
@@ -969,8 +967,7 @@
    "in_list_view": 1,
    "label": "What are your preferred contact times?",
    "options": "\nMorning\nLunch\nAfternoon\nLate afternoon",
-   "print_hide": 1,
-   "reqd": 1
+   "print_hide": 1
   },
   {
    "fieldname": "personalized_familiar",
@@ -998,7 +995,7 @@
    "link_fieldname": "custom_medical_history"
   }
  ],
- "modified": "2024-12-20 07:11:13.161095",
+ "modified": "2024-12-24 14:50:50.022846",
  "modified_by": "Administrator",
  "module": "Swissmedhealth",
  "name": "Medical History",

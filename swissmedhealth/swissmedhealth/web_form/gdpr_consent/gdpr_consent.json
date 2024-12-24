@@ -45,7 +45,7 @@
    "label": "Accept Registration",
    "max_length": 0,
    "max_value": 0,
-   "options": \n"No\nYes",
+   "options": "\nNo\nYes",
    "read_only": 0,
    "reqd": 0,
    "show_in_filter": 0
@@ -71,7 +71,7 @@
    "label": "Accept Personal Data",
    "max_length": 0,
    "max_value": 0,
-   "options": \n"No\nYes",
+   "options": "\nNo\nYes",
    "read_only": 0,
    "reqd": 0,
    "show_in_filter": 0
@@ -97,7 +97,7 @@
    "label": "Accept Communication",
    "max_length": 0,
    "max_value": 0,
-   "options": \n"No\nYes",
+   "options": "\nNo\nYes",
    "read_only": 0,
    "reqd": 0,
    "show_in_filter": 0
