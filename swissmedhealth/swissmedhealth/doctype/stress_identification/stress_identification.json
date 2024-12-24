@@ -33,7 +33,7 @@
    "fieldname": "physical_symptoms",
    "fieldtype": "Select",
    "label": "Physical Symptoms",
-   "options": "1 - Never\n2 - Rarely\n3 - Sometimes\n4 - Often\n5 - Always"
+   "options": "\n1 - Never\n2 - Rarely\n3 - Sometimes\n4 - Often\n5 - Always"
   },
   {
    "fieldname": "section_break_tioj",
@@ -44,21 +44,21 @@
    "fieldname": "sleep_patterns",
    "fieldtype": "Select",
    "label": "Sleep Patterns",
-   "options": "1 - Never\n2 - Rarely\n3 - Sometimes\n4 - Often\n5 - Always"
+   "options": "\n1 - Never\n2 - Rarely\n3 - Sometimes\n4 - Often\n5 - Always"
   },
   {
    "description": "Do you feel fatigued or drained even after a full night\u2019s sleep?",
    "fieldname": "energy_levels",
    "fieldtype": "Select",
    "label": "Energy Levels",
-   "options": "1 - Never\n2 - Rarely\n3 - Sometimes\n4 - Often\n5 - Always"
+   "options": "\n1 - Never\n2 - Rarely\n3 - Sometimes\n4 - Often\n5 - Always"
   },
   {
    "description": "How often do you turn to unhealthy habits (e.g., smoking, overeating, or alcohol)?",
    "fieldname": "unhealthy_habits",
    "fieldtype": "Select",
    "label": "Unhealthy Habits",
-   "options": "1 - Never\n2 - Rarely\n3 - Sometimes\n4 - Often\n5 - Always"
+   "options": "\n1 - Never\n2 - Rarely\n3 - Sometimes\n4 - Often\n5 - Always"
   },
   {
    "fieldname": "column_break_itza",
@@ -69,21 +69,21 @@
    "fieldname": "general_mood",
    "fieldtype": "Select",
    "label": "General Mood",
-   "options": "1 - Never\n2 - Rarely\n3 - Sometimes\n4 - Often\n5 - Always"
+   "options": "\n1 - Never\n2 - Rarely\n3 - Sometimes\n4 - Often\n5 - Always"
   },
   {
    "description": "How often do you feel you have too much work to manage effectively?",
    "fieldname": "workload",
    "fieldtype": "Select",
    "label": "Workload",
-   "options": "1 - Never\n2 - Rarely\n3 - Sometimes\n4 - Often\n5 - Always"
+   "options": "\n1 - Never\n2 - Rarely\n3 - Sometimes\n4 - Often\n5 - Always"
   },
   {
    "description": "How often do work demands interfere with your personal life and relationships?",
    "fieldname": "work_life_balance",
    "fieldtype": "Select",
    "label": "Work-Life Balance",
-   "options": "1 - Never\n2 - Rarely\n3 - Sometimes\n4 - Often\n5 - Always"
+   "options": "\n1 - Never\n2 - Rarely\n3 - Sometimes\n4 - Often\n5 - Always"
   }
  ],
  "index_web_pages_for_search": 1,
