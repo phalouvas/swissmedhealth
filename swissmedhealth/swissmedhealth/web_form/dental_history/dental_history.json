@@ -57,7 +57,7 @@
    "label": "Amalgam fillings",
    "max_length": 0,
    "max_value": 0,
-   "options": "No\nYes\nDon't know",
+   "options": "\nNo\nYes\nDon't know",
    "read_only": 0,
    "reqd": 0,
    "show_in_filter": 0
@@ -83,7 +83,7 @@
    "label": "Bone grafts",
    "max_length": 0,
    "max_value": 0,
-   "options": "No\nYes\nDon't know",
+   "options": "\nNo\nYes\nDon't know",
    "read_only": 0,
    "reqd": 0,
    "show_in_filter": 0
@@ -96,7 +96,7 @@
    "label": "Bridges",
    "max_length": 0,
    "max_value": 0,
-   "options": "No\nYes\nDon't know",
+   "options": "\nNo\nYes\nDon't know",
    "read_only": 0,
    "reqd": 0,
    "show_in_filter": 0
@@ -109,7 +109,7 @@
    "label": "Composite fillings",
    "max_length": 0,
    "max_value": 0,
-   "options": "No\nYes\nDon't know",
+   "options": "\nNo\nYes\nDon't know",
    "read_only": 0,
    "reqd": 0,
    "show_in_filter": 0
@@ -135,7 +135,7 @@
    "label": "Crowns",
    "max_length": 0,
    "max_value": 0,
-   "options": "No\nYes\nDon't know",
+   "options": "\nNo\nYes\nDon't know",
    "read_only": 0,
    "reqd": 0,
    "show_in_filter": 0
@@ -161,7 +161,7 @@
    "label": "Dentures",
    "max_length": 0,
    "max_value": 0,
-   "options": "No\nYes\nDon't know",
+   "options": "\nNo\nYes\nDon't know",
    "read_only": 0,
    "reqd": 0,
    "show_in_filter": 0
@@ -187,7 +187,7 @@
    "label": "Implants",
    "max_length": 0,
    "max_value": 0,
-   "options": "No\nYes\nDon't know",
+   "options": "\nNo\nYes\nDon't know",
    "read_only": 0,
    "reqd": 0,
    "show_in_filter": 0
@@ -226,7 +226,7 @@
    "label": "Orthodontic treatment (Braces)",
    "max_length": 0,
    "max_value": 0,
-   "options": "No\nYes\nDon't know",
+   "options": "\nNo\nYes\nDon't know",
    "read_only": 0,
    "reqd": 0,
    "show_in_filter": 0
@@ -239,7 +239,7 @@
    "label": "Periodontal treatment (Gum treatment)",
    "max_length": 0,
    "max_value": 0,
-   "options": "No\nYes\nDon't know",
+   "options": "\nNo\nYes\nDon't know",
    "read_only": 0,
    "reqd": 0,
    "show_in_filter": 0
@@ -252,7 +252,7 @@
    "label": "Root fillings",
    "max_length": 0,
    "max_value": 0,
-   "options": "No\nYes\nDon't know",
+   "options": "\nNo\nYes\nDon't know",
    "read_only": 0,
    "reqd": 0,
    "show_in_filter": 0
@@ -278,7 +278,7 @@
    "label": "Wisdom tooth extraction",
    "max_length": 0,
    "max_value": 0,
-   "options": "No\nYes\nDon't know",
+   "options": "\nNo\nYes\nDon't know",
    "read_only": 0,
    "reqd": 0,
    "show_in_filter": 0
@@ -291,7 +291,7 @@
    "label": "How many months since you last saw a dentist?",
    "max_length": 0,
    "max_value": 0,
-   "options": "Never\n6\n12\nLonger",
+   "options": "\nNever\n6\n12\nLonger",
    "read_only": 0,
    "reqd": 0,
    "show_in_filter": 0

@@ -28,7 +28,7 @@
    "fieldname": "accept_registration",
    "fieldtype": "Select",
    "label": "Accept Registration",
-   "options": "No\nYes"
+   "options": "\nNo\nYes"
   },
   {
    "description": "The information collected with this questionnaire will be used by Swissmed Health for medical services and practices. Your personal data and information will remain with Swissmed Health for us to provide you with medical services and other related services both at the center and also potentially to other health centers. This may require that your personal data including medical records to be shared with other medical service providers for referral purposes as well as other legal and procedural purposes of the center.",
@@ -45,7 +45,7 @@
    "fieldname": "accept_personal_data",
    "fieldtype": "Select",
    "label": "Accept Personal Data",
-   "options": "No\nYes"
+   "options": "\nNo\nYes"
   },
   {
    "fieldname": "column_break_8bnez",
@@ -56,7 +56,7 @@
    "fieldname": "accept_communication",
    "fieldtype": "Select",
    "label": "Accept Communication",
-   "options": "No\nYes"
+   "options": "\nNo\nYes"
   },
   {
    "fieldname": "section_break_wilzw",
@@ -89,12 +89,11 @@
    "fieldtype": "Section Break"
   },
   {
-   "default": "Yes",
    "description": "By participating in Swissmed Health's Hormonal Optimization Program, the member acknowledges and voluntarily consents to hormone levels being adjusted beyond normal health and optimization parameters at their own request.<br>\n\nThe member understands and accepts that such adjustments may carry increased risks, including but not limited to potential health complications, side effects, or adverse outcomes.<br>\n\nThe member expressly waives any claims against Swissmed Health, its physicians, staff, and affiliated entities for any liability, harm, or damages arising from hormone adjustments beyond standard recommended health levels.<br>\n\nThe member agrees that Swissmed Health shall not be held responsible for any negative health impacts resulting from member-initiated requests for hormone levels outside of normal clinical guidelines.<br>",
    "fieldname": "understand_hormone",
    "fieldtype": "Select",
    "label": "Do you understand that hormonal optimization therapy is a personalized treatment plan and may not be suitable for everyone?",
-   "options": "No\nYes"
+   "options": "\nNo\nYes"
   }
  ],
  "index_web_pages_for_search": 1,

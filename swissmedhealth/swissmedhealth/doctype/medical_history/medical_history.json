@@ -225,11 +225,10 @@
    "fieldtype": "Section Break"
   },
   {
-   "default": "None",
    "fieldname": "physical_activity",
    "fieldtype": "Select",
    "label": "Physical activity",
-   "options": "None\nSometimes\nRegularly"
+   "options": "\nNone\nSometimes\nRegularly"
   },
   {
    "depends_on": "eval:doc.physical_activity=='Sometimes' || doc.physical_activity=='Regularly';",
@@ -243,11 +242,10 @@
    "print_hide": 1
   },
   {
-   "default": "None",
    "fieldname": "relaxing_activity",
    "fieldtype": "Select",
    "label": "Relaxing activity",
-   "options": "None\nSometimes\nRegularly"
+   "options": "\nNone\nSometimes\nRegularly"
   },
   {
    "depends_on": "eval:doc.relaxing_activity=='Sometimes' || doc.relaxing_activity=='Regularly';",
@@ -260,11 +258,10 @@
    "fieldtype": "Column Break"
   },
   {
-   "default": "None",
    "fieldname": "diet_preferences",
    "fieldtype": "Select",
    "label": "Diet preferences",
-   "options": "None\nVegetarian\nVegan\nMeat\nOther"
+   "options": "\nNone\nVegetarian\nVegan\nMeat\nOther"
   },
   {
    "depends_on": "eval:doc.diet_preferences=='Vegan' || doc.diet_preferences=='Vegetarian' || doc.diet_preferences =='Meat' || doc.diet_preferences =='Other';",
@@ -277,11 +274,10 @@
    "fieldtype": "Section Break"
   },
   {
-   "default": "No",
    "fieldname": "pacemaker",
    "fieldtype": "Select",
    "label": "Do you wear a pacemaker?",
-   "options": "No\nYes"
+   "options": "\nNo\nYes"
   },
   {
    "fieldname": "section_break_itjls",
@@ -293,109 +289,94 @@
    "label": "Do you currently have or have you ever suffered from the following conditions?"
   },
   {
-   "default": "No",
    "fieldname": "anorexia",
    "fieldtype": "Select",
    "label": "Anorexia",
-   "options": "No\nYes"
+   "options": "\nNo\nYes"
   },
   {
-   "default": "No",
    "fieldname": "asthma",
    "fieldtype": "Select",
    "label": "Asthma",
-   "options": "No\nYes"
+   "options": "\nNo\nYes"
   },
   {
-   "default": "No",
    "fieldname": "breathing_difficulties",
    "fieldtype": "Select",
    "label": "Breathing difficulties",
-   "options": "No\nYes"
+   "options": "\nNo\nYes"
   },
   {
-   "default": "No",
    "fieldname": "bulimia",
    "fieldtype": "Select",
    "label": "Bulimia",
-   "options": "No\nYes"
+   "options": "\nNo\nYes"
   },
   {
-   "default": "No",
    "fieldname": "chronic_bronchitis",
    "fieldtype": "Select",
    "label": "Chronic Bronchitis",
-   "options": "No\nYes"
+   "options": "\nNo\nYes"
   },
   {
-   "default": "No",
    "fieldname": "diabetes",
    "fieldtype": "Select",
    "label": "Diabetes",
-   "options": "No\nYes"
+   "options": "\nNo\nYes"
   },
   {
-   "default": "No",
    "fieldname": "epilepsy",
    "fieldtype": "Select",
    "label": "Epilepsy",
-   "options": "No\nYes"
+   "options": "\nNo\nYes"
   },
   {
-   "default": "No",
    "fieldname": "excessive_bleeding",
    "fieldtype": "Select",
    "label": "Excessive bleeding",
-   "options": "No\nYes"
+   "options": "\nNo\nYes"
   },
   {
-   "default": "No",
    "fieldname": "fainting_attacks",
    "fieldtype": "Select",
    "label": "Fainting attacks",
-   "options": "No\nYes"
+   "options": "\nNo\nYes"
   },
   {
-   "default": "No",
    "fieldname": "heart_complaint",
    "fieldtype": "Select",
    "label": "Heart complaint",
-   "options": "No\nYes"
+   "options": "\nNo\nYes"
   },
   {
-   "default": "No",
    "fieldname": "heart_surgery",
    "fieldtype": "Select",
    "label": "Heart surgery",
-   "options": "No\nYes"
+   "options": "\nNo\nYes"
   },
   {
-   "default": "No",
    "fieldname": "hepatitis",
    "fieldtype": "Select",
    "label": "Hepatitis",
-   "options": "No\nYes"
+   "options": "\nNo\nYes"
   },
   {
-   "default": "No",
    "fieldname": "high_blood_pressure",
    "fieldtype": "Select",
    "label": "High blood pressure",
-   "options": "No\nYes"
+   "options": "\nNo\nYes"
   },
   {
-   "default": "No",
    "fieldname": "kidney_failure",
    "fieldtype": "Select",
    "label": "Kidney failure",
-   "options": "No\nYes"
+   "options": "\nNo\nYes"
   },
   {
-   "default": "No",
    "fieldname": "migraines",
    "fieldtype": "Select",
    "label": "Migraines",
-   "options": "No\nYes"
+   "options": "\nNo\nYes"
   },
   {
    "fieldname": "column_break_p0lc3",
@@ -407,109 +388,94 @@
    "label": "Do you have problems with any of the bellow?"
   },
   {
-   "default": "No",
    "fieldname": "bladder",
    "fieldtype": "Select",
    "label": "Bladder",
-   "options": "No\nYes"
+   "options": "\nNo\nYes"
   },
   {
-   "default": "No",
    "fieldname": "chronic_diseasecancer",
    "fieldtype": "Select",
    "label": "Chronic disease/Cancers",
-   "options": "No\nYes"
+   "options": "\nNo\nYes"
   },
   {
-   "default": "No",
    "fieldname": "gallbladder",
    "fieldtype": "Select",
    "label": "Gallbladder",
-   "options": "No\nYes"
+   "options": "\nNo\nYes"
   },
   {
-   "default": "No",
    "fieldname": "gut",
    "fieldtype": "Select",
    "label": "Gut",
-   "options": "No\nYes"
+   "options": "\nNo\nYes"
   },
   {
-   "default": "No",
    "fieldname": "kidneys",
    "fieldtype": "Select",
    "label": "Kidneys",
-   "options": "No\nYes"
+   "options": "\nNo\nYes"
   },
   {
-   "default": "No",
    "fieldname": "liver",
    "fieldtype": "Select",
    "label": "Liver",
-   "options": "No\nYes"
+   "options": "\nNo\nYes"
   },
   {
-   "default": "No",
    "fieldname": "lungs",
    "fieldtype": "Select",
    "label": "Lungs",
-   "options": "No\nYes"
+   "options": "\nNo\nYes"
   },
   {
-   "default": "No",
    "fieldname": "prostate",
    "fieldtype": "Select",
    "label": "Prostate",
-   "options": "No\nYes"
+   "options": "\nNo\nYes"
   },
   {
-   "default": "No",
    "fieldname": "spleen",
    "fieldtype": "Select",
    "label": "Spleen",
-   "options": "No\nYes"
+   "options": "\nNo\nYes"
   },
   {
-   "default": "No",
    "fieldname": "stomach",
    "fieldtype": "Select",
    "label": "Stomach",
-   "options": "No\nYes"
+   "options": "\nNo\nYes"
   },
   {
-   "default": "No",
    "fieldname": "thyroid",
    "fieldtype": "Select",
    "label": "Thyroid",
-   "options": "No\nYes"
+   "options": "\nNo\nYes"
   },
   {
-   "default": "No",
    "fieldname": "urogenital_system",
    "fieldtype": "Select",
    "label": "Uro-genital system",
-   "options": "No\nYes"
+   "options": "\nNo\nYes"
   },
   {
-   "default": "No",
    "fieldname": "rheumatic_fever",
    "fieldtype": "Select",
    "label": "Rheumatic fever",
-   "options": "No\nYes"
+   "options": "\nNo\nYes"
   },
   {
-   "default": "No",
    "fieldname": "stroke",
    "fieldtype": "Select",
    "label": "Stroke",
-   "options": "No\nYes"
+   "options": "\nNo\nYes"
   },
   {
-   "default": "No",
    "fieldname": "medication_allergies",
    "fieldtype": "Select",
    "label": "Do you have any food or medical allergies?",
-   "options": "No\nYes\nNot sure"
+   "options": "\nNo\nYes\nNot sure"
   },
   {
    "depends_on": "eval:doc.medication_allergies=='Yes'",
@@ -518,11 +484,10 @@
    "label": "Allergies Details"
   },
   {
-   "default": "No",
    "fieldname": "taking_medications",
    "fieldtype": "Select",
    "label": "Are you taking any medication? If yes, what are they for?",
-   "options": "No\nYes"
+   "options": "\nNo\nYes"
   },
   {
    "depends_on": "eval:doc.taking_medications=='Yes'",
@@ -531,11 +496,10 @@
    "label": "Medications Details"
   },
   {
-   "default": "No",
    "fieldname": "have_surgical_history",
    "fieldtype": "Select",
    "label": "Have you had any operations?",
-   "options": "No\nYes"
+   "options": "\nNo\nYes"
   },
   {
    "depends_on": "eval:doc.have_surgical_history=='Yes'",
@@ -544,11 +508,10 @@
    "label": "Provide surgical history details including year of operation."
   },
   {
-   "default": "No",
    "fieldname": "have_accidents",
    "fieldtype": "Select",
    "label": "Have you had any previous accidents?",
-   "options": "No\nYes"
+   "options": "\nNo\nYes"
   },
   {
    "depends_on": "eval:doc.have_accidents=='Yes'",
@@ -557,11 +520,10 @@
    "label": "List of accidents"
   },
   {
-   "default": "No",
    "fieldname": "have_hydrocortisone_or_corticosteroids",
    "fieldtype": "Select",
    "label": "Have you ever been treated with hydrocortisone or corticosteroids?",
-   "options": "No\nYes"
+   "options": "\nNo\nYes"
   },
   {
    "depends_on": "eval:doc.have_hydrocortisone_or_corticosteroids=='Yes'",
@@ -583,11 +545,10 @@
    "print_hide": 1
   },
   {
-   "default": "No",
    "fieldname": "have_operation_ceramic_or_titanium",
    "fieldtype": "Select",
    "label": "Have you ever had a joint or hip replacement operation? Ceramic or Titanium?",
-   "options": "No\nYes"
+   "options": "\nNo\nYes"
   },
   {
    "depends_on": "eval:doc.have_operation_ceramic_or_titanium=='Yes'",
@@ -596,43 +557,38 @@
    "label": "Replacement Operation Details"
   },
   {
-   "default": "No",
    "depends_on": "    ",
    "fieldname": "custom_amalgan_fillings_past",
    "fieldtype": "Select",
    "label": "Did you ever have amalgam fillings?",
-   "options": "No\nYes\nNot sure",
+   "options": "\nNo\nYes\nNot sure",
    "print_hide": 1
   },
   {
-   "default": "No",
    "fieldname": "have_amalgam_fillings",
    "fieldtype": "Select",
    "label": "Do you currently have amalgam fillings?",
-   "options": "No\nYes",
+   "options": "\nNo\nYes",
    "print_hide": 1
   },
   {
-   "default": "No",
    "fieldname": "root_canals_past",
    "fieldtype": "Select",
    "label": "Did you ever have root canals?",
-   "options": "No\nYes\nNot sure",
+   "options": "\nNo\nYes\nNot sure",
    "print_hide": 1
   },
   {
-   "default": "No",
    "fieldname": "have_root_canals",
    "fieldtype": "Select",
    "label": "Do you currently have root canals?",
-   "options": "No\nYes"
+   "options": "\nNo\nYes"
   },
   {
-   "default": "No",
    "fieldname": "perform__mri",
    "fieldtype": "Select",
    "label": "Did you perform any MRIs? Please give number and when they were performed",
-   "options": "No\nYes"
+   "options": "\nNo\nYes"
   },
   {
    "depends_on": "eval:doc.perform__mri=='Yes'",
@@ -641,11 +597,10 @@
    "label": "MRI Details"
   },
   {
-   "default": "No",
    "fieldname": "have_medical_diagnostic_tests",
    "fieldtype": "Select",
    "label": "Have you had any blood tests or other medical diagnostic tests done within the last 12 months? If yes, please detail",
-   "options": "No\nYes"
+   "options": "\nNo\nYes"
   },
   {
    "depends_on": "eval:doc.have_medical_diagnostic_tests=='Yes'",
@@ -658,11 +613,10 @@
    "fieldtype": "Column Break"
   },
   {
-   "default": "No",
    "fieldname": "do_you_smoke",
    "fieldtype": "Select",
    "label": "Do you smoke?",
-   "options": "No\nYes"
+   "options": "\nNo\nYes"
   },
   {
    "depends_on": "eval:doc.do_you_smoke=='Yes'",
@@ -672,11 +626,10 @@
    "non_negative": 1
   },
   {
-   "default": "No",
    "fieldname": "do_you_consume_alcohol",
    "fieldtype": "Select",
    "label": "Do you consume alcohol?",
-   "options": "No\nYes"
+   "options": "\nNo\nYes"
   },
   {
    "depends_on": "eval:doc.do_you_consume_alcohol=='Yes'",
@@ -685,11 +638,10 @@
    "label": "Alcohol details of weekly consumption"
   },
   {
-   "default": "No",
    "fieldname": "have_food_intolerances",
    "fieldtype": "Select",
    "label": "Do you have any food intolerances?",
-   "options": "No\nYes",
+   "options": "\nNo\nYes",
    "print_hide": 1
   },
   {
@@ -700,11 +652,10 @@
    "print_hide": 1
   },
   {
-   "default": "No",
    "fieldname": "take_supplements",
    "fieldtype": "Select",
    "label": "Do you take supplements? ",
-   "options": "No\nYes"
+   "options": "\nNo\nYes"
   },
   {
    "depends_on": "eval:doc.take_supplements=='Yes'",
@@ -713,19 +664,17 @@
    "label": "List of supplements"
   },
   {
-   "default": "No",
    "fieldname": "covid19_vaccination",
    "fieldtype": "Select",
    "label": "Have you been vaccinated for Covid-19 in the last 60 days?",
-   "options": "No\nYes",
+   "options": "\nNo\nYes",
    "print_hide": 1
   },
   {
-   "default": "No",
    "fieldname": "have_adverse_reactions_to_vaccinations",
    "fieldtype": "Select",
    "label": "Have you ever suffered any adverse reactions to vaccinations, medication, anesthetics? If yes, please detail:",
-   "options": "No\nYes",
+   "options": "\nNo\nYes",
    "print_hide": 1
   },
   {
@@ -736,11 +685,10 @@
    "print_hide": 1
   },
   {
-   "default": "Neither",
    "fieldname": "do_you_tend_to_feel",
    "fieldtype": "Select",
    "label": "Do you tend to feel",
-   "options": "Neither\nHot\nCold"
+   "options": "\nNeither\nHot\nCold"
   },
   {
    "depends_on": "eval:doc.do_you_tend_to_feel=='Hot' || doc.do_you_tend_to_feel=='Cold'",
@@ -750,18 +698,16 @@
    "non_negative": 1
   },
   {
-   "default": "No",
    "fieldname": "sleep_easily",
    "fieldtype": "Select",
    "label": "Do you get to sleep easily?",
-   "options": "No\nYes"
+   "options": "\nNo\nYes"
   },
   {
-   "default": "No",
    "fieldname": "night_pee",
    "fieldtype": "Select",
    "label": "Do you have to get up at night to pee?",
-   "options": "No\nYes"
+   "options": "\nNo\nYes"
   },
   {
    "fieldname": "section_break_oukzv",
@@ -774,123 +720,108 @@
    "print_hide": 1
   },
   {
-   "default": "No",
    "fieldname": "low_energy",
    "fieldtype": "Select",
    "label": "Low Energy",
-   "options": "No\nYes",
+   "options": "\nNo\nYes",
    "print_hide": 1
   },
   {
-   "default": "No",
    "fieldname": "fatigue",
    "fieldtype": "Select",
    "label": "Fatigue",
-   "options": "No\nYes",
+   "options": "\nNo\nYes",
    "print_hide": 1
   },
   {
-   "default": "No",
    "fieldname": "weakness",
    "fieldtype": "Select",
    "label": "Weakness",
-   "options": "No\nYes",
+   "options": "\nNo\nYes",
    "print_hide": 1
   },
   {
-   "default": "No",
    "fieldname": "depression",
    "fieldtype": "Select",
    "label": "Depression",
-   "options": "No\nYes",
+   "options": "\nNo\nYes",
    "print_hide": 1
   },
   {
-   "default": "No",
    "fieldname": "decreased_muscle_mass",
    "fieldtype": "Select",
    "label": "Decreased muscle mass",
-   "options": "No\nYes",
+   "options": "\nNo\nYes",
    "print_hide": 1
   },
   {
-   "default": "No",
    "fieldname": "low_sexual_drive",
    "fieldtype": "Select",
    "label": "Low sexual drive",
-   "options": "No\nYes",
+   "options": "\nNo\nYes",
    "print_hide": 1
   },
   {
-   "default": "No",
    "fieldname": "hot_flushes",
    "fieldtype": "Select",
    "label": "Hot flushes",
-   "options": "No\nYes",
+   "options": "\nNo\nYes",
    "print_hide": 1
   },
   {
-   "default": "No",
    "fieldname": "short_temper",
    "fieldtype": "Select",
    "label": "Short temper",
-   "options": "No\nYes",
+   "options": "\nNo\nYes",
    "print_hide": 1
   },
   {
-   "default": "No",
    "fieldname": "trouble_sleeping",
    "fieldtype": "Select",
    "label": "Trouble sleeping",
-   "options": "No\nYes",
+   "options": "\nNo\nYes",
    "print_hide": 1
   },
   {
-   "default": "No",
    "fieldname": "appetite_changes",
    "fieldtype": "Select",
    "label": "Appetite changes",
-   "options": "No\nYes",
+   "options": "\nNo\nYes",
    "print_hide": 1
   },
   {
-   "default": "No",
    "fieldname": "diarrhea",
    "fieldtype": "Select",
    "label": "Diarrhea",
-   "options": "No\nYes",
+   "options": "\nNo\nYes",
    "print_hide": 1
   },
   {
-   "default": "No",
    "fieldname": "dizziness",
    "fieldtype": "Select",
    "label": "Dizziness",
-   "options": "No\nYes",
+   "options": "\nNo\nYes",
    "print_hide": 1
   },
   {
-   "default": "No",
    "fieldname": "nervousness",
    "fieldtype": "Select",
    "label": "Nervousness",
-   "options": "No\nYes",
+   "options": "\nNo\nYes",
    "print_hide": 1
   },
   {
-   "default": "No",
    "fieldname": "stress",
    "fieldtype": "Select",
    "label": "Stress",
-   "options": "No\nYes",
+   "options": "\nNo\nYes",
    "print_hide": 1
   },
   {
-   "default": "No",
    "fieldname": "increased_sweating",
    "fieldtype": "Select",
    "label": "Increased sweating",
-   "options": "No\nYes",
+   "options": "\nNo\nYes",
    "print_hide": 1
   },
   {
@@ -900,25 +831,22 @@
    "print_hide": 1
   },
   {
-   "default": "No",
    "fieldname": "loss_of_peripheral_vision",
    "fieldtype": "Select",
    "label": "Loss of peripheral vision",
-   "options": "No\nYes"
+   "options": "\nNo\nYes"
   },
   {
-   "default": "No",
    "fieldname": "low_red_blood_cell_count",
    "fieldtype": "Select",
    "label": "Low red blood cell count",
-   "options": "No\nYes"
+   "options": "\nNo\nYes"
   },
   {
-   "default": "No",
    "fieldname": "low_bone_density",
    "fieldtype": "Select",
    "label": "Low bone density",
-   "options": "No\nYes"
+   "options": "\nNo\nYes"
   },
   {
    "fieldname": "section_break_azvk",
@@ -955,11 +883,10 @@
    "options": "\nBeginner\nIntermediate\nAdvanced\nAthlete"
   },
   {
-   "default": "No",
    "fieldname": "use_supplements",
    "fieldtype": "Select",
    "label": "Have you ever used or are you currently using any methods/substances/supplements to enhance sports performance?",
-   "options": "No\nYes"
+   "options": "\nNo\nYes"
   },
   {
    "fieldname": "physical_activity_details",
@@ -982,18 +909,16 @@
    "label": "Current medications and supplements"
   },
   {
-   "default": "No",
    "fieldname": "is_pregnant",
    "fieldtype": "Select",
    "label": "Are you currently pregnant or breastfeeding?",
-   "options": "No\nYes"
+   "options": "\nNo\nYes"
   },
   {
-   "default": "No",
    "fieldname": "fitness_injury",
    "fieldtype": "Select",
    "label": "Have you ever experienced any injuries or conditions that have affected your fitness routine? If yes, please provide details",
-   "options": "No\nYes"
+   "options": "\nNo\nYes"
   },
   {
    "depends_on": "eval:doc.fitness_injury=='Yes'",
@@ -1002,20 +927,18 @@
    "label": "Fitness Injury Details"
   },
   {
-   "default": "Nothing specific",
    "fieldname": "nutritional_preferences",
    "fieldtype": "Select",
    "label": "Nutritional Preferences",
-   "options": "Nothing specific\nVegetarian\nVegan\nGluten-free\nDairy-free\nKeto\nPaleo\nLow-carb\nLow-fat"
+   "options": "\nNothing specific\nVegetarian\nVegan\nGluten-free\nDairy-free\nKeto\nPaleo\nLow-carb\nLow-fat"
   },
   {
    "fieldname": "health_goals",
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Health Goals",
-   "options": "Overcoming a current health challenge\nUnlocking the secrets to a longer, healthier life\nBoosting my physical and mental performance\nGetting a comprehensive health check-up\nAchieving a brighter, healthier smile with our biological dental services\nCurious about a treatment I saw on social media\nOur corporate wellness program",
-   "print_hide": 1,
-   "reqd": 1
+   "options": "\nOvercoming a current health challenge\nUnlocking the secrets to a longer, healthier life\nBoosting my physical and mental performance\nGetting a comprehensive health check-up\nAchieving a brighter, healthier smile with our biological dental services\nCurious about a treatment I saw on social media\nOur corporate wellness program",
+   "print_hide": 1
   },
   {
    "fieldname": "health_section",
@@ -1035,32 +958,29 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Which is your preferred contact method?",
-   "options": "Email\nTelephone\nWhatsapp\nTelegram",
-   "print_hide": 1,
-   "reqd": 1
+   "options": "\nEmail\nTelephone\nWhatsapp\nTelegram",
+   "print_hide": 1
   },
   {
    "fieldname": "preferred_contact_times",
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "What are your preferred contact times?",
-   "options": "Morning\nLunch\nAfternoon\nLate afternoon",
-   "print_hide": 1,
-   "reqd": 1
+   "options": "\nMorning\nLunch\nAfternoon\nLate afternoon",
+   "print_hide": 1
   },
   {
-   "default": "No",
    "fieldname": "personalized_familiar",
    "fieldtype": "Select",
    "label": "Are you familiar with Swissmed Health Personalized Medicine approach?",
-   "options": "No\nYes"
+   "options": "\nNo\nYes"
   },
   {
    "description": "On a scale of 1\u20135, where would you score your overall health level? - (1 = Poor, 5 = Excellent)",
    "fieldname": "overall_health",
    "fieldtype": "Select",
    "label": "Overall Health",
-   "options": "1\n2\n3\n4\n5",
+   "options": "\n1\n2\n3\n4\n5",
    "print_hide": 1
   }
  ],
@@ -1075,7 +995,7 @@
    "link_fieldname": "custom_medical_history"
   }
  ],
- "modified": "2024-12-20 07:11:13.161095",
+ "modified": "2024-12-24 14:50:50.022846",
  "modified_by": "Administrator",
  "module": "Swissmedhealth",
  "name": "Medical History",

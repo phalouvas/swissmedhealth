@@ -5,38 +5,24 @@
     {% set active_doc = doc %}
     {% set new_row= {'total': 0} %}
     <table class="table table-bordered">
-        <caption><h2>Personal Details</h2></caption>
+        <h2>Personal Details</h2>
         {% for field in active_doc.meta.fields %}
         {% set active_value = active_doc.get(field.fieldname) %}        
             {% if field.print_hide != 1 and field.fieldtype != "Column Break" %}
                 {% if field.fieldtype == "Heading" or field.fieldtype == "Section Break" %}
                     {% if new_row.update({'total': 0}) %}{% endif %} 
-                    <tr><td colspan="2">{% if field.label %}<h3>{{ field.label }}</h3>{% endif %}</td></tr>
+                    <tr><td colspan="2">{% if field.label %}<h5><u>{{ field.label }}</u></h5>{% endif %}</td></tr>
                 {% else %}
                 {% if new_row.total % 2 == 0 %}
                 <tr>
                 {% endif %}
                 {% if new_row.update({'total': new_row.total + 1}) %}{% endif %}                 
                     <td>
-                    <p>{{ field.label }}</p>
+                    {{ field.label }}:
                     {% if active_value %}
-                        {% if field.fieldtype == "Select" %}
-                            <ul>
-                                {% for option in field.options.split('\n') %}
-                                <li>
-                                    {% if option == active_value %}
-                                    <span class="text-primary" style="font-weight: bold;">{{ option }}</span>
-                                    {% else %}
-                                    {{ option }}
-                                    {% endif %}
-                                </li>
-                                {% endfor %}
-                            </ul>
-                        {% else %}
-                        <span class="text-primary">
+                        <b>
                             {{ active_value }}
-                        </span>
-                        {% endif %}
+                        </b>
                     {% else %}
                         {% if field.fieldtype == "Small Text" %}
                         <span>
@@ -53,43 +39,28 @@
         {% endfor %}
     </table>
 
-    <div style="page-break-before: always;"></div>
 
     {% set active_doc = frappe.get_doc("Medical History", doc.custom_medical_history) %}
     {% set new_row= {'total': 0} %}
     <table class="table table-bordered">
-        <caption><h2>Medical History</h2></caption>
+        <h2>Medical History</h2>
         {% for field in active_doc.meta.fields %}
         {% set active_value = active_doc.get(field.fieldname) %}        
             {% if field.print_hide != 1 and field.fieldtype != "Column Break" %}
                 {% if field.fieldtype == "Heading" or field.fieldtype == "Section Break" %}
                     {% if new_row.update({'total': 0}) %}{% endif %} 
-                    <tr><td colspan="2">{% if field.label %}<h3>{{ field.label }}</h3>{% endif %}</td></tr>
+                    <tr><td colspan="2">{% if field.label %}<h5><u>{{ field.label }}</u></h5>{% endif %}</td></tr>
                 {% else %}
                 {% if new_row.total % 2 == 0 %}
                 <tr>
                 {% endif %}
                 {% if new_row.update({'total': new_row.total + 1}) %}{% endif %}                 
                     <td>
-                    <p>{{ field.label }}</p>
-                    {% if active_value %}
-                        {% if field.fieldtype == "Select" %}
-                            <ul>
-                                {% for option in field.options.split('\n') %}
-                                <li>
-                                    {% if option == active_value %}
-                                    <span class="text-primary" style="font-weight: bold;">{{ option }}</span>
-                                    {% else %}
-                                    {{ option }}
-                                    {% endif %}
-                                </li>
-                                {% endfor %}
-                            </ul>
-                        {% else %}
-                        <span class="text-primary">
-                            {{ active_value }}
-                        </span>
-                        {% endif %}
+                        {{ field.label }}:
+                        {% if active_value %}
+                            <b>
+                                {{ active_value }}
+                            </b>
                     {% else %}
                         {% if field.fieldtype == "Small Text" %}
                         <span>
@@ -106,43 +77,28 @@
         {% endfor %}
     </table>
 
-    <div style="page-break-before: always;"></div>
 
     {% set active_doc = frappe.get_doc("Dental History", doc.custom_dental_history) %}
     {% set new_row= {'total': 0} %}
     <table class="table table-bordered">
-        <caption><h2>Dental History</h2></caption>
+        <h2>Dental History</h2>
         {% for field in active_doc.meta.fields %}
         {% set active_value = active_doc.get(field.fieldname) %}        
             {% if field.print_hide != 1 and field.fieldtype != "Column Break" %}
                 {% if field.fieldtype == "Heading" or field.fieldtype == "Section Break" %}
                     {% if new_row.update({'total': 0}) %}{% endif %} 
-                    <tr><td colspan="2">{% if field.label %}<h3>{{ field.label }}</h3>{% endif %}</td></tr>
+                    <tr><td colspan="2">{% if field.label %}<h5><u>{{ field.label }}</u></h5>{% endif %}</td></tr>
                 {% else %}
                 {% if new_row.total % 2 == 0 %}
                 <tr>
                 {% endif %}
                 {% if new_row.update({'total': new_row.total + 1}) %}{% endif %}                 
                     <td>
-                    <p>{{ field.label }}</p>
-                    {% if active_value %}
-                        {% if field.fieldtype == "Select" %}
-                            <ul>
-                                {% for option in field.options.split('\n') %}
-                                <li>
-                                    {% if option == active_value %}
-                                    <span class="text-primary" style="font-weight: bold;">{{ option }}</span>
-                                    {% else %}
-                                    {{ option }}
-                                    {% endif %}
-                                </li>
-                                {% endfor %}
-                            </ul>
-                        {% else %}
-                        <span class="text-primary">
-                            {{ active_value }}
-                        </span>
-                        {% endif %}
+                        {{ field.label }}:
+                        {% if active_value %}
+                            <b>
+                                {{ active_value }}
+                            </b>
                     {% else %}
                         {% if field.fieldtype == "Small Text" %}
                         <span>
@@ -159,43 +115,28 @@
         {% endfor %}
     </table>
 
-    <div style="page-break-before: always;"></div>
     
     {% set active_doc = frappe.get_doc("Stress Identification", doc.custom_stress_identification) %}
     {% set new_row= {'total': 0} %}
     <table class="table table-bordered">
-        <caption><h2>Stress Identification</h2></caption>
+        <h2>Stress Identification</h2>
         {% for field in active_doc.meta.fields %}
         {% set active_value = active_doc.get(field.fieldname) %}        
             {% if field.print_hide != 1 and field.fieldtype != "Column Break" %}
                 {% if field.fieldtype == "Heading" or field.fieldtype == "Section Break" %}
                     {% if new_row.update({'total': 0}) %}{% endif %} 
-                    <tr><td colspan="2">{% if field.label %}<h3>{{ field.label }}</h3>{% endif %}</td></tr>
+                    <tr><td colspan="2">{% if field.label %}<h5><u>{{ field.label }}</u></h5>{% endif %}</td></tr>
                 {% else %}
                 {% if new_row.total % 2 == 0 %}
                 <tr>
                 {% endif %}
                 {% if new_row.update({'total': new_row.total + 1}) %}{% endif %}                 
                     <td>
-                    <p>{{ field.label }}</p>
-                    {% if active_value %}
-                        {% if field.fieldtype == "Select" %}
-                            <ul>
-                                {% for option in field.options.split('\n') %}
-                                <li>
-                                    {% if option == active_value %}
-                                    <span class="text-primary" style="font-weight: bold;">{{ option }}</span>
-                                    {% else %}
-                                    {{ option }}
-                                    {% endif %}
-                                </li>
-                                {% endfor %}
-                            </ul>
-                        {% else %}
-                        <span class="text-primary">
-                            {{ active_value }}
-                        </span>
-                        {% endif %}
+                        {{ field.label }}:
+                        {% if active_value %}
+                            <b>
+                                {{ active_value }}
+                            </b>
                     {% else %}
                         {% if field.fieldtype == "Small Text" %}
                         <span>
@@ -212,7 +153,6 @@
         {% endfor %}
     </table>
     
-    <div style="page-break-before: always;"></div>
 
     {% set active_doc = frappe.get_doc("Customer Consent", doc.custom_customer_consent) %}
     <table class="table table-bordered">
