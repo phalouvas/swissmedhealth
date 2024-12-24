@@ -18,25 +18,11 @@
                 {% endif %}
                 {% if new_row.update({'total': new_row.total + 1}) %}{% endif %}                 
                     <td>
-                    <p>{{ field.label }}</p>
+                    {{ field.label }}:
                     {% if active_value %}
-                        {% if field.fieldtype == "Select" %}
-                            <ul>
-                                {% for option in field.options.split('\n') %}
-                                <li>
-                                    {% if option == active_value %}
-                                    <span class="text-primary" style="font-weight: bold;">{{ option }}</span>
-                                    {% else %}
-                                    {{ option }}
-                                    {% endif %}
-                                </li>
-                                {% endfor %}
-                            </ul>
-                        {% else %}
-                        <span class="text-primary">
+                        <b>
                             {{ active_value }}
-                        </span>
-                        {% endif %}
+                        </b>
                     {% else %}
                         {% if field.fieldtype == "Small Text" %}
                         <span>
@@ -71,25 +57,11 @@
                 {% endif %}
                 {% if new_row.update({'total': new_row.total + 1}) %}{% endif %}                 
                     <td>
-                    <p>{{ field.label }}</p>
-                    {% if active_value %}
-                        {% if field.fieldtype == "Select" %}
-                            <ul>
-                                {% for option in field.options.split('\n') %}
-                                <li>
-                                    {% if option == active_value %}
-                                    <span class="text-primary" style="font-weight: bold;">{{ option }}</span>
-                                    {% else %}
-                                    {{ option }}
-                                    {% endif %}
-                                </li>
-                                {% endfor %}
-                            </ul>
-                        {% else %}
-                        <span class="text-primary">
-                            {{ active_value }}
-                        </span>
-                        {% endif %}
+                        {{ field.label }}:
+                        {% if active_value %}
+                            <b>
+                                {{ active_value }}
+                            </b>
                     {% else %}
                         {% if field.fieldtype == "Small Text" %}
                         <span>
@@ -124,25 +96,11 @@
                 {% endif %}
                 {% if new_row.update({'total': new_row.total + 1}) %}{% endif %}                 
                     <td>
-                    <p>{{ field.label }}</p>
-                    {% if active_value %}
-                        {% if field.fieldtype == "Select" %}
-                            <ul>
-                                {% for option in field.options.split('\n') %}
-                                <li>
-                                    {% if option == active_value %}
-                                    <span class="text-primary" style="font-weight: bold;">{{ option }}</span>
-                                    {% else %}
-                                    {{ option }}
-                                    {% endif %}
-                                </li>
-                                {% endfor %}
-                            </ul>
-                        {% else %}
-                        <span class="text-primary">
-                            {{ active_value }}
-                        </span>
-                        {% endif %}
+                        {{ field.label }}:
+                        {% if active_value %}
+                            <b>
+                                {{ active_value }}
+                            </b>
                     {% else %}
                         {% if field.fieldtype == "Small Text" %}
                         <span>
@@ -177,25 +135,11 @@
                 {% endif %}
                 {% if new_row.update({'total': new_row.total + 1}) %}{% endif %}                 
                     <td>
-                    <p>{{ field.label }}</p>
-                    {% if active_value %}
-                        {% if field.fieldtype == "Select" %}
-                            <ul>
-                                {% for option in field.options.split('\n') %}
-                                <li>
-                                    {% if option == active_value %}
-                                    <span class="text-primary" style="font-weight: bold;">{{ option }}</span>
-                                    {% else %}
-                                    {{ option }}
-                                    {% endif %}
-                                </li>
-                                {% endfor %}
-                            </ul>
-                        {% else %}
-                        <span class="text-primary">
-                            {{ active_value }}
-                        </span>
-                        {% endif %}
+                        {{ field.label }}:
+                        {% if active_value %}
+                            <b>
+                                {{ active_value }}
+                            </b>
                     {% else %}
                         {% if field.fieldtype == "Small Text" %}
                         <span>
