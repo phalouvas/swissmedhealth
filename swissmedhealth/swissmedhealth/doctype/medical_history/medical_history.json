@@ -582,7 +582,8 @@
    "fieldname": "have_root_canals",
    "fieldtype": "Select",
    "label": "Do you currently have root canals?",
-   "options": "\nNo\nYes"
+   "options": "\nNo\nYes",
+   "print_hide": 1
   },
   {
    "fieldname": "perform__mri",
@@ -655,13 +656,15 @@
    "fieldname": "take_supplements",
    "fieldtype": "Select",
    "label": "Do you take supplements? ",
-   "options": "\nNo\nYes"
+   "options": "\nNo\nYes",
+   "print_hide": 1
   },
   {
    "depends_on": "eval:doc.take_supplements=='Yes'",
    "fieldname": "supplements",
    "fieldtype": "Small Text",
-   "label": "List of supplements"
+   "label": "List of supplements",
+   "print_hide": 1
   },
   {
    "fieldname": "covid19_vaccination",
@@ -688,7 +691,8 @@
    "fieldname": "do_you_tend_to_feel",
    "fieldtype": "Select",
    "label": "Do you tend to feel",
-   "options": "\nNeither\nHot\nCold"
+   "options": "\nNeither\nHot\nCold",
+   "print_hide": 1
   },
   {
    "depends_on": "eval:doc.do_you_tend_to_feel=='Hot' || doc.do_you_tend_to_feel=='Cold'",
@@ -706,7 +710,7 @@
   {
    "fieldname": "night_pee",
    "fieldtype": "Select",
-   "label": "Do you have to get up at night to pee?",
+   "label": "Do you have to get up at night to urinate?",
    "options": "\nNo\nYes"
   },
   {
@@ -1007,7 +1011,7 @@
    "link_fieldname": "custom_medical_history"
   }
  ],
- "modified": "2024-12-31 07:12:50.468228",
+ "modified": "2024-12-31 08:30:31.531350",
  "modified_by": "Administrator",
  "module": "Swissmedhealth",
  "name": "Medical History",
