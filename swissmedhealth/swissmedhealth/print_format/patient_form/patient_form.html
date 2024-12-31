@@ -22,7 +22,7 @@
                 {% endif %}
                 {% if new_row.update({'total': new_row.total + 1}) %}{% endif %}
                     {% if field.fieldtype == "Select" and "Yes" in field.options.split("\n") %}
-                        <td>{{ field.label }}</td>
+                        <td style="max-width: 20rem;">{{ field.label }}</td>
                         {% for option in field.options.split("\n") %}
                             {% if option in ["Yes", "No"] %}
                                 <td>{% if option == active_value %}<b>{{ option }}</b>{% else %}{{ option }}{% endif %}&nbsp;</td>
@@ -62,7 +62,7 @@
                 {% endif %}
                 {% if new_row.update({'total': new_row.total + 1}) %}{% endif %}
                     {% if field.fieldtype == "Select" and "Yes" in field.options.split("\n") %}
-                        <td>{{ field.label }}</td>
+                        <td style="max-width: 20rem;">{{ field.label }}</td>
                         {% for option in field.options.split("\n") %}
                             {% if option in ["Yes", "No"] %}
                                 <td>{% if option == active_value %}<b>{{ option }}</b>{% else %}{{ option }}{% endif %}&nbsp;</td>
@@ -102,7 +102,7 @@
                 {% endif %}
                 {% if new_row.update({'total': new_row.total + 1}) %}{% endif %}
                     {% if field.fieldtype == "Select" and "Yes" in field.options.split("\n") %}
-                        <td>{{ field.label }}</td>
+                        <td style="max-width: 20rem;">{{ field.label }}</td>
                         {% for option in field.options.split("\n") %}
                             {% if option in ["Yes", "No"] %}
                                 <td>{% if option == active_value %}<b>{{ option }}</b>{% else %}{{ option }}{% endif %}&nbsp;</td>
