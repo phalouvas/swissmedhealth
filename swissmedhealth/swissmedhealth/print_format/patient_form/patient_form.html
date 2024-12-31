@@ -4,34 +4,37 @@
 
     {% set active_doc = doc %}
     {% set new_row= {'total': 0} %}
-    <table class="table table-bordered">
+    <table class="table table-bordered" style="border: none;">
         <h2>Personal Details</h2>
         {% for field in active_doc.meta.fields %}
         {% set active_value = active_doc.get(field.fieldname) %}        
             {% if field.print_hide != 1 and field.fieldtype != "Column Break" %}
                 {% if field.fieldtype == "Heading" or field.fieldtype == "Section Break" %}
                     {% if new_row.update({'total': 0}) %}{% endif %} 
-                    <tr><td colspan="2">{% if field.label %}<h5><u>{{ field.label }}</u></h5>{% endif %}</td></tr>
+                    <tr style="border: none;"><td colspan="6" style="border: none;">{% if field.label %}<b>{{ field.label }}</b>{% endif %}</td></tr>
                 {% else %}
                 {% if new_row.total % 2 == 0 %}
                 <tr>
                 {% endif %}
-                {% if new_row.update({'total': new_row.total + 1}) %}{% endif %}                 
-                    <td>
-                    {{ field.label }}:
-                    {% if active_value %}
-                        <b>
-                            {{ active_value }}
-                        </b>
+                {% if new_row.update({'total': new_row.total + 1}) %}{% endif %}
+                    {% if field.fieldtype == "Select" and "Yes" in field.options.split("\n") %}
+                        <td>{{ field.label }}:</td>
+                        {% for option in field.options.split("\n") %}
+                            {% if option in ["Yes", "No"] %}
+                                <td>{% if option == active_value %}<b>{{ option }}</b>{% else %}{{ option }}{% endif %}&nbsp;</td>
+                            {% endif %}
+                        {% endfor %}
                     {% else %}
-                        {% if field.fieldtype == "Small Text" %}
-                        <span>
-                            <br><br><br>
-                        </span>
-                        {% endif %}
+                        <td colspan="3">
+                            {{ field.label }}:
+                            {% if active_value and field.fieldtype != "Select" %}
+                                <b style="display: block; min-height: 2em;">{{ active_value }}</b>
+                            {% else %}
+                                <span style="display: block; min-height: 2em;"></span>
+                            {% endif %}
+                        </td>                        
                     {% endif %}
-                    </td>
-                    {% endif %}
+                {% endif %}
                 {% if new_row.total % 2 == 0 %}
                 </tr>
                 {% endif %}
@@ -81,34 +84,37 @@
 
     {% set active_doc = frappe.get_doc("Dental History", doc.custom_dental_history) %}
     {% set new_row= {'total': 0} %}
-    <table class="table table-bordered">
+    <table class="table table-bordered" style="border: none;">
         <h2>Dental History</h2>
         {% for field in active_doc.meta.fields %}
         {% set active_value = active_doc.get(field.fieldname) %}        
             {% if field.print_hide != 1 and field.fieldtype != "Column Break" %}
                 {% if field.fieldtype == "Heading" or field.fieldtype == "Section Break" %}
                     {% if new_row.update({'total': 0}) %}{% endif %} 
-                    <tr><td colspan="6">{% if field.label %}<h5><u>{{ field.label }}</u></h5>{% endif %}</td></tr>
+                    <tr style="border: none;"><td colspan="6" style="border: none;">{% if field.label %}<b>{{ field.label }}</b>{% endif %}</td></tr>
                 {% else %}
                 {% if new_row.total % 2 == 0 %}
                 <tr>
                 {% endif %}
-                {% if new_row.update({'total': new_row.total + 1}) %}{% endif %}                 
-                    <td>{{ field.label }}:</td>
-                        {% if active_value and field.fieldtype != "Select" %}
-                            <td colspan="2"><b>{{ active_value }}</b></td>
-                    {% else %}
-                        {% if field.fieldtype == "Select" and "Yes" in field.options.split("\n") %}
+                {% if new_row.update({'total': new_row.total + 1}) %}{% endif %}
+                    {% if field.fieldtype == "Select" and "Yes" in field.options.split("\n") %}
+                        <td>{{ field.label }}:</td>
                         {% for option in field.options.split("\n") %}
                             {% if option in ["Yes", "No"] %}
                                 <td>{% if option == active_value %}<b>{{ option }}</b>{% else %}{{ option }}{% endif %}&nbsp;</td>
                             {% endif %}
                         {% endfor %}
-                        {% else %}
-                        <td colspan="2"><br><br><br></td>
-                        {% endif %}
+                    {% else %}
+                        <td colspan="3">
+                            {{ field.label }}:
+                            {% if active_value and field.fieldtype != "Select" %}
+                                <b style="display: block; min-height: 2em;">{{ active_value }}</b>
+                            {% else %}
+                                <span style="display: block; min-height: 2em;"></span>
+                            {% endif %}
+                        </td>                        
                     {% endif %}
-                    {% endif %}
+                {% endif %}
                 {% if new_row.total % 2 == 0 %}
                 </tr>
                 {% endif %}
