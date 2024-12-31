@@ -66,6 +66,13 @@
                             <br><br><br>
                         </span>
                         {% endif %}
+                        {% if field.fieldtype == "Select" and "Yes" in field.options.split("\n") %}
+                        {% for option in field.options.split("\n") %}
+                            {% if option %}
+                                <span style="float: right;">{{ option }}&nbsp;</span>
+                            {% endif %}
+                        {% endfor %}
+                        {% endif %}
                     {% endif %}
                     </td>
                     {% endif %}
