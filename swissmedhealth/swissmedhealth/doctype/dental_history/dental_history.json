@@ -198,8 +198,7 @@
    "fieldname": "wisdom_tooth_extraction",
    "fieldtype": "Select",
    "label": "Wisdom tooth extraction",
-   "options": "\nNo\nYes\nDon't know",
-   "print_hide": 1
+   "options": "\nNo\nYes\nDon't know"
   },
   {
    "fieldname": "excessive_bleeding",
@@ -491,7 +490,7 @@
    "link_fieldname": "custom_dental_history"
   }
  ],
- "modified": "2024-12-20 07:17:23.073165",
+ "modified": "2024-12-31 08:39:10.065968",
  "modified_by": "Administrator",
  "module": "Swissmedhealth",
  "name": "Dental History",
