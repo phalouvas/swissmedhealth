@@ -2,6 +2,10 @@
 
     <h1 class="text-center">Patient Registration Form</h1>
 
+    {% set gdpr_doc = frappe.get_doc("Customer Consent", doc.custom_customer_consent) %}
+    {% set acceptance_date = gdpr_doc.acceptance_date %}
+    <span style="float: right;">Date: {{ acceptance_date }}</span>
+    
     {% set active_doc = doc %}
     {% set new_row= {'total': 0} %}
     <table class="table table-bordered" style="border: none;">
