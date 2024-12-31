@@ -48,33 +48,26 @@
             {% if field.print_hide != 1 and field.fieldtype != "Column Break" %}
                 {% if field.fieldtype == "Heading" or field.fieldtype == "Section Break" %}
                     {% if new_row.update({'total': 0}) %}{% endif %} 
-                    <tr><td colspan="2">{% if field.label %}<h5><u>{{ field.label }}</u></h5>{% endif %}</td></tr>
+                    <tr><td colspan="6">{% if field.label %}<h5><u>{{ field.label }}</u></h5>{% endif %}</td></tr>
                 {% else %}
                 {% if new_row.total % 2 == 0 %}
                 <tr>
                 {% endif %}
                 {% if new_row.update({'total': new_row.total + 1}) %}{% endif %}                 
-                    <td>
-                        {{ field.label }}:
-                        {% if active_value %}
-                            <b>
-                                {{ active_value }}
-                            </b>
+                    <td>{{ field.label }}:</td>
+                        {% if active_value and field.fieldtype != "Select" %}
+                            <td colspan="2"><b>{{ active_value }}</b></td>
                     {% else %}
-                        {% if field.fieldtype == "Small Text" %}
-                        <span>
-                            <br><br><br>
-                        </span>
-                        {% endif %}
                         {% if field.fieldtype == "Select" and "Yes" in field.options.split("\n") %}
                         {% for option in field.options.split("\n") %}
-                            {% if option %}
-                                <span style="float: right;">{{ option }}&nbsp;</span>
+                            {% if option in ["Yes", "No"] %}
+                                <td>{% if option == active_value %}<b>{{ option }}</b>{% else %}{{ option }}{% endif %}&nbsp;</td>
                             {% endif %}
                         {% endfor %}
+                        {% else %}
+                        <td colspan="2"><br><br><br></td>
                         {% endif %}
                     {% endif %}
-                    </td>
                     {% endif %}
                 {% if new_row.total % 2 == 0 %}
                 </tr>
