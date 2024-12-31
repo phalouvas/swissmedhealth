@@ -582,7 +582,8 @@
    "fieldname": "have_root_canals",
    "fieldtype": "Select",
    "label": "Do you currently have root canals?",
-   "options": "\nNo\nYes"
+   "options": "\nNo\nYes",
+   "print_hide": 1
   },
   {
    "fieldname": "perform__mri",
@@ -655,13 +656,15 @@
    "fieldname": "take_supplements",
    "fieldtype": "Select",
    "label": "Do you take supplements? ",
-   "options": "\nNo\nYes"
+   "options": "\nNo\nYes",
+   "print_hide": 1
   },
   {
    "depends_on": "eval:doc.take_supplements=='Yes'",
    "fieldname": "supplements",
    "fieldtype": "Small Text",
-   "label": "List of supplements"
+   "label": "List of supplements",
+   "print_hide": 1
   },
   {
    "fieldname": "covid19_vaccination",
@@ -688,7 +691,8 @@
    "fieldname": "do_you_tend_to_feel",
    "fieldtype": "Select",
    "label": "Do you tend to feel",
-   "options": "\nNeither\nHot\nCold"
+   "options": "\nNeither\nHot\nCold",
+   "print_hide": 1
   },
   {
    "depends_on": "eval:doc.do_you_tend_to_feel=='Hot' || doc.do_you_tend_to_feel=='Cold'",
@@ -706,7 +710,7 @@
   {
    "fieldname": "night_pee",
    "fieldtype": "Select",
-   "label": "Do you have to get up at night to pee?",
+   "label": "Do you have to get up at night to urinate?",
    "options": "\nNo\nYes"
   },
   {
@@ -862,69 +866,81 @@
   {
    "fieldname": "fitness_section",
    "fieldtype": "Section Break",
-   "label": "Fitness"
+   "label": "Fitness",
+   "print_hide": 1
   },
   {
    "fieldname": "fitness_goals",
    "fieldtype": "Select",
    "label": "What are your primary fitness goals?",
-   "options": "\nImproving strength\nIncreasing flexibility\nEnhancing cardiovascular health\nWeight management\nGeneral wellness"
+   "options": "\nImproving strength\nIncreasing flexibility\nEnhancing cardiovascular health\nWeight management\nGeneral wellness",
+   "print_hide": 1
   },
   {
    "fieldname": "fitness_areas",
    "fieldtype": "Select",
    "label": "What areas of fitness would you like to improve on through guidance or support?",
-   "options": "\nStrength\nEndurance\nFlexibility and mobility\nBalance\nRecovery and rehabilitation"
+   "options": "\nStrength\nEndurance\nFlexibility and mobility\nBalance\nRecovery and rehabilitation",
+   "print_hide": 1
   },
   {
    "fieldname": "fitness_level",
    "fieldtype": "Select",
    "label": "How would you rate your overall fitness level?",
-   "options": "\nBeginner\nIntermediate\nAdvanced\nAthlete"
+   "options": "\nBeginner\nIntermediate\nAdvanced\nAthlete",
+   "print_hide": 1
   },
   {
    "fieldname": "use_supplements",
    "fieldtype": "Select",
    "label": "Have you ever used or are you currently using any methods/substances/supplements to enhance sports performance?",
-   "options": "\nNo\nYes"
+   "options": "\nNo\nYes",
+   "print_hide": 1
   },
   {
    "fieldname": "physical_activity_details",
    "fieldtype": "Small Text",
-   "label": "What is your primary sport or physical activity?"
+   "label": "What is your primary sport or physical activity?",
+   "print_hide": 1
   },
   {
    "fieldname": "training_frequency",
    "fieldtype": "Small Text",
-   "label": "How often do you train per week (frequency, duration, intensity)?"
+   "label": "How often do you train per week (frequency, duration, intensity)?",
+   "print_hide": 1
   },
   {
    "fieldname": "competitive_sports_details",
    "fieldtype": "Small Text",
-   "label": "Do you participate in competitive events (competititions)? If yes, please specify"
+   "label": "Do you participate in competitive events (competititions)? If yes, please specify",
+   "print_hide": 1
   },
   {
    "fieldname": "supplements_details",
    "fieldtype": "Small Text",
-   "label": "Current medications and supplements"
+   "label": "Current medications and supplements",
+   "print_hide": 1
   },
   {
    "fieldname": "is_pregnant",
    "fieldtype": "Select",
    "label": "Are you currently pregnant or breastfeeding?",
-   "options": "\nNo\nYes"
+   "options": "\nNo\nYes",
+   "print_hide": 1
   },
   {
    "fieldname": "fitness_injury",
    "fieldtype": "Select",
    "label": "Have you ever experienced any injuries or conditions that have affected your fitness routine? If yes, please provide details",
-   "options": "\nNo\nYes"
+   "options": "\nNo\nYes",
+   "print_hide": 1
   },
   {
    "depends_on": "eval:doc.fitness_injury=='Yes'",
    "fieldname": "fitness_injury_details",
    "fieldtype": "Small Text",
-   "label": "Fitness Injury Details"
+   "label": "Fitness Injury Details",
+   "print_hide": 1
   },
   {
    "fieldname": "nutritional_preferences",
@@ -995,7 +1011,7 @@
    "link_fieldname": "custom_medical_history"
   }
  ],
- "modified": "2024-12-24 14:50:50.022846",
+ "modified": "2024-12-31 08:30:31.531350",
  "modified_by": "Administrator",
  "module": "Swissmedhealth",
  "name": "Medical History",
