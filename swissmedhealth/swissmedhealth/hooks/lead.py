@@ -54,7 +54,6 @@ class Lead(OriginalLead):
             if self.custom_relative_phone:
                 contact.append("phone_nos", {"phone": self.custom_relative_phone, "is_primary_phone": 1})
 
-
             contact.insert(ignore_permissions=True)
             contact.reload()  # load changes by hooks on contact
             self.relative_contact_doc = contact
@@ -112,6 +111,8 @@ def after_insert(doc, method):
         address.insert(ignore_permissions=True)
         doc.db_set('custom_customer_primary_address', address.name)
 
+    doc.db_set('phone', doc.phone)
+    doc.db_set('mobile_no', doc.mobile_no)
     doc.reload()
 
 def on_update(doc, method):
