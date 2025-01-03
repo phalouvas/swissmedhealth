@@ -46,6 +46,26 @@
         {% endfor %}
     </table>
 
+    {% set contact_list = frappe.get_list(
+        "Contact",
+        filters=[
+            ["Dynamic Link", "link_doctype", "=", doc.doctype],
+            ["Dynamic Link", "link_name", "=", doc.name],
+            ["Dynamic Link", "parenttype", "=", "Contact"],
+            "is_primary_contact = 0",
+        ],
+        fields=["full_name", "phone"],
+        order_by="is_primary_contact DESC, `tabContact`.creation ASC",
+    ) %}
+    {% if contact_list and contact_list[0].phone != active_doc.phone %}
+    <table class="table table-bordered">
+        <tr>
+            <td colspan="6">Emergency Contact <b>{{ contact_list[0].full_name }}</b></td>
+            <td colspan="3">Phone <b>{{ contact_list[0].phone }}</b></td>
+        </tr>
+    </table>
+    {% endif %}
+
     {% set active_doc = frappe.get_doc("Medical History", doc.custom_medical_history) %}
     {% set new_row= {'total': 0} %}
     <table class="table table-bordered" style="border: none;">
