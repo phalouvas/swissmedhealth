@@ -26,7 +26,7 @@ frappe.ready(function () {
 	// bind events here
 	frappe.web_form.after_save = () => {
 		let email_id = frappe.web_form.doc.email_id;
-		window.location.href = '/stress-identification-2/new?email_id=' + encodeURIComponent(email_id);
+		window.location.href = '/medical-questionnaire-2/new?email_id=' + encodeURIComponent(email_id);
 	}
 
 	$('.submit-btn').on('click', async function (e) {
@@ -47,7 +47,7 @@ frappe.ready(function () {
 
 			frappe.call('swissmedhealth.swissmedhealth.web_form.medical_history.medical_history.save', { doc: frappe.web_form.doc }).then(r => {
 				let email_id = r.message.email_id;
-				window.location.href = '../stress-identification-2/new?email_id=' + encodeURIComponent(email_id);
+				window.location.href = '../medical-questionnaire-2/new?email_id=' + encodeURIComponent(email_id);
 			}).catch((err) => {
 				frappe.msgprint({
 					title: __('Error'),
@@ -60,7 +60,7 @@ frappe.ready(function () {
 			e.preventDefault();
 			frappe.call('swissmedhealth.swissmedhealth.web_form.medical_history.medical_history.save', { doc: frappe.web_form.doc }).then(r => {
 				let email_id = r.message.email_id;
-				window.location.href = '../stress-identification-2/new?email_id=' + encodeURIComponent(email_id);
+				window.location.href = '../medical-questionnaire-2/new?email_id=' + encodeURIComponent(email_id);
 			}).catch((err) => {
 				frappe.msgprint({
 					title: __('Error'),

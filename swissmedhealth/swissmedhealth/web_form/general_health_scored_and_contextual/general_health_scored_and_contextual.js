@@ -26,7 +26,7 @@ frappe.ready(function () {
 		frappe.call('swissmedhealth.swissmedhealth.web_form.medical_history.medical_history.save_medical_history', { doc: frappe.web_form.doc }).then(() => {
 			let params = new URLSearchParams(window.location.search);
 			let email_id = params.get('email_id');
-			window.location.href = '../stress-identification-3/new?email_id=' + encodeURIComponent(email_id);
+			window.location.href = '../medical-questionnaire-3/new?email_id=' + encodeURIComponent(email_id);
 		}).catch((err) => {
 			frappe.msgprint({
 				title: __('Error'),
