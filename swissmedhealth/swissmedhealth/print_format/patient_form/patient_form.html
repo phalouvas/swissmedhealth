@@ -25,14 +25,14 @@
                         <td style="max-width: 20rem;">{{ field.label }}</td>
                         {% for option in field.options.split("\n") %}
                             {% if option in ["Yes", "No"] %}
-                                <td>{% if option == active_value %}<b>{{ option }}</b>{% else %}{{ option }}{% endif %}&nbsp;</td>
+                                <td>{% if option == active_value %}<b class="text-primary">{{ option }}</b>{% else %}{{ option }}{% endif %}&nbsp;</td>
                             {% endif %}
                         {% endfor %}
                     {% else %}
                         <td colspan="3">
                             {{ field.label }}
                             {% if active_value and field.fieldtype != "Select" %}
-                                <b>{{ active_value }}</b>
+                                <b class="text-primary">{{ active_value }}</b>
                             {% else %}
                                 <span style="display: block; min-height: 2em;"></span>
                             {% endif %}
@@ -92,14 +92,14 @@
                         <td style="max-width: 20rem;">{{ field.label }}</td>
                         {% for option in field.options.split("\n") %}
                             {% if option in ["Yes", "No"] %}
-                                <td>{% if option == active_value %}<b>{{ option }}</b>{% else %}{{ option }}{% endif %}&nbsp;</td>
+                                <td>{% if option == active_value %}<b class="text-primary">{{ option }}</b>{% else %}{{ option }}{% endif %}&nbsp;</td>
                             {% endif %}
                         {% endfor %}
                     {% else %}
                         <td colspan="3">
                             {{ field.label }}
                             {% if active_value and field.fieldtype != "Select" %}
-                                <b>{{ active_value }}</b>
+                                <b class="text-primary">{{ active_value }}</b>
                             {% else %}
                                 <span style="display: block; min-height: 2em;"></span>
                             {% endif %}
@@ -132,14 +132,14 @@
                         <td style="max-width: 20rem;">{{ field.label }}</td>
                         {% for option in field.options.split("\n") %}
                             {% if option in ["Yes", "No"] %}
-                                <td>{% if option == active_value %}<b>{{ option }}</b>{% else %}{{ option }}{% endif %}&nbsp;</td>
+                                <td>{% if option == active_value %}<b class="text-primary">{{ option }}</b>{% else %}{{ option }}{% endif %}&nbsp;</td>
                             {% endif %}
                         {% endfor %}
                     {% else %}
                         <td colspan="3">
                             {{ field.label }}
                             {% if active_value and field.fieldtype != "Select" %}
-                                <b>{{ active_value }}</b>
+                                <b class="text-primary">{{ active_value }}</b>
                             {% else %}
                                 <span style="display: block; min-height: 2em;"></span>
                             {% endif %}
