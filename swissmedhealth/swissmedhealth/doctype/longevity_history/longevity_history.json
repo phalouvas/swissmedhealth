@@ -46,6 +46,10 @@
   "12_16_hours",
   "more_than_16_hours",
   "protein_heading",
+  "plant_based",
+  "animal_based",
+  "combination_of_both",
+  "sleep_hours_heading",
   "less_than_5_hours",
   "5_6_hours",
   "7_8_hours",
@@ -127,6 +131,11 @@
   "i_have_strong_and_meaningful_relationships",
   "social_connection_check",
   "i_often_feel_socially_isolated_or_disconnected",
+  "social_activities_heading",
+  "daily",
+  "a_few_times_a_week",
+  "a_few_times_a_month",
+  "rarely_or_never",
   "environmental_toxin_exposure_section",
   "toxins_heading",
   "mercury",
@@ -925,6 +934,60 @@
    "fieldname": "toxin_measure_other",
    "fieldtype": "Small Text",
    "label": "Other"
+  },
+  {
+   "default": "0",
+   "description": "(e.g., legumes, tofu)",
+   "fieldname": "plant_based",
+   "fieldtype": "Check",
+   "label": "Plant-based"
+  },
+  {
+   "default": "0",
+   "description": "(e.g., grass-fed meat, wild fish)",
+   "fieldname": "animal_based",
+   "fieldtype": "Check",
+   "label": "Animal-based"
+  },
+  {
+   "default": "0",
+   "fieldname": "combination_of_both",
+   "fieldtype": "Check",
+   "label": "Combination of both"
+  },
+  {
+   "fieldname": "sleep_hours_heading",
+   "fieldtype": "Heading",
+   "label": "How many hours of sleep do you get per night?"
+  },
+  {
+   "fieldname": "social_activities_heading",
+   "fieldtype": "Heading",
+   "label": "How often do you engage in social activities or meaningful interactions?"
+  },
+  {
+   "default": "0",
+   "fieldname": "daily",
+   "fieldtype": "Check",
+   "label": "Daily"
+  },
+  {
+   "default": "0",
+   "fieldname": "a_few_times_a_week",
+   "fieldtype": "Check",
+   "label": "A few times a week"
+  },
+  {
+   "default": "0",
+   "fieldname": "a_few_times_a_month",
+   "fieldtype": "Check",
+   "label": "A few times a month"
+  },
+  {
+   "default": "0",
+   "fieldname": "rarely_or_never",
+   "fieldtype": "Check",
+   "label": "Rarely or never"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -938,7 +1001,7 @@
    "link_fieldname": "custom_longevity_history"
   }
  ],
- "modified": "2025-02-21 08:38:48.602536",
+ "modified": "2025-02-21 09:29:11.016137",
  "modified_by": "Administrator",
  "module": "Swissmedhealth",
  "name": "Longevity History",
