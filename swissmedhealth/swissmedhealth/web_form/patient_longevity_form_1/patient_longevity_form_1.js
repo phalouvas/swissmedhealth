@@ -30,7 +30,7 @@ frappe.ready(function () {
 		// Get the redirect button with class name "new-btn" and set the href attribute
 		$('.new-btn').attr('href', href);
 		// Also change the text of the button to "Please complete your medical history here"
-		$('.new-btn').text('Medical information Form');
+		$('.new-btn').text('Longevity information Form');
 	}
 
 	$('.submit-btn').on('click', async function (e) {
