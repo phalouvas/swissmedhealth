@@ -12,7 +12,7 @@ def get_longevity_history_details(email_id):
 		frappe.throw("Not found")
 
 	# get the dental history document from the lead
-	longevity_history = frappe.get_value("Medical History", lead.custom_longevity_history, ["*"], as_dict=True)
+	longevity_history = frappe.get_value("Longevity History", lead.custom_longevity_history, ["*"], as_dict=True)
 	return longevity_history
 
 @frappe.whitelist(allow_guest=True)
