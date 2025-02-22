@@ -1,0 +1,1027 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-02-21 07:17:16.597139",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "heading_1",
+  "naming_series",
+  "goals_heading",
+  "increase_energy_levels",
+  "improve_cognitive_function",
+  "enhance_physical_performance_and_mobility",
+  "slow_down_biological_aging",
+  "improve_sleep_quality",
+  "reduce_inflammation_and_oxidative_stress",
+  "prevent_age_related_diseases",
+  "reduce_stress",
+  "goals_other",
+  "track_heading",
+  "track_yes",
+  "track_desc",
+  "track_no",
+  "tests_heading",
+  "dna_methylation_test",
+  "biological_age_test",
+  "hormone_panel",
+  "advanced_lipid_panel",
+  "inflammation_markers",
+  "insulin_sensitivity_test",
+  "gut_microbiome_analysis",
+  "mitochondrial_function_test",
+  "heavy_metal_test",
+  "tests_other",
+  "habits_section",
+  "diet_heading",
+  "mediterranean_diet",
+  "ketogenic_low_carb_diet",
+  "intermittent_fasting_or_time_restricted_eating",
+  "plant_based_diet",
+  "diet_other",
+  "fast_heading",
+  "less_than_10_hours",
+  "10_12_hours",
+  "12_16_hours",
+  "more_than_16_hours",
+  "protein_heading",
+  "plant_based",
+  "animal_based",
+  "combination_of_both",
+  "sleep_hours_heading",
+  "less_than_5_hours",
+  "5_6_hours",
+  "7_8_hours",
+  "more_than_8_hours",
+  "sleep_heading",
+  "very_bad_i_wake_up_every_2_3_hours",
+  "bad_i_wake_up_1_2_times_per_night",
+  "ok",
+  "good",
+  "morning_heading",
+  "morning_yes",
+  "morning_no",
+  "sleep_optimize_heading",
+  "blue_light_blocking_glasses",
+  "meditation_or_relaxation_techniques",
+  "sleep_supplements",
+  "cold_exposure_before_bed",
+  "sleep_optimize_other",
+  "exercise_heading",
+  "resistance_training",
+  "cardiovascular_training",
+  "body_posture_optimisation",
+  "high_intensity_interval_training",
+  "yoga_pilates",
+  "exercise_other",
+  "medical_metabolic_health_section",
+  "metaboli_history_heading",
+  "cardiovascular_disease",
+  "diabetes_or_insulin_resistance",
+  "neurodegenerative_conditions",
+  "osteoporosis_or_osteopenia",
+  "autoimmune_disorders",
+  "cancer",
+  "hormonal_imbalances",
+  "chronic_inflammation_or_metabolic_dysfunction",
+  "metaboli_history_other",
+  "supplements_heading",
+  "nad_precursors",
+  "metformin_or_berberine",
+  "rapamycin",
+  "resveratrol_quercetin",
+  "collagen_or_hyaluronic_acid",
+  "omega_3",
+  "supplements_other",
+  "therapies_heading",
+  "hyperbaric_oxygen_therapy",
+  "ozone_therapy",
+  "peptide_therapy",
+  "stem_cell_therapy",
+  "cryotherapy_or_cold_exposure_therapy",
+  "therapies_other",
+  "monitor_heading",
+  "blood_glucose_levels",
+  "heart_rate_variability",
+  "sleep_quality",
+  "body_composition",
+  "monitor_other",
+  "well_being_section",
+  "how_would_you_describe_your_stress_levels",
+  "low",
+  "moderate",
+  "high",
+  "how_do_you_manage_stress",
+  "meditation_or_mindfulness_practices",
+  "breathing_exercises",
+  "regular_exercise",
+  "social_engagement_and_relationships",
+  "professional_therapy_or_coaching",
+  "stress_other",
+  "emotiona_well_being_section",
+  "emotional_well_being_heading",
+  "emotionally_balanced",
+  "occasionally_stressed",
+  "frequently_overwhelmed",
+  "struggling_emotionally",
+  "seeking_support",
+  "social_well_being_section",
+  "how_would_you_describe_your_social_connections",
+  "i_have_strong_and_meaningful_relationships",
+  "social_connection_check",
+  "i_often_feel_socially_isolated_or_disconnected",
+  "social_activities_heading",
+  "daily",
+  "a_few_times_a_week",
+  "a_few_times_a_month",
+  "rarely_or_never",
+  "environmental_toxin_exposure_section",
+  "toxins_heading",
+  "mercury",
+  "lead",
+  "mold_toxicity",
+  "toxins_other",
+  "toxin_measure_section",
+  "air_purification_at_home",
+  "filtered_water",
+  "organic_diet",
+  "regular_sauna_use_for_detoxification",
+  "toxin_measure_other"
+ ],
+ "fields": [
+  {
+   "fieldname": "heading_1",
+   "fieldtype": "Section Break",
+   "label": "Longevity & Health Goals"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Series",
+   "options": "LON-HIS-.YYYY.-",
+   "print_hide": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "increase_energy_levels",
+   "fieldtype": "Check",
+   "label": "Increase energy levels"
+  },
+  {
+   "default": "0",
+   "fieldname": "improve_cognitive_function",
+   "fieldtype": "Check",
+   "label": "Improve cognitive function"
+  },
+  {
+   "default": "0",
+   "fieldname": "enhance_physical_performance_and_mobility",
+   "fieldtype": "Check",
+   "label": "Enhance physical performance and mobility"
+  },
+  {
+   "default": "0",
+   "fieldname": "slow_down_biological_aging",
+   "fieldtype": "Check",
+   "label": "Slow down biological aging"
+  },
+  {
+   "default": "0",
+   "fieldname": "improve_sleep_quality",
+   "fieldtype": "Check",
+   "label": "Improve sleep quality"
+  },
+  {
+   "default": "0",
+   "fieldname": "reduce_inflammation_and_oxidative_stress",
+   "fieldtype": "Check",
+   "label": "Reduce inflammation and oxidative stress"
+  },
+  {
+   "default": "0",
+   "fieldname": "prevent_age_related_diseases",
+   "fieldtype": "Check",
+   "label": "Prevent age-related diseases"
+  },
+  {
+   "default": "0",
+   "fieldname": "reduce_stress",
+   "fieldtype": "Check",
+   "label": "Reduce stress"
+  },
+  {
+   "fieldname": "goals_other",
+   "fieldtype": "Small Text",
+   "label": "Other"
+  },
+  {
+   "description": "Check all that apply",
+   "fieldname": "goals_heading",
+   "fieldtype": "Heading",
+   "label": "What are your main longevity-related concerns or goals?"
+  },
+  {
+   "fieldname": "track_heading",
+   "fieldtype": "Heading",
+   "label": "Do you track your biological age or metabolic age?"
+  },
+  {
+   "depends_on": "eval:doc.track_yes==1;",
+   "fieldname": "track_desc",
+   "fieldtype": "Small Text",
+   "label": "Please provide the latest result"
+  },
+  {
+   "description": "Check all that apply",
+   "fieldname": "tests_heading",
+   "fieldtype": "Heading",
+   "label": "Have you done any of the following longevity-related tests?"
+  },
+  {
+   "default": "0",
+   "fieldname": "dna_methylation_test",
+   "fieldtype": "Check",
+   "label": "DNA methylation test"
+  },
+  {
+   "default": "0",
+   "fieldname": "biological_age_test",
+   "fieldtype": "Check",
+   "label": "Biological Age Test"
+  },
+  {
+   "default": "0",
+   "description": "(DHEA, testosterone, estrogen, cortisol, etc.)",
+   "fieldname": "hormone_panel",
+   "fieldtype": "Check",
+   "label": "Hormone panel"
+  },
+  {
+   "default": "0",
+   "description": "(LDL particle size, APOB, etc.)",
+   "fieldname": "advanced_lipid_panel",
+   "fieldtype": "Check",
+   "label": "Advanced lipid panel"
+  },
+  {
+   "default": "0",
+   "description": "(CRP, homocysteine)",
+   "fieldname": "inflammation_markers",
+   "fieldtype": "Check",
+   "label": "Inflammation markers"
+  },
+  {
+   "default": "0",
+   "description": "(fasting insulin, HOMA-IR)",
+   "fieldname": "insulin_sensitivity_test",
+   "fieldtype": "Check",
+   "label": "Insulin sensitivity test"
+  },
+  {
+   "default": "0",
+   "fieldname": "gut_microbiome_analysis",
+   "fieldtype": "Check",
+   "label": "Gut microbiome analysis"
+  },
+  {
+   "default": "0",
+   "fieldname": "mitochondrial_function_test",
+   "fieldtype": "Check",
+   "label": "Mitochondrial function test"
+  },
+  {
+   "default": "0",
+   "fieldname": "heavy_metal_test",
+   "fieldtype": "Check",
+   "label": "Heavy metal test"
+  },
+  {
+   "fieldname": "tests_other",
+   "fieldtype": "Small Text",
+   "label": "Other"
+  },
+  {
+   "fieldname": "habits_section",
+   "fieldtype": "Section Break",
+   "label": "Lifestyle & Daily Habits"
+  },
+  {
+   "fieldname": "diet_heading",
+   "fieldtype": "Heading",
+   "label": "Do you follow a specific longevity-based diet?"
+  },
+  {
+   "default": "0",
+   "fieldname": "mediterranean_diet",
+   "fieldtype": "Check",
+   "label": "Mediterranean diet"
+  },
+  {
+   "default": "0",
+   "fieldname": "ketogenic_low_carb_diet",
+   "fieldtype": "Check",
+   "label": "Ketogenic/Low-carb diet"
+  },
+  {
+   "default": "0",
+   "fieldname": "intermittent_fasting_or_time_restricted_eating",
+   "fieldtype": "Check",
+   "label": "Intermittent fasting or time-restricted eating"
+  },
+  {
+   "default": "0",
+   "fieldname": "plant_based_diet",
+   "fieldtype": "Check",
+   "label": "Plant-based diet"
+  },
+  {
+   "fieldname": "diet_other",
+   "fieldtype": "Small Text",
+   "label": "Other"
+  },
+  {
+   "default": "0",
+   "fieldname": "track_yes",
+   "fieldtype": "Check",
+   "label": "Yes"
+  },
+  {
+   "default": "0",
+   "fieldname": "track_no",
+   "fieldtype": "Check",
+   "label": "No"
+  },
+  {
+   "fieldname": "fast_heading",
+   "fieldtype": "Heading",
+   "label": "How many hours do you fast daily"
+  },
+  {
+   "default": "0",
+   "fieldname": "less_than_10_hours",
+   "fieldtype": "Check",
+   "label": "Less than 10 hours"
+  },
+  {
+   "default": "0",
+   "fieldname": "10_12_hours",
+   "fieldtype": "Check",
+   "label": "10-12 hours"
+  },
+  {
+   "default": "0",
+   "fieldname": "12_16_hours",
+   "fieldtype": "Check",
+   "label": "12-16 hours"
+  },
+  {
+   "default": "0",
+   "fieldname": "more_than_16_hours",
+   "fieldtype": "Check",
+   "label": "More than 16 hours"
+  },
+  {
+   "fieldname": "protein_heading",
+   "fieldtype": "Heading",
+   "label": "What are your main sources of protein?"
+  },
+  {
+   "default": "0",
+   "fieldname": "less_than_5_hours",
+   "fieldtype": "Check",
+   "label": "Less than 5 hours"
+  },
+  {
+   "default": "0",
+   "fieldname": "5_6_hours",
+   "fieldtype": "Check",
+   "label": "5-6 hours"
+  },
+  {
+   "default": "0",
+   "fieldname": "7_8_hours",
+   "fieldtype": "Check",
+   "label": "7-8 hours"
+  },
+  {
+   "default": "0",
+   "fieldname": "more_than_8_hours",
+   "fieldtype": "Check",
+   "label": "More than 8 hours"
+  },
+  {
+   "fieldname": "sleep_heading",
+   "fieldtype": "Heading",
+   "label": "How is your sleep quality?"
+  },
+  {
+   "default": "0",
+   "fieldname": "very_bad_i_wake_up_every_2_3_hours",
+   "fieldtype": "Check",
+   "label": "Very bad \u2013 I wake up every 2-3 hours"
+  },
+  {
+   "default": "0",
+   "fieldname": "bad_i_wake_up_1_2_times_per_night",
+   "fieldtype": "Check",
+   "label": "Bad \u2013 I wake up 1-2 times per night"
+  },
+  {
+   "default": "0",
+   "fieldname": "ok",
+   "fieldtype": "Check",
+   "label": "Ok"
+  },
+  {
+   "default": "0",
+   "fieldname": "good",
+   "fieldtype": "Check",
+   "label": "Good"
+  },
+  {
+   "fieldname": "morning_heading",
+   "fieldtype": "Heading",
+   "label": "Do you have energy in the morning?"
+  },
+  {
+   "default": "0",
+   "fieldname": "morning_yes",
+   "fieldtype": "Check",
+   "label": "Yes"
+  },
+  {
+   "default": "0",
+   "fieldname": "morning_no",
+   "fieldtype": "Check",
+   "label": "No"
+  },
+  {
+   "description": "Check all that apply",
+   "fieldname": "sleep_optimize_heading",
+   "fieldtype": "Heading",
+   "label": "Do you use any sleep optimization strategies?"
+  },
+  {
+   "default": "0",
+   "fieldname": "blue_light_blocking_glasses",
+   "fieldtype": "Check",
+   "label": "Blue light blocking glasses"
+  },
+  {
+   "default": "0",
+   "fieldname": "meditation_or_relaxation_techniques",
+   "fieldtype": "Check",
+   "label": "Meditation or relaxation techniques"
+  },
+  {
+   "default": "0",
+   "description": "(magnesium, melatonin, etc.)",
+   "fieldname": "sleep_supplements",
+   "fieldtype": "Check",
+   "label": "Sleep supplements"
+  },
+  {
+   "default": "0",
+   "fieldname": "cold_exposure_before_bed",
+   "fieldtype": "Check",
+   "label": "Cold exposure before bed"
+  },
+  {
+   "fieldname": "sleep_optimize_other",
+   "fieldtype": "Small Text",
+   "label": "Other"
+  },
+  {
+   "description": "Check all that apply",
+   "fieldname": "exercise_heading",
+   "fieldtype": "Heading",
+   "label": "Do you engage in any of the following exercise routines?"
+  },
+  {
+   "default": "0",
+   "description": "(weights, bodyweight exercises)",
+   "fieldname": "resistance_training",
+   "fieldtype": "Check",
+   "label": "Resistance training"
+  },
+  {
+   "default": "0",
+   "description": "(running, cycling, swimming)",
+   "fieldname": "cardiovascular_training",
+   "fieldtype": "Check",
+   "label": "Cardiovascular training"
+  },
+  {
+   "default": "0",
+   "fieldname": "body_posture_optimisation",
+   "fieldtype": "Check",
+   "label": "Body Posture optimisation"
+  },
+  {
+   "default": "0",
+   "fieldname": "high_intensity_interval_training",
+   "fieldtype": "Check",
+   "label": "High-intensity interval training (HIIT)"
+  },
+  {
+   "default": "0",
+   "fieldname": "yoga_pilates",
+   "fieldtype": "Check",
+   "label": "Yoga/Pilates"
+  },
+  {
+   "fieldname": "exercise_other",
+   "fieldtype": "Small Text",
+   "label": "Other"
+  },
+  {
+   "fieldname": "medical_metabolic_health_section",
+   "fieldtype": "Section Break",
+   "label": "Medical & Metabolic Health"
+  },
+  {
+   "description": "Check all that apply",
+   "fieldname": "metaboli_history_heading",
+   "fieldtype": "Heading",
+   "label": "Do you have a history of any of the following?"
+  },
+  {
+   "default": "0",
+   "fieldname": "cardiovascular_disease",
+   "fieldtype": "Check",
+   "label": "Cardiovascular disease"
+  },
+  {
+   "default": "0",
+   "fieldname": "diabetes_or_insulin_resistance",
+   "fieldtype": "Check",
+   "label": "Diabetes or insulin resistance"
+  },
+  {
+   "default": "0",
+   "description": "(Alzheimer\u2019s, Parkinson\u2019s)",
+   "fieldname": "neurodegenerative_conditions",
+   "fieldtype": "Check",
+   "label": "Neurodegenerative conditions"
+  },
+  {
+   "default": "0",
+   "fieldname": "osteoporosis_or_osteopenia",
+   "fieldtype": "Check",
+   "label": "Osteoporosis or osteopenia"
+  },
+  {
+   "default": "0",
+   "fieldname": "autoimmune_disorders",
+   "fieldtype": "Check",
+   "label": "Autoimmune disorders"
+  },
+  {
+   "default": "0",
+   "fieldname": "cancer",
+   "fieldtype": "Check",
+   "label": "Cancer"
+  },
+  {
+   "default": "0",
+   "description": "(thyroid, adrenal fatigue, menopause/andropause)",
+   "fieldname": "hormonal_imbalances",
+   "fieldtype": "Check",
+   "label": "Hormonal imbalances"
+  },
+  {
+   "default": "0",
+   "fieldname": "chronic_inflammation_or_metabolic_dysfunction",
+   "fieldtype": "Check",
+   "label": "Chronic inflammation or metabolic dysfunction"
+  },
+  {
+   "fieldname": "metaboli_history_other",
+   "fieldtype": "Small Text",
+   "label": "Other"
+  },
+  {
+   "fieldname": "supplements_heading",
+   "fieldtype": "Heading",
+   "label": "Do you currently take any longevity-related supplements or medications?"
+  },
+  {
+   "default": "0",
+   "description": "(NR/NMN)",
+   "fieldname": "nad_precursors",
+   "fieldtype": "Check",
+   "label": "NAD+ precursors"
+  },
+  {
+   "default": "0",
+   "description": "(for metabolic health)",
+   "fieldname": "metformin_or_berberine",
+   "fieldtype": "Check",
+   "label": "Metformin or berberine"
+  },
+  {
+   "default": "0",
+   "fieldname": "rapamycin",
+   "fieldtype": "Check",
+   "label": "Rapamycin"
+  },
+  {
+   "default": "0",
+   "fieldname": "resveratrol_quercetin",
+   "fieldtype": "Check",
+   "label": "Resveratrol/quercetin"
+  },
+  {
+   "default": "0",
+   "fieldname": "collagen_or_hyaluronic_acid",
+   "fieldtype": "Check",
+   "label": "Collagen or hyaluronic acid"
+  },
+  {
+   "default": "0",
+   "fieldname": "omega_3",
+   "fieldtype": "Check",
+   "label": "Omega-3 or other anti-inflammatory supplements"
+  },
+  {
+   "fieldname": "supplements_other",
+   "fieldtype": "Small Text",
+   "label": "Other"
+  },
+  {
+   "fieldname": "therapies_heading",
+   "fieldtype": "Heading",
+   "label": "Have you undergone any longevity-related therapies?"
+  },
+  {
+   "default": "0",
+   "fieldname": "hyperbaric_oxygen_therapy",
+   "fieldtype": "Check",
+   "label": "Hyperbaric oxygen therapy"
+  },
+  {
+   "default": "0",
+   "fieldname": "ozone_therapy",
+   "fieldtype": "Check",
+   "label": "Ozone therapy"
+  },
+  {
+   "default": "0",
+   "fieldname": "peptide_therapy",
+   "fieldtype": "Check",
+   "label": "Peptide therapy"
+  },
+  {
+   "default": "0",
+   "fieldname": "stem_cell_therapy",
+   "fieldtype": "Check",
+   "label": "Stem cell therapy"
+  },
+  {
+   "default": "0",
+   "fieldname": "cryotherapy_or_cold_exposure_therapy",
+   "fieldtype": "Check",
+   "label": "Cryotherapy or cold exposure therapy"
+  },
+  {
+   "fieldname": "therapies_other",
+   "fieldtype": "Small Text",
+   "label": "Other"
+  },
+  {
+   "fieldname": "monitor_heading",
+   "fieldtype": "Heading",
+   "label": "Do you currently monitor any of the following?"
+  },
+  {
+   "default": "0",
+   "fieldname": "blood_glucose_levels",
+   "fieldtype": "Check",
+   "label": "Blood glucose levels"
+  },
+  {
+   "default": "0",
+   "fieldname": "heart_rate_variability",
+   "fieldtype": "Check",
+   "label": "Heart rate variability (HRV)"
+  },
+  {
+   "default": "0",
+   "description": "(Oura ring, Whoop, smart watch etc.)",
+   "fieldname": "sleep_quality",
+   "fieldtype": "Check",
+   "label": "Sleep quality"
+  },
+  {
+   "default": "0",
+   "description": "(DEXA scan, etc.)",
+   "fieldname": "body_composition",
+   "fieldtype": "Check",
+   "label": "Body composition"
+  },
+  {
+   "fieldname": "monitor_other",
+   "fieldtype": "Small Text",
+   "label": "Other"
+  },
+  {
+   "fieldname": "well_being_section",
+   "fieldtype": "Section Break",
+   "label": "Stress & Emotional Well-being"
+  },
+  {
+   "fieldname": "how_would_you_describe_your_stress_levels",
+   "fieldtype": "Heading",
+   "label": "How would you describe your stress levels?"
+  },
+  {
+   "default": "0",
+   "fieldname": "low",
+   "fieldtype": "Check",
+   "label": "Low"
+  },
+  {
+   "default": "0",
+   "fieldname": "moderate",
+   "fieldtype": "Check",
+   "label": "Moderate"
+  },
+  {
+   "default": "0",
+   "fieldname": "high",
+   "fieldtype": "Check",
+   "label": "High"
+  },
+  {
+   "fieldname": "how_do_you_manage_stress",
+   "fieldtype": "Heading",
+   "label": "How do you manage stress?"
+  },
+  {
+   "default": "0",
+   "fieldname": "meditation_or_mindfulness_practices",
+   "fieldtype": "Check",
+   "label": "Meditation or mindfulness practices"
+  },
+  {
+   "default": "0",
+   "fieldname": "breathing_exercises",
+   "fieldtype": "Check",
+   "label": "Breathing exercises"
+  },
+  {
+   "default": "0",
+   "fieldname": "regular_exercise",
+   "fieldtype": "Check",
+   "label": "Regular exercise"
+  },
+  {
+   "default": "0",
+   "fieldname": "social_engagement_and_relationships",
+   "fieldtype": "Check",
+   "label": "Social engagement and relationships"
+  },
+  {
+   "default": "0",
+   "fieldname": "professional_therapy_or_coaching",
+   "fieldtype": "Check",
+   "label": "Professional therapy or coaching"
+  },
+  {
+   "fieldname": "stress_other",
+   "fieldtype": "Small Text",
+   "label": "Other"
+  },
+  {
+   "fieldname": "emotiona_well_being_section",
+   "fieldtype": "Section Break",
+   "label": "Emotional & Mental Well-being"
+  },
+  {
+   "fieldname": "emotional_well_being_heading",
+   "fieldtype": "Heading",
+   "label": "How would you describe your overall emotional and mental well-being?"
+  },
+  {
+   "default": "0",
+   "description": "I generally feel positive, resilient, and able to handle stress effectively.",
+   "fieldname": "emotionally_balanced",
+   "fieldtype": "Check",
+   "label": "Emotionally balanced"
+  },
+  {
+   "default": "0",
+   "description": "I experience mild stress but can manage it with healthy coping strategies.",
+   "fieldname": "occasionally_stressed",
+   "fieldtype": "Check",
+   "label": "Occasionally stressed"
+  },
+  {
+   "default": "0",
+   "description": "I often feel stressed, anxious, or emotionally drained.",
+   "fieldname": "frequently_overwhelmed",
+   "fieldtype": "Check",
+   "label": "Frequently overwhelmed"
+  },
+  {
+   "default": "0",
+   "description": "I experience persistent emotional distress, anxiety, or depressive moods.",
+   "fieldname": "struggling_emotionally",
+   "fieldtype": "Check",
+   "label": "Struggling emotionally"
+  },
+  {
+   "default": "0",
+   "description": "I feel I would benefit from emotional or psychological support to improve my well-being.",
+   "fieldname": "seeking_support",
+   "fieldtype": "Check",
+   "label": "Seeking support"
+  },
+  {
+   "fieldname": "social_well_being_section",
+   "fieldtype": "Section Break",
+   "label": "Social Well-being"
+  },
+  {
+   "fieldname": "how_would_you_describe_your_social_connections",
+   "fieldtype": "Heading",
+   "label": "How would you describe your social connections?"
+  },
+  {
+   "default": "0",
+   "fieldname": "i_have_strong_and_meaningful_relationships",
+   "fieldtype": "Check",
+   "label": "I have strong and meaningful relationships"
+  },
+  {
+   "default": "0",
+   "fieldname": "social_connection_check",
+   "fieldtype": "Check",
+   "label": "I have some social connections but would like to strengthen them"
+  },
+  {
+   "default": "0",
+   "fieldname": "i_often_feel_socially_isolated_or_disconnected",
+   "fieldtype": "Check",
+   "label": "I often feel socially isolated or disconnected"
+  },
+  {
+   "fieldname": "environmental_toxin_exposure_section",
+   "fieldtype": "Section Break",
+   "label": "Environmental & Toxin Exposure"
+  },
+  {
+   "fieldname": "toxins_heading",
+   "fieldtype": "Heading",
+   "label": "Have you been exposed to heavy metals, mold, or other environmental toxins?"
+  },
+  {
+   "default": "0",
+   "description": "(amalgam dental fillings, fish consumption)",
+   "fieldname": "mercury",
+   "fieldtype": "Check",
+   "label": "Mercury"
+  },
+  {
+   "default": "0",
+   "fieldname": "lead",
+   "fieldtype": "Check",
+   "label": "Lead"
+  },
+  {
+   "default": "0",
+   "fieldname": "mold_toxicity",
+   "fieldtype": "Check",
+   "label": "Mold toxicity"
+  },
+  {
+   "fieldname": "toxins_other",
+   "fieldtype": "Small Text",
+   "label": "Other"
+  },
+  {
+   "fieldname": "toxin_measure_section",
+   "fieldtype": "Heading",
+   "label": "Do you take any measures to reduce toxin exposure?"
+  },
+  {
+   "default": "0",
+   "fieldname": "air_purification_at_home",
+   "fieldtype": "Check",
+   "label": "Air purification at home"
+  },
+  {
+   "default": "0",
+   "fieldname": "filtered_water",
+   "fieldtype": "Check",
+   "label": "Filtered water"
+  },
+  {
+   "default": "0",
+   "fieldname": "organic_diet",
+   "fieldtype": "Check",
+   "label": "Organic diet"
+  },
+  {
+   "default": "0",
+   "fieldname": "regular_sauna_use_for_detoxification",
+   "fieldtype": "Check",
+   "label": "Regular sauna use for detoxification"
+  },
+  {
+   "fieldname": "toxin_measure_other",
+   "fieldtype": "Small Text",
+   "label": "Other"
+  },
+  {
+   "default": "0",
+   "description": "(e.g., legumes, tofu)",
+   "fieldname": "plant_based",
+   "fieldtype": "Check",
+   "label": "Plant-based"
+  },
+  {
+   "default": "0",
+   "description": "(e.g., grass-fed meat, wild fish)",
+   "fieldname": "animal_based",
+   "fieldtype": "Check",
+   "label": "Animal-based"
+  },
+  {
+   "default": "0",
+   "fieldname": "combination_of_both",
+   "fieldtype": "Check",
+   "label": "Combination of both"
+  },
+  {
+   "fieldname": "sleep_hours_heading",
+   "fieldtype": "Heading",
+   "label": "How many hours of sleep do you get per night?"
+  },
+  {
+   "fieldname": "social_activities_heading",
+   "fieldtype": "Heading",
+   "label": "How often do you engage in social activities or meaningful interactions?"
+  },
+  {
+   "default": "0",
+   "fieldname": "daily",
+   "fieldtype": "Check",
+   "label": "Daily"
+  },
+  {
+   "default": "0",
+   "fieldname": "a_few_times_a_week",
+   "fieldtype": "Check",
+   "label": "A few times a week"
+  },
+  {
+   "default": "0",
+   "fieldname": "a_few_times_a_month",
+   "fieldtype": "Check",
+   "label": "A few times a month"
+  },
+  {
+   "default": "0",
+   "fieldname": "rarely_or_never",
+   "fieldtype": "Check",
+   "label": "Rarely or never"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "link_doctype": "Lead",
+   "link_fieldname": "custom_longevity_history"
+  },
+  {
+   "link_doctype": "Patient",
+   "link_fieldname": "custom_longevity_history"
+  }
+ ],
+ "modified": "2025-02-21 09:29:11.016137",
+ "modified_by": "Administrator",
+ "module": "Swissmedhealth",
+ "name": "Longevity History",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

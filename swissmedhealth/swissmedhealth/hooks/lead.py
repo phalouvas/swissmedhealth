@@ -27,6 +27,11 @@ class Lead(OriginalLead):
             stress_identification.insert(ignore_permissions=True)
             self.db_set('custom_stress_identification', stress_identification.name)
 
+        if not self.custom_longevity_history:
+            longevity_history = frappe.new_doc("Longevity History")
+            longevity_history.insert(ignore_permissions=True)
+            self.db_set('custom_longevity_history', longevity_history.name)
+
         frappe.db.commit()
         
 
@@ -93,6 +98,10 @@ def after_insert(doc, method):
     stress_identification.insert(ignore_permissions=True)
     doc.db_set('custom_stress_identification', stress_identification.name)
 
+    longevity_history = frappe.new_doc("Longevity History")
+    longevity_history.insert(ignore_permissions=True)
+    doc.db_set('custom_longevity_history', longevity_history.name)
+
     if not doc.custom_customer_primary_address:
         address = frappe.new_doc("Address")
         address.update({
@@ -158,3 +167,6 @@ def after_delete(doc, method):
     if doc.get('custom_stress_identification'):
         # delete the customer consent document
         frappe.delete_doc("Stress Identification", doc.get('custom_stress_identification'))
+    if doc.get('custom_longevity_history'):
+        # delete the customer consent document
+        frappe.delete_doc("Longevity History", doc.get('custom_longevity_history'))
