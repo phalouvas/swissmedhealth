@@ -91,24 +91,27 @@ order_by="is_primary_contact DESC, `tabContact`.creation ASC",
     <tr>
         {% endif %}
         {% if new_row.update({'total': new_row.total + 1}) %}{% endif %}
-        {% if field.fieldtype == "Select" and "Yes" in field.options.split("\n") %}
-        <td style="max-width: 20rem;">{{ field.label }}</td>
-        {% for option in field.options.split("\n") %}
-        {% if option in ["Yes", "No"] %}
-        <td>{% if option == active_value %}<b class="text-primary">{{ option }}</b>{% else %}{{ option }}{% endif
-            %}&nbsp;</td>
-        {% endif %}
-        {% endfor %}
-        {% else %}
-        <td colspan="3">
-            {{ field.label }}
-            {% if active_value %}
-            <b class="text-primary">{{ active_value }}</b>
+            {% if field.fieldtype == "Select" and "Yes" in field.options.split("\n") %}
+            <td style="max-width: 20rem;">{{ field.label }}</td>
+            {% for option in field.options.split("\n") %}
+                {% if option in ["Yes", "No"] %}
+                <td>{% if option == active_value %}<b class="text-primary">{{ option }}</b>{% else %}{{ option }}{% endif
+                    %}&nbsp;</td>
+                {% endif %}
+            {% endfor %}
+            {% elif field.fieldtype == "Check" %}
+            <td style="max-width: 20rem;">{{ field.label }}</td>
+            <td>{% if active_value %}<b class="text-primary">✔️</b>{% else %}&nbsp;{% endif %}</td>
             {% else %}
-            <span style="display: block; min-height: 2em;"></span>
+            <td colspan="4">
+                {{ field.label }}
+                {% if active_value %}
+                <b class="text-primary">{{ active_value }}</b>
+                {% else %}
+                <span style="display: block; min-height: 2em;"></span>
+                {% endif %}
+            </td>
             {% endif %}
-        </td>
-        {% endif %}
         {% endif %}
         {% if new_row.total % 2 == 0 %}
     </tr>
