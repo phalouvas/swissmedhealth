@@ -1,0 +1,75 @@
+<h1 class="text-center">Patient Longevity History</h1>
+
+{% set gdpr_doc = frappe.get_doc("Customer Consent", doc.custom_customer_consent) %}
+{% set acceptance_date = gdpr_doc.acceptance_date %}
+<span style="float: right;">Date: {{ acceptance_date }}</span>
+
+{% set active_doc = doc %}
+{% set new_row= {'total': 0} %}
+<table class="table table-bordered" style="border: none;">
+    <h2>Personal Details</h2>
+    {% for field in active_doc.meta.fields %}
+    {% set active_value = active_doc.get(field.fieldname) %}
+    {% if field.print_hide != 1 and field.fieldtype != "Column Break" %}
+    {% if field.fieldtype == "Heading" or field.fieldtype == "Section Break" %}
+    {% if new_row.update({'total': 0}) %}{% endif %}
+    <tr style="border: none;">
+        <td colspan="6" style="border: none;">{% if field.label %}<b>{{ field.label }}</b>{% endif %}</td>
+    </tr>
+    {% else %}
+    {% if new_row.total % 2 == 0 %}
+    <tr>
+        {% endif %}
+        {% if new_row.update({'total': new_row.total + 1}) %}{% endif %}
+        {% if field.fieldtype == "Select" and "Yes" in field.options.split("\n") %}
+        <td style="max-width: 20rem;">{{ field.label }}</td>
+        {% for option in field.options.split("\n") %}
+        {% if option in ["Yes", "No"] %}
+        <td>{% if option == active_value %}<b class="text-primary">{{ option }}</b>{% else %}{{ option }}{% endif
+            %}&nbsp;</td>
+        {% endif %}
+        {% endfor %}
+        {% else %}
+        <td colspan="3">
+            {{ field.label }}
+            {% if active_value %}
+            <b class="text-primary">{{ active_value }}</b>
+            {% else %}
+            <span style="display: block; min-height: 2em;"></span>
+            {% endif %}
+        </td>
+        {% endif %}
+        {% endif %}
+        {% if new_row.total % 2 == 0 %}
+    </tr>
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+</table>
+
+{% set contact_list = frappe.get_list(
+"Contact",
+filters=[
+["Dynamic Link", "link_doctype", "=", active_doc.doctype or ""],
+["Dynamic Link", "link_name", "=", active_doc.name or ""],
+["Dynamic Link", "parenttype", "=", "Contact"],
+["is_primary_contact", "=", 0],
+],
+fields=["full_name", "phone"],
+order_by="is_primary_contact DESC, `tabContact`.creation ASC",
+) %}
+{% if contact_list and contact_list[0].phone != active_doc.phone %}
+<table class="table table-bordered">
+    <tr>
+        <td style="max-width: 20rem;" colspan="6">Emergency Contact <b>{{ contact_list[0].full_name }}</b></td>
+        <td colspan="3">Phone <b class="text-primary">{{ contact_list[0].phone }}</b></td>
+    </tr>
+</table>
+{% else %}
+<table class="table table-bordered">
+    <tr>
+        <td style="max-width: 20rem;" colspan="6">Emergency Contact</td>
+        <td colspan="3">Phone</td>
+    </tr>
+</table>
+{% endif %}
