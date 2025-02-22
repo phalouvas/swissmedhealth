@@ -73,3 +73,180 @@ order_by="is_primary_contact DESC, `tabContact`.creation ASC",
     </tr>
 </table>
 {% endif %}
+
+{% set active_doc = frappe.get_doc("Longevity History", doc.custom_longevity_history) %}
+{% set new_row= {'total': 0} %}
+<table class="table table-bordered" style="border: none;">
+    <h2>Longevity History</h2>
+    {% for field in active_doc.meta.fields %}
+    {% set active_value = active_doc.get(field.fieldname) %}
+    {% if field.print_hide != 1 and field.fieldtype != "Column Break" %}
+    {% if field.fieldtype == "Heading" or field.fieldtype == "Section Break" %}
+    {% if new_row.update({'total': 0}) %}{% endif %}
+    <tr style="border: none;">
+        <td colspan="6" style="border: none;">{% if field.label %}<b>{{ field.label }}</b>{% endif %}</td>
+    </tr>
+    {% else %}
+    {% if new_row.total % 2 == 0 %}
+    <tr>
+        {% endif %}
+        {% if new_row.update({'total': new_row.total + 1}) %}{% endif %}
+        {% if field.fieldtype == "Select" and "Yes" in field.options.split("\n") %}
+        <td style="max-width: 20rem;">{{ field.label }}</td>
+        {% for option in field.options.split("\n") %}
+        {% if option in ["Yes", "No"] %}
+        <td>{% if option == active_value %}<b class="text-primary">{{ option }}</b>{% else %}{{ option }}{% endif
+            %}&nbsp;</td>
+        {% endif %}
+        {% endfor %}
+        {% else %}
+        <td colspan="3">
+            {{ field.label }}
+            {% if active_value %}
+            <b class="text-primary">{{ active_value }}</b>
+            {% else %}
+            <span style="display: block; min-height: 2em;"></span>
+            {% endif %}
+        </td>
+        {% endif %}
+        {% endif %}
+        {% if new_row.total % 2 == 0 %}
+    </tr>
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+</table>
+
+{% set active_doc = frappe.get_doc("Customer Consent", doc.custom_customer_consent) %}
+<table class="table table-bordered">
+    <tbody>
+        <tr>
+            <td colspan="9">
+                <p><b>GDPR statement and consent</b></p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="9">
+                <p>Your personal information:</p>
+                <p>The information collected with this questionnaire will be used by Swissmed Health for medical
+                    services and practices. Your personal data and information will remain with Swissmed Health for us
+                    to provide you with medical services and other related services both at the center and also
+                    potentially to other health centers. This may require that your personal data including medical
+                    records to be shared with other medical service providers for referral purposes as well as other
+                    legal and procedural purposes of the center.</p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="6">
+                <p><b>Your statement and confirmation</b></p>
+            </td>
+            <td colspan="2">
+                <p><b>Yes</b></p>
+            </td>
+            <td>
+                <p><b>No</b></p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="6">
+                <p>I understand and accept that the Center has the right to approve or reject my registration
+                    application at any point in time.</p>
+            </td>
+            <td colspan="2">
+                <p>
+                    {% if active_doc.accept_registration == "Yes" %}
+                    <span style='font-weight: bold;'>✔️</span>
+                    {% else %}
+                    <span>&nbsp;</span>
+                    {% endif %}
+                </p>
+            </td>
+            <td>
+                <p>
+                    {% if active_doc.accept_registration == "No" %}
+                    <span style='font-weight: bold;'>X</span>
+                    {% else %}
+                    <span>&nbsp;</span>
+                    {% endif %}
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="6">
+                <p>I confirm that to the best of my knowledge the information that I have given on this registration
+                    form/questionnaire is accurate. Additionally, I understand that it is my responsibility to inform
+                    and update the Center as to any changes to my personal data and information.</p>
+            </td>
+            <td colspan="2">
+                <p>
+                    {% if active_doc.accept_personal_data == "Yes" %}
+                    <span style='font-weight: bold;'>✔️</span>
+                    {% else %}
+                    <span>&nbsp;</span>
+                    {% endif %}
+                </p>
+            </td>
+            <td>
+                <p>
+                    {% if active_doc.accept_personal_data == "No" %}
+                    <span style='font-weight: bold;'>X</span>
+                    {% else %}
+                    <span>&nbsp;</span>
+                    {% endif %}
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="6">
+                <p>I hereby give my consent to the Center to communicate with me via phone, email or other means for
+                    updates as to new medical programs, upcoming lectures and conferences as well as Center news.</p>
+            </td>
+            <td colspan="2">
+                <p>
+                    {% if active_doc.accept_communication == "Yes" %}
+                    <span style='font-weight: bold;'>✔️</span>
+                    {% else %}
+                    <span>&nbsp;</span>
+                    {% endif %}
+                </p>
+            </td>
+            <td>
+                <p>
+                    {% if active_doc.accept_communication == "No" %}
+                    <span style='font-weight: bold;'>X</span>
+                    {% else %}
+                    <span>&nbsp;</span>
+                    {% endif %}
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="9">
+                <p>
+                    {% if active_doc.signature %}
+                    <img src="{{ active_doc.signature }}" />
+                    {% endif %}
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="9">
+                <p>Signature</p>
+                <p>Date: <b>{{ active_doc.acceptance_date or ''}}</b></p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="9" style="background:#D9D9D9;">
+                <p><b>For Internal Use</b></p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="5">Received by:</td>
+            <td colspan="4">Previous medical records requested</td>
+        </tr>
+        <tr>
+            <td colspan="5">System entry date</td>
+            <td colspan="4">MRN Number</td>
+        </tr>
+    </tbody>
+</table>
