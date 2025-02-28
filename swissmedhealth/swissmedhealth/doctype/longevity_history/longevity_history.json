@@ -107,6 +107,18 @@
   "sleep_quality",
   "body_composition",
   "monitor_other",
+  "environmental_toxin_exposure_section",
+  "toxins_heading",
+  "mercury",
+  "lead",
+  "mold_toxicity",
+  "toxins_other",
+  "toxin_measure_section",
+  "air_purification_at_home",
+  "filtered_water",
+  "organic_diet",
+  "regular_sauna_use_for_detoxification",
+  "toxin_measure_other",
   "well_being_section",
   "how_would_you_describe_your_stress_levels",
   "low",
@@ -135,19 +147,7 @@
   "daily",
   "a_few_times_a_week",
   "a_few_times_a_month",
-  "rarely_or_never",
-  "environmental_toxin_exposure_section",
-  "toxins_heading",
-  "mercury",
-  "lead",
-  "mold_toxicity",
-  "toxins_other",
-  "toxin_measure_section",
-  "air_purification_at_home",
-  "filtered_water",
-  "organic_diet",
-  "regular_sauna_use_for_detoxification",
-  "toxin_measure_other"
+  "rarely_or_never"
  ],
  "fields": [
   {
@@ -1001,7 +1001,7 @@
    "link_fieldname": "custom_longevity_history"
   }
  ],
- "modified": "2025-02-21 09:29:11.016137",
+ "modified": "2025-02-28 06:38:20.196716",
  "modified_by": "Administrator",
  "module": "Swissmedhealth",
  "name": "Longevity History",
