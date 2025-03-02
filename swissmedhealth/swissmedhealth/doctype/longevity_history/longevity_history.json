@@ -32,6 +32,7 @@
   "gut_microbiome_analysis",
   "mitochondrial_function_test",
   "heavy_metal_test",
+  "no_answer_tests",
   "tests_other",
   "habits_section",
   "diet_heading",
@@ -39,6 +40,7 @@
   "ketogenic_low_carb_diet",
   "intermittent_fasting_or_time_restricted_eating",
   "plant_based_diet",
+  "no_answer_diet",
   "diet_other",
   "fast_heading",
   "less_than_10_hours",
@@ -67,6 +69,7 @@
   "meditation_or_relaxation_techniques",
   "sleep_supplements",
   "cold_exposure_before_bed",
+  "no_answer_sleep",
   "sleep_optimize_other",
   "exercise_heading",
   "resistance_training",
@@ -74,6 +77,7 @@
   "body_posture_optimisation",
   "high_intensity_interval_training",
   "yoga_pilates",
+  "no_answer_exercise",
   "exercise_other",
   "medical_metabolic_health_section",
   "metaboli_history_heading",
@@ -93,6 +97,7 @@
   "resveratrol_quercetin",
   "collagen_or_hyaluronic_acid",
   "omega_3",
+  "no_answer_medication",
   "supplements_other",
   "therapies_heading",
   "hyperbaric_oxygen_therapy",
@@ -100,13 +105,29 @@
   "peptide_therapy",
   "stem_cell_therapy",
   "cryotherapy_or_cold_exposure_therapy",
+  "no_answer_therapies",
   "therapies_other",
   "monitor_heading",
   "blood_glucose_levels",
   "heart_rate_variability",
   "sleep_quality",
   "body_composition",
+  "no_answer_monitor",
   "monitor_other",
+  "environmental_toxin_exposure_section",
+  "toxins_heading",
+  "mercury",
+  "lead",
+  "mold_toxicity",
+  "no_answer_toxins",
+  "toxins_other",
+  "toxin_measure_section",
+  "air_purification_at_home",
+  "filtered_water",
+  "organic_diet",
+  "regular_sauna_use_for_detoxification",
+  "no_answer_toxin_exposure",
+  "toxin_measure_other",
   "well_being_section",
   "how_would_you_describe_your_stress_levels",
   "low",
@@ -135,19 +156,7 @@
   "daily",
   "a_few_times_a_week",
   "a_few_times_a_month",
-  "rarely_or_never",
-  "environmental_toxin_exposure_section",
-  "toxins_heading",
-  "mercury",
-  "lead",
-  "mold_toxicity",
-  "toxins_other",
-  "toxin_measure_section",
-  "air_purification_at_home",
-  "filtered_water",
-  "organic_diet",
-  "regular_sauna_use_for_detoxification",
-  "toxin_measure_other"
+  "rarely_or_never"
  ],
  "fields": [
   {
@@ -988,6 +997,60 @@
    "fieldname": "rarely_or_never",
    "fieldtype": "Check",
    "label": "Rarely or never"
+  },
+  {
+   "default": "0",
+   "fieldname": "no_answer_tests",
+   "fieldtype": "Check",
+   "label": "No, I have not done any tests"
+  },
+  {
+   "default": "0",
+   "fieldname": "no_answer_diet",
+   "fieldtype": "Check",
+   "label": "I don\u2019t follow any specific diet"
+  },
+  {
+   "default": "0",
+   "fieldname": "no_answer_sleep",
+   "fieldtype": "Check",
+   "label": "No, I don\u2019t use any sleep strategies"
+  },
+  {
+   "default": "0",
+   "fieldname": "no_answer_exercise",
+   "fieldtype": "Check",
+   "label": "No, I don\u2019t exercise regularly"
+  },
+  {
+   "default": "0",
+   "fieldname": "no_answer_medication",
+   "fieldtype": "Check",
+   "label": "No, I don\u2019t take them"
+  },
+  {
+   "default": "0",
+   "fieldname": "no_answer_therapies",
+   "fieldtype": "Check",
+   "label": "No, I haven\u2019t tried any longevity  therapies"
+  },
+  {
+   "default": "0",
+   "fieldname": "no_answer_monitor",
+   "fieldtype": "Check",
+   "label": "No, I don\u2019t monitor them"
+  },
+  {
+   "default": "0",
+   "fieldname": "no_answer_toxins",
+   "fieldtype": "Check",
+   "label": "Not that I am aware of"
+  },
+  {
+   "default": "0",
+   "fieldname": "no_answer_toxin_exposure",
+   "fieldtype": "Check",
+   "label": "No, I don\u2019t"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -1001,7 +1064,7 @@
    "link_fieldname": "custom_longevity_history"
   }
  ],
- "modified": "2025-02-21 09:29:11.016137",
+ "modified": "2025-03-02 06:47:11.920088",
  "modified_by": "Administrator",
  "module": "Swissmedhealth",
  "name": "Longevity History",
