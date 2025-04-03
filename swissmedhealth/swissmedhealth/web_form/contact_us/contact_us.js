@@ -52,7 +52,10 @@ frappe.ready(function () {
             if (frappe.web_form.is_new) {
                 await frappe.web_form.save();
             } else {
-                await frappe.web_form.update();
+                frappe.call('swissmedhealth.swissmedhealth.web_form.medical_history.medical_history.save', { doc: frappe.web_form.doc }).then(r => {
+                    let email_id = r.message.email_id;
+                    window.location.href = '../lead-step-2/new?email_id=' + encodeURIComponent(email_id);
+                });
             }
         } catch (err) {
             console.error("Error during form submission:", err);
