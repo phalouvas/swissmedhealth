@@ -32,7 +32,7 @@ frappe.ready(function () {
             let email_id = frappe.web_form.get_value('email_id');
             
             // Redirect to the next step with email
-            window.location.href = '../patient-longevity-form-2/new?email_id=' + encodeURIComponent(email_id);
+            window.location.href = '../swissmed-longevity-form-2/new?email_id=' + encodeURIComponent(email_id);
         } catch (err) {
             console.error("Error in after_save:", err);
             frappe.msgprint({
@@ -55,7 +55,7 @@ frappe.ready(function () {
                 // For existing leads, use your custom server method
                 frappe.call('swissmedhealth.swissmedhealth.web_form.medical_history.medical_history.save', { doc: frappe.web_form.doc }).then(r => {
                     let email_id = r.message.email_id;
-                    window.location.href = '../patient-longevity-form-2/new?email_id=' + encodeURIComponent(email_id);
+                    window.location.href = '../swissmed-longevity-form-2/new?email_id=' + encodeURIComponent(email_id);
                 }).catch(err => {
                     console.error("Error saving to medical history:", err);
                     frappe.msgprint({
