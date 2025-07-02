@@ -69,9 +69,16 @@
   "high_blood_pressure",
   "kidney_failure",
   "migraines",
+  "neurologicalcognitive",
+  "musculosceletal",
+  "geneticinherited",
+  "bloodimmune_system",
+  "endocrinehormonal",
+  "other",
   "column_break_p0lc3",
   "heading_2",
   "bladder",
+  "mental_health",
   "chronic_diseasecancer",
   "gallbladder",
   "gut",
@@ -113,6 +120,7 @@
   "mri_details",
   "have_medical_diagnostic_tests",
   "medical_diagnostic_tests_details",
+  "latest_results",
   "column_break_hwgxx",
   "do_you_smoke",
   "daily_number_of_cigarettes",
@@ -998,8 +1006,56 @@
    "label": "Overall Health",
    "options": "\n1\n2\n3\n4\n5",
    "print_hide": 1
+  },
+  {
+   "fieldname": "mental_health",
+   "fieldtype": "Select",
+   "label": "Mental Health",
+   "options": "\nNo\nYes"
+  },
+  {
+   "fieldname": "other",
+   "fieldtype": "Small Text",
+   "label": "Other",
+   "placeholder": "specify details"
+  },
+  {
+   "fieldname": "neurologicalcognitive",
+   "fieldtype": "Select",
+   "label": "Neurological/Cognitive",
+   "options": "\nNo\nYes"
+  },
+  {
+   "fieldname": "musculosceletal",
+   "fieldtype": "Select",
+   "label": "Musculosceletal",
+   "options": "\nNo\nYes"
+  },
+  {
+   "fieldname": "geneticinherited",
+   "fieldtype": "Select",
+   "label": "Genetic/Inherited",
+   "options": "\nNo\nYes"
+  },
+  {
+   "fieldname": "bloodimmune_system",
+   "fieldtype": "Select",
+   "label": " Blood/Immune system",
+   "options": "\nNo\nYes"
+  },
+  {
+   "fieldname": "endocrinehormonal",
+   "fieldtype": "Select",
+   "label": "Endocrine/Hormonal",
+   "options": "\nNo\nYes"
+  },
+  {
+   "fieldname": "latest_results",
+   "fieldtype": "Attach",
+   "label": "Latest Results"
   }
  ],
+ "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [
   {
@@ -1011,7 +1067,7 @@
    "link_fieldname": "custom_medical_history"
   }
  ],
- "modified": "2024-12-31 08:30:31.531350",
+ "modified": "2025-07-02 10:55:12.772095",
  "modified_by": "Administrator",
  "module": "Swissmedhealth",
  "name": "Medical History",
@@ -1031,6 +1087,7 @@
    "write": 1
   }
  ],
+ "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []

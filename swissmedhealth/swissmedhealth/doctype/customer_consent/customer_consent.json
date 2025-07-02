@@ -11,10 +11,13 @@
   "naming_series",
   "gdpr_notice",
   "accept_registration",
+  "accept_registration_2",
   "column_break_cqqy5",
   "accept_personal_data",
+  "accept_personal_data_2",
   "column_break_8bnez",
   "accept_communication",
+  "accept_communication_2",
   "section_break_joso",
   "understand_hormone",
   "section_break_wilzw",
@@ -94,8 +97,30 @@
    "fieldtype": "Select",
    "label": "Do you understand that hormonal optimization therapy is a personalized treatment plan and may not be suitable for everyone?",
    "options": "\nNo\nYes"
+  },
+  {
+   "default": "1",
+   "description": "I agree to the processing of my personal data in accordance with the GDPR Policy for the purposes of  registration and communication.",
+   "fieldname": "accept_registration_2",
+   "fieldtype": "Check",
+   "label": "Agree to GDPR-compliant data processing for registration & communication."
+  },
+  {
+   "default": "1",
+   "description": " I confirm that the personal, medical, and contact information I have provided is true and complete to the best  of my knowledge.I understand it is my responsibility to inform and update the Center as to any changes to my  personal data and info.",
+   "fieldname": "accept_personal_data_2",
+   "fieldtype": "Check",
+   "label": "Confirm my info is accurate & complete."
+  },
+  {
+   "default": "0",
+   "description": "I consent to receive informational and promotional communications from the medical center, including health  education materials, updates on medical programs and services, invitations to events, lectures or workshops, and  newsletters (optional)",
+   "fieldname": "accept_communication_2",
+   "fieldtype": "Check",
+   "label": "Consent to health updates, promos & event invites from med center (optional)"
   }
  ],
+ "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [
   {
@@ -107,7 +132,7 @@
    "link_fieldname": "custom_customer_consent"
   }
  ],
- "modified": "2024-09-20 09:11:42.176383",
+ "modified": "2025-07-02 11:18:47.067513",
  "modified_by": "Administrator",
  "module": "Swissmedhealth",
  "name": "Customer Consent",
@@ -127,6 +152,7 @@
    "write": 1
   }
  ],
+ "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []
