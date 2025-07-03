@@ -24,7 +24,7 @@
  "list_columns": [],
  "login_required": 0,
  "max_attachment_size": 0,
- "modified": "2025-07-02 11:08:38.625683",
+ "modified": "2025-07-03 06:56:01.533235",
  "modified_by": "Administrator",
  "module": "Swissmedhealth",
  "name": "medical-history",
@@ -161,7 +161,7 @@
    "max_length": 0,
    "max_value": 0,
    "read_only": 0,
-   "reqd": 1,
+   "reqd": 0,
    "show_in_filter": 0
   },
   {
@@ -192,7 +192,7 @@
   },
   {
    "allow_read_on_all_link_options": 0,
-   "depends_on": "eval:doc.diet_preferences=='Vegan' || doc.diet_preferences=='Vegetarian' || doc.diet_preferences =='Meat' || doc.diet_preferences =='Other';",
+   "depends_on": "eval:doc.diet_preferences=='Other';",
    "fieldname": "diet_preference_details",
    "fieldtype": "Small Text",
    "hidden": 0,
@@ -200,7 +200,7 @@
    "max_length": 0,
    "max_value": 0,
    "read_only": 0,
-   "reqd": 1,
+   "reqd": 0,
    "show_in_filter": 0
   },
   {
@@ -459,7 +459,7 @@
    "max_value": 0,
    "options": "\nNo\nYes\nNot sure",
    "read_only": 0,
-   "reqd": 1,
+   "reqd": 0,
    "show_in_filter": 0
   },
   {

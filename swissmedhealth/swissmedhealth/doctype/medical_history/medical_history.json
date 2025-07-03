@@ -272,7 +272,7 @@
    "options": "\nNone\nVegetarian\nVegan\nMeat\nOther"
   },
   {
-   "depends_on": "eval:doc.diet_preferences=='Vegan' || doc.diet_preferences=='Vegetarian' || doc.diet_preferences =='Meat' || doc.diet_preferences =='Other';",
+   "depends_on": "eval:doc.diet_preferences=='Other';",
    "fieldname": "diet_preference_details",
    "fieldtype": "Small Text",
    "label": "Diet preference details"
@@ -1067,7 +1067,7 @@
    "link_fieldname": "custom_medical_history"
   }
  ],
- "modified": "2025-07-02 10:55:12.772095",
+ "modified": "2025-07-03 06:50:58.738435",
  "modified_by": "Administrator",
  "module": "Swissmedhealth",
  "name": "Medical History",
