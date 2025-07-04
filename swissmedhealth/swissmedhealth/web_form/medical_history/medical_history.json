@@ -24,7 +24,7 @@
  "list_columns": [],
  "login_required": 0,
  "max_attachment_size": 0,
- "modified": "2025-07-03 06:56:01.533235",
+ "modified": "2025-07-04 09:37:03.077737",
  "modified_by": "Administrator",
  "module": "Swissmedhealth",
  "name": "medical-history",
@@ -374,7 +374,7 @@
   },
   {
    "allow_read_on_all_link_options": 0,
-   "fieldname": "kidney_failure",
+   "fieldname": "kidneys",
    "fieldtype": "Select",
    "hidden": 0,
    "label": "Kidneys",
@@ -409,6 +409,20 @@
    "options": "\nNo\nYes\nNot sure",
    "read_only": 0,
    "reqd": 1,
+   "show_in_filter": 0
+  },
+  {
+   "allow_read_on_all_link_options": 0,
+   "depends_on": "eval:doc.medication_allergies=='Yes'",
+   "fieldname": "medication_allergies_details",
+   "fieldtype": "Small Text",
+   "hidden": 0,
+   "label": "Allergies Details",
+   "max_length": 0,
+   "max_value": 0,
+   "precision": "",
+   "read_only": 0,
+   "reqd": 0,
    "show_in_filter": 0
   },
   {

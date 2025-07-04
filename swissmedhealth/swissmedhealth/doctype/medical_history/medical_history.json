@@ -404,7 +404,7 @@
   {
    "fieldname": "chronic_diseasecancer",
    "fieldtype": "Select",
-   "label": "Chronic disease/Cancers",
+   "label": "Cancer",
    "options": "\nNo\nYes"
   },
   {
@@ -434,7 +434,7 @@
   {
    "fieldname": "lungs",
    "fieldtype": "Select",
-   "label": "Lungs",
+   "label": "Respiratory/Lung",
    "options": "\nNo\nYes"
   },
   {
@@ -482,7 +482,7 @@
   {
    "fieldname": "medication_allergies",
    "fieldtype": "Select",
-   "label": "Do you have any food or medical allergies?",
+   "label": "Allergies",
    "options": "\nNo\nYes\nNot sure"
   },
   {
@@ -1067,7 +1067,7 @@
    "link_fieldname": "custom_medical_history"
   }
  ],
- "modified": "2025-07-03 06:50:58.738435",
+ "modified": "2025-07-04 09:38:49.031699",
  "modified_by": "Administrator",
  "module": "Swissmedhealth",
  "name": "Medical History",
