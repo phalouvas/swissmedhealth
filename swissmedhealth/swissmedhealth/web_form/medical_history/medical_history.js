@@ -20,6 +20,27 @@ frappe.ready(function () {
 		// Prevent the default form submission
 		e.preventDefault();
 
+		// Validate weight and height
+		const weight = parseFloat(frappe.web_form.get_value('weight'));
+		const height = parseInt(frappe.web_form.get_value('height'), 10);
+
+		if (isNaN(weight) || weight <= 0) {
+			frappe.msgprint({
+				title: __('Validation Error'),
+				indicator: 'red',
+				message: __('Weight must be greater than zero.')
+			});
+			return;
+		}
+		if (isNaN(height) || height <= 0) {
+			frappe.msgprint({
+				title: __('Validation Error'),
+				indicator: 'red',
+				message: __('Height must be greater than zero.')
+			});
+			return;
+		}
+
 		// set custom_status to 'Documentation received'
 		frappe.web_form.doc.custom_status = 'Documentation received';
 
