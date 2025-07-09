@@ -192,12 +192,11 @@ order_by="is_primary_contact DESC, `tabContact`.creation ASC",
         </tr>
         <tr>
             <td colspan="6">
-                <p>I understand and accept that the Center has the right to approve or reject my registration
-                    application at any point in time.</p>
+                <p>I agree to the processing of my personal data in accordance with the GDPR Policy for the purposes of  registration and communication.</p>
             </td>
             <td colspan="2">
                 <p>
-                    {% if active_doc.accept_registration == "Yes" %}
+                    {% if active_doc.accept_registration_2 == 1 %}
                     <span style='font-weight: bold;'>✔️</span>
                     {% else %}
                     <span>&nbsp;</span>
@@ -206,7 +205,7 @@ order_by="is_primary_contact DESC, `tabContact`.creation ASC",
             </td>
             <td>
                 <p>
-                    {% if active_doc.accept_registration == "No" %}
+                    {% if active_doc.accept_registration_2 == 0 %}
                     <span style='font-weight: bold;'>X</span>
                     {% else %}
                     <span>&nbsp;</span>
@@ -216,13 +215,11 @@ order_by="is_primary_contact DESC, `tabContact`.creation ASC",
         </tr>
         <tr>
             <td colspan="6">
-                <p>I confirm that to the best of my knowledge the information that I have given on this registration
-                    form/questionnaire is accurate. Additionally, I understand that it is my responsibility to inform
-                    and update the Center as to any changes to my personal data and information.</p>
+                <p> I confirm that the personal, medical, and contact information I have provided is true and complete to the best  of my knowledge.I understand it is my responsibility to inform and update the Center as to any changes to my  personal data and info.</p>
             </td>
             <td colspan="2">
                 <p>
-                    {% if active_doc.accept_personal_data == "Yes" %}
+                    {% if active_doc.accept_personal_data_2 == 1 %}
                     <span style='font-weight: bold;'>✔️</span>
                     {% else %}
                     <span>&nbsp;</span>
@@ -231,7 +228,7 @@ order_by="is_primary_contact DESC, `tabContact`.creation ASC",
             </td>
             <td>
                 <p>
-                    {% if active_doc.accept_personal_data == "No" %}
+                    {% if active_doc.accept_personal_data_2 == 0 %}
                     <span style='font-weight: bold;'>X</span>
                     {% else %}
                     <span>&nbsp;</span>
@@ -241,12 +238,11 @@ order_by="is_primary_contact DESC, `tabContact`.creation ASC",
         </tr>
         <tr>
             <td colspan="6">
-                <p>I hereby give my consent to the Center to communicate with me via phone, email or other means for
-                    updates as to new medical programs, upcoming lectures and conferences as well as Center news.</p>
+                <p>I consent to receive informational and promotional communications from the medical center, including health  education materials, updates on medical programs and services, invitations to events, lectures or workshops, and  newsletters (optional)</p>
             </td>
             <td colspan="2">
                 <p>
-                    {% if active_doc.accept_communication == "Yes" %}
+                    {% if active_doc.accept_communication_2 == 1 %}
                     <span style='font-weight: bold;'>✔️</span>
                     {% else %}
                     <span>&nbsp;</span>
@@ -255,7 +251,7 @@ order_by="is_primary_contact DESC, `tabContact`.creation ASC",
             </td>
             <td>
                 <p>
-                    {% if active_doc.accept_communication == "No" %}
+                    {% if active_doc.accept_communication_2 == 0 %}
                     <span style='font-weight: bold;'>X</span>
                     {% else %}
                     <span>&nbsp;</span>
@@ -265,16 +261,6 @@ order_by="is_primary_contact DESC, `tabContact`.creation ASC",
         </tr>
         <tr>
             <td colspan="9">
-                <p>
-                    {% if active_doc.signature %}
-                    <img src="{{ active_doc.signature }}" />
-                    {% endif %}
-                </p>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="9">
-                <p>Signature</p>
                 <p>Date: <b>{{ active_doc.acceptance_date or ''}}</b></p>
             </td>
         </tr>
