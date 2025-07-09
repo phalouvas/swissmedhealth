@@ -217,7 +217,8 @@
    "fieldname": "blood_group",
    "fieldtype": "Select",
    "label": "Blood group",
-   "options": "\nA Positive\nA Negative\nAB Positive\nAB Negative\nB Positive\nB Negative\nO Positive\nO Negative"
+   "options": "\nA Positive\nA Negative\nAB Positive\nAB Negative\nB Positive\nB Negative\nO Positive\nO Negative",
+   "print_hide": 1
   },
   {
    "fieldname": "column_break_kl6as",
@@ -226,7 +227,8 @@
   {
    "fieldname": "blood_pressure",
    "fieldtype": "Data",
-   "label": "Blood pressure"
+   "label": "Blood pressure",
+   "print_hide": 1
   },
   {
    "fieldname": "section_break_cm6a5",
@@ -300,25 +302,29 @@
    "fieldname": "anorexia",
    "fieldtype": "Select",
    "label": "Anorexia",
-   "options": "\nNo\nYes"
+   "options": "\nNo\nYes",
+   "print_hide": 1
   },
   {
    "fieldname": "asthma",
    "fieldtype": "Select",
    "label": "Asthma",
-   "options": "\nNo\nYes"
+   "options": "\nNo\nYes",
+   "print_hide": 1
   },
   {
    "fieldname": "breathing_difficulties",
    "fieldtype": "Select",
    "label": "Breathing difficulties",
-   "options": "\nNo\nYes"
+   "options": "\nNo\nYes",
+   "print_hide": 1
   },
   {
    "fieldname": "bulimia",
    "fieldtype": "Select",
    "label": "Bulimia",
-   "options": "\nNo\nYes"
+   "options": "\nNo\nYes",
+   "print_hide": 1
   },
   {
    "fieldname": "chronic_bronchitis",
@@ -330,49 +336,57 @@
    "fieldname": "diabetes",
    "fieldtype": "Select",
    "label": "Diabetes",
-   "options": "\nNo\nYes"
+   "options": "\nNo\nYes",
+   "print_hide": 1
   },
   {
    "fieldname": "epilepsy",
    "fieldtype": "Select",
    "label": "Epilepsy",
-   "options": "\nNo\nYes"
+   "options": "\nNo\nYes",
+   "print_hide": 1
   },
   {
    "fieldname": "excessive_bleeding",
    "fieldtype": "Select",
    "label": "Excessive bleeding",
-   "options": "\nNo\nYes"
+   "options": "\nNo\nYes",
+   "print_hide": 1
   },
   {
    "fieldname": "fainting_attacks",
    "fieldtype": "Select",
    "label": "Fainting attacks",
-   "options": "\nNo\nYes"
+   "options": "\nNo\nYes",
+   "print_hide": 1
   },
   {
    "fieldname": "heart_complaint",
    "fieldtype": "Select",
    "label": "Heart complaint",
-   "options": "\nNo\nYes"
+   "options": "\nNo\nYes",
+   "print_hide": 1
   },
   {
    "fieldname": "heart_surgery",
    "fieldtype": "Select",
    "label": "Heart surgery",
-   "options": "\nNo\nYes"
+   "options": "\nNo\nYes",
+   "print_hide": 1
   },
   {
    "fieldname": "hepatitis",
    "fieldtype": "Select",
    "label": "Hepatitis",
-   "options": "\nNo\nYes"
+   "options": "\nNo\nYes",
+   "print_hide": 1
   },
   {
    "fieldname": "high_blood_pressure",
    "fieldtype": "Select",
    "label": "High blood pressure",
-   "options": "\nNo\nYes"
+   "options": "\nNo\nYes",
+   "print_hide": 1
   },
   {
    "fieldname": "kidney_failure",
@@ -384,7 +398,8 @@
    "fieldname": "migraines",
    "fieldtype": "Select",
    "label": "Migraines",
-   "options": "\nNo\nYes"
+   "options": "\nNo\nYes",
+   "print_hide": 1
   },
   {
    "fieldname": "column_break_p0lc3",
@@ -399,7 +414,8 @@
    "fieldname": "bladder",
    "fieldtype": "Select",
    "label": "Bladder",
-   "options": "\nNo\nYes"
+   "options": "\nNo\nYes",
+   "print_hide": 1
   },
   {
    "fieldname": "chronic_diseasecancer",
@@ -411,13 +427,15 @@
    "fieldname": "gallbladder",
    "fieldtype": "Select",
    "label": "Gallbladder",
-   "options": "\nNo\nYes"
+   "options": "\nNo\nYes",
+   "print_hide": 1
   },
   {
    "fieldname": "gut",
    "fieldtype": "Select",
    "label": "Gut",
-   "options": "\nNo\nYes"
+   "options": "\nNo\nYes",
+   "print_hide": 1
   },
   {
    "fieldname": "kidneys",
@@ -441,43 +459,50 @@
    "fieldname": "prostate",
    "fieldtype": "Select",
    "label": "Prostate",
-   "options": "\nNo\nYes"
+   "options": "\nNo\nYes",
+   "print_hide": 1
   },
   {
    "fieldname": "spleen",
    "fieldtype": "Select",
    "label": "Spleen",
-   "options": "\nNo\nYes"
+   "options": "\nNo\nYes",
+   "print_hide": 1
   },
   {
    "fieldname": "stomach",
    "fieldtype": "Select",
    "label": "Stomach",
-   "options": "\nNo\nYes"
+   "options": "\nNo\nYes",
+   "print_hide": 1
   },
   {
    "fieldname": "thyroid",
    "fieldtype": "Select",
    "label": "Thyroid",
-   "options": "\nNo\nYes"
+   "options": "\nNo\nYes",
+   "print_hide": 1
   },
   {
    "fieldname": "urogenital_system",
    "fieldtype": "Select",
    "label": "Uro-genital system",
-   "options": "\nNo\nYes"
+   "options": "\nNo\nYes",
+   "print_hide": 1
   },
   {
    "fieldname": "rheumatic_fever",
    "fieldtype": "Select",
    "label": "Rheumatic fever",
-   "options": "\nNo\nYes"
+   "options": "\nNo\nYes",
+   "print_hide": 1
   },
   {
    "fieldname": "stroke",
    "fieldtype": "Select",
    "label": "Stroke",
-   "options": "\nNo\nYes"
+   "options": "\nNo\nYes",
+   "print_hide": 1
   },
   {
    "fieldname": "medication_allergies",
@@ -707,7 +732,8 @@
    "fieldname": "daily_bowel_movements",
    "fieldtype": "Int",
    "label": "How many bowel movements do you have per day?",
-   "non_negative": 1
+   "non_negative": 1,
+   "print_hide": 1
   },
   {
    "fieldname": "sleep_easily",
@@ -846,19 +872,22 @@
    "fieldname": "loss_of_peripheral_vision",
    "fieldtype": "Select",
    "label": "Loss of peripheral vision",
-   "options": "\nNo\nYes"
+   "options": "\nNo\nYes",
+   "print_hide": 1
   },
   {
    "fieldname": "low_red_blood_cell_count",
    "fieldtype": "Select",
    "label": "Low red blood cell count",
-   "options": "\nNo\nYes"
+   "options": "\nNo\nYes",
+   "print_hide": 1
   },
   {
    "fieldname": "low_bone_density",
    "fieldtype": "Select",
    "label": "Low bone density",
-   "options": "\nNo\nYes"
+   "options": "\nNo\nYes",
+   "print_hide": 1
   },
   {
    "fieldname": "section_break_azvk",
@@ -1052,7 +1081,8 @@
   {
    "fieldname": "latest_results",
    "fieldtype": "Attach",
-   "label": "Latest Results"
+   "label": "Latest Results",
+   "print_hide": 1
   }
  ],
  "grid_page_length": 50,
@@ -1067,7 +1097,7 @@
    "link_fieldname": "custom_medical_history"
   }
  ],
- "modified": "2025-07-04 09:38:49.031699",
+ "modified": "2025-07-09 07:08:40.665110",
  "modified_by": "Administrator",
  "module": "Swissmedhealth",
  "name": "Medical History",
