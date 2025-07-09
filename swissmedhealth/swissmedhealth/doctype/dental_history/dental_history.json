@@ -87,7 +87,8 @@
    "depends_on": "eval:doc.amalgam_fillings=='Yes'",
    "fieldname": "amalgam_fillings_no",
    "fieldtype": "Int",
-   "label": "How many"
+   "label": "How many",
+   "print_hide": 1
   },
   {
    "fieldname": "amalgam_fillings_removed",
@@ -107,7 +108,8 @@
    "fieldname": "bone_grafts",
    "fieldtype": "Select",
    "label": "Bone grafts",
-   "options": "\nNo\nYes\nDon't know"
+   "options": "\nNo\nYes\nDon't know",
+   "print_hide": 1
   },
   {
    "fieldname": "bridges",
@@ -119,31 +121,36 @@
    "fieldname": "composite_fillings",
    "fieldtype": "Select",
    "label": "Composite fillings",
-   "options": "\nNo\nYes\nDon't know"
+   "options": "\nNo\nYes\nDon't know",
+   "print_hide": 1
   },
   {
    "depends_on": "eval:doc.composite_fillings=='Yes'",
    "fieldname": "composite_fillings_no",
    "fieldtype": "Int",
-   "label": "How many"
+   "label": "How many",
+   "print_hide": 1
   },
   {
    "fieldname": "crowns",
    "fieldtype": "Select",
    "label": "Crowns",
-   "options": "\nNo\nYes\nDon't know"
+   "options": "\nNo\nYes\nDon't know",
+   "print_hide": 1
   },
   {
    "depends_on": "eval:doc.crowns=='Yes'",
    "fieldname": "crowns_no",
    "fieldtype": "Int",
-   "label": "How many"
+   "label": "How many",
+   "print_hide": 1
   },
   {
    "fieldname": "dentures",
    "fieldtype": "Select",
    "label": "Dentures",
-   "options": "\nNo\nYes\nDon't know"
+   "options": "\nNo\nYes\nDon't know",
+   "print_hide": 1
   },
   {
    "fieldname": "implants",
@@ -155,7 +162,8 @@
    "depends_on": "eval:doc.implants=='Yes'",
    "fieldname": "implants_no",
    "fieldtype": "Int",
-   "label": "How many"
+   "label": "How many",
+   "print_hide": 1
   },
   {
    "depends_on": "eval:doc.implants=='Yes'",
@@ -185,7 +193,8 @@
    "depends_on": "eval:doc.root_fillings=='Yes'",
    "fieldname": "root_fillings_no",
    "fieldtype": "Int",
-   "label": "How many"
+   "label": "How many",
+   "print_hide": 1
   },
   {
    "fieldname": "tooth_fracture",
@@ -232,13 +241,15 @@
    "fieldname": "last_dentist_visit",
    "fieldtype": "Select",
    "label": "How many months since you last saw a dentist?",
-   "options": "\nNever\n6\n12\nLonger"
+   "options": "\nNever\n6\n12\nLonger",
+   "print_hide": 1
   },
   {
    "depends_on": "eval:doc.last_dentist_visit!='Never'",
    "fieldname": "last_dentist_address",
    "fieldtype": "Small Text",
-   "label": "Name and address of dentist"
+   "label": "Name and address of dentist",
+   "print_hide": 1
   },
   {
    "fieldname": "section_break_rhm4a",
@@ -479,6 +490,7 @@
    "print_hide": 1
   }
  ],
+ "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [
   {
@@ -490,7 +502,7 @@
    "link_fieldname": "custom_dental_history"
   }
  ],
- "modified": "2024-12-31 08:39:10.065968",
+ "modified": "2025-07-09 07:08:02.492964",
  "modified_by": "Administrator",
  "module": "Swissmedhealth",
  "name": "Dental History",
@@ -510,6 +522,7 @@
    "write": 1
   }
  ],
+ "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []
