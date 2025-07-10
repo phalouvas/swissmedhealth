@@ -68,6 +68,7 @@
   "hepatitis",
   "high_blood_pressure",
   "kidney_failure",
+  "allergies",
   "migraines",
   "neurologicalcognitive",
   "musculosceletal",
@@ -182,12 +183,14 @@
   {
    "fieldname": "possible_problem_cause",
    "fieldtype": "Small Text",
-   "label": "Cause of the problem in your opinion?"
+   "label": "Cause of the problem in your opinion?",
+   "print_hide": 1
   },
   {
    "fieldname": "symptoms_restrict_daily_life",
    "fieldtype": "Small Text",
-   "label": "Do the symptoms restrict you in everyday life?"
+   "label": "Do the symptoms restrict you in everyday life?",
+   "print_hide": 1
   },
   {
    "fieldname": "section_break_3szph",
@@ -255,13 +258,15 @@
    "fieldname": "relaxing_activity",
    "fieldtype": "Select",
    "label": "Relaxing activity",
-   "options": "\nNone\nSometimes\nRegularly"
+   "options": "\nNone\nSometimes\nRegularly",
+   "print_hide": 1
   },
   {
    "depends_on": "eval:doc.relaxing_activity=='Sometimes' || doc.relaxing_activity=='Regularly';",
    "fieldname": "relaxing_activity_details",
    "fieldtype": "Small Text",
-   "label": "Relaxing activity description"
+   "label": "Relaxing activity description",
+   "print_hide": 1
   },
   {
    "fieldname": "column_break_qryhc",
@@ -277,7 +282,8 @@
    "depends_on": "eval:doc.diet_preferences=='Other';",
    "fieldname": "diet_preference_details",
    "fieldtype": "Small Text",
-   "label": "Diet preference details"
+   "label": "Diet preference details",
+   "print_hide": 1
   },
   {
    "fieldname": "section_break_uc9hj",
@@ -330,7 +336,8 @@
    "fieldname": "chronic_bronchitis",
    "fieldtype": "Select",
    "label": "Chronic Bronchitis",
-   "options": "\nNo\nYes"
+   "options": "\nNo\nYes",
+   "print_hide": 1
   },
   {
    "fieldname": "diabetes",
@@ -363,9 +370,8 @@
   {
    "fieldname": "heart_complaint",
    "fieldtype": "Select",
-   "label": "Heart complaint",
-   "options": "\nNo\nYes",
-   "print_hide": 1
+   "label": "Heart",
+   "options": "\nNo\nYes"
   },
   {
    "fieldname": "heart_surgery",
@@ -507,7 +513,7 @@
   {
    "fieldname": "medication_allergies",
    "fieldtype": "Select",
-   "label": "Allergies",
+   "label": "Medication Allergies",
    "options": "\nNo\nYes\nNot sure"
   },
   {
@@ -983,7 +989,8 @@
    "fieldname": "nutritional_preferences",
    "fieldtype": "Select",
    "label": "Nutritional Preferences",
-   "options": "\nNothing specific\nVegetarian\nVegan\nGluten-free\nDairy-free\nKeto\nPaleo\nLow-carb\nLow-fat"
+   "options": "\nNothing specific\nVegetarian\nVegan\nGluten-free\nDairy-free\nKeto\nPaleo\nLow-carb\nLow-fat",
+   "print_hide": 1
   },
   {
    "fieldname": "health_goals",
@@ -1026,7 +1033,8 @@
    "fieldname": "personalized_familiar",
    "fieldtype": "Select",
    "label": "Are you familiar with Swissmed Health Personalized Medicine approach?",
-   "options": "\nNo\nYes"
+   "options": "\nNo\nYes",
+   "print_hide": 1
   },
   {
    "description": "On a scale of 1\u20135, where would you score your overall health level? - (1 = Poor, 5 = Excellent)",
@@ -1083,6 +1091,12 @@
    "fieldtype": "Attach",
    "label": "Latest Results",
    "print_hide": 1
+  },
+  {
+   "fieldname": "allergies",
+   "fieldtype": "Select",
+   "label": "Allergies",
+   "options": "\nNo\nYes"
   }
  ],
  "grid_page_length": 50,
@@ -1097,7 +1111,7 @@
    "link_fieldname": "custom_medical_history"
   }
  ],
- "modified": "2025-07-09 07:08:40.665110",
+ "modified": "2025-07-10 10:08:14.971450",
  "modified_by": "Administrator",
  "module": "Swissmedhealth",
  "name": "Medical History",
