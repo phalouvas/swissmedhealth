@@ -32,7 +32,7 @@
  "list_title": "Test",
  "login_required": 0,
  "max_attachment_size": 0,
- "modified": "2025-07-09 06:44:25.196657",
+ "modified": "2025-07-11 08:00:00.521187",
  "modified_by": "Administrator",
  "module": "Swissmedhealth",
  "name": "contact-us",
@@ -360,7 +360,7 @@
    "max_length": 0,
    "max_value": 0,
    "read_only": 0,
-   "reqd": 1,
+   "reqd": 0,
    "show_in_filter": 0
   },
   {
@@ -385,7 +385,7 @@
    "max_value": 0,
    "options": "Country",
    "read_only": 0,
-   "reqd": 1,
+   "reqd": 0,
    "show_in_filter": 0
   },
   {
@@ -458,19 +458,6 @@
   },
   {
    "allow_read_on_all_link_options": 0,
-   "fieldname": "custom_relative_first_name",
-   "fieldtype": "Data",
-   "hidden": 0,
-   "label": "First Name",
-   "mandatory_depends_on": "eval:doc.custom_contact_relative==\"For relative\"",
-   "max_length": 0,
-   "max_value": 0,
-   "read_only": 0,
-   "reqd": 0,
-   "show_in_filter": 0
-  },
-  {
-   "allow_read_on_all_link_options": 0,
    "fieldname": "custom_relative_last_name",
    "fieldtype": "Data",
    "hidden": 0,
@@ -533,21 +520,6 @@
    "max_length": 0,
    "max_value": 0,
    "options": "Email",
-   "read_only": 0,
-   "reqd": 0,
-   "show_in_filter": 0
-  },
-  {
-   "allow_read_on_all_link_options": 0,
-   "depends_on": "",
-   "fieldname": "custom_relative_phone",
-   "fieldtype": "Phone",
-   "hidden": 0,
-   "label": "Phone",
-   "mandatory_depends_on": "eval:doc.custom_contact_relative==\"For relative\"",
-   "max_length": 0,
-   "max_value": 0,
-   "options": "Phone",
    "read_only": 0,
    "reqd": 0,
    "show_in_filter": 0
