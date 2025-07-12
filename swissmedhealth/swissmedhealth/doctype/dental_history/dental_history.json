@@ -187,7 +187,8 @@
    "fieldname": "root_fillings",
    "fieldtype": "Select",
    "label": "Root fillings",
-   "options": "\nNo\nYes\nDon't know"
+   "options": "\nNo\nYes\nDon't know",
+   "print_hide": 1
   },
   {
    "depends_on": "eval:doc.root_fillings=='Yes'",
@@ -502,7 +503,7 @@
    "link_fieldname": "custom_dental_history"
   }
  ],
- "modified": "2025-07-09 07:08:02.492964",
+ "modified": "2025-07-12 07:39:26.730210",
  "modified_by": "Administrator",
  "module": "Swissmedhealth",
  "name": "Dental History",

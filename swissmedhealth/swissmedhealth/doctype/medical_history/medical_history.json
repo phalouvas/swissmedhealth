@@ -69,6 +69,7 @@
   "high_blood_pressure",
   "kidney_failure",
   "allergies",
+  "allergies_details",
   "migraines",
   "neurologicalcognitive",
   "musculosceletal",
@@ -77,7 +78,6 @@
   "endocrinehormonal",
   "other",
   "column_break_p0lc3",
-  "heading_2",
   "bladder",
   "mental_health",
   "chronic_diseasecancer",
@@ -398,7 +398,8 @@
    "fieldname": "kidney_failure",
    "fieldtype": "Select",
    "label": "Kidney failure",
-   "options": "\nNo\nYes"
+   "options": "\nNo\nYes",
+   "print_hide": 1
   },
   {
    "fieldname": "migraines",
@@ -410,11 +411,6 @@
   {
    "fieldname": "column_break_p0lc3",
    "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "heading_2",
-   "fieldtype": "Heading",
-   "label": "Do you have problems with any of the bellow?"
   },
   {
    "fieldname": "bladder",
@@ -520,7 +516,7 @@
    "depends_on": "eval:doc.medication_allergies=='Yes'",
    "fieldname": "medication_allergies_details",
    "fieldtype": "Small Text",
-   "label": "Allergies Details"
+   "label": "Medication Allergies Details"
   },
   {
    "fieldname": "taking_medications",
@@ -1097,6 +1093,12 @@
    "fieldtype": "Select",
    "label": "Allergies",
    "options": "\nNo\nYes"
+  },
+  {
+   "depends_on": "eval:doc.allergies=='Yes'",
+   "fieldname": "allergies_details",
+   "fieldtype": "Small Text",
+   "label": "Allergies Details"
   }
  ],
  "grid_page_length": 50,
@@ -1111,7 +1113,7 @@
    "link_fieldname": "custom_medical_history"
   }
  ],
- "modified": "2025-07-10 10:08:14.971450",
+ "modified": "2025-07-12 07:36:17.985139",
  "modified_by": "Administrator",
  "module": "Swissmedhealth",
  "name": "Medical History",
