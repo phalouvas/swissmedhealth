@@ -20,6 +20,11 @@ frappe.ready(function () {
 		// Prevent the default form submission
 		e.preventDefault();
 
+		let validation_result = frappe.web_form.validate_section();
+		if (!validation_result) {
+			return;
+		}
+
 		// set custom_status to 'Documentation received'
 		frappe.web_form.doc.custom_status = 'Documentation received';
 
