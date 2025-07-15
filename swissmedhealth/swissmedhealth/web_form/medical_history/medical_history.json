@@ -24,7 +24,7 @@
  "list_columns": [],
  "login_required": 0,
  "max_attachment_size": 0,
- "modified": "2025-07-12 07:33:43.793416",
+ "modified": "2025-07-15 06:45:12.343315",
  "modified_by": "Administrator",
  "module": "Swissmedhealth",
  "name": "medical-history",
@@ -304,7 +304,7 @@
    "max_value": 0,
    "options": "\nNo\nYes",
    "read_only": 0,
-   "reqd": 0,
+   "reqd": 1,
    "show_in_filter": 0
   },
   {
@@ -473,7 +473,7 @@
    "max_value": 0,
    "options": "\nNo\nYes\nNot sure",
    "read_only": 0,
-   "reqd": 0,
+   "reqd": 1,
    "show_in_filter": 0
   },
   {

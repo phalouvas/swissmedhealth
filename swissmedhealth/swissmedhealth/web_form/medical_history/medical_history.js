@@ -20,6 +20,11 @@ frappe.ready(function () {
 		// Prevent the default form submission
 		e.preventDefault();
 
+		let validation_result = frappe.web_form.validate_section();
+		if (!validation_result) {
+			return;
+		}
+
 		// Validate weight and height
 		const weight = parseFloat(frappe.web_form.get_value('weight'));
 		const height = parseInt(frappe.web_form.get_value('height'), 10);

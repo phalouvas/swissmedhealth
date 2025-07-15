@@ -26,6 +26,23 @@ frappe.ready(function () {
 		// Prevent the default form submission
 		e.preventDefault();
 
+		let validation_result = frappe.web_form.validate_section();
+		if (!validation_result) {
+			return;
+		}
+
+		// Validate check fields using frappe.web_form.doc
+		const regChecked = frappe.web_form.doc.accept_registration_2;
+		const personalChecked = frappe.web_form.doc.accept_personal_data_2;
+		if (!regChecked || !personalChecked) {
+			frappe.msgprint({
+				title: __('Validation Error'),
+				indicator: 'red',
+				message: __('You must accept both registration and personal data terms to proceed.')
+			});
+			return;
+		}
+
 		frappe.call('swissmedhealth.swissmedhealth.web_form.gdpr_consent.gdpr_consent.save', { doc: frappe.web_form.doc }).then(() => {
 			frappe.msgprint({
 				title: __('Success'),
