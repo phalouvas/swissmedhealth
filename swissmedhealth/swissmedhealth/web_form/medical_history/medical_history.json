@@ -24,7 +24,7 @@
  "list_columns": [],
  "login_required": 0,
  "max_attachment_size": 0,
- "modified": "2025-07-15 06:45:12.343315",
+ "modified": "2025-07-16 17:47:42.447111",
  "modified_by": "Administrator",
  "module": "Swissmedhealth",
  "name": "medical-history",
@@ -232,7 +232,7 @@
   {
    "allow_read_on_all_link_options": 0,
    "fieldname": "",
-   "fieldtype": "Page Break",
+   "fieldtype": "Section Break",
    "hidden": 0,
    "label": "Do you currently have or have you ever suffered from the following issues?",
    "max_length": 0,
@@ -453,7 +453,7 @@
   {
    "allow_read_on_all_link_options": 0,
    "fieldname": "",
-   "fieldtype": "Page Break",
+   "fieldtype": "Section Break",
    "hidden": 0,
    "label": "If the answer is YES to any of the following questions, please provide details in the space provided",
    "max_length": 0,

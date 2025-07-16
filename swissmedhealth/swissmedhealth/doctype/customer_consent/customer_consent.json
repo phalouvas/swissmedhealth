@@ -113,7 +113,7 @@
    "label": "Confirm my info is accurate & complete."
   },
   {
-   "default": "0",
+   "default": "1",
    "description": "I consent to receive informational and promotional communications from the medical center, including health  education materials, updates on medical programs and services, invitations to events, lectures or workshops, and  newsletters (optional)",
    "fieldname": "accept_communication_2",
    "fieldtype": "Check",
@@ -132,7 +132,7 @@
    "link_fieldname": "custom_customer_consent"
   }
  ],
- "modified": "2025-07-02 11:18:47.067513",
+ "modified": "2025-07-16 17:52:08.883799",
  "modified_by": "Administrator",
  "module": "Swissmedhealth",
  "name": "Customer Consent",
