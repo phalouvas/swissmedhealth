@@ -62,28 +62,4 @@ frappe.ready(function () {
 		});
 	});
 
-	$('.btn-next').on('click', function (e) {
-
-		// Validate weight and height
-		const weight = parseFloat(frappe.web_form.get_value('weight'));
-		const height = parseInt(frappe.web_form.get_value('height'), 10);
-
-		if (isNaN(weight) || weight <= 0) {
-			frappe.msgprint({
-				title: __('Validation Error'),
-				indicator: 'red',
-				message: __('Weight and Weight must be greater than zero.')
-			});
-			return;
-		}
-		if (isNaN(height) || height <= 0) {
-			frappe.msgprint({
-				title: __('Validation Error'),
-				indicator: 'red',
-				message: __('Height and Weight must be greater than zero.')
-			});
-			return;
-		}
-	});
-
 })
