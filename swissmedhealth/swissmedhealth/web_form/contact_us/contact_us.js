@@ -25,6 +25,22 @@ frappe.ready(function () {
         frappe.web_form.set_value('custom_referral_code', referral_code);
     }
     
+    // Helper function for phone validation
+    function validateRelativePhone() {
+        let phone = frappe.web_form.get_value('phone');
+        let relative_phone = frappe.web_form.get_value('custom_relative_phone');
+        // Only validate if both are filled
+        if (phone && relative_phone && phone === relative_phone) {
+            frappe.msgprint({
+                title: __('Validation Error'),
+                indicator: 'red',
+                message: __('Emergency contact phone must be different from your phone number.')
+            });
+            return false;
+        }
+        return true;
+    }
+
     // Use Frappe's after_save hook for guaranteed execution after save completes
     frappe.web_form.after_save = function() {
         try {
@@ -46,7 +62,12 @@ frappe.ready(function () {
     // Keep your click handler for backward compatibility but simplify it
     $('.submit-btn').on('click', async function (e) {
         e.preventDefault();
-        
+
+        // Validate relative phone before saving
+        if (!validateRelativePhone()) {
+            return;
+        }
+
         try {
             // Just trigger the normal save process - after_save will handle the redirect
             if (frappe.web_form.is_new) {
