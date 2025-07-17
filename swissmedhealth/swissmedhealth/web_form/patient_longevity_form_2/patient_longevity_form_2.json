@@ -26,7 +26,7 @@
  "list_columns": [],
  "login_required": 0,
  "max_attachment_size": 0,
- "modified": "2025-07-17 14:46:34.645437",
+ "modified": "2025-07-17 15:05:08.622066",
  "modified_by": "Administrator",
  "module": "Swissmedhealth",
  "name": "patient-longevity-form-2",
@@ -420,7 +420,7 @@
   {
    "allow_read_on_all_link_options": 0,
    "fieldname": "",
-   "fieldtype": "Page Break",
+   "fieldtype": "Section Break",
    "hidden": 0,
    "label": "Lifestyle & Daily Habits",
    "max_length": 0,
@@ -1049,7 +1049,7 @@
   {
    "allow_read_on_all_link_options": 0,
    "fieldname": "",
-   "fieldtype": "Page Break",
+   "fieldtype": "Section Break",
    "hidden": 0,
    "label": "Medical & Metabolic Health",
    "max_length": 0,
@@ -1536,7 +1536,7 @@
   {
    "allow_read_on_all_link_options": 0,
    "fieldname": "",
-   "fieldtype": "Page Break",
+   "fieldtype": "Section Break",
    "hidden": 0,
    "label": "Environmental & Toxin Exposure",
    "max_length": 0,
@@ -1730,7 +1730,7 @@
   {
    "allow_read_on_all_link_options": 0,
    "fieldname": "",
-   "fieldtype": "Page Break",
+   "fieldtype": "Section Break",
    "hidden": 0,
    "label": "Stress & Emotional Well-being",
    "max_length": 0,
@@ -1897,7 +1897,7 @@
   {
    "allow_read_on_all_link_options": 0,
    "fieldname": "",
-   "fieldtype": "Page Break",
+   "fieldtype": "Section Break",
    "hidden": 0,
    "label": "Emotional & Mental Well-being",
    "max_length": 0,
@@ -1995,7 +1995,7 @@
   {
    "allow_read_on_all_link_options": 0,
    "fieldname": "",
-   "fieldtype": "Page Break",
+   "fieldtype": "Section Break",
    "hidden": 0,
    "label": "Social Well-being",
    "max_length": 0,
