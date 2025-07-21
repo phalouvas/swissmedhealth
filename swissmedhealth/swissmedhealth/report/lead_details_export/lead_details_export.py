@@ -66,6 +66,41 @@ def get_columns():
 			"options": "Country",
 			"width": 100,
 		},
+		{
+			"label": _("Medical History"),
+			"fieldname": "custom_medical_history",
+			"fieldtype": "Link",
+			"options": "Medical History",
+			"width": 150,
+		},
+		{
+			"label": _("Dental History"),
+			"fieldname": "custom_dental_history",
+			"fieldtype": "Link",
+			"options": "Dental History",
+			"width": 150,
+		},
+		{
+			"label": _("Stress Identification"),
+			"fieldname": "custom_stress_identification",
+			"fieldtype": "Link",
+			"options": "Stress Identification",
+			"width": 150,
+		},
+		{
+			"label": _("Longevity History"),
+			"fieldname": "custom_longevity_history",
+			"fieldtype": "Link",
+			"options": "Longevity History",
+			"width": 150,
+		},
+		{
+			"label": _("Customer Consent"),
+			"fieldname": "custom_customer_consent",
+			"fieldtype": "Link",
+			"options": "Customer Consent",
+			"width": 120,
+		},
 	]
 	return columns
 
@@ -98,6 +133,11 @@ def get_data(filters):
 			address.city,
 			address.state,
 			address.country,
+			lead.custom_medical_history,
+			lead.custom_dental_history,
+			lead.custom_stress_identification,
+			lead.custom_longevity_history,
+			lead.custom_customer_consent,
 		)
 		.where(lead.company == filters.company)
 		.where(Date(lead.creation).between(filters.from_date, filters.to_date))
