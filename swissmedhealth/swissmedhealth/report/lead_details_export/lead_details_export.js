@@ -47,5 +47,15 @@ frappe.query_reports["Lead Details Export"] = {
 			fieldtype: "Link",
 			options: "Territory",
 		},
+		{
+			fieldname: "accept_communication_2",
+			label: __("Accept Communication"),
+			fieldtype: "Select",
+			options: [
+				{ value: "", label: __("All") },
+				{ value: "1", label: __("Accept Communication") },
+				{ value: "0", label: __("Reject Communication") },
+			],
+		},
 	],
 };

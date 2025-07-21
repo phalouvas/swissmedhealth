@@ -109,6 +109,7 @@ def get_data(filters):
 	lead = frappe.qb.DocType("Lead")
 	address = frappe.qb.DocType("Address")
 	dynamic_link = frappe.qb.DocType("Dynamic Link")
+	customer_consent = frappe.qb.DocType("Customer Consent")
 
 	query = (
 		frappe.qb.from_(lead)
@@ -116,6 +117,8 @@ def get_data(filters):
 		.on((lead.name == dynamic_link.link_name) & (dynamic_link.parenttype == "Address"))
 		.left_join(address)
 		.on(address.name == dynamic_link.parent)
+		.left_join(customer_consent)
+		.on(lead.custom_customer_consent == customer_consent.name)
 		.select(
 			lead.name,
 			lead.lead_name,
@@ -148,5 +151,8 @@ def get_data(filters):
 
 	if filters.get("status"):
 		query = query.where(lead.status == filters.get("status"))
+
+	if filters.get("accept_communication_2") is not None and filters.get("accept_communication_2") != "":
+		query = query.where(customer_consent.accept_communication_2 == int(filters.get("accept_communication_2")))
 
 	return query.run(as_dict=1)
