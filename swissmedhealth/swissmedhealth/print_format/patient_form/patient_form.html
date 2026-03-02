@@ -2,7 +2,8 @@
 
 {% set gdpr_doc = frappe.get_doc("Customer Consent", doc.custom_customer_consent) %}
 {% set acceptance_date = gdpr_doc.acceptance_date %}
-<span style="float: right;">Date: {{ acceptance_date }}</span>
+<span style="float: right;">Acceptance Date: {{ acceptance_date }}</span>
+<span style="float: left;">Created On: {{ frappe.utils.format_datetime(doc.creation) }}</span>
 
 {% set active_doc = doc %}
 {% set new_row= {'total': 0} %}
@@ -274,7 +275,7 @@ order_by="is_primary_contact DESC, `tabContact`.creation ASC",
             <td colspan="4">Previous medical records requested</td>
         </tr>
         <tr>
-            <td colspan="5">System entry date</td>
+            <td colspan="5">System entry date: <b>{{ frappe.utils.format_datetime(doc.creation) }}</b></td>
             <td colspan="4">MRN Number</td>
         </tr>
     </tbody>
