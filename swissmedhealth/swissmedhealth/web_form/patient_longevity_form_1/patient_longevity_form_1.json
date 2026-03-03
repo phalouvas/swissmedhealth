@@ -74,7 +74,7 @@
    "label": "Status",
    "max_length": 0,
    "max_value": 0,
-   "options": "Initial Contact\nDirect Service\nConsultation Scheduled\nDirect Diagnostic\nOpen Diagnostic Proposal\nDirect Protocol\nOpen Proposal\nProposal Accepted\nDuring Treatment\nPost Treatment",
+   "options": "Initial Contact\nDirect Service\nConsultation Scheduled\nDirect Diagnostic\nOpen Diagnostic Proposal\nDirect Protocol\nOpen Proposal\nNeeds Re-engagement\nNot Interested\nProposal Accepted\nDuring Treatment\nPost Treatment",
    "precision": "",
    "read_only": 0,
    "reqd": 1,
