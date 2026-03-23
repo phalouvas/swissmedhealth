@@ -44,7 +44,7 @@
    "name": "Opportunity-custom_status",
    "no_copy": 1,
    "non_negative": 0,
-   "options": "Initial Contact\nDirect Service\nConsultation Scheduled\nDirect Diagnostic\nOpen Diagnostic Proposal\nDirect Protocol\nOpen Proposal\nNeeds Re-engagement\nNot Interested\nProposal Accepted\nDuring Treatment\nPost Treatment",
+   "options": "Initial Contact\nDirect Service\nConsultation Scheduled\nDirect Mini Protocol\nDirect Diagnostic\nDiagnostic Proposal\nComplex Proposal\nNot Qualified\nNeeds Re-engagement\nNot Interested\nProposal Accepted\nDuring Treatment\nPost Treatment",
    "owner": "Administrator",
    "permlevel": 0,
    "precision": "",
