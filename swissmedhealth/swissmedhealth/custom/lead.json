@@ -557,7 +557,7 @@
    "name": "Lead-custom_contact_method",
    "no_copy": 0,
    "non_negative": 0,
-   "options": "\nChat\nContact Form\nPhone\nDirect email",
+   "options": "\nChat\nContact Form\nPhone\nDirect email\nDirect Patient Form",
    "owner": "Administrator",
    "permlevel": 0,
    "placeholder": null,
